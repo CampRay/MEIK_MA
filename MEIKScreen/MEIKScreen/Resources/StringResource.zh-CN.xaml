@@ -1,0 +1,597 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <sys:String x:Key="MainWinMenuTitle">请选择工作模式</sys:String>
+    <sys:String x:Key="MainWinMenuScreening">检查</sys:String>
+    <sys:String x:Key="MainWinMenuDiagnostics">诊断</sys:String>
+    <sys:String x:Key="MainWinMenuReport">报告</sys:String>
+    <sys:String x:Key="MainWinMenuPerferences">系统设置</sys:String>
+    <sys:String x:Key="MainWinMenuRecords">记录</sys:String>
+    <sys:String x:Key="MainWinMenuExit">退出</sys:String>
+    <sys:String x:Key="MainWinDeviceNo">设备编号: </sys:String>
+    <sys:String x:Key="MainWinMenuReceive">接收数据</sys:String>
+    <sys:String x:Key="MainWinMenuReceiveReport">接收报告</sys:String>
+    
+    <sys:String x:Key="CommonExitBtn">退出</sys:String>
+    <sys:String x:Key="CommonPreviewBtn">预览</sys:String>
+    <sys:String x:Key="CommonPrintBtn">打印</sys:String>
+    <sys:String x:Key="CommonExportBtn">生成报告</sys:String>
+    <sys:String x:Key="CommonSaveBtn">保存</sys:String>
+    <sys:String x:Key="CommonSaveAsBtn">另存为...</sys:String>
+    <sys:String x:Key="CommonOpenBtn">诊断</sys:String>
+    <sys:String x:Key="CommonAddBtn">添加</sys:String>
+    <sys:String x:Key="CommonDeleteBtn">删除</sys:String>
+    <sys:String x:Key="CommonCloseBtn">关闭</sys:String>
+    <sys:String x:Key="CommonUpdateBtn">引入报告数据</sys:String>
+    <sys:String x:Key="CommonCancelBtn">取消</sys:String>
+    <sys:String x:Key="CommonArchiveBtn">打开</sys:String>
+    <sys:String x:Key="CommonUsernameLab">用戶名</sys:String>
+    <sys:String x:Key="CommonPwdLab">密码</sys:String>
+    <sys:String x:Key="CommonOKBtn">确定</sys:String>
+    <sys:String x:Key="CommonExportSelectBtn">请选择导出的PDF模板</sys:String>
+    <sys:String x:Key="CommonExportNuvoMedBtn">NuvoTEK PDF</sys:String>
+    <sys:String x:Key="CommonExportGoodUnionBtn">GoodUnino PDF</sys:String>
+    <sys:String x:Key="CommonAnalysisBtn">分析</sys:String>
+    <sys:String x:Key="CommonStatusScreen">已经检测</sys:String>
+    <sys:String x:Key="CommonStatusNew">新的用户</sys:String>
+    <sys:String x:Key="CommonStatusDataSent">数据送出</sys:String>
+    <sys:String x:Key="CommonStatusReport">已收报告</sys:String>
+    <sys:String x:Key="CommonLicenseLab">授权编号</sys:String>
+    <sys:String x:Key="CommonStatusReceived">数据已接收</sys:String>
+    <sys:String x:Key="CommonStatusReportSent">报告送出</sys:String>
+    <sys:String x:Key="CommonStatusReportDone">报告完成</sys:String>
+    <sys:String x:Key="CommonPreviewSelect">预览报告</sys:String>
+    <sys:String x:Key="CommonPreviewLF">Long Form Report</sys:String>
+    <sys:String x:Key="CommonPreviewSFI">Client Report</sys:String>
+
+    <sys:String x:Key="RecordsWin1" xml:space="preserve">客户总人数: </sys:String>
+    <sys:String x:Key="RecordsWin2" xml:space="preserve">设备扫描总次数: </sys:String>
+    <sys:String x:Key="RecordsWin3">导出到Excel</sys:String>
+    <sys:String x:Key="RecordsWin4">搜索</sys:String>
+    <sys:String x:Key="RecordsWin5">开始日期:</sys:String>
+    <sys:String x:Key="RecordsWin6">结束日期:</sys:String>
+    <sys:String x:Key="Excel1">客户编号</sys:String>
+    <sys:String x:Key="Excel2">客户名称</sys:String>
+    <sys:String x:Key="Excel3">扫描说明</sys:String>
+    <sys:String x:Key="Excel4">扫描时间</sys:String>
+    <sys:String x:Key="Excel5">客户档案文件夹</sys:String>
+    <sys:String x:Key="Excel6">扫描时间</sys:String>
+
+    <sys:String x:Key="MailSubject">扫描记录</sys:String>
+
+    <sys:String x:Key="Dialog1">请输入客户名称</sys:String>
+    <sys:String x:Key="Dialog2">姓:</sys:String>
+    <sys:String x:Key="Dialog3">名:</sys:String>
+    <sys:String x:Key="Dialog4">中间名:</sys:String>
+    <sys:String x:Key="Dialog5">客户编号:</sys:String>
+    <sys:String x:Key="Dialog6">创建</sys:String>
+    <sys:String x:Key="Dialog7">取消</sys:String>
+    <sys:String x:Key="Dialog8">检测员:</sys:String>
+
+    <sys:String x:Key="Message_1">启动MEIK v5.6程序失败, 错误信息:</sys:String>
+    <sys:String x:Key="Message_2">保存报告数据成功!</sys:String>
+    <sys:String x:Key="Message_3">保存报告数据失败，错误原因:</sys:String>
+    <sys:String x:Key="Message_4">是否要保存当前修改的报告数据?</sys:String>
+    <sys:String x:Key="Message_5">成功地导出了PDF文件!</sys:String>
+    <sys:String x:Key="Message_6">成功地另保了报告文件!</sys:String>
+    <sys:String x:Key="Message_7">是否要保存当前修改的报告数据?</sys:String>
+    <sys:String x:Key="Message_8">请选择客户数据文件夹</sys:String>
+    <sys:String x:Key="Message_9">加载报告配置参数失败. 异常信息:</sys:String>
+    <sys:String x:Key="Message_10">屏幕截图操作失败，当您点击截取图像按钮后，请在屏幕上想要截取的图像位置拖动鼠标左键。</sys:String>
+    <sys:String x:Key="Message_11">请输入一个姓名</sys:String>
+    <sys:String x:Key="Message_12">此姓名已存在</sys:String>
+    <sys:String x:Key="Message_13">保存配置参数失败，错误原因:</sys:String>
+    <sys:String x:Key="Message_14">保存配置参数成功!</sys:String>
+    <sys:String x:Key="Message_15">您没有在程序的配置页面配置邮箱帐户或者配置的邮箱帐户不正确。</sys:String>
+    <sys:String x:Key="Message_16">还没有创建当前客户的检查报告，请先填写并保存报告。</sys:String>
+    <sys:String x:Key="Message_17">您确定要把所选客户的数据发送给数据中心?</sys:String>
+    <sys:String x:Key="Message_18">发送数据成功!</sys:String>
+    <sys:String x:Key="Message_19">发送邮件失败，错误原因:</sys:String>
+    <sys:String x:Key="Message_20">加载报告配置参数失败. 异常信息:</sys:String>
+    <sys:String x:Key="Message_21">目录 {0} 不能被打包成ZIP文件，错误原因:</sys:String>
+    <sys:String x:Key="Message_22">请输入客户姓氏</sys:String>
+    <sys:String x:Key="Message_23">创建客户档案目录成功！</sys:String>
+    <sys:String x:Key="Message_24">客户档案目录{0} 已存在.</sys:String>
+    <sys:String x:Key="Message_25">创建客户档案目录{0}失败{1}</sys:String>
+    <sys:String x:Key="Message_26">没有在客户文件夹中找到基础报告文档, 请先在诊断窗口访问报告功能生成基础报告文档。</sys:String>
+    <sys:String x:Key="Message_27">从基础报告文档更新数据到当前报告成功。</sys:String>
+    <sys:String x:Key="Message_28">请选择发送数据的检测员名称, 如果没有可选择的检测员，请先请入程序设置功能页面添加检测员.</sys:String>
+    <sys:String x:Key="Message_29">输入的内容不允许包含';'或'|'.</sys:String>
+    <sys:String x:Key="Message_30">更新病历卡信息成功.</sys:String>
+    <sys:String x:Key="Message_31">更新病历卡信息失败，错误原因:</sys:String>
+    <sys:String x:Key="Message_32">加载客户病历文件{0}失败，错误原因:</sys:String>
+    <sys:String x:Key="Message_33">不能从基础诊断分析文档({0})中读取数据, 文档正在被使用或被锁定, 请先关闭已打开的Word文档.</sys:String>
+    <sys:String x:Key="Message_34">还没有截取图像！</sys:String>
+    <sys:String x:Key="Message_35">请至少选择一个客户的MRN</sys:String>
+    <sys:String x:Key="Message_36">有{0}个客户的数据没有发送成功,错误原因如下：</sys:String>
+    <sys:String x:Key="Message_37">接收客户数据成功.</sys:String>
+    <sys:String x:Key="Message_38">数据接收处理完成, 但是接收处理数据时出现以下错误:</sys:String>
+    <sys:String x:Key="Message_39">创建客户档案目录失败, 错误原因:</sys:String>
+    <sys:String x:Key="Message_40">下载zip文件失败, 错误原因:</sys:String>
+    <sys:String x:Key="Message_41">解包数据文件到本地目录失败, 错误原因:</sys:String>
+    <sys:String x:Key="Message_42">接收客户数据失败，错误原因:</sys:String>
+    <sys:String x:Key="Message_43">没有需要接收的新数据.</sys:String>
+    <sys:String x:Key="Message_44">下载PDF报告文件失败，错误原因：</sys:String>
+    <sys:String x:Key="Message_45">接收PDF数据失败，错误原因:</sys:String>
+    <sys:String x:Key="Message_46">您确定要立即升级当前软件吗? 这将会关闭当前的软件, 请注意先保存您的数据，以免丢失.</sys:String>
+    <sys:String x:Key="Message_47">从中心服务器获取版本数据失败， 错误原因:</sys:String>
+    <sys:String x:Key="Message_48">从服务中心获取版本数据成功</sys:String>
+    <sys:String x:Key="Message_49">密码错误</sys:String>
+    <sys:String x:Key="Message_50">您确定要删除选择的文件夹及其下所有内容吗?</sys:String>
+    <sys:String x:Key="Message_51">启动升级安装包程序失败，错误原因：</sys:String>
+    <sys:String x:Key="Message_52">上传数据文件失败，错误原因：</sys:String>
+    <sys:String x:Key="Message_53">請輸入數字</sys:String>
+    <sys:String x:Key="Message_54">請輸入0到23之間的數字</sys:String>
+    <sys:String x:Key="Message_55">請輸入0到59之間的數字</sys:String>
+    <sys:String x:Key="Message_56">請輸入0到99之間的數字</sys:String>
+    <sys:String x:Key="Message_57">請輸入1到12之間的數字</sys:String>
+    <sys:String x:Key="Message_58">請輸入1到31之間的數字</sys:String>
+    <sys:String x:Key="Message_59">請輸入一個有效的年份數</sys:String>
+    <sys:String x:Key="Message_60">請輸入小於500的數字</sys:String>
+    <sys:String x:Key="Message_61">請輸入一個有效的電話號碼</sys:String>
+    <sys:String x:Key="Message_62">您的結論與腫瘤標識特徵狀況不一致，請重新檢查並確認您的報告是否正確！</sys:String>
+    <sys:String x:Key="Message_63">BI-RADS分類結果與腫瘤標識特徵狀況不一致，請重新檢查並確認您的報告是否正確！</sys:String>
+    <sys:String x:Key="Message_64">請輸入三位數字的設備編號</sys:String>
+    <sys:String x:Key="Message_65">確定要刪除所有選擇的用戶檔案嗎?</sys:String>
+    <sys:String x:Key="Message_66">請先在配置頁面配置數據傳輸方式.</sys:String>
+    <sys:String x:Key="Message_67">用戶名不能為空.</sys:String>
+    <sys:String x:Key="Message_68">密碼不能為空.</sys:String>
+    <sys:String x:Key="Message_69">登錄失敗，用戶名或密碼錯誤.</sys:String>
+    <sys:String x:Key="Message_70">請先在配置頁面配置設備編號.</sys:String>
+    <sys:String x:Key="Message_71">請輸入授權編號.</sys:String>
+    <sys:String x:Key="Message_72">在線授權激活失敗, 錯誤原因:</sys:String>
+    <sys:String x:Key="Message_73">在線授權激活成功.</sys:String>
+    <sys:String x:Key="Message_74">還沒有生成PDF報告文件，請先點擊"生成報告"按鈕生成PDF報告文件.</sys:String>
+    <sys:String x:Key="Message_75">所有C:\MEIKData目錄下的未歸檔的zip數據文件已經被解包並且歸檔成功.</sys:String>
+    <sys:String x:Key="Message_76">加載报告数据文件{0}失敗，請確定報告數據文件是否正確，錯誤原因:</sys:String>
+    <sys:String x:Key="Message_77">在{0}目錄下沒有需要歸檔的zip文件.</sys:String>
+    <sys:String x:Key="Message_78">請輸入一個電郵地址.</sys:String>
+    <sys:String x:Key="Message_79">請輸入一個有效的電郵地址.</sys:String>
+    <sys:String x:Key="Message_80">此電郵地址已經被添加過.</sys:String>
+    <sys:String x:Key="Message_81">所有C:\MEIKData目錄下的未歸檔的zip報告數據文件已經被解包並且歸檔成功.</sys:String>
+    <sys:String x:Key="Message_82">請選擇數據接收者的電郵, 如果沒有可選擇的電郵，請先進入程式設置功能頁面添加收件人郵箱.</sys:String>
+    <sys:String x:Key="Message_83">請選擇編寫報告的醫生的名稱, 如果沒有可選擇的醫生名稱，請先進入程式設置功能頁面添加醫生名稱.</sys:String>
+    <sys:String x:Key="Message_84">請先輸入一個設備編號.</sys:String>
+    <sys:String x:Key="Message_85">請選擇這臺設備的檢測報告所用的logo</sys:String>
+    <sys:String x:Key="Message_86">已經添加了此設備的logo記錄.</sys:String>
+
+    <sys:String x:Key="UserListWinBrowerLab">选择客户档案</sys:String>
+    <sys:String x:Key="UserListWinBrowerBtn">浏览...</sys:String>
+    <sys:String x:Key="UserListWinEditReportBtn">编辑报告</sys:String>
+    <sys:String x:Key="UserListWinExaminationReportBtn">检查报告</sys:String>
+    <sys:String x:Key="UserListWinSummaryReportBtn">总结报告</sys:String>
+    <sys:String x:Key="UserListWinDeleteBtn">删除</sys:String>
+    <sys:String x:Key="UserListWinEmailReportBtn">发送报告</sys:String>
+    <sys:String x:Key="UserListWinPatientCardTitle">客户健康记录</sys:String>
+    <sys:String x:Key="UserListWinNewBtn">新建</sys:String>
+    <sys:String x:Key="UserListWinEmailDataBtn">发送数据</sys:String>
+    
+    <sys:String x:Key="SignaureWinLab">设置为默认签名</sys:String>
+    <sys:String x:Key="SignaureWinLoadBtn">加载签名</sys:String>
+    <sys:String x:Key="SignaureWinClearBtn">清除</sys:String>
+    <sys:String x:Key="SignaureWinConfirmBtn">确认</sys:String>
+
+    <sys:String x:Key="SettingReportTitle">默认的报表设置</sys:String>
+    <sys:String x:Key="SettingReportDesc">下面是当前的一些报表相关参数设置，您可以随时修改它们.</sys:String>
+    <sys:String x:Key="SettingReportTabTitle">报表设置</sys:String>
+    <sys:String x:Key="SettingReportNameGroupHeader">程序使用者信息</sys:String>
+    <sys:String x:Key="SettingReportDoctorNameLab">医生</sys:String>
+    <sys:String x:Key="SettingReportTechNameLab">检测员</sys:String>
+    <sys:String x:Key="SettingReportDoctorRequired">在報告中顯示醫生名稱</sys:String>
+    <sys:String x:Key="SettingReportTechRequired">在報告中顯示檢測員名稱</sys:String>
+    <sys:String x:Key="SettingReportPrintGroupHeader">默认的打印纸</sys:String>
+    <sys:String x:Key="SettingReportTransferGroupHeader">默认的数据传输模式</sys:String>
+    <sys:String x:Key="SettingEmailTitle">默认的电子邮箱设置</sys:String>
+    <sys:String x:Key="SettingEmailDesc">下面是当前的一些电子邮箱相关参数设置，您可以随时修改它们.</sys:String>
+    <sys:String x:Key="SettingEmailTabTitle">Email设置</sys:String>
+    <sys:String x:Key="SettingEmailHost">SMTP主机</sys:String>
+    <sys:String x:Key="SettingEmailPort">SMTP端口</sys:String>
+    <sys:String x:Key="SettingEmailSSL">使用SSL</sys:String>
+    <sys:String x:Key="SettingEmailUsername">SMTP帐号</sys:String>
+    <sys:String x:Key="SettingEmailPassword">SMTP密码</sys:String>
+    <sys:String x:Key="SettingEmailFrom">发件人邮箱</sys:String>
+    <sys:String x:Key="SettingEmailTo">收件人邮箱</sys:String>
+    <sys:String x:Key="SettingEmailAddress">邮箱地址</sys:String>
+    <sys:String x:Key="SettingEmailSubject">邮件主题</sys:String>
+    <sys:String x:Key="SettingEmailBody">邮件内容</sys:String>
+    <sys:String x:Key="SettingReportFullName">全名</sys:String>
+    <sys:String x:Key="SettingReportLicense">授权编号</sys:String>
+    <sys:String x:Key="SettingVersionTitle">系统信息</sys:String>
+    <sys:String x:Key="SettingVersionLab">版本:</sys:String>
+    <sys:String x:Key="SettingOperModelLab">程序工作模式:</sys:String>
+    <sys:String x:Key="SettingTechModel">检测员</sys:String>
+    <sys:String x:Key="SettingDoctorModel">医生</sys:String>
+    <sys:String x:Key="SettingAdminModel">系统管理员</sys:String>
+    <sys:String x:Key="SettingVersionCheckLab">程序版本更新:</sys:String>
+    <sys:String x:Key="SettingVersionCheckInfo1">您的程序已经是最新版本. 现在还没有可更新的程序版本.</sys:String>
+    <sys:String x:Key="SettingVersionCheckInfo2">有最新的程序版本可供更新.</sys:String>
+    <sys:String x:Key="SettingVersionUpdate">立即更新</sys:String>
+    <sys:String x:Key="SettingDeviceId">设备编号</sys:String>
+    <sys:String x:Key="SettingImageTitle">公司信息</sys:String>
+    <sys:String x:Key="SettingUploadLogo">公司Logo</sys:String>
+    <sys:String x:Key="SettingSealIcon">公司印章</sys:String>
+    <sys:String x:Key="SettingCompanyInfo">公司地址</sys:String>
+    <sys:String x:Key="SettingLogoSelect">选择图片...</sys:String>
+    <sys:String x:Key="SettingLogoDefault">恢复默认</sys:String>
+    <sys:String x:Key="SettingUploadIcon">设备所属公司信息</sys:String>
+
+    <sys:String x:Key="UserDataPersonalTab">个人数据</sys:String>
+    <sys:String x:Key="UserDataPersonal1">姓:</sys:String>
+    <sys:String x:Key="UserDataPersonal2">名:</sys:String>
+    <sys:String x:Key="UserDataPersonal3">中间名:</sys:String>
+    <sys:String x:Key="UserDataPersonal4">出生日期:</sys:String>
+    <sys:String x:Key="UserDataPersonal5">检查日期:</sys:String>
+    <sys:String x:Key="UserDataPersonal6">地址1:</sys:String>
+    <sys:String x:Key="UserDataPersonal7">日</sys:String>
+    <sys:String x:Key="UserDataPersonal8">月</sys:String>
+    <sys:String x:Key="UserDataPersonal9">年</sys:String>
+    <sys:String x:Key="UserDataPersona20">其他状况:</sys:String>
+    <sys:String x:Key="UserDataPersona21">无</sys:String>
+    <sys:String x:Key="UserDataPersona22">有</sys:String>
+    <sys:String x:Key="UserDataPersona23">身高(公分): </sys:String>
+    <sys:String x:Key="UserDataPersona24">体重(公斤): </sys:String>
+    <sys:String x:Key="UserDataPersona25">电话号码:</sys:String>
+    <sys:String x:Key="UserDataPersona26">电邮:</sys:String>
+    <sys:String x:Key="UserDataPersona27">报告使用语言:</sys:String>
+    <sys:String x:Key="UserDataPersona28">中文</sys:String>
+    <sys:String x:Key="UserDataPersona29">英文</sys:String>
+    <sys:String x:Key="UserDataPersona30">客戶號碼:</sys:String>
+    <sys:String x:Key="UserDataPersona31">地址2:</sys:String>
+    <sys:String x:Key="UserDataPersona32">城市:</sys:String>
+    <sys:String x:Key="UserDataPersona33">州/省:</sys:String>
+    <sys:String x:Key="UserDataPersona34">邮编:</sys:String>
+    <sys:String x:Key="UserDataPersona35">国家:</sys:String>
+
+    <sys:String x:Key="UserDataFamilyTab">家族病歷</sys:String>
+    <sys:String x:Key="UserDataFamily1">乳癌:</sys:String>
+    <sys:String x:Key="UserDataFamily2">子宮癌:</sys:String>
+    <sys:String x:Key="UserDataFamily3">子宮頸癌:</sys:String>
+    <sys:String x:Key="UserDataFamily4">卵巢癌:</sys:String>
+    <sys:String x:Key="UserDataFamily5">母親/姐妹</sys:String>
+    <sys:String x:Key="UserDataFamily6">姑姨母/堂表姐妹</sys:String>
+    <sys:String x:Key="UserDataFamily7">祖母/姑姨婆</sys:String>
+
+    <sys:String x:Key="UserDataComplaintsTab">乳房健康状况</sys:String>
+    <sys:String x:Key="UserDataComplaints1">疼痛</sys:String>
+    <sys:String x:Key="UserDataComplaints2">乳液分泌物(分娩后5天内)</sys:String>
+    <sys:String x:Key="UserDataComplaints3">浆液性分泌物(类黄色)</sys:String>
+    <sys:String x:Key="UserDataComplaints4">血性溢液</sys:String>
+    <sys:String x:Key="UserDataComplaints5">其他（说明）</sys:String>
+    <sys:String x:Key="UserDataComplaints6">特殊状况</sys:String>
+    <sys:String x:Key="UserDataComplaints7">妊娠:</sys:String>
+    <sys:String x:Key="UserDataComplaints8">哺乳期:</sys:String>
+    <sys:String x:Key="UserDataComplaints9">妊娠时间 (周)</sys:String>
+    <sys:String x:Key="UserDataComplaints10">乳房人工植入:</sys:String>
+    <sys:String x:Key="UserDataComplaints11">右乳</sys:String>
+    <sys:String x:Key="UserDataComplaints12">年份</sys:String>
+    <sys:String x:Key="UserDataComplaints13">左乳</sys:String>
+    <sys:String x:Key="UserDataComplaints14">物料:</sys:String>
+    <sys:String x:Key="UserDataComplaints15">矽膠</sys:String>
+    <sys:String x:Key="UserDataComplaints16">自體脂肪移植</sys:String>
+    <sys:String x:Key="UserDataComplaints17">其他</sys:String>
+    <sys:String x:Key="UserDataComplaints18">哺乳時間（周）</sys:String>
+    <sys:String x:Key="UserDataComplaints19">明顯腫塊</sys:String>
+    <sys:String x:Key="UserDataComplaints20">如有，在图中點擊相應位置</sys:String>
+    <sys:String x:Key="UserDataComplaints21">程度:</sys:String>
+    <sys:String x:Key="UserDataComplaints22">[最弱]</sys:String>
+    <sys:String x:Key="UserDataComplaints23">[最強]</sys:String>
+
+    <sys:String x:Key="UserDataMenstrualTab">月经状况</sys:String>
+    <sys:String x:Key="UserDataMenstrual1">最近一次月經開始日期 (日/月):</sys:String>
+    <sys:String x:Key="UserDataMenstrual2">(月)</sys:String>
+
+    <sys:String x:Key="UserDataAnamnesisTab">病史</sys:String>
+    <sys:String x:Key="UserDataAnamnesis1">月经</sys:String>
+    <sys:String x:Key="UserDataAnamnesis2">月经周期失调</sys:String>
+    <sys:String x:Key="UserDataAnamnesis3">绝经期</sys:String>
+    <sys:String x:Key="UserDataAnamnesis4">激素避孕药</sys:String>
+    <sys:String x:Key="UserDataAnamnesis5">药品名称:</sys:String>
+    <sys:String x:Key="UserDataAnamnesis6">持续服用时间</sys:String>
+    <sys:String x:Key="UserDataAnamnesis7">慢性病</sys:String>
+    <sys:String x:Key="UserDataAnamnesis8">肥胖</sys:String>
+    <sys:String x:Key="UserDataAnamnesis9">原发性高血压</sys:String>
+    <sys:String x:Key="UserDataAnamnesis10">糖尿病</sys:String>
+    <sys:String x:Key="UserDataAnamnesis11">甲状腺疾病</sys:String>
+    <sys:String x:Key="UserDataAnamnesis12">其他（说明）</sys:String>
+    <sys:String x:Key="UserDataAnamnesis13">妇科疾病</sys:String>
+    <sys:String x:Key="UserDataAnamnesis14">不孕不育</sys:String>
+    <sys:String x:Key="UserDataAnamnesis15">卵巢疾病</sys:String>
+    <sys:String x:Key="UserDataAnamnesis16">炎症</sys:String>
+    <sys:String x:Key="UserDataAnamnesis17">囊肿</sys:String>
+    <sys:String x:Key="UserDataAnamnesis18">癌症</sys:String>
+    <sys:String x:Key="UserDataAnamnesis19">子宫内膜异位</sys:String>
+    <sys:String x:Key="UserDataAnamnesis20">其他（说明）</sys:String>
+    <sys:String x:Key="UserDataAnamnesis21">子宫疾病</sys:String>
+    <sys:String x:Key="UserDataAnamnesis22">肌瘤</sys:String>
+    <sys:String x:Key="UserDataAnamnesis23">产科</sys:String>
+    <sys:String x:Key="UserDataAnamnesis24">次数:</sys:String>
+    <sys:String x:Key="UserDataAnamnesis25">堕胎/流产</sys:String>
+    <sys:String x:Key="UserDataAnamnesis26">分娩</sys:String>
+    <sys:String x:Key="UserDataAnamnesis27">过去最长哺乳期</sys:String>
+    <sys:String x:Key="UserDataAnamnesis28">一个月之内</sys:String>
+    <sys:String x:Key="UserDataAnamnesis29">一年之内</sys:String>
+    <sys:String x:Key="UserDataAnamnesis30">一年以上</sys:String>
+    <sys:String x:Key="UserDataAnamnesis31">正常</sys:String>
+    <sys:String x:Key="UserDataAnamnesis32">异常</sys:String>
+
+    <sys:String x:Key="UserDataDiseaseTab">乳腺疾病</sys:String>
+    <sys:String x:Key="UserDataDisease1">外伤</sys:String>
+    <sys:String x:Key="UserDataDisease2">乳腺炎</sys:String>
+    <sys:String x:Key="UserDataDisease3">纤维囊性乳腺病</sys:String>
+    <sys:String x:Key="UserDataDisease4">囊肿</sys:String>
+    <sys:String x:Key="UserDataDisease5">癌症</sys:String>
+    <sys:String x:Key="UserDataDisease6">其他</sys:String>
+
+    <sys:String x:Key="UserDataExaminationsTab">检查化验</sys:String>
+    <sys:String x:Key="UserDataExaminations1">触诊</sys:String>
+    <sys:String x:Key="UserDataExaminations2">变化</sys:String>
+    <sys:String x:Key="UserDataExaminations3">分散性</sys:String>
+    <sys:String x:Key="UserDataExaminations4">局部性</sys:String>
+    <sys:String x:Key="UserDataExaminations5">注释</sys:String>
+    <sys:String x:Key="UserDataExaminations6">超声</sys:String>
+    <sys:String x:Key="UserDataExaminations7">钼靶</sys:String>
+    <sys:String x:Key="UserDataExaminations8">活检</sys:String>
+    <sys:String x:Key="UserDataExaminations9">诊断</sys:String>
+    <sys:String x:Key="UserDataExaminations10">癌症</sys:String>
+    <sys:String x:Key="UserDataExaminations11">增生</sys:String>
+    <sys:String x:Key="UserDataExaminations12">结构异常</sys:String>
+    <sys:String x:Key="UserDataExaminations13">导管内乳头状瘤</sys:String>
+    <sys:String x:Key="UserDataExaminations14">纤维腺瘤</sys:String>
+    <sys:String x:Key="UserDataExaminations15">其他（说明）</sys:String>
+    <sys:String x:Key="UserDataExaminations16">年数</sys:String>
+    <sys:String x:Key="UserDataExaminations17">正常</sys:String>
+    <sys:String x:Key="UserDataExaminations18">異常:</sys:String>
+    <sys:String x:Key="UserDataExaminations19">結果:</sys:String>
+    <sys:String x:Key="UserDataExaminations20">诊断:</sys:String>
+    <sys:String x:Key="UserDataExaminations21">EIM分数:</sys:String>
+    <sys:String x:Key="UserDataExaminations22">MEIK检测</sys:String>
+
+    <sys:String x:Key="UserDataVisualTab">目测</sys:String>
+    <sys:String x:Key="UserDataVisual1">红肿</sys:String>
+    <sys:String x:Key="UserDataVisual2">块状</sys:String>
+    <sys:String x:Key="UserDataVisual3">浆液性分泌物</sys:String>
+    <sys:String x:Key="UserDataVisual4">傷口</sys:String>
+    <sys:String x:Key="UserDataVisual5">疤痕</sys:String>
+
+    <sys:String x:Key="ReportContext_1" xml:space="preserve">姓名: </sys:String>
+    <sys:String x:Key="ReportContext_2" xml:space="preserve">检测日期: </sys:String>
+    <sys:String x:Key="ReportContext_3" xml:space="preserve">性别: </sys:String>
+    <sys:String x:Key="ReportContext_4">女</sys:String>
+    <sys:String x:Key="ReportContext_5">男</sys:String>
+    <sys:String x:Key="ReportContext_6" xml:space="preserve">检测地点: </sys:String>
+    <sys:String x:Key="ReportContext_7" xml:space="preserve">住址: </sys:String>
+    <sys:String x:Key="ReportContext_8" xml:space="preserve">医保卡号: </sys:String>
+    <sys:String x:Key="ReportContext_9" xml:space="preserve">客户编号: </sys:String>
+    <sys:String x:Key="ReportContext_10" xml:space="preserve">年龄: </sys:String>
+    <sys:String x:Key="ReportContext_11" xml:space="preserve">体重: </sys:String>
+    <sys:String x:Key="ReportContext_12">磅</sys:String>
+    <sys:String x:Key="ReportContext_13">公斤</sys:String>
+    <sys:String x:Key="ReportContext_14" xml:space="preserve">月经周期: </sys:String>
+    <sys:String x:Key="ReportContext_15">第一阶段</sys:String>
+    <sys:String x:Key="ReportContext_16">第二阶段</sys:String>
+    <sys:String x:Key="ReportContext_17">一，二阶段</sys:String>
+    <sys:String x:Key="ReportContext_18">痛经</sys:String>
+    <sys:String x:Key="ReportContext_19">闭经</sys:String>
+    <sys:String x:Key="ReportContext_20">妊娠期</sys:String>
+    <sys:String x:Key="ReportContext_21">哺乳期</sys:String>
+    <sys:String x:Key="ReportContext_24">绝经期</sys:String>
+    <sys:String x:Key="ReportContext_22" xml:space="preserve">荷尔蒙: </sys:String>
+    <sys:String x:Key="ReportContext_23" xml:space="preserve">皮肤情况: </sys:String>
+    <!--<sys:String x:Key="ReportContext_24">有</sys:String>-->
+    <sys:String x:Key="ReportContext_25">无</sys:String>
+    <sys:String x:Key="ReportContext_26">痣</sys:String>
+    <sys:String x:Key="ReportContext_27">疣</sys:String>
+    <sys:String x:Key="ReportContext_28">痤疮</sys:String>
+    <sys:String x:Key="ReportContext_29">手术后疤痕</sys:String>
+    <sys:String x:Key="ReportContext_30">烧伤后改变</sys:String>
+    <sys:String x:Key="ReportContext_31">晒伤</sys:String>
+    <sys:String x:Key="ReportContext_32" xml:space="preserve">相关病历-近亲患乳癌记录: </sys:String>
+
+    <sys:String x:Key="ReportContext_33">有</sys:String>
+    <sys:String x:Key="ReportContext_34">无</sys:String>
+
+    <sys:String x:Key="ReportContext_35" xml:space="preserve">超声波/乳房X光照: </sys:String>
+    <sys:String x:Key="ReportContext_36">没有检查</sys:String>
+    <sys:String x:Key="ReportContext_37">无异常</sys:String>
+    <sys:String x:Key="ReportContext_38">良性</sys:String>
+    <sys:String x:Key="ReportContext_39">疑似恶性</sys:String>
+    <sys:String x:Key="ReportContext_40">所选照片:</sys:String>
+    <sys:String x:Key="ReportContext_41" xml:space="preserve">左乳: </sys:String>
+    <sys:String x:Key="ReportContext_42" xml:space="preserve">右乳: </sys:String>
+    <sys:String x:Key="ReportContext_43">图像特征</sys:String>
+    <sys:String x:Key="ReportContext_44">左</sys:String>
+    <sys:String x:Key="ReportContext_45">右</sys:String>
+    <sys:String x:Key="ReportContext_46">可触摸硬块 :</sys:String>
+    <sys:String x:Key="ReportContext_47">电导率局灶性/弥漫性改变</sys:String>
+    <sys:String x:Key="ReportContext_48">无</sys:String>
+    <sys:String x:Key="ReportContext_49">局灶性</sys:String>
+    <sys:String x:Key="ReportContext_50">弥漫性</sys:String>
+    <sys:String x:Key="ReportContext_51">乳腺结构</sys:String>
+    <sys:String x:Key="ReportContext_52">结构保留</sys:String>
+    <sys:String x:Key="ReportContext_53">结构变更</sys:String>
+    <sys:String x:Key="ReportContext_54">输乳窦区域</sys:String>
+    <sys:String x:Key="ReportContext_55">不可见</sys:String>
+    <sys:String x:Key="ReportContext_56">无扩张</sys:String>
+    <sys:String x:Key="ReportContext_57">扩张</sys:String>
+    <sys:String x:Key="ReportContext_58">颗粒状</sys:String>
+    <sys:String x:Key="ReportContext_59">乳腺外形</sys:String>
+    <sys:String x:Key="ReportContext_60">无变化</sys:String>
+    <sys:String x:Key="ReportContext_61">变厚</sys:String>
+    <sys:String x:Key="ReportContext_62">变形</sys:String>
+    <sys:String x:Key="ReportContext_63">局部电导率变化特征</sys:String>
+    <sys:String x:Key="ReportContext_64">部位</sys:String>
+    <sys:String x:Key="ReportContext_65">数量</sys:String>
+    <sys:String x:Key="ReportContext_66">大小</sys:String>
+    <sys:String x:Key="ReportContext_67">形状</sys:String>
+    <sys:String x:Key="ReportContext_68">圆形</sys:String>
+    <sys:String x:Key="ReportContext_69">椭圆形</sys:String>
+    <sys:String x:Key="ReportContext_70">分叶状</sys:String>
+    <sys:String x:Key="ReportContext_71">不规则</sys:String>
+    <sys:String x:Key="ReportContext_72">病灶周围形状</sys:String>
+    <sys:String x:Key="ReportContext_73">清晰地</sys:String>
+    <sys:String x:Key="ReportContext_74">阻抗超标的</sys:String>
+    <sys:String x:Key="ReportContext_75">不清晰的</sys:String>
+    <sys:String x:Key="ReportContext_76">内部电阻结构</sys:String>
+    <sys:String x:Key="ReportContext_77">高电阻抗</sys:String>
+    <sys:String x:Key="ReportContext_78">常度电阻抗</sys:String>
+    <sys:String x:Key="ReportContext_79">低电阻抗</sys:String>
+    <sys:String x:Key="ReportContext_80">弱电阻抗</sys:String>
+    <sys:String x:Key="ReportContext_81">周围组织和外围轮廓</sys:String>
+    <sys:String x:Key="ReportContext_82">无变化</sys:String>
+    <sys:String x:Key="ReportContext_83">结构紊乱</sys:String>
+    <sys:String x:Key="ReportContext_84">结构移位</sys:String>
+    <sys:String x:Key="ReportContext_85">增厚</sys:String>
+    <sys:String x:Key="ReportContext_86">挤压</sys:String>
+    <sys:String x:Key="ReportContext_87">收缩</sys:String>
+    <sys:String x:Key="ReportContext_88">定量特征</sys:String>
+    <sys:String x:Key="ReportContext_89">参考值</sys:String>
+    <sys:String x:Key="ReportContext_90"> 肿瘤标识特征</sys:String>
+    <sys:String x:Key="ReportContext_91">良性变化</sys:String>
+    <sys:String x:Key="ReportContext_92">第 1 层</sys:String>
+    <sys:String x:Key="ReportContext_93">第 2 层</sys:String>
+    <sys:String x:Key="ReportContext_94">第 3 层</sys:String>
+    <sys:String x:Key="ReportContext_95">第 4 层</sys:String>
+    <sys:String x:Key="ReportContext_96">第 5 层</sys:String>
+    <sys:String x:Key="ReportContext_97">第 6 层</sys:String>
+    <sys:String x:Key="ReportContext_98">第 7 层</sys:String>
+    <sys:String x:Key="ReportContext_99">疑似恶性变化</sys:String>
+    <sys:String x:Key="ReportContext_100">平均电导率</sys:String>
+    <sys:String x:Key="ReportContext_101">第一阶段</sys:String>
+    <sys:String x:Key="ReportContext_102">第二阶段</sys:String>
+    <sys:String x:Key="ReportContext_103">绝经期</sys:String>
+    <sys:String x:Key="ReportContext_104">妊娠期</sys:String>
+    <sys:String x:Key="ReportContext_105">哺乳期</sys:String>
+    <sys:String x:Key="ReportContext_106">相对电导率</sys:String>
+    <sys:String x:Key="ReportContext_107">左右侧乳腺差异</sys:String>
+    <sys:String x:Key="ReportContext_108">正常水平比较</sys:String>
+    <sys:String x:Key="ReportContext_109">阶段电导率</sys:String>
+    <sys:String x:Key="ReportContext_110">年龄电导性</sys:String>
+    <sys:String x:Key="ReportContext_111">&lt; 5%</sys:String>
+    <sys:String x:Key="ReportContext_112">5% - 95%</sys:String>
+    <sys:String x:Key="ReportContext_113">&gt; 95%</sys:String>
+    <sys:String x:Key="ReportContext_114">电导率年龄对照值</sys:String>
+    <sys:String x:Key="ReportContext_115">结论:</sys:String>
+    <sys:String x:Key="ReportContext_116">青春期</sys:String>
+    <sys:String x:Key="ReportContext_117">育龄早期</sys:String>
+    <sys:String x:Key="ReportContext_118">育龄期</sys:String>
+    <sys:String x:Key="ReportContext_119">围绝经期</sys:String>
+    <sys:String x:Key="ReportContext_120">绝经期</sys:String>
+    <sys:String x:Key="ReportContext_121" xml:space="preserve">左乳腺: </sys:String>
+    <sys:String x:Key="ReportContext_122">无定型乳腺结构</sys:String>
+    <sys:String x:Key="ReportContext_123">混合型，无定型结构优势</sys:String>
+    <sys:String x:Key="ReportContext_124">混合型乳腺结构</sys:String>
+    <sys:String x:Key="ReportContext_125">导管成分优先的混合结构</sys:String>
+    <sys:String x:Key="ReportContext_126">导管型乳腺结构</sys:String>
+    <sys:String x:Key="ReportContext_127" xml:space="preserve">年龄相关电导率: </sys:String>
+    <sys:String x:Key="ReportContext_128">平均电导率病变程度:</sys:String>
+    <sys:String x:Key="ReportContext_129">发现:</sys:String>
+    <sys:String x:Key="ReportContext_130">无电导率改变</sys:String>
+    <sys:String x:Key="ReportContext_131">检测到集中电导率改变</sys:String>
+    <sys:String x:Key="ReportContext_132">结果:</sys:String>
+    <sys:String x:Key="ReportContext_133">左乳腺:</sys:String>
+    <sys:String x:Key="ReportContext_134">未发现病理性改变</sys:String>
+    <sys:String x:Key="ReportContext_135">良性组织损伤</sys:String>
+    <sys:String x:Key="ReportContext_136">疑似良性发现</sys:String>
+    <sys:String x:Key="ReportContext_137">疑似恶性发现</sys:String>
+    <sys:String x:Key="ReportContext_138">高度可能为恶性</sys:String>
+    <sys:String x:Key="ReportContext_139" xml:space="preserve">右乳腺: </sys:String>
+    <sys:String x:Key="ReportContext_140">右乳腺:</sys:String>
+    <sys:String x:Key="ReportContext_141">BI-EIM 分数:</sys:String>
+    <sys:String x:Key="ReportContext_142" xml:space="preserve">分数: </sys:String>
+    <sys:String x:Key="ReportContext_143" xml:space="preserve">积分</sys:String>
+    <sys:String x:Key="ReportContext_144">0-1分 - 1类</sys:String>
+    <sys:String x:Key="ReportContext_145">2-3分 - 2类</sys:String>
+    <sys:String x:Key="ReportContext_146">4分 - 3类</sys:String>
+    <sys:String x:Key="ReportContext_147">5-7分 - 4类</sys:String>
+    <sys:String x:Key="ReportContext_148">8分 - 5类</sys:String>
+    <sys:String x:Key="ReportContext_149" xml:space="preserve">检测员: </sys:String>
+    <sys:String x:Key="ReportContext_150" xml:space="preserve">BI-RADS分类: </sys:String>
+    <sys:String x:Key="ReportContext_151">0 类 - 照片影像模糊 - 需重新扫描</sys:String>
+    <sys:String x:Key="ReportContext_152">1 类 - 未发现病理性改变</sys:String>
+    <sys:String x:Key="ReportContext_153">2 类 - 良性组织损伤</sys:String>
+    <sys:String x:Key="ReportContext_154">3 类 - 疑似良性发现</sys:String>
+    <sys:String x:Key="ReportContext_155">4 类 - 疑似恶性发现</sys:String>
+    <sys:String x:Key="ReportContext_156">5 类 - 高度可能为恶性</sys:String>
+    <sys:String x:Key="ReportContext_157" xml:space="preserve">建议: </sys:String>
+    <sys:String x:Key="ReportContext_158">MEIK乳腺电阻抗检测 (三月内)</sys:String>
+    <sys:String x:Key="ReportContext_159">MEIK乳腺电阻抗检测 (六月内)</sys:String>
+    <sys:String x:Key="ReportContext_160">MEIK乳腺电阻抗检测 (年度)</sys:String>
+    <sys:String x:Key="ReportContext_161" xml:space="preserve">建议: </sys:String>
+    <sys:String x:Key="ReportContext_162">乳房超声波检测</sys:String>
+    <sys:String x:Key="ReportContext_163">乳房X光照检测</sys:String>
+    <sys:String x:Key="ReportContext_164">乳房活组织检测</sys:String>    
+    <sys:String x:Key="ReportContext_171">按照医生的要求进行进一步检测</sys:String>
+    <sys:String x:Key="ReportContext_165" xml:space="preserve">说明01: </sys:String>
+
+    <sys:String x:Key="ReportContext_228">没有发现病理性改变</sys:String>
+    <sys:String x:Key="ReportContext_166">没有发现病理性改变，（平均电导率）属于高风险类型</sys:String>
+    <sys:String x:Key="ReportContext_167">发现良性病理性改变.</sys:String>
+    <sys:String x:Key="ReportContext_229">发现良性病理性改变，（平均电导率）属于高风险类型</sys:String>
+    <sys:String x:Key="ReportContext_168">发现可疑病理性改变</sys:String>
+    <sys:String x:Key="ReportContext_230">发现高度可疑病理性改变</sys:String>
+    <sys:String x:Key="ReportContext_169" xml:space="preserve">说明02: </sys:String>
+    <sys:String x:Key="ReportContext_170">查看截图</sys:String>
+    <!--<sys:String x:Key="ReportContext_170">For further consultation pls. contact Nuvotek at 0917-984-8105 or Landline 475-8961 to make an appt.</sys:String>
+    <sys:String x:Key="ReportContext_171">For further consultation pls. contact LivLite Center at 0925-503-0581 or Landline 637-9661 to 68 to make an appt.</sys:String>
+    <sys:String x:Key="ReportContext_172">Refer to Surgeon – Follow up Biopsy</sys:String>-->
+    <sys:String x:Key="ReportContext_173" xml:space="preserve">医生: </sys:String>
+    <sys:String x:Key="ReportContext_174" xml:space="preserve">医生签名: </sys:String>
+    <sys:String x:Key="ReportContext_175">截取图像</sys:String>
+    <sys:String x:Key="ReportContext_176">删除图像</sys:String>
+    <sys:String x:Key="ReportContext_177" xml:space="preserve">检查日期: </sys:String>
+    <sys:String x:Key="ReportContext_178" xml:space="preserve">客户档案编号: </sys:String>
+    <sys:String x:Key="ReportContext_179" xml:space="preserve">姓名: </sys:String>
+    <sys:String x:Key="ReportContext_180">左乳</sys:String>
+    <sys:String x:Key="ReportContext_181">右乳</sys:String>
+    <sys:String x:Key="ReportContext_182" xml:space="preserve">发现: </sys:String>
+    <!--<sys:String x:Key="ReportContext_183">疑似良性的发现</sys:String>
+    <sys:String x:Key="ReportContext_184">未发现病理性改变</sys:String>
+    <sys:String x:Key="ReportContext_185">良性组织损伤</sys:String>
+    <sys:String x:Key="ReportContext_186">Probably benign findings</sys:String>
+    <sys:String x:Key="ReportContext_187">疑似恶性变更</sys:String>-->
+    <sys:String x:Key="ReportContext_188" xml:space="preserve">部位: </sys:String>
+    <sys:String x:Key="ReportContext_189" xml:space="preserve">深入检查: </sys:String>
+    <sys:String x:Key="ReportContext_190">日期</sys:String>
+    <sys:String x:Key="ReportContext_191" xml:space="preserve">MEIK检测员: </sys:String>
+    <sys:String x:Key="ReportContext_192" xml:space="preserve">大小: </sys:String>
+    <sys:String x:Key="ReportContext_193">上述的诊断结果是基于此次MEIK扫描，必须与以前的乳房X光和超声波检测结果（如果有的话）、病史、临床表现以及其他辅助程序诊断结果相结合。</sys:String>
+    <sys:String x:Key="ReportContext_194">MEIK是一个设备扫描程序，同时具备乳房X光检测和乳房超声波检查的功能。</sys:String>
+    <sys:String x:Key="ReportContext_195">* 在扫描图中，绿色的标志表示良性的发现，红色的标志表示可疑的病变</sys:String>
+    <sys:String x:Key="ReportContext_196">MEIK检查结果</sys:String>
+    <sys:String x:Key="ReportContext_197">MEIK v.5.6 -乳腺成像总结报告</sys:String>
+    <sys:String x:Key="ReportContext_198">乳腺电阻抗检查报告</sys:String>
+    <sys:String x:Key="ReportContext_199">3D乳腺成像 – MEIK v.5.6</sys:String>
+    <sys:String x:Key="ReportContext_200">授权编号:</sys:String>
+    <sys:String x:Key="ReportContext_201">BI-RADS分類: 0 类 - 照片影像模糊 - 需重新扫描; 1 类 - 未发现病理性改变; 2 类 - 良性组织损伤; 3 类 - 疑似良性发现; 4 类 - 疑似恶性发现</sys:String>
+    <sys:String x:Key="ReportContext_202">客户号码:</sys:String>
+    <sys:String x:Key="ReportContext_203">身高(cm):</sys:String>
+    <sys:String x:Key="ReportContext_204">电话号码:</sys:String>
+    <sys:String x:Key="ReportContext_205">电邮:</sys:String>
+
+    <sys:String x:Key="ReportContext_206">1</sys:String>
+    <sys:String x:Key="ReportContext_207">2</sys:String>
+    <sys:String x:Key="ReportContext_208">3</sys:String>
+    <sys:String x:Key="ReportContext_209">很多</sys:String>
+    <sys:String x:Key="ReportContext_210">4点钟</sys:String>
+    <sys:String x:Key="ReportContext_211">5点钟</sys:String>
+    <sys:String x:Key="ReportContext_212">6点钟</sys:String>
+    <sys:String x:Key="ReportContext_213">7点钟</sys:String>
+    <sys:String x:Key="ReportContext_214">8点钟</sys:String>
+    <sys:String x:Key="ReportContext_215">9点钟</sys:String>
+    <sys:String x:Key="ReportContext_216">10点钟</sys:String>
+    <sys:String x:Key="ReportContext_217">11点钟</sys:String>
+    <sys:String x:Key="ReportContext_218">12点钟</sys:String>
+    <sys:String x:Key="ReportContext_219">1点钟</sys:String>
+    <sys:String x:Key="ReportContext_220">1-</sys:String>
+    <sys:String x:Key="ReportContext_221">2-</sys:String>
+    <sys:String x:Key="ReportContext_222">3-</sys:String>
+    <sys:String x:Key="ReportContext_223">2点钟</sys:String>
+    <sys:String x:Key="ReportContext_224">3点钟</sys:String>
+    <sys:String x:Key="ReportContext_225">毫米</sys:String>
+    <sys:String x:Key="ReportContext_226">结论:</sys:String>
+    <sys:String x:Key="ReportContext_227">说明:</sys:String>
+    <sys:String x:Key="ReportContext_231">在第1阶段月经周期内进行MEIK检查</sys:String>
+    <sys:String x:Key="ReportContext_232" xml:space="preserve">进一步检查: </sys:String>
+    <sys:String x:Key="ReportContext_233">描述</sys:String>
+    <sys:String x:Key="ReportContext_234">备注</sys:String>
+</ResourceDictionary>

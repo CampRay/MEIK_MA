@@ -1,0 +1,95 @@
+﻿<Window x:Class="MEIKScreen.AddFolderPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Icon="/MEIKScreen;component/Images/App_Icon.png"
+        Title="Create Client" Height="305" Width="310" ShowInTaskbar="False" ResizeMode="NoResize" Topmost="True" WindowStartupLocation="CenterOwner" WindowStyle="ToolWindow">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="White"/>
+                <GradientStop Color="#FFC4DBFB" Offset="1"/>
+                <GradientStop Color="White" Offset="0.543"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <Label FontSize="14" Height="28" VerticalAlignment="Bottom" FontWeight="Bold" Content="{DynamicResource  Dialog1}" Visibility="Collapsed"></Label>
+        </StackPanel>
+        <StackPanel Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Center">
+            <Label FontSize="14" Height="28" Content="{DynamicResource  Dialog2}"></Label>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <TextBox Name="txtLastName" Width="180" Height="28" FontSize="14" BorderBrush="#FF3E6E8F"></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="3" HorizontalAlignment="Right" VerticalAlignment="Center">
+            <Label FontSize="14" Height="28" Content="{DynamicResource  Dialog3}"></Label>
+        </StackPanel>
+        <StackPanel Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <TextBox Name="txtFirstName" Width="180" Height="28" FontSize="14" BorderBrush="#FF3E6E8F"></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="4" HorizontalAlignment="Right" VerticalAlignment="Center">
+            <Label FontSize="14" Height="28" Content="{DynamicResource  Dialog4}"></Label>
+        </StackPanel>
+        <StackPanel Grid.Row="4" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <TextBox Name="txtMiddleInitial" Width="180" Height="28" FontSize="14" BorderBrush="#FF3E6E8F"></TextBox>
+        </StackPanel>
+        <WrapPanel Grid.Row="5" Grid.Column="1" VerticalAlignment="Center">
+            <TextBlock Width="60" TextAlignment="Center"  Text="{DynamicResource UserDataPersonal7}"></TextBlock>
+            <TextBlock Width="60" TextAlignment="Center"  Text="{DynamicResource UserDataPersonal8}"></TextBlock>
+            <TextBlock Width="60" TextAlignment="Center" Text="{DynamicResource UserDataPersonal9}"></TextBlock>
+        </WrapPanel>                
+        <TextBlock Grid.Row="6" Grid.Column="0" Width="Auto" HorizontalAlignment="Right" VerticalAlignment="Center"  Text="{DynamicResource UserDataPersonal4}" Margin="0,0,3,0"></TextBlock>
+        <WrapPanel Grid.Row="6" Grid.Column="1" VerticalAlignment="Center">
+            <TextBox Name="txtBirthDate" Width="52" HorizontalContentAlignment="Center" Text="{Binding Path=BirthDate}" PreviewTextInput="Day_PreviewTextInput" BorderBrush="#FF3E6E8F"></TextBox>
+            <TextBlock Width="15" VerticalAlignment="Center" TextAlignment="Center">/</TextBlock>
+            <TextBox Name="txtBirthMonth" Width="52" HorizontalContentAlignment="Center" Text="{Binding Path=BirthMonth}" PreviewTextInput="Month_PreviewTextInput" BorderBrush="#FF3E6E8F"></TextBox>
+            <TextBlock Width="15" VerticalAlignment="Center" TextAlignment="Center">/</TextBlock>
+            <TextBox Name="txtBirthYear" Width="52" HorizontalContentAlignment="Center" Text="{Binding Path=BirthYear}" PreviewTextInput="Year_PreviewTextInput" BorderBrush="#FF3E6E8F"></TextBox>
+        </WrapPanel>
+        <StackPanel Grid.Row="7" HorizontalAlignment="Right" VerticalAlignment="Center">
+            <Label FontSize="14" Height="28" Content="{DynamicResource  Dialog5}"></Label>
+        </StackPanel>
+        <StackPanel Grid.Row="7" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <TextBox Name="txtPatientCode" Width="180" Height="28" FontSize="14" BorderBrush="#FF3E6E8F"></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="8" HorizontalAlignment="Right" VerticalAlignment="Center">
+            <Label FontSize="14" Content="{StaticResource Dialog8}"></Label>
+        </StackPanel>
+        <StackPanel Grid.Row="8" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <ComboBox Name="listTechnicianName" Height="26" Width="180" Style="{StaticResource NewComboBoxStyle}" IsSynchronizedWithCurrentItem="True" FontSize="14" Background="White" BorderBrush="#FF3E6E8F">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal" >
+                            <TextBlock Text="{Binding Path=Name}" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ComboBox>
+        </StackPanel>
+        <WrapPanel Grid.Row="8" Visibility="Collapsed">
+            <Label FontSize="14" Height="28" Width="120" HorizontalContentAlignment="Right" VerticalAlignment="Center" Foreground="#FF3E6E8F">License:</Label>
+            <TextBox Name="technicianLicense" Width="220" Height="22" Text="{Binding ElementName=listTechnicianName,Path=SelectedItem.License}" IsEnabled="False" ></TextBox>
+        </WrapPanel>
+        <WrapPanel Grid.Row="9" Grid.Column="1"  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,5,20,0">
+            <Button Name="btnAdd" Width="80" Height="26" Click="btnAdd_Click" Content="{DynamicResource  Dialog6}"></Button>
+            <Button Name="btnCancel" Width="80" Height="26" Click="btnCancel_Click" Margin="10,0,0,0" Content="{DynamicResource  Dialog7}"></Button>
+        </WrapPanel>
+    </Grid>
+</Window>

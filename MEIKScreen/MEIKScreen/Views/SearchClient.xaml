@@ -1,0 +1,109 @@
+﻿<Window x:Class="MEIKScreen.SearchClient"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Icon="/MEIKScreen;component/Images/App_Icon.png"
+        Title="Search Client" Height="500" Width="800" ShowInTaskbar="False" ResizeMode="NoResize" Topmost="True" WindowStartupLocation="CenterOwner" WindowStyle="ToolWindow">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="White"/>
+                <GradientStop Color="#FFC4DBFB" Offset="1"/>
+                <GradientStop Color="White" Offset="0.543"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10"/>
+            
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Center">
+            <Label FontSize="12" Height="24" Content="{DynamicResource  Dialog11}"></Label>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <TextBox Name="txtClientNo" Width="180" Height="24" FontSize="12" BorderBrush="#FF3E6E8F"></TextBox>
+        </StackPanel>
+        
+        
+        <WrapPanel Grid.Row="1" Grid.Column="3" VerticalAlignment="Center">
+            <TextBlock Width="60" TextAlignment="Center"  Text="{DynamicResource UserDataPersonal7}"></TextBlock>
+            <TextBlock Width="60" TextAlignment="Center"  Text="{DynamicResource UserDataPersonal8}"></TextBlock>
+            <TextBlock Width="60" TextAlignment="Center" Text="{DynamicResource UserDataPersonal9}"></TextBlock>
+        </WrapPanel>
+        <Label Grid.Row="2" Grid.Column="2" Width="Auto" HorizontalAlignment="Right" VerticalAlignment="Center"  Content="{DynamicResource UserDataPersonal4}" Margin="0,0,3,0"></Label>
+        <WrapPanel Grid.Row="2" Grid.Column="3" VerticalAlignment="Center">
+            <TextBox Name="txtBirthDate" Width="50" Height="24" FontSize="12" HorizontalContentAlignment="Center" Text="{Binding Path=BirthDate}" PreviewTextInput="Day_PreviewTextInput" BorderBrush="#FF3E6E8F"></TextBox>
+            <TextBlock Width="15" VerticalAlignment="Center" TextAlignment="Center">/</TextBlock>
+            <TextBox Name="txtBirthMonth" Width="50" Height="24" FontSize="12" HorizontalContentAlignment="Center" Text="{Binding Path=BirthMonth}" PreviewTextInput="Month_PreviewTextInput" BorderBrush="#FF3E6E8F"></TextBox>
+            <TextBlock Width="15" VerticalAlignment="Center" TextAlignment="Center">/</TextBlock>
+            <TextBox Name="txtBirthYear" Width="50" Height="24" FontSize="12" HorizontalContentAlignment="Center" Text="{Binding Path=BirthYear}" PreviewTextInput="Year_PreviewTextInput" BorderBrush="#FF3E6E8F"></TextBox>
+        </WrapPanel>
+        <StackPanel Grid.Row="3" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center">
+            <Label FontSize="12" Height="24" Content="{DynamicResource  Dialog2}"></Label>
+        </StackPanel>
+        <StackPanel Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <TextBox Name="txtLastName" Width="180" Height="24" FontSize="12" BorderBrush="#FF3E6E8F"></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="3" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Center">
+            <Label FontSize="12" Height="24" Content="{DynamicResource  Dialog3}"></Label>
+        </StackPanel>
+        <StackPanel Grid.Row="3" Grid.Column="3" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <TextBox Name="txtFirstName" Width="180" Height="24" FontSize="12" BorderBrush="#FF3E6E8F"></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="4" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center">
+            <Label FontSize="12" Height="24" Content="{DynamicResource  Dialog4}"></Label>
+        </StackPanel>
+        <StackPanel Grid.Row="4" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <TextBox Name="txtMiddleName" Width="180" Height="24" FontSize="12" BorderBrush="#FF3E6E8F"></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="4" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Center">
+            <Label FontSize="12" Content="{StaticResource Dialog9}"></Label>
+        </StackPanel>
+        <StackPanel Grid.Row="4" Grid.Column="3" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <TextBox Name="txtMobile" Width="180" Height="24" FontSize="12" BorderBrush="#FF3E6E8F"></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="5" HorizontalAlignment="Right" VerticalAlignment="Center">
+            <Label FontSize="12" Content="{StaticResource Dialog10}"></Label>
+        </StackPanel>
+        <StackPanel Grid.Row="5" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <TextBox Name="txtEmail" Width="180" Height="24" FontSize="12" BorderBrush="#FF3E6E8F"></TextBox>
+        </StackPanel>
+        <WrapPanel Grid.Row="5" Grid.Column="3" Grid.ColumnSpan="2"  VerticalAlignment="Center">
+            <Button Name="btnSearch" Width="120" Height="26" Click="btnSearch_Click" Content="{DynamicResource  Dialog12}" IsDefault="True"></Button>
+            <Button Name="btnReset" Width="100" Height="26" Click="btnReset_Click" Content="{DynamicResource  Dialog13}" Margin="10,0,0,0"></Button>
+        </WrapPanel>
+
+        <StackPanel  Grid.Row="7" Grid.ColumnSpan="4" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10,2,10,10">
+            <!--<TextBlock Name="screeningTimes" FontSize="46" FontWeight="Bold">5</TextBlock>-->
+            <DataGrid Name="patientGrid" Height="290" ColumnHeaderStyle="{StaticResource columnHeaderStyle}" AutoGenerateColumns="False" RowHeaderWidth="0" FontSize="14" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="{StaticResource Excel7}" Width="0.7*" IsReadOnly="True" Binding="{Binding Path=ClientNumber}"/>
+                    <DataGridTextColumn Header="{StaticResource Excel2}" Width="*" IsReadOnly="True" Binding="{Binding Path=FullName}"/>
+                    <DataGridTextColumn Header="{StaticResource Excel10}" Width="0.6*" IsReadOnly="True" Binding="{Binding Path=Birthday}"/>
+                    <DataGridTextColumn Header="{StaticResource Excel8}" Width="0.7*" IsReadOnly="True" Binding="{Binding Path=Mobile}"/>
+                    <DataGridTextColumn Header="{StaticResource Excel9}" Width="*" IsReadOnly="True" Binding="{Binding Path=Email}"/>
+                    <DataGridHyperlinkColumn Header="{StaticResource Excel11}" Width="0.5*" IsReadOnly="True" Binding="{Binding Path=ClientNumber}">
+                        <DataGridHyperlinkColumn.ElementStyle>
+                            <Style>
+                                <Setter Property="Hyperlink.BaselineAlignment" Value="Center"/>
+                                <EventSetter Event="Hyperlink.Click" Handler="DG_Hyperlink_Click"/>                                
+                            </Style>
+                        </DataGridHyperlinkColumn.ElementStyle>
+                    </DataGridHyperlinkColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+    </Grid>
+</Window>

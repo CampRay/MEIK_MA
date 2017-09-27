@@ -1,0 +1,16 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">        
+    <XmlDataProvider x:Key="ComboBoxDataSource" XPath="Finding">
+        <x:XData>
+            <Items xmlns="">
+                <Item text="Probably benign findings" value="Probably benign findings"/>
+                <Item text="No pathological changes" value="705 Purok 1, Moras dela Paz, Sto. Tomas, Pampanga"/>
+                <Item text="Benign findings" value="705 Purok 1, Moras dela Paz, Sto. Tomas, Pampanga"/>
+                <Item text="Probably benign findings" value="705 Purok 1, Moras dela Paz, Sto. Tomas, Pampanga"/>                
+            </Items>
+        </x:XData>
+    </XmlDataProvider>
+    <DataTemplate x:Key="findingItemTemplate">
+        <Label Content="{Binding XPath=@text}"/>
+    </DataTemplate>
+</ResourceDictionary>

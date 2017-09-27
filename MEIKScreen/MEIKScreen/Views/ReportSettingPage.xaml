@@ -1,0 +1,272 @@
+﻿<Window x:Class="MEIKScreen.ReportSettingPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:cvt="clr-namespace:MEIKScreen.Common"
+        Title="System Parameters"
+        Width="710" Height="420"
+        Icon="/Images/App_Icon.png"
+        ShowInTaskbar="False" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Topmost="True" Closed="Window_Closed" WindowStyle="ToolWindow">
+    <!--<Window.TaskbarItemInfo>
+        <TaskbarItemInfo Description="My Application" Overlay="/MEIKReport;component/Images/ProgressIcon.jpg" ProgressState="Normal"  ProgressValue="10" />
+    </Window.TaskbarItemInfo>-->   
+    <Window.Resources>
+        <cvt:EnumBooleanConverter x:Key="enumBooleanConverter" />
+    </Window.Resources>
+    <Grid>        
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="White"/>
+                <GradientStop Color="#FFC4DBFB" Offset="1"/>
+                <GradientStop Color="White" Offset="0.543"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <!--<RowDefinition Height="80"/>-->
+            <RowDefinition Height="1"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <!--<Grid Grid.Row="0">
+            <Grid.RowDefinitions>                
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+            </Grid.RowDefinitions>
+            <Label Name="labSettingTitle" Grid.Row="0" FontSize="14" FontWeight="Bold" Height="40" Margin="20,0,0,0" VerticalContentAlignment="Bottom" Content="{StaticResource SettingReportTitle}"></Label>
+            <Label Name="labSettingDesc" Grid.Row="1" FontSize="14" Height="40"  Margin="40,0,0,0" VerticalContentAlignment="Top" Content="{StaticResource SettingReportDesc}"></Label>
+        </Grid>-->
+
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="340"/>
+                <RowDefinition Height="60"/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0" Margin="10">
+                <TabControl Name="tabSetting" SelectedIndex="0" Background="{x:Null}" BorderBrush="#FF3E6E8F">
+                    <TabItem Name="tabReport" Header="{StaticResource SettingReportTabTitle}" Style="{StaticResource NewTabButtonStyle}" FontSize="14" Width="150" Height="26" HorizontalContentAlignment="Center" Background="#FF768795" Foreground="White">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="140"/>
+                                <RowDefinition Height="30"/>
+                                <RowDefinition Height="30"/>
+                                <RowDefinition Height="80"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <GroupBox Name="grpUserProfile" Grid.Row="0" Margin="10" Header="{StaticResource SettingReportNameGroupHeader}" BorderBrush="#FF3E6E8F" Foreground="#FF3E6E8F">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="25"/>
+                                        <RowDefinition Height="32"/>
+                                        <RowDefinition Height="10"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+
+                                    <WrapPanel Grid.Row="0" Margin="90,5,0,0" VerticalAlignment="Bottom">
+                                        <Label Height="28" Width="190" FontSize="13" HorizontalContentAlignment="Center" Content="{StaticResource SettingReportFullName}" Foreground="#FF3E6E8F"></Label>
+                                        <Label Height="28" Width="180" FontSize="13" HorizontalContentAlignment="Center" Content="{StaticResource SettingReportLicense}" Foreground="#FF3E6E8F"></Label>
+                                    </WrapPanel>
+                                    <WrapPanel Name="optTech" Grid.Row="1" Margin="2" HorizontalAlignment="Left">
+                                        <Label Height="28" Width="90" FontSize="14" HorizontalContentAlignment="Right" VerticalAlignment="Center" Content="{StaticResource SettingReportTechNameLab}" Foreground="#FF3E6E8F"></Label>
+                                        <ComboBox Name="listTechnicianName" Style="{StaticResource NewComboBoxStyle}" Grid.Row="0" Grid.Column="0" Height="26" Width="190" VerticalAlignment="Center" IsSynchronizedWithCurrentItem="True" FontSize="12" ItemsSource="{Binding TechNames}" Background="White" BorderBrush="#FF3E6E8F">
+                                            <ItemsControl.ItemTemplate>
+                                                <DataTemplate>
+                                                    <StackPanel Orientation="Horizontal" >
+                                                        <TextBlock Text="{Binding Path=Name}" />
+                                                    </StackPanel>
+                                                </DataTemplate>
+                                            </ItemsControl.ItemTemplate>
+                                        </ComboBox>
+                                        <TextBox Name="technicianLicense" Width="180" Height="28" VerticalAlignment="Center" Margin="5,0,0,0" Text="{Binding ElementName=listTechnicianName,Path=SelectedItem.License}" IsEnabled="False" BorderBrush="#FF3E6E8F" Background="White" ></TextBox>
+                                        <Button Name="btnAddTech" Width="70" Height="28" Margin="5,0,0,0" VerticalAlignment="Center" Click="btnAddTech_Click" Content="{StaticResource CommonAddBtn}"></Button>
+                                        <Button Name="btnDelTech" Width="70" Height="28" Margin="5,0,0,0" VerticalAlignment="Center" Click="btnDelTech_Click" Content="{StaticResource CommonDeleteBtn}"></Button>
+                                    </WrapPanel>                                    
+                                    <StackPanel Orientation="Horizontal" Grid.Row="3" Margin="90,0,0,0" VerticalAlignment="Center">
+                                        <CheckBox Name="chkHideDoctor" Visibility="Collapsed" Content="{StaticResource SettingReportDoctorRequired}" Foreground="#FF3E6E8F" BorderBrush="#FF3E6E8F" BorderThickness="1" IsChecked="{Binding ShowDoctorSignature}"></CheckBox>
+                                        <CheckBox Name="chkHideTech" Content="{StaticResource SettingReportTechRequired}" Foreground="#FF3E6E8F" BorderBrush="#FF3E6E8F" BorderThickness="1" IsChecked="{Binding ShowTechSignature}" Margin="20,0,0,0"></CheckBox>
+                                    </StackPanel>
+                                </Grid>
+                            </GroupBox>
+                            <WrapPanel Grid.Row="1" VerticalAlignment="Center" Margin="10,0,0,0">
+                                <Label Height="28" Width="110" FontSize="14" HorizontalContentAlignment="Right" Content="{StaticResource SettingDeviceId}" Foreground="#FF3E6E8F"></Label>
+                                <TextBox Name="txtDeviceId" Text="{Binding DeviceNo}" FontSize="14" Width="190" Height="28" BorderBrush="#FF3E6E8F"></TextBox>
+                            </WrapPanel>
+                            
+                            <WrapPanel Grid.Row="2" VerticalAlignment="Center" Margin="10,0,0,0">
+                                <Label Height="28" Width="110" FontSize="14" HorizontalContentAlignment="Right" Content="{StaticResource SettingScreenVenue}" Foreground="#FF3E6E8F"></Label>
+                                <TextBox Name="txtScreenVenue" Text="{Binding ScreenVenue}" FontSize="14" Width="400" Height="28" BorderBrush="#FF3E6E8F"></TextBox>
+                            </WrapPanel>
+                            <GroupBox Grid.Row="3" Margin="10" Header="{StaticResource SettingReportTransferGroupHeader}" BorderBrush="#FF3E6E8F" Foreground="#FF3E6E8F">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel Grid.Row="0" Grid.Column="0" Margin="15,10,0,0" HorizontalAlignment="Left">
+                                        <RadioButton GroupName="radTransferMode" FontSize="14" Height="22" Width="200" IsChecked="{Binding TransferMode, Converter={StaticResource enumBooleanConverter}, ConverterParameter=Email}" Foreground="#FF3E6E8F" BorderBrush="#FF3E6E8F" BorderThickness="1">Email</RadioButton>
+                                    </StackPanel>
+                                    <StackPanel  Grid.Column="1" Margin="0,10,0,0" HorizontalAlignment="Left">
+                                        <RadioButton GroupName="radTransferMode" FontSize="14" Height="22" Width="300" IsChecked="{Binding TransferMode, Converter={StaticResource enumBooleanConverter}, ConverterParameter=CloudServer}" Foreground="#FF3E6E8F" BorderBrush="#FF3E6E8F" BorderThickness="1">Cloud Server</RadioButton>
+                                    </StackPanel>
+                                </Grid>
+                            </GroupBox>
+                        </Grid>
+                    </TabItem>
+                    <TabItem Name="tabMail" Header="{StaticResource SettingEmailTabTitle}" Style="{StaticResource NewTabButtonStyle}" FontSize="14" Width="150" Height="26" HorizontalContentAlignment="Center" Background="#FF768795" Foreground="White">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="40"/>
+                                <RowDefinition Height="40"/>
+                                <RowDefinition Height="40"/>
+                                <RowDefinition Height="40"/>
+                                <RowDefinition Height="40"/>
+                                <RowDefinition Height="40"/>
+                                <RowDefinition Height="40"/>
+
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="135"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="135"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <StackPanel Grid.Row="0" Grid.Column="0" Margin="5">
+                                <Label Height="28" Width="Auto" FontSize="14" HorizontalContentAlignment="Right" Content="{StaticResource SettingEmailHost}" Foreground="#FF3E6E8F"></Label>
+                            </StackPanel>
+                            <StackPanel Grid.Row="0" Grid.Column="1" Margin="5" HorizontalAlignment="Left">
+                                <TextBox Name="txtMailHost" Text="{Binding MailHost}" FontSize="14" Width="190" Height="28"></TextBox>
+                            </StackPanel>
+                            <StackPanel Grid.Row="0" Grid.Column="2" Margin="5">
+                                <Label Height="28" Width="Auto" FontSize="14" HorizontalContentAlignment="Right" Content="{StaticResource SettingEmailPort}" Foreground="#FF3E6E8F"></Label>
+                            </StackPanel>
+                            <WrapPanel Grid.Row="0" Grid.Column="3" Margin="5" HorizontalAlignment="Left" VerticalAlignment="Center">
+                                <TextBox Name="txtMailPort" Text="{Binding MailPort}" FontSize="14" Width="50" Height="28"></TextBox>
+                                <CheckBox Name="txtMailSsl" Margin="20,0,0,0" IsChecked="{Binding MailSsl}" Height="28" Width="80" FontSize="14" Content="{StaticResource SettingEmailSSL}" Foreground="#FF3E6E8F" BorderBrush="#FF3E6E8F" BorderThickness="1"></CheckBox>
+                            </WrapPanel>
+                            <StackPanel Grid.Row="1" Grid.Column="0" Margin="5">
+                                <Label Height="28" Width="Auto" FontSize="14" HorizontalContentAlignment="Right" Content="{StaticResource SettingEmailUsername}" Foreground="#FF3E6E8F"></Label>
+                            </StackPanel>
+                            <StackPanel Grid.Row="1" Grid.Column="1" Margin="5" HorizontalAlignment="Left">
+                                <TextBox Name="txtMailUsername" Text="{Binding MailUsername}" FontSize="14" Width="190" Height="28"></TextBox>
+                            </StackPanel>
+                            <StackPanel Grid.Row="1" Grid.Column="2" Margin="5">
+                                <Label Height="28" Width="Auto" FontSize="14" HorizontalContentAlignment="Right" Content="{StaticResource SettingEmailPassword}" Foreground="#FF3E6E8F"></Label>
+                            </StackPanel>
+                            <StackPanel Grid.Row="1" Grid.Column="3" Margin="5" HorizontalAlignment="Left">
+                                <PasswordBox Name="txtMailPwd"  FontSize="14" Width="190" Height="28"></PasswordBox>
+                            </StackPanel>
+                            <StackPanel Grid.Row="2" Grid.Column="0" Margin="5">
+                                <Label Height="28" Width="Auto" FontSize="14" HorizontalContentAlignment="Right" Content="{StaticResource SettingEmailFrom}" Foreground="#FF3E6E8F"></Label>
+                            </StackPanel>
+                            <StackPanel Grid.Row="2" Grid.Column="1" Margin="5" HorizontalAlignment="Left">
+                                <TextBox Name="txtMyMailAddress" Text="{Binding MailAddress}" FontSize="14" Width="190" Height="28"></TextBox>
+                            </StackPanel>                            
+                            <StackPanel Grid.Row="3" Grid.Column="0" Margin="5">
+                                <Label Height="28" Width="Auto" FontSize="14" HorizontalContentAlignment="Right" Content="{StaticResource SettingEmailTo}" Foreground="#FF3E6E8F"/>
+                            </StackPanel>
+                            <StackPanel Grid.Row="3" Grid.Column="1" Margin="5" HorizontalAlignment="Left">
+                                <TextBox Visibility="Collapsed" Name="txtToMailAddress" Text="{Binding MailAddress}" FontSize="14" Width="190" Height="28"></TextBox>
+                                <ComboBox Name="listToMailAddress" Style="{StaticResource NewComboBoxStyle}" Grid.Row="0" Grid.Column="0" Height="26" Width="190" VerticalAlignment="Center" IsSynchronizedWithCurrentItem="True" FontSize="12" ItemsSource="{Binding ToMailAddressList}" Background="White" BorderBrush="#FF3E6E8F">
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal" >
+                                                <TextBlock Text="{Binding }" />
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ComboBox>
+                            </StackPanel>
+                            <WrapPanel Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2" VerticalAlignment="Center">
+                                <Button Name="btnAddEmail" Width="70" Height="28" Margin="5,0,0,0" VerticalAlignment="Center" Content="{StaticResource CommonAddBtn}" Click="btnAddEmail_Click"></Button>
+                                <Button Name="btnDelEmail" Width="70" Height="28" Margin="5,0,0,0" VerticalAlignment="Center" Content="{StaticResource CommonDeleteBtn}" Click="btnDelEmail_Click"></Button>
+                            </WrapPanel>
+                            <StackPanel Grid.Row="4" Grid.Column="0" Margin="5">
+                                <Label Height="28" Width="Auto" FontSize="14" HorizontalContentAlignment="Right" Content="{StaticResource SettingEmailSubject}" Foreground="#FF3E6E8F"></Label>
+                            </StackPanel>
+                            <StackPanel Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3" Margin="5" HorizontalAlignment="Left">
+                                <TextBox Name="txtMailSubject" Text="{Binding MailSubject}" Height="28" Width="510" FontSize="14"></TextBox>
+                            </StackPanel>
+                            <StackPanel Grid.Row="5" Grid.Column="0" Margin="5">
+                                <Label Height="28" Width="Auto" FontSize="14" HorizontalContentAlignment="Right" Content="{StaticResource SettingEmailBody}" Foreground="#FF3E6E8F"></Label>
+                            </StackPanel>
+                            <StackPanel Grid.Row="5" Grid.Column="1" Grid.RowSpan="2" Grid.ColumnSpan="3" Margin="5,0,0,0" HorizontalAlignment="Left">
+                                <TextBox Name="txtMailBody" Text="{Binding MailBody}" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Visible" Height="80" Width="510" FontSize="14"></TextBox>
+                            </StackPanel>
+                        </Grid>
+                    </TabItem>
+                    <TabItem Name="tabFTP" Visibility="Collapsed" Header="{StaticResource SettingFTPTabTitle}" Style="{StaticResource NewTabButtonStyle}" FontSize="14" Width="150" Height="26" HorizontalContentAlignment="Center" Background="#FF768795" Foreground="White">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="40"/>
+                                <RowDefinition Height="40"/>
+                                <RowDefinition Height="40"/>
+                                <RowDefinition Height="40"/>
+                                <RowDefinition Height="40"/>
+                                <RowDefinition Height="40"/>
+                                <RowDefinition Height="40"/>
+
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="135"/>
+                                <ColumnDefinition Width="300"/>
+                                <ColumnDefinition Width="135"/>
+                                <ColumnDefinition Width="90"/>
+                            </Grid.ColumnDefinitions>
+
+                            <StackPanel Grid.Row="0" Grid.Column="0" Margin="5">
+                                <Label Height="28" Width="Auto" FontSize="14" HorizontalContentAlignment="Right" Content="{StaticResource SettingFTPUrl}" Foreground="#FF3E6E8F"></Label>
+                            </StackPanel>
+                            <StackPanel Grid.Row="0" Grid.Column="1" Margin="5" HorizontalAlignment="Left">
+                                <TextBox Name="txtFTPUrl" Text="{Binding FtpPath}" FontSize="14" Width="190" Height="28"></TextBox>
+                            </StackPanel>
+                            
+                            <StackPanel Grid.Row="1" Grid.Column="0" Margin="5">
+                                <Label Height="28" Width="Auto" FontSize="14" HorizontalContentAlignment="Right" Content="{StaticResource SettingFTPUsername}" Foreground="#FF3E6E8F"></Label>
+                            </StackPanel>
+                            <StackPanel Grid.Row="1" Grid.Column="1" Margin="5" HorizontalAlignment="Left">
+                                <TextBox Name="txtFTPUsername" Text="{Binding FtpUser}" FontSize="14" Width="190" Height="28"></TextBox>
+                            </StackPanel>
+                            <StackPanel Grid.Row="2" Grid.Column="0" Margin="5">
+                                <Label Height="28" Width="Auto" FontSize="14" HorizontalContentAlignment="Right" Content="{StaticResource SettingFTPPassword}" Foreground="#FF3E6E8F"></Label>
+                            </StackPanel>
+                            <StackPanel Grid.Row="2" Grid.Column="1" Margin="5" HorizontalAlignment="Left">
+                                <PasswordBox Name="txtFTPPwd"  FontSize="14" Width="190" Height="28"></PasswordBox>
+                            </StackPanel>
+                            
+                        </Grid>
+                    </TabItem>
+                    <TabItem Name="tabVersion" Visibility="Collapsed" Header="{StaticResource SettingVersionTitle}" Style="{StaticResource NewTabButtonStyle}" FontSize="14" Width="150" Height="26" HorizontalContentAlignment="Center" Background="#FF768795" Foreground="White">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="10"/>
+                                <RowDefinition Height="30"/>
+                                <RowDefinition Height="0"/>
+                                <RowDefinition Height="0"/>
+                                <RowDefinition Height="0"/>
+                                <RowDefinition Height="30"/>
+                                <RowDefinition Height="30"/>
+                                <RowDefinition Height="180"/>                                
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="150"/>
+                                <ColumnDefinition Width="510"/>                                
+                            </Grid.ColumnDefinitions>
+                            <Label Content="{StaticResource SettingVersionLab}" Grid.Row="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" FontWeight="Bold" Foreground="#FF3E6E8F"></Label>
+                            <Label Content="{Binding Version}" Grid.Row="1" Grid.Column="1" VerticalContentAlignment="Center" Foreground="#FF3E6E8F"></Label>
+                            
+                        </Grid>
+                    </TabItem>
+                </TabControl>
+            </StackPanel>
+            <WrapPanel Grid.Row="1" Margin="0,0,10,0" HorizontalAlignment="Right">
+                <Button Name="btnReportSettingSave" Height="30" FontSize="14" Width="100" Click="btnReportSettingSave_Click" Content="{StaticResource CommonSaveBtn}"></Button>
+                <Button Name="btnReportSettingClose" Height="30" FontSize="14" Width="100" Click="btnReportSettingClose_Click" Margin="10,0,0,0" Content="{StaticResource CommonCloseBtn}"></Button>
+            </WrapPanel>
+        </Grid>
+
+        <Grid Name="progressBarGrid" Grid.Row="0" Grid.RowSpan="2" Visibility="Collapsed">
+            <StackPanel Background="#7F000000"/>
+            <ProgressBar Name="uploadProgressBar" Width="500" Height="20"  Background="White" Foreground="#FF68FF00" BorderBrush="{x:Null}" BorderThickness="0" Value="0" />
+        </Grid>
+    </Grid>
+</Window>
