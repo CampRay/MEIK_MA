@@ -512,7 +512,7 @@ namespace MEIKScreen
                 //遍历指定文件夹下所有文件
                 HandleFolder(folderName,ref set);
 
-                customerSource.Source = set;
+                customerSource.Source = set.OrderByDescending(x=>x.Code);
                 if (set.Count > 0)
                 {
                     reportButtonPanel.Visibility = Visibility.Visible;                    
@@ -1081,47 +1081,46 @@ namespace MEIKScreen
 
                         Dispatcher.Invoke(updatePbDelegate, System.Windows.Threading.DispatcherPriority.Background, new object[] { System.Windows.Controls.ProgressBar.ValueProperty, Convert.ToDouble(groupValue * n + sizeValue) });
                         //如果没有截取图片，则不允许上传数据
-                        if (!File.Exists(selectedUser.ArchiveFolder + System.IO.Path.DirectorySeparatorChar + selectedUser.Code + ".jpg"))
+                        if (!File.Exists(selectedUser.ArchiveFolder + System.IO.Path.DirectorySeparatorChar + selectedUser.Code + ".png"))
                         {
                             errMsg.Add(selectedUser.Code + " :: " + App.Current.FindResource("Message_90").ToString());
                             continue;
                         }                        
 
-                        //先上传自动生成的PDF文件
-                        string sfPdfFile = "";
-                        string csvFile = "";
-                        if (App.reportSettingModel.TransferMode == TransferMode.CloudServer)
-                        {
-                            string personName = selectedUser.SurName + (string.IsNullOrEmpty(selectedUser.GivenName) ? "" : "," + selectedUser.GivenName) + (string.IsNullOrEmpty(selectedUser.OtherName) ? "" : " " + selectedUser.OtherName);
-                            sfPdfFile = selectedUser.ArchiveFolder + System.IO.Path.DirectorySeparatorChar + selectedUser.Code + " - " + personName + ".pdf";
-                            ShortFormReport reportModel = new ShortFormReport();
-                            reportModel.DataClientNum = string.IsNullOrEmpty(selectedUser.ClientNumber) ? "N/A" : selectedUser.ClientNumber;
-                            reportModel.DataName = personName;
-                            reportModel.DataAge = selectedUser.Age + "";
-                            reportModel.DataHeight = string.IsNullOrEmpty(selectedUser.Height) ? "N/A" : selectedUser.Height;
-                            reportModel.DataWeight = string.IsNullOrEmpty(selectedUser.Weight) ? "N/A" : selectedUser.Weight;
-                            reportModel.DataMobile = string.IsNullOrEmpty(selectedUser.Mobile) ? "N/A" : selectedUser.Mobile;
-                            reportModel.DataEmail = string.IsNullOrEmpty(selectedUser.Email) ? "N/A" : selectedUser.Email;
-                            reportModel.DataUserCode = selectedUser.Code;
-                            reportModel.DataScreenDate = selectedUser.RegYear + "-" + selectedUser.RegMonth + "-" + selectedUser.RegDate;
-                            reportModel.DataScreenLocation = string.IsNullOrEmpty(selectedUser.ScreenVenue) ? "N/A" : selectedUser.ScreenVenue;
-                            reportModel.DataMeikTech = string.IsNullOrEmpty(selectedUser.TechName) ? "N/A" : selectedUser.TechName;
-                            reportModel.DataSignDate = reportModel.DataScreenDate;
-                            reportModel.DataPoint = (selectedUser.LeftResult > selectedUser.RightResult ? selectedUser.LeftResult : selectedUser.RightResult) + "";
-                            reportModel.DataLeftTotalPts = selectedUser.LeftResult+"";
-                            reportModel.DataRightTotalPts = selectedUser.RightResult + "";
-                            reportModel.DataLeftBiRadsCategory = selectedUser.LeftResult == 2 ? "發現可疑病理性改變 Suspicious changes detected" : (selectedUser.LeftResult == 1 ? "發現良性病理性改變 Benign changes detected" : "正常 Normal");
-                            reportModel.DataRightBiRadsCategory = selectedUser.RightResult == 2 ? "發現可疑病理性改變 Suspicious changes detected" : (selectedUser.RightResult == 1 ? "發現良性病理性改變 Benign changes detected" : "正常 Normal");
-                            //创建PDF文件
-                            this.createPDF(reportModel, selectedUser, sfPdfFile);
-                            Dispatcher.Invoke(updatePbDelegate, System.Windows.Threading.DispatcherPriority.Background, new object[] { System.Windows.Controls.ProgressBar.ValueProperty, Convert.ToDouble(groupValue * n + sizeValue * 1) });
+                        //先生成自动生成的PDF文件
+                        //string sfPdfFile = "";
+                        //string csvFile = "";
+                        //if (App.reportSettingModel.TransferMode == TransferMode.CloudServer)
+                        //{
+                        //    string personName = selectedUser.SurName + (string.IsNullOrEmpty(selectedUser.GivenName) ? "" : "," + selectedUser.GivenName) + (string.IsNullOrEmpty(selectedUser.OtherName) ? "" : " " + selectedUser.OtherName);
+                        //    sfPdfFile = selectedUser.ArchiveFolder + System.IO.Path.DirectorySeparatorChar + selectedUser.Code + " - " + personName + ".pdf";
+                        //    ShortFormReport reportModel = new ShortFormReport();
+                        //    reportModel.DataClientNum = string.IsNullOrEmpty(selectedUser.ClientNumber) ? "N/A" : selectedUser.ClientNumber;
+                        //    reportModel.DataName = personName;
+                        //    reportModel.DataAge = selectedUser.Age + "";
+                        //    reportModel.DataHeight = string.IsNullOrEmpty(selectedUser.Height) ? "N/A" : selectedUser.Height;
+                        //    reportModel.DataWeight = string.IsNullOrEmpty(selectedUser.Weight) ? "N/A" : selectedUser.Weight;
+                        //    reportModel.DataMobile = string.IsNullOrEmpty(selectedUser.Mobile) ? "N/A" : selectedUser.Mobile;
+                        //    reportModel.DataEmail = string.IsNullOrEmpty(selectedUser.Email) ? "N/A" : selectedUser.Email;
+                        //    reportModel.DataUserCode = selectedUser.Code;
+                        //    reportModel.DataScreenDate = selectedUser.RegYear + "-" + selectedUser.RegMonth + "-" + selectedUser.RegDate;
+                        //    reportModel.DataScreenLocation = string.IsNullOrEmpty(selectedUser.ScreenVenue) ? "N/A" : selectedUser.ScreenVenue;
+                        //    reportModel.DataMeikTech = string.IsNullOrEmpty(selectedUser.TechName) ? "N/A" : selectedUser.TechName;
+                        //    reportModel.DataSignDate = reportModel.DataScreenDate;
+                        //    reportModel.DataPoint = (selectedUser.LeftResult > selectedUser.RightResult ? selectedUser.LeftResult : selectedUser.RightResult) + "";
+                        //    reportModel.DataLeftTotalPts = selectedUser.LeftResult+"";
+                        //    reportModel.DataRightTotalPts = selectedUser.RightResult + "";
+                        //    reportModel.DataLeftBiRadsCategory = selectedUser.LeftResult == 2 ? "發現可疑病理性改變 Suspicious changes detected" : (selectedUser.LeftResult == 1 ? "發現良性病理性改變 Benign changes detected" : "正常 Normal");
+                        //    reportModel.DataRightBiRadsCategory = selectedUser.RightResult == 2 ? "發現可疑病理性改變 Suspicious changes detected" : (selectedUser.RightResult == 1 ? "發現良性病理性改變 Benign changes detected" : "正常 Normal");
+                        //    //创建PDF文件
+                        //    this.createPDF(reportModel, selectedUser, sfPdfFile);
+                        //    Dispatcher.Invoke(updatePbDelegate, System.Windows.Threading.DispatcherPriority.Background, new object[] { System.Windows.Controls.ProgressBar.ValueProperty, Convert.ToDouble(groupValue * n + sizeValue * 1) });
 
-
-                            //创建CSV文件
-                            csvFile = selectedUser.ArchiveFolder + System.IO.Path.DirectorySeparatorChar + selectedUser.Code + ".csv";
-                            this.createdCsvFile(reportModel, selectedUser, csvFile);
-                            Dispatcher.Invoke(updatePbDelegate, System.Windows.Threading.DispatcherPriority.Background, new object[] { System.Windows.Controls.ProgressBar.ValueProperty, Convert.ToDouble(groupValue * n + sizeValue * 2) });
-                        }
+                        //    //创建CSV文件
+                        //    csvFile = selectedUser.ArchiveFolder + System.IO.Path.DirectorySeparatorChar + selectedUser.Code + ".csv";
+                        //    this.createdCsvFile(reportModel, selectedUser, csvFile);
+                        //    Dispatcher.Invoke(updatePbDelegate, System.Windows.Threading.DispatcherPriority.Background, new object[] { System.Windows.Controls.ProgressBar.ValueProperty, Convert.ToDouble(groupValue * n + sizeValue * 2) });
+                        //}
 
                         //打包数据文件
                         string zipFile = dataFolder + System.IO.Path.DirectorySeparatorChar;
@@ -1177,33 +1176,33 @@ namespace MEIKScreen
                                     selectedUser.Uploaded = Visibility.Visible.ToString();
 
                                     //上传自动生成的PDF报告
-                                    if (File.Exists(sfPdfFile))
-                                    {
-                                        JObject jObject1 = new JObject();
-                                        jObject1["code"] = selectedUser.Code;
-                                        jObject1["result"] = selectedUser.Result;
-                                        NameValueCollection nvlist1 = new NameValueCollection();
-                                        nvlist1.Add("jsonStr", jObject.ToString());
-                                        resStr = HttpWebTools.UploadFile(App.reportSettingModel.CloudPath + "/api/sendScreenPDF", sfPdfFile, nvlist1, App.reportSettingModel.CloudToken);
-                                        var json = JObject.Parse(resStr);
-                                        bool res = (bool)json["status"];
-                                        if (!res)
-                                        {
-                                            errMsg.Add(selectedUser.Code + " :: " + App.Current.FindResource("Message_52").ToString() + json["info"]);
-                                        }
-                                    }
+                                    //if (File.Exists(sfPdfFile))
+                                    //{
+                                    //    JObject jObject1 = new JObject();
+                                    //    jObject1["code"] = selectedUser.Code;
+                                    //    jObject1["result"] = selectedUser.Result;
+                                    //    NameValueCollection nvlist1 = new NameValueCollection();
+                                    //    nvlist1.Add("jsonStr", jObject1.ToString());
+                                    //    resStr = HttpWebTools.UploadFile(App.reportSettingModel.CloudPath + "/api/sendScreenPDF", sfPdfFile, nvlist1, App.reportSettingModel.CloudToken);
+                                    //    var json = JObject.Parse(resStr);
+                                    //    bool res = (bool)json["status"];
+                                    //    if (!res)
+                                    //    {
+                                    //        errMsg.Add(selectedUser.Code + " :: " + App.Current.FindResource("Message_52").ToString() + json["info"]);
+                                    //    }
+                                    //}
                                 }
                                 else
                                 {                                    
                                     errMsg.Add(selectedUser.Code + " :: " + App.Current.FindResource("Message_52").ToString() +jsonObj["info"]);
                                 }
 
-                                try
-                                {                                    
-                                    File.Delete(csvFile);//删除生成的CSV文件
-                                    File.Delete(sfPdfFile);//删除生成的PDF文件                                
-                                }
-                                catch { }       
+                                //try
+                                //{                                    
+                                //    File.Delete(csvFile);//删除生成的CSV文件
+                                //    File.Delete(sfPdfFile);//删除生成的PDF文件                                
+                                //}
+                                //catch { }       
                             }
                             else if (App.reportSettingModel.TransferMode == TransferMode.Email)
                             {
@@ -1784,6 +1783,7 @@ namespace MEIKScreen
                         
                     }
                     catch (Exception) { }
+                   
                 }
                 else
                 {
@@ -2112,34 +2112,9 @@ namespace MEIKScreen
         private void btnViewImg_Click(object sender, RoutedEventArgs e)
         {
             var person = this.CodeListBox.SelectedItem as Person;
-            string imgFileName = person.ArchiveFolder + System.IO.Path.DirectorySeparatorChar + person.Code + ".jpg";
-            if (File.Exists(imgFileName))
-            {
-                var screenShotImg = ImageTools.GetBitmapImage(imgFileName as string);
-                if (screenShotImg != null)
-                {
-                    var stream = screenShotImg.StreamSource;
-                    stream.Position = 0;
-                    byte[] buffer = new byte[stream.Length];
-                    stream.Read(buffer, 0, buffer.Length);
-                    stream.Flush();
-                    ViewImagePage viewImagePage = new ViewImagePage(person,buffer);
-                    viewImagePage.Owner = this;
-                    viewImagePage.Show();
-                }
-                else
-                {
-                    ViewImagePage viewImagePage = new ViewImagePage(person);
-                    viewImagePage.Owner = this;
-                    viewImagePage.Show();
-                }
-            }
-            else
-            {
-                ViewImagePage viewImagePage = new ViewImagePage(person);
-                viewImagePage.Owner = this;
-                viewImagePage.Show();
-            }
+            ViewImagePage viewImagePage = new ViewImagePage(person);
+            viewImagePage.Owner = this;
+            viewImagePage.Show();
 
             
         }
@@ -4227,19 +4202,20 @@ namespace MEIKScreen
                 }
 
 
-                string imgFileName = _person.ArchiveFolder + System.IO.Path.DirectorySeparatorChar + _person.Code + ".jpg";
+                string imgFileName = _person.ArchiveFolder + System.IO.Path.DirectorySeparatorChar + _person.Code + ".png";
                 if (File.Exists(imgFileName))
-                {
-                    var screenShotImg = ImageTools.GetBitmapImage(imgFileName as string);
-                    if (screenShotImg != null)
-                    {
-                        var stream = screenShotImg.StreamSource;
-                        stream.Position = 0;
-                        byte[] buffer = new byte[stream.Length];
-                        stream.Read(buffer, 0, buffer.Length);
-                        stream.Flush();
-                        reportModel.DataScreenShotImg = buffer;
-                    }
+                {                                                            
+                    //var screenShotImg = ImageTools.GetBitmapImage(imgFileName as string);
+                    //if (screenShotImg != null)
+                    //{
+                    //    var stream = screenShotImg.StreamSource;
+                    //    stream.Position = 0;
+                    //    byte[] buffer = new byte[stream.Length];
+                    //    stream.Read(buffer, 0, buffer.Length);
+                    //    stream.Flush();
+                    //    reportModel.DataScreenShotImg = buffer;
+                    //}
+                    reportModel.DataScreenShotImg = ImageTools.GetBytesImage(imgFileName);
                 }
 
                 FixedPage page = (FixedPage)PrintPreviewWindow.LoadFixedDocumentAndRender(sfReportTempl, reportModel);

@@ -272,7 +272,6 @@
 		<row><td>NewBinary7</td><td/><td>&lt;ISProductFolder&gt;\Redist\Language Independent\OS Independent\ReinstIco.ibd</td></row>
 		<row><td>NewBinary8</td><td/><td>&lt;ISProductFolder&gt;\Redist\Language Independent\OS Independent\RemoveIco.ibd</td></row>
 		<row><td>NewBinary9</td><td/><td>&lt;ISProductFolder&gt;\Redist\Language Independent\OS Independent\SetupIcon.ibd</td></row>
-		<row><td>SetAllUsers.dll</td><td/><td>&lt;ISRedistPlatformDependentFolder&gt;\SetAllUsers.dll</td></row>
 	</table>
 
 	<table name="BindImage">
@@ -341,12 +340,11 @@
 		<col def="S0">ISDotNetInstallerArgsCommit</col>
 		<col def="S0">ISDotNetInstallerArgsUninstall</col>
 		<col def="S0">ISDotNetInstallerArgsRollback</col>
-		<row><td>ICSharpCode.SharpZipLib.dll</td><td>{80B8A2C9-C606-4A5C-8584-4D68CF0E7E16}</td><td>INSTALLDIR</td><td>2</td><td/><td>icsharpcode.sharpziplib.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ICSharpCode.SharpZipLib.dll</td><td>{C4E60350-58E9-4091-B154-DE0D68EB2B8D}</td><td>INSTALLDIR</td><td>2</td><td/><td>icsharpcode.sharpziplib.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td>{2305A005-9C58-4AB1-AF92-44050E2F06BC}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>IS_ININSTALL_SHORTCUT</td><td>{F7535313-3374-420E-8EFC-6E74B883BCB0}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>MEIKScreen.exe</td><td>{ACEE745A-0740-495C-8C0C-716E099270E4}</td><td>INSTALLDIR</td><td>2</td><td/><td>meikscreen.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Xceed.Wpf.Toolkit.dll</td><td>{BF473814-552A-4B0C-A369-68C42C09DA0B}</td><td>INSTALLDIR</td><td>2</td><td/><td>xceed.wpf.toolkit.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>gxpswin32.exe</td><td>{D7936EC1-1493-407F-A5FA-7C12270732E3}</td><td>INSTALLDIR</td><td>2</td><td/><td>gxpswin32.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>MEIKScreen.exe</td><td>{E45E2319-0FF1-4A05-A29F-EA632C7B1C1B}</td><td>INSTALLDIR</td><td>2</td><td/><td>meikscreen.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>gxpswin32.exe</td><td>{2F6157C9-451A-49EA-9312-C5A68C7156BA}</td><td>INSTALLDIR</td><td>2</td><td/><td>gxpswin32.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 	</table>
 
 	<table name="Condition">
@@ -1060,7 +1058,6 @@
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT</td></row>
 		<row><td>INSTALLDIR</td><td>IS_ININSTALL_SHORTCUT</td></row>
 		<row><td>INSTALLDIR</td><td>MEIKScreen.exe</td></row>
-		<row><td>INSTALLDIR</td><td>Xceed.Wpf.Toolkit.dll</td></row>
 		<row><td>INSTALLDIR</td><td>gxpswin32.exe</td></row>
 	</table>
 
@@ -1071,13 +1068,11 @@
 		<col def="S0">Target</col>
 		<col def="I4">ExtendedType</col>
 		<col def="S255">ISComments</col>
-		<row><td>ISPreventDowngrade</td><td>19</td><td/><td>[IS_PREVENT_DOWNGRADE_EXIT]</td><td/><td/></row>
 		<row><td>ISPrint</td><td>1</td><td>SetAllUsers.dll</td><td>PrintScrollableText</td><td/><td>Prints the contents of a ScrollableText control on a dialog.</td></row>
 		<row><td>ISRunSetupTypeAddLocalEvent</td><td>1</td><td>ISExpHlp.dll</td><td>RunSetupTypeAddLocalEvent</td><td/><td>Run the AddLocal events associated with the Next button on the Setup Type dialog.</td></row>
 		<row><td>ISSelfRegisterCosting</td><td>1</td><td>ISSELFREG.DLL</td><td>ISSelfRegisterCosting</td><td/><td/></row>
 		<row><td>ISSelfRegisterFiles</td><td>3073</td><td>ISSELFREG.DLL</td><td>ISSelfRegisterFiles</td><td/><td/></row>
 		<row><td>ISSelfRegisterFinalize</td><td>1</td><td>ISSELFREG.DLL</td><td>ISSelfRegisterFinalize</td><td/><td/></row>
-		<row><td>ISSetAllUsers</td><td>257</td><td>SetAllUsers.dll</td><td>SetAllUsers</td><td/><td/></row>
 		<row><td>ISUnSelfRegisterFiles</td><td>3073</td><td>ISSELFREG.DLL</td><td>ISUnSelfRegisterFiles</td><td/><td/></row>
 		<row><td>LaunchProgramFileFromSetupCompleteSuccess</td><td>1</td><td>NewBinary19</td><td>LaunchProgram</td><td/><td/></row>
 		<row><td>SetARPINSTALLLOCATION</td><td>51</td><td>ARPINSTALLLOCATION</td><td>[INSTALLDIR]</td><td/><td/></row>
@@ -1153,16 +1148,13 @@
 		<row><td>FavoritesFolder</td><td>TARGETDIR</td><td>.:FAVORI~1|Favorites</td><td/><td>0</td><td/></row>
 		<row><td>FontsFolder</td><td>TARGETDIR</td><td>.:Fonts</td><td/><td>0</td><td/></row>
 		<row><td>GlobalAssemblyCache</td><td>TARGETDIR</td><td>.:Global~1|GlobalAssemblyCache</td><td/><td>0</td><td/></row>
-		<row><td>INSTALLDIR</td><td>MEIKSCREEN1</td><td>.</td><td/><td>0</td><td/></row>
+		<row><td>INSTALLDIR</td><td>MEIKSCREEN</td><td>.</td><td/><td>0</td><td/></row>
 		<row><td>ISCommonFilesFolder</td><td>CommonFilesFolder</td><td>Instal~1|InstallShield</td><td/><td>0</td><td/></row>
-		<row><td>ISMyCompanyDir</td><td>ProgramFilesFolder</td><td>MYCOMP~1|My Company Name</td><td/><td>0</td><td/></row>
-		<row><td>ISMyProductDir</td><td>ISMyCompanyDir</td><td>MYPROD~1|My Product Name</td><td/><td>0</td><td/></row>
 		<row><td>ISYourDataBaseDir</td><td>INSTALLDIR</td><td>Database</td><td/><td>0</td><td/></row>
 		<row><td>LocalAppDataFolder</td><td>TARGETDIR</td><td>.:LocalA~1|LocalAppData</td><td/><td>0</td><td/></row>
-		<row><td>MEIKSCREEN1</td><td>ProgramFilesFolder</td><td>MEIKSC~1|MEIKScreen</td><td/><td>0</td><td/></row>
-		<row><td>MY_PRODUCT_NAME</td><td>NUVOMED</td><td>MYPROD~1|My Product Name</td><td/><td>0</td><td/></row>
+		<row><td>MEIKASIA</td><td>ProgramFilesFolder</td><td>MEIKAsia</td><td/><td>0</td><td/></row>
+		<row><td>MEIKSCREEN</td><td>MEIKASIA</td><td>MEIKSC~1|MEIKScreen</td><td/><td>0</td><td/></row>
 		<row><td>MyPicturesFolder</td><td>TARGETDIR</td><td>.:MyPict~1|MyPictures</td><td/><td>0</td><td/></row>
-		<row><td>NUVOMED</td><td>ProgramFilesFolder</td><td>nuvomed</td><td/><td>0</td><td/></row>
 		<row><td>NetHoodFolder</td><td>TARGETDIR</td><td>.:NetHood</td><td/><td>0</td><td/></row>
 		<row><td>PersonalFolder</td><td>TARGETDIR</td><td>.:Personal</td><td/><td>0</td><td/></row>
 		<row><td>PrimaryVolumePath</td><td>TARGETDIR</td><td>.:Primar~1|PrimaryVolumePath</td><td/><td>0</td><td/></row>
@@ -1183,7 +1175,8 @@
 		<row><td>USERPROFILE</td><td>TARGETDIR</td><td>.:USERPR~1|UserProfile</td><td/><td>0</td><td/></row>
 		<row><td>WindowsFolder</td><td>TARGETDIR</td><td>.:Windows</td><td/><td>0</td><td/></row>
 		<row><td>WindowsVolume</td><td>TARGETDIR</td><td>.:WinRoot</td><td/><td>0</td><td/></row>
-		<row><td>meiksc_1_meikscreen</td><td>ProgramMenuFolder</td><td>MEIKSC~1|MEIKScreen</td><td/><td>1</td><td/></row>
+		<row><td>meikasia</td><td>ProgramMenuFolder</td><td>MEIKAsia</td><td/><td>1</td><td/></row>
+		<row><td>meikscreen</td><td>meikasia</td><td>MEIKSC~1|MEIKScreen</td><td/><td>1</td><td/></row>
 	</table>
 
 	<table name="DrLocator">
@@ -1879,7 +1872,6 @@
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT</td></row>
 		<row><td>AlwaysInstall</td><td>IS_ININSTALL_SHORTCUT</td></row>
 		<row><td>AlwaysInstall</td><td>MEIKScreen.exe</td></row>
-		<row><td>AlwaysInstall</td><td>Xceed.Wpf.Toolkit.dll</td></row>
 		<row><td>AlwaysInstall</td><td>gxpswin32.exe</td></row>
 	</table>
 
@@ -1899,7 +1891,6 @@
 		<row><td>gxpswin32.exe</td><td>gxpswin32.exe</td><td>GXPSWI~1.EXE|gxpswin32.exe</td><td>0</td><td/><td/><td/><td>1</td><td>D:\NewGit\MEIK_MA\MEIKScreen\MEIKScreen\bin\Release\gxpswin32.exe</td><td>1</td><td/></row>
 		<row><td>icsharpcode.sharpziplib.dll</td><td>ICSharpCode.SharpZipLib.dll</td><td>ICSHAR~1.DLL|ICSharpCode.SharpZipLib.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\NewGit\MEIK_MA\MEIKScreen\MEIKScreen\bin\Release\ICSharpCode.SharpZipLib.dll</td><td>1</td><td/></row>
 		<row><td>meikscreen.exe</td><td>MEIKScreen.exe</td><td>MEIKSC~1.EXE|MEIKScreen.exe</td><td>0</td><td/><td/><td/><td>1</td><td>D:\NewGit\MEIK_MA\MEIKScreen\MEIKScreen\bin\Release\MEIKScreen.exe</td><td>1</td><td/></row>
-		<row><td>xceed.wpf.toolkit.dll</td><td>Xceed.Wpf.Toolkit.dll</td><td>XCEEDW~1.DLL|Xceed.Wpf.Toolkit.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\NewGit\MEIK_MA\MEIKScreen\MEIKScreen\bin\Release\Xceed.Wpf.Toolkit.dll</td><td>1</td><td/></row>
 	</table>
 
 	<table name="FileSFPCatalog">
@@ -2042,12 +2033,11 @@
 		<col def="S0">FTPLocation</col>
 		<col def="S0">HTTPLocation</col>
 		<col def="S0">Miscellaneous</col>
-		<row><td>ICSharpCode.SharpZipLib.dll</td><td/><td/><td>_5576F19F_94BA_49BD_B9EB_5E397B9365D2_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ICSharpCode.SharpZipLib.dll</td><td/><td/><td>_92337BE2_6D10_4607_9244_85926EE7EB41_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_E7A236F2_D7F1_4045_88E4_102FA3541338_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>IS_ININSTALL_SHORTCUT</td><td/><td/><td>_A5CA677E_3FC6_42EE_80D1_0568B0BEDD61_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>MEIKScreen.exe</td><td/><td/><td>_F6028FEE_D4F7_4FA4_BAE7_E050E5B7CC62_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Xceed.Wpf.Toolkit.dll</td><td/><td/><td>_F685EAE0_6BAC_46A9_AA93_0C901A0CF6B4_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>gxpswin32.exe</td><td/><td/><td>_E2AC3298_2067_4FC8_9287_277AE70D81B1_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>MEIKScreen.exe</td><td/><td/><td>_BDE969E9_E6F5_4AA3_B53C_1C21E46D99EF_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>gxpswin32.exe</td><td/><td/><td>_D8AA7ECD_F764_49AC_8BCB_D5AE91E7A798_FILTER</td><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="ISCustomActionReference">
@@ -2393,7 +2383,7 @@
 		<row><td>DVD-18</td><td>Express</td><td>&lt;ISProjectDataFolder&gt;</td><td>Default</td><td>3</td><td>1033</td><td>0</td><td>2</td><td>Intel</td><td/><td>1033</td><td>0</td><td>15.83</td><td>1</td><td>2048</td><td/><td>0</td><td/><td>MediaLocation</td><td/><td>http://</td><td/><td/><td/><td/><td>75805</td><td/><td/><td/><td>3</td></row>
 		<row><td>DVD-5</td><td>Express</td><td>&lt;ISProjectDataFolder&gt;</td><td>Default</td><td>3</td><td>1033</td><td>0</td><td>2</td><td>Intel</td><td/><td>1033</td><td>0</td><td>4.38</td><td>1</td><td>2048</td><td/><td>0</td><td/><td>MediaLocation</td><td/><td>http://</td><td/><td/><td/><td/><td>75805</td><td/><td/><td/><td>3</td></row>
 		<row><td>DVD-9</td><td>Express</td><td>&lt;ISProjectDataFolder&gt;</td><td>Default</td><td>3</td><td>1033</td><td>0</td><td>2</td><td>Intel</td><td/><td>1033</td><td>0</td><td>7.95</td><td>1</td><td>2048</td><td/><td>0</td><td/><td>MediaLocation</td><td/><td>http://</td><td/><td/><td/><td/><td>75805</td><td/><td/><td/><td>3</td></row>
-		<row><td>SingleImage</td><td>Express</td><td>&lt;ISProjectDataFolder&gt;</td><td>PackageName</td><td>1</td><td>1033</td><td>0</td><td>1</td><td>Intel</td><td/><td>1033</td><td>0</td><td>0</td><td>0</td><td>0</td><td/><td>0</td><td/><td>MediaLocation</td><td/><td>http://</td><td/><td/><td/><td/><td>108573</td><td/><td/><td/><td>3</td></row>
+		<row><td>SingleImage</td><td>Express</td><td>&lt;ISProjectDataFolder&gt;</td><td>PackageName</td><td>1</td><td>1033</td><td>0</td><td>1</td><td>Intel</td><td/><td>1033</td><td>0</td><td>0</td><td>0</td><td>0</td><td/><td>0</td><td/><td>MediaLocation</td><td/><td>http://</td><td/><td/><td/><td/><td>108573</td><td/><td/><td/><td>1</td></row>
 		<row><td>WebDeployment</td><td>Express</td><td>&lt;ISProjectDataFolder&gt;</td><td>PackageName</td><td>4</td><td>1033</td><td>2</td><td>1</td><td>Intel</td><td/><td>1033</td><td>0</td><td>0</td><td>0</td><td>0</td><td/><td>0</td><td/><td>MediaLocation</td><td/><td>http://</td><td/><td/><td/><td/><td>124941</td><td/><td/><td/><td>3</td></row>
 	</table>
 
@@ -2636,7 +2626,7 @@
 		<col def="I2">Encoded</col>
 		<col def="S0">Comment</col>
 		<col def="I4">TimeStamp</col>
-		<row><td>COMPANY_NAME</td><td>1033</td><td>meikasia</td><td>0</td><td/><td>1227215926</td></row>
+		<row><td>COMPANY_NAME</td><td>1033</td><td>MEIKAsia</td><td>0</td><td/><td>-458927242</td></row>
 		<row><td>DN_AlwaysInstall</td><td>1033</td><td>Always Install</td><td>0</td><td/><td>-1650164255</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_COLOR</td><td>1033</td><td>The color settings of your system are not adequate for running [ProductName].</td><td>0</td><td/><td>-1650162207</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_DOTNETVERSION40CLIENT</td><td>1033</td><td>Microsoft .NET Framework 4.0 Client Package or greater needs to be installed for this installation to continue.</td><td>0</td><td/><td>-1650180030</td></row>
@@ -3468,6 +3458,10 @@
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME23</td><td>1033</td><td>LAUNCH~1.EXE|Launch gxpswin32.exe</td><td>0</td><td/><td>-1801124940</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME24</td><td>1033</td><td>MEIKScreen2.0</td><td>0</td><td/><td>-1801118764</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME25</td><td>1033</td><td>Uninstall</td><td>0</td><td/><td>-1801096236</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME26</td><td>1033</td><td>Uninstall2.0</td><td>0</td><td/><td>-458928754</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME27</td><td>1033</td><td>Uninstall</td><td>0</td><td/><td>-458895025</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME28</td><td>1033</td><td>LAUNCH~1.EXE|Launch gxpswin32.exe</td><td>0</td><td/><td>-458948077</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME29</td><td>1033</td><td>MEIKScreen2.0</td><td>0</td><td/><td>-458909165</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME3</td><td>1033</td><td>Uninstall</td><td>0</td><td/><td>-1650142942</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME4</td><td>1033</td><td>Uninstall</td><td>0</td><td/><td>-1776002026</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME5</td><td>1033</td><td>LAUNCH~1.EXE|Launch gxpswin32.exe</td><td>0</td><td/><td>-702255438</td></row>
@@ -3763,15 +3757,17 @@
 		<row><td>IDS__TargetReq_DESC_PROCESSOR</td><td>1033</td><td>The processor is not adequate for running [ProductName].</td><td>0</td><td/><td>-1650162207</td></row>
 		<row><td>IDS__TargetReq_DESC_RAM</td><td>1033</td><td>The amount of RAM is not adequate for running [ProductName].</td><td>0</td><td/><td>-1650162207</td></row>
 		<row><td>IDS__TargetReq_DESC_RESOLUTION</td><td>1033</td><td>The screen resolution is not adequate for running [ProductName].</td><td>0</td><td/><td>-1650162207</td></row>
-		<row><td>ID_STRING1</td><td>1033</td><td>http://www.meikasia.com</td><td>0</td><td/><td>1227215926</td></row>
+		<row><td>ID_STRING1</td><td>1033</td><td>http://www.MEIKAsia.com</td><td>0</td><td/><td>-458927242</td></row>
 		<row><td>ID_STRING10</td><td>1033</td><td>MEIKScreen</td><td>0</td><td/><td>1218814827</td></row>
 		<row><td>ID_STRING11</td><td>1033</td><td>MEIKScreen.exe</td><td>0</td><td/><td>-1591397226</td></row>
 		<row><td>ID_STRING12</td><td>1033</td><td>MEIKScreen.exe</td><td>0</td><td/><td>-240843913</td></row>
 		<row><td>ID_STRING13</td><td>1033</td><td>LAUNCH~1.EXE|Launch MEIKScreen.exe</td><td>0</td><td/><td>-1801073740</td></row>
-		<row><td>ID_STRING2</td><td>1033</td><td>meikasia</td><td>0</td><td/><td>1227215926</td></row>
+		<row><td>ID_STRING14</td><td>1033</td><td>Uninstall2.0</td><td>0</td><td/><td>-458903021</td></row>
+		<row><td>ID_STRING15</td><td>1033</td><td>MEIKScreen2.0</td><td>0</td><td/><td>-458888685</td></row>
+		<row><td>ID_STRING2</td><td>1033</td><td>MEIKAsia</td><td>0</td><td/><td>-458927242</td></row>
 		<row><td>ID_STRING3</td><td>1033</td><td>Contact:  admin@campray.com</td><td>0</td><td/><td>-1650143551</td></row>
 		<row><td>ID_STRING4</td><td>1033</td><td>admin@campray.com</td><td>0</td><td/><td>-1650151615</td></row>
-		<row><td>ID_STRING5</td><td>1033</td><td>http://www.meikasia.com</td><td>0</td><td/><td>1227215926</td></row>
+		<row><td>ID_STRING5</td><td>1033</td><td>http://www.MEIKAsia.com</td><td>0</td><td/><td>-458927242</td></row>
 		<row><td>ID_STRING6</td><td>1033</td><td>http://www.meikasia.com</td><td>0</td><td/><td>-1650170015</td></row>
 		<row><td>ID_STRING7</td><td>1033</td><td>Standalone MEIK Screen program</td><td>0</td><td/><td>-1650165758</td></row>
 		<row><td>ID_STRING8</td><td>1033</td><td>MEIKScreen</td><td>0</td><td/><td>-1650183966</td></row>
@@ -3896,6 +3892,7 @@
 		<row><td>MEIKScreen.exe1_8CBB47C4FB6E45A1AF029075DA269F34.exe</td><td/><td>C:\Users\CampRay\Downloads\20170101\MEIK_Standalone\MEIKScreen\MEIKScreen\bin\Release\MEIKScreen.exe</td><td>0</td></row>
 		<row><td>MEIKScreen.exe1_908A12CF86CC41E783F6F1D00F854926.exe</td><td/><td>&lt;VSSolutionFolder&gt;\MEIKScreen\bin\Release\MEIKScreen.exe</td><td>0</td></row>
 		<row><td>MEIKScreen.exe1_BBA99D071F224E7EAF527A2F9151208C.exe</td><td/><td>D:\NewGit\MEIK_Standalone\MEIKScreen\MEIKScreen\bin\Release\MEIKScreen.exe</td><td>0</td></row>
+		<row><td>MEIKScreen.exe1_CA001D7FBA5844F7923DD62D27BA0DAF.exe</td><td/><td>D:\NewGit\MEIK_MA\MEIKScreen\MEIKScreen\bin\Release\MEIKScreen.exe</td><td>0</td></row>
 		<row><td>MEIKScreen.exe1_E9E31AD09506448AA05E81B9C8225299.exe</td><td/><td>D:\NewGit\MEIK_Standalone\MEIKScreen\MEIKScreen\bin\Release\MEIKScreen.exe</td><td>0</td></row>
 		<row><td>MEIKScreen.exe_5AA619E213654778ADE508703D60D931.exe</td><td/><td>&lt;VSSolutionFolder&gt;\MEIKScreen\bin\Release\MEIKScreen.exe</td><td>0</td></row>
 		<row><td>MEIKScreen.exe_5E772D26A94B4D0EB935D7AA33465E0B.exe</td><td/><td>D:\NewGit\MEIK_Standalone\MEIKScreen\MEIKScreen\bin\Release\MEIKScreen.exe</td><td>0</td></row>
@@ -3903,8 +3900,9 @@
 		<row><td>MEIKScreen.exe_A69C2276810D41DA87FF11DB954A3327.exe</td><td/><td>D:\NewGit\MEIK_Standalone\MEIKScreen\MEIKScreen\bin\Release\MEIKScreen.exe</td><td>0</td></row>
 		<row><td>MEIKScreen.exe_B0113CC1ABC94C9182B4D9724ABD0831.exe</td><td/><td>D:\NewGit\MEIK_Cloud\MEIKScreen\MEIKScreen\bin\Release\MEIKScreen.exe</td><td>0</td></row>
 		<row><td>MEIKScreen.exe_D97D006AAFCB4C03BE1180FDD61A712E.exe</td><td/><td>C:\Users\CampRay\Downloads\20170101\MEIK_Standalone\MEIKScreen\MEIKScreen\bin\Release\MEIKScreen.exe</td><td>0</td></row>
+		<row><td>MEIKScreen.exe_E322EBB60A0A4536BAAF4F74A772A474.exe</td><td/><td>D:\NewGit\MEIK_MA\MEIKScreen\MEIKScreen\bin\Release\MEIKScreen.exe</td><td>0</td></row>
 		<row><td>MEIKScreen.exe_FB1F2389C36D4D7FA1A6A82BAF42F7F8.exe</td><td/><td>D:\NewGit\MEIK_Cloud\MEIKScreen\MEIKScreen\bin\Release\MEIKScreen.exe</td><td>0</td></row>
-		<row><td>UNINST_Uninstall_M_C24C7A25F5494F929FC858668F73A9E2.exe</td><td/><td>C:\Program Files (x86)\InstallShield\2015LE\Redist\Language Independent\OS Independent\uninstall.ico</td><td>0</td></row>
+		<row><td>NewShortcut1_87A798E3FB09436EB872E1151A3DEF74.exe</td><td/><td>C:\Program Files (x86)\InstallShield\2015LE\Redist\Language Independent\OS Independent\uninstall.ico</td><td>0</td></row>
 		<row><td>gxpswin32.exe_99AD1AC3BDEC44EAAC693EB56B732D71.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
 	</table>
 
@@ -3946,12 +3944,10 @@
 		<row><td>DuplicateFiles</td><td/><td>4210</td><td>DuplicateFiles</td><td/></row>
 		<row><td>FileCost</td><td/><td>900</td><td>FileCost</td><td/></row>
 		<row><td>FindRelatedProducts</td><td>NOT ISSETUPDRIVEN</td><td>420</td><td>FindRelatedProducts</td><td/></row>
-		<row><td>ISPreventDowngrade</td><td>ISFOUNDNEWERPRODUCTVERSION</td><td>450</td><td/><td/></row>
 		<row><td>ISRunSetupTypeAddLocalEvent</td><td>Not Installed And Not ISRUNSETUPTYPEADDLOCALEVENT</td><td>1050</td><td>ISRunSetupTypeAddLocalEvent</td><td/></row>
 		<row><td>ISSelfRegisterCosting</td><td/><td>2201</td><td/><td/></row>
 		<row><td>ISSelfRegisterFiles</td><td/><td>5601</td><td/><td/></row>
 		<row><td>ISSelfRegisterFinalize</td><td/><td>6601</td><td/><td/></row>
-		<row><td>ISSetAllUsers</td><td>Not Installed</td><td>10</td><td/><td/></row>
 		<row><td>ISUnSelfRegisterFiles</td><td/><td>2202</td><td/><td/></row>
 		<row><td>InstallFiles</td><td/><td>4000</td><td>InstallFiles</td><td/></row>
 		<row><td>InstallFinalize</td><td/><td>6600</td><td>InstallFinalize</td><td/></row>
@@ -4068,8 +4064,6 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>ExecuteAction</td><td/><td>1300</td><td>ExecuteAction</td><td/></row>
 		<row><td>FileCost</td><td/><td>900</td><td>FileCost</td><td/></row>
 		<row><td>FindRelatedProducts</td><td/><td>430</td><td>FindRelatedProducts</td><td/></row>
-		<row><td>ISPreventDowngrade</td><td>ISFOUNDNEWERPRODUCTVERSION</td><td>450</td><td/><td/></row>
-		<row><td>ISSetAllUsers</td><td>Not Installed</td><td>10</td><td/><td/></row>
 		<row><td>InstallWelcome</td><td>Not Installed</td><td>1210</td><td>InstallWelcome</td><td/></row>
 		<row><td>IsolateComponents</td><td/><td>950</td><td>IsolateComponents</td><td/></row>
 		<row><td>LaunchConditions</td><td>Not Installed</td><td>410</td><td>LaunchConditions</td><td/></row>
@@ -4420,9 +4414,9 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>PROGMSG_IIS_ROLLBACKVROOTS</td><td>##IDS_PROGMSG_IIS_ROLLBACKVROOTS##</td><td/></row>
 		<row><td>PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS</td><td>##IDS_PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS##</td><td/></row>
 		<row><td>PROGRAMFILETOLAUNCHATEND</td><td>[INSTALLDIR]MEIKScreen.exe</td><td/></row>
-		<row><td>ProductCode</td><td>{491EA3B9-D843-4142-A9CC-EF2AAF3880CE}</td><td/></row>
+		<row><td>ProductCode</td><td>{89ED9849-6D8F-4A79-89EA-3D0F9CF43C84}</td><td/></row>
 		<row><td>ProductName</td><td>MEIKScreen</td><td/></row>
-		<row><td>ProductVersion</td><td>2.0.1</td><td/></row>
+		<row><td>ProductVersion</td><td>2.0.0</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
 		<row><td>ProgressType1</td><td>Installing</td><td/></row>
 		<row><td>ProgressType2</td><td>installed</td><td/></row>
@@ -4435,10 +4429,10 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>SERIALNUMBER</td><td/><td/></row>
 		<row><td>SERIALNUMVALSUCCESSRETVAL</td><td>1</td><td/></row>
 		<row><td>SHOWLAUNCHPROGRAM</td><td>-1</td><td/></row>
-		<row><td>SecureCustomProperties</td><td>USERNAME;COMPANYNAME;ISX_SERIALNUM;SUPPORTDIR;DOTNETVERSION45FULL;ISACTIONPROP1</td><td/></row>
+		<row><td>SecureCustomProperties</td><td>USERNAME;COMPANYNAME;ISX_SERIALNUM;SUPPORTDIR;DOTNETVERSION45FULL</td><td/></row>
 		<row><td>SelectedSetupType</td><td>##IDS__DisplayName_Typical##</td><td/></row>
 		<row><td>SetupType</td><td>Typical</td><td/></row>
-		<row><td>UpgradeCode</td><td>{EECB4541-7D1E-4F21-9B9C-2BBD8E860D15}</td><td/></row>
+		<row><td>UpgradeCode</td><td>{05CC25F7-9922-449E-A0A8-F8934AACB622}</td><td/></row>
 		<row><td>_IsMaintenance</td><td>Change</td><td/></row>
 		<row><td>_IsSetupTypeMin</td><td>Typical</td><td/></row>
 	</table>
@@ -4499,10 +4493,8 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="L255">FileName</col>
 		<col def="s72">DirProperty</col>
 		<col def="i2">InstallMode</col>
-		<row><td>FileKey1</td><td>gxpswin32.exe</td><td/><td>meikasia</td><td>2</td></row>
-		<row><td>FileKey2</td><td>gxpswin32.exe</td><td/><td>meiksc_1_meikscreen1</td><td>2</td></row>
-		<row><td>MEIKScreen.exe</td><td>MEIKScreen.exe</td><td/><td>meiksc_1_meikscreen</td><td>2</td></row>
-		<row><td>UNINST_Uninstall_MEIKScreen</td><td>IS_ININSTALL_SHORTCUT</td><td/><td>meiksc_1_meikscreen</td><td>2</td></row>
+		<row><td>MEIKScreen.exe</td><td>MEIKScreen.exe</td><td/><td>meikscreen</td><td>2</td></row>
+		<row><td>NewShortcut1</td><td>ISX_DEFAULTCOMPONENT</td><td/><td>meikscreen</td><td>2</td></row>
 	</table>
 
 	<table name="RemoveIniFile">
@@ -4588,9 +4580,9 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S255">ISComments</col>
 		<col def="S255">ISShortcutName</col>
 		<col def="I4">ISAttributes</col>
-		<row><td>MEIKScreen.exe</td><td>meiksc_1_meikscreen</td><td>##IDS_SHORTCUT_DISPLAY_NAME24##</td><td>MEIKScreen.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>MEIKScreen.exe_66CDECC2E60247A38CBA2DD95EB1F1AF.exe</td><td>1</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
-		<row><td>MEIKScreen.exe1</td><td>DesktopFolder</td><td>##IDS_SHORTCUT_DISPLAY_NAME24##</td><td>MEIKScreen.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>MEIKScreen.exe1_6A633F8A827243C8A7C2C466E38B6C12.exe</td><td>1</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
-		<row><td>UNINST_Uninstall_MEIKScreen</td><td>meiksc_1_meikscreen</td><td>##IDS_SHORTCUT_DISPLAY_NAME25##</td><td>IS_ININSTALL_SHORTCUT</td><td>[SystemFolder]msiexec.exe</td><td>/x {E68DC78E-BD60-44AB-AC93-09697822E0D3}</td><td/><td/><td>UNINST_Uninstall_M_C24C7A25F5494F929FC858668F73A9E2.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>MEIKScreen.exe</td><td>meikscreen</td><td>##IDS_SHORTCUT_DISPLAY_NAME29##</td><td>MEIKScreen.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>MEIKScreen.exe_E322EBB60A0A4536BAAF4F74A772A474.exe</td><td>1</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>MEIKScreen.exe1</td><td>DesktopFolder</td><td>##IDS_SHORTCUT_DISPLAY_NAME29##</td><td>MEIKScreen.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>MEIKScreen.exe1_CA001D7FBA5844F7923DD62D27BA0DAF.exe</td><td>1</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>NewShortcut1</td><td>meikscreen</td><td>##ID_STRING14##</td><td>ISX_DEFAULTCOMPONENT</td><td>[SystemFolder]MsiExec.exe</td><td>/x [ProductCode]</td><td/><td/><td>NewShortcut1_87A798E3FB09436EB872E1151A3DEF74.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="Signature">
@@ -4712,7 +4704,6 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S255">Remove</col>
 		<col def="s72">ActionProperty</col>
 		<col def="S72">ISDisplayName</col>
-		<row><td>{EECB4541-7D1E-4F21-9B9C-2BBD8E860D15}</td><td>1.0.0</td><td>9.9.9</td><td>1033</td><td>768</td><td/><td>ISACTIONPROP1</td><td>NewUpgradeEntry1</td></row>
 	</table>
 
 	<table name="Verb">

@@ -56,7 +56,7 @@ namespace MEIKScreen.Model
         private string regYear;
         private string remark;
         private bool free = false;
-        //自動分析結果：0 正常，1 綠色，2 紅色
+        //自動分析結果：-1 無結果， 0 正常，1 綠色，2 紅色
         private int result = -1;
         private int leftResult = -1;
         private int rightResult = -1;

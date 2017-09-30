@@ -32,10 +32,11 @@
     <sys:String x:Key="CommonExportSelectBtn">請選擇導出的PDF模板</sys:String>
     <sys:String x:Key="CommonExportNuvoMedBtn">NuvoTEK PDF</sys:String>
     <sys:String x:Key="CommonExportGoodUnionBtn">GoodUnino PDF</sys:String>
-    <sys:String x:Key="CommonStatusScreen">Screened</sys:String>
-    <sys:String x:Key="CommonStatusNew">New Client</sys:String>
-    <sys:String x:Key="CommonStatusDataSent">Data Sent</sys:String>
-    <sys:String x:Key="CommonStatusReport">Received Report</sys:String>
+    <sys:String x:Key="CommonAnalysisBtn">分析</sys:String>
+    <sys:String x:Key="CommonStatusScreen">已經檢測</sys:String>
+    <sys:String x:Key="CommonStatusNew">新的用戶</sys:String>
+    <sys:String x:Key="CommonStatusDataSent">數據送出</sys:String>
+    <sys:String x:Key="CommonStatusReport">收到報告</sys:String>
     <sys:String x:Key="CommonLicenseLab">授權密鑰</sys:String>
     <sys:String x:Key="CommonAdminPwdLab">管理員密碼</sys:String>
 
@@ -67,7 +68,9 @@
     <sys:String x:Key="Dialog11">客戶編號</sys:String>
     <sys:String x:Key="Dialog12">搜索客戶</sys:String>
     <sys:String x:Key="Dialog13">重置</sys:String>
-
+    <sys:String x:Key="Dialog14">左乳:</sys:String>
+    <sys:String x:Key="Dialog15">右乳:</sys:String>
+    
     <sys:String x:Key="Label1">預覽乳房造影圖片(此圖片將在檢查報告中顯示)</sys:String>
 
     <sys:String x:Key="Message_1">啟動MEIK v5.6程序失敗，錯誤信息：</sys:String>
@@ -167,6 +170,7 @@
     <sys:String x:Key="UserListWinExaminationReportBtn">檢查報告</sys:String>
     <sys:String x:Key="UserListWinSummaryReportBtn">總結報告</sys:String>
     <sys:String x:Key="UserListWinDeleteBtn">刪除</sys:String>
+    <sys:String x:Key="UserListWinEmailReportBtn">發送報告</sys:String>
     <sys:String x:Key="UserListWinPatientCardTitle">客戶健康記錄</sys:String>
     <sys:String x:Key="UserListWinNewBtn">新建</sys:String>
     <sys:String x:Key="UserListWinEmailDataBtn">發送數據</sys:String>

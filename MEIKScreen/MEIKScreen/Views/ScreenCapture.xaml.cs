@@ -88,21 +88,18 @@ namespace MEIKScreen.Views
             iw = Convert.ToInt32(width);
             ih = Convert.ToInt32(height);
             string screenshotFolder = this.selectedUser.ArchiveFolder;
-            try{
-                if (!Directory.Exists(screenshotFolder))
-                {
-                    Directory.CreateDirectory(screenshotFolder);
-                    FileHelper.SetFolderPower(screenshotFolder, "Everyone", "FullControl");
-                    FileHelper.SetFolderPower(screenshotFolder, "Users", "FullControl");
-                }
-
+            try{                
                 Bitmap image = new Bitmap(iw, ih, System.Drawing.Imaging.PixelFormat.Format32bppArgb);
+                
                 Graphics g = Graphics.FromImage(image);
                 g.CopyFromScreen(ix-6, iy-6, 0, 0, new System.Drawing.Size(iw+12, ih), CopyPixelOperation.SourceCopy);                
                 
-                string imgFileName = screenshotFolder + System.IO.Path.DirectorySeparatorChar + this.selectedUser.Code+".jpg";
-                image.Save(imgFileName, ImageFormat.Jpeg);
-
+                string imgFileName = screenshotFolder + System.IO.Path.DirectorySeparatorChar + this.selectedUser.Code+".png";
+                //string jpgFileName = screenshotFolder + System.IO.Path.DirectorySeparatorChar + this.selectedUser.Code + ".jpg";
+                image.Save(imgFileName, ImageFormat.Png);
+                //image.Save(jpgFileName, ImageFormat.Jpeg);                
+                image.Dispose();
+                //File.Copy(imgFileName, jpgFileName);
                 if (this.callbackMethod != null)
                 {
                     this.callbackMethod(imgFileName);
@@ -115,8 +112,8 @@ namespace MEIKScreen.Views
                 System.Windows.MessageBox.Show(this, App.Current.FindResource("Message_10").ToString());
             }
             //App.opendWin.Owner.Visibility = Visibility.Visible;
-            App.opendWin.WindowState = WindowState.Maximized;
-            App.opendWin.Owner.WindowState = WindowState.Maximized;
+            App.opendWin.WindowState = WindowState.Normal;
+            App.opendWin.Owner.WindowState = WindowState.Normal;
             this.Close();
 
             //SaveFileDialog dlg = new SaveFileDialog();

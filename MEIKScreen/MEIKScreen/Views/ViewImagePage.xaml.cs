@@ -27,21 +27,19 @@ namespace MEIKScreen
     /// </summary>
     public partial class ViewImagePage : Window
     {
-        private Person _person;
+        private Person _person;        
+
         public ViewImagePage(Person person)
         {
             this._person = person;
-            InitializeComponent();           
-        }
-
-        public ViewImagePage(Person person,byte[] screenShotImg)
-        {
-            this._person = person;
             InitializeComponent();
-            if (screenShotImg != null)
+
+            string imgFileName = person.ArchiveFolder + System.IO.Path.DirectorySeparatorChar + person.Code + ".png";
+            if (File.Exists(imgFileName))
             {
-                this.dataScreenShotImg.Source = ImageTools.GetBitmapImage(screenShotImg);
+                this.dataScreenShotImg.Source = ImageTools.GetBitmapImage(imgFileName);
             }
+            
         }
 
         /// <summary>
@@ -88,22 +86,13 @@ namespace MEIKScreen
             {
                 if (File.Exists((string)imgFileName))
                 {
-                    var screenShotImg = ImageTools.GetBitmapImage(imgFileName as string);
-                    if (screenShotImg != null)
-                    {
-                        var stream = screenShotImg.StreamSource;
-                        stream.Position = 0;
-                        byte[] buffer = new byte[stream.Length];
-                        stream.Read(buffer, 0, buffer.Length);
-                        stream.Flush();
-                        //this.dataScreenShotImg.Source = ImageTools.GetBitmapImage(buffer);
-                        this.dataScreenShotImg.Source = ImageTools.GetBitmapImage(imgFileName as string);
+                    this.dataScreenShotImg.Source = ImageTools.GetBitmapImage(imgFileName as string);                    
 
-                        //獲取結果狀態
-                        this.getResult();
-                        _person.Result = _person.LeftResult > _person.RightResult ? _person.LeftResult : _person.RightResult;
-                        OperateIniFile.WriteIniData("Report", "Result", _person.Result+"", _person.IniFilePath);
-                    }
+                    //獲取結果狀態
+                    //this.getResult();
+                    //_person.Result = _person.LeftResult > _person.RightResult ? _person.LeftResult : _person.RightResult;
+                    //OperateIniFile.WriteIniData("Report", "Result", _person.Result+"", _person.IniFilePath);
+                    
                 }
             }
             catch (Exception ex)

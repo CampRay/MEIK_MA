@@ -29,8 +29,17 @@
             </Setter.Value>            
         </Setter>        
     </Style>
-    
-    
+    <!--设置 DatePicker 的日期时间显示格式-->
+    <Style TargetType="DatePickerTextBox">
+        <Setter Property="Control.Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <TextBox Text="{Binding Path=SelectedDate, StringFormat='yyyy/MM/dd', RelativeSource={RelativeSource AncestorType=DatePicker}}" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
     <!--默认的按钮样式-->
     <Style TargetType="{x:Type Button}">
         <Style.Triggers>

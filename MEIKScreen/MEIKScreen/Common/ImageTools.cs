@@ -59,5 +59,29 @@ namespace MEIKScreen.Common
             }
             return bitmap;
         }
+
+        /// <summary>
+        /// 读取图片文件并保存到字节流中
+        /// </summary>
+        /// <param name="filePath"></param>
+        /// <returns></returns>
+        public static byte[] GetBytesImage(string filePath)
+        {            
+            try
+            {
+                using (BinaryReader reader = new BinaryReader(File.Open(filePath, FileMode.Open)))
+                {
+                    FileInfo fi = new FileInfo(filePath);
+                    byte[] bytes = reader.ReadBytes((int)fi.Length);
+                    reader.Close();
+                    return bytes;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return null;
+        }
     }
 }

@@ -23,13 +23,16 @@ namespace MEIKScreen
         public static string dataFolder = null;
         public static ReportSettingModel reportSettingModel = null;
         //原始MIEK程序的根目录
-        public static string meikFolder = OperateIniFile.ReadIniData("Base", "MEIK base", "C:\\Program Files (x86)\\MEIK 5.6", System.AppDomain.CurrentDomain.BaseDirectory + "Config.ini"); 
+        public static string meikFolder = OperateIniFile.ReadIniData("Base", "MEIK base", "C:\\Program Files (x86)\\MEIK 5.6", System.AppDomain.CurrentDomain.BaseDirectory + "Config.ini");
+        //MEIKMA程序的根目錄
+        //public static string meikFolder = System.AppDomain.CurrentDomain.BaseDirectory + System.IO.Path.DirectorySeparatorChar+"MEIKMA"; 
         //统计扫描次数的字典
         public static SortedDictionary<string, List<long>> countDictionary = new SortedDictionary<string, List<long>>();
 
         public static string local = "en-US";
         public static string strScreening = "Screening";
         public static string strDiagnostics = "Diagnostics";
+        public static string strList = "List";
         public static string strExit = "Exit";
         //public static string strMeasurement = "Measurement";
         public static string strStart = "Start";

@@ -272,7 +272,7 @@
                         </ControlTemplate>
                     </Button.Template>
                 </Button>
-                <Button Name="btnResult" Width="100" Height="42" FontSize="13" FontWeight="Bold" HorizontalContentAlignment="Left" HorizontalAlignment="Left"  Content="{DynamicResource UserListWinResult}" Background="{x:Null}" Foreground="White" Cursor="Hand" Click="btnResult_Click">
+                <Button Visibility="Collapsed" Name="btnResult" Width="100" Height="42" FontSize="13" FontWeight="Bold" HorizontalContentAlignment="Left" HorizontalAlignment="Left"  Content="{DynamicResource UserListWinResult}" Background="{x:Null}" Foreground="White" Cursor="Hand" Click="btnResult_Click">
                     <Button.Template>
                         <ControlTemplate TargetType="{x:Type Button}">
                             <WrapPanel Width="{TemplateBinding Width}" Height="{TemplateBinding Height}" HorizontalAlignment="left" VerticalAlignment="Center">

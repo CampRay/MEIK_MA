@@ -72,7 +72,9 @@
     <sys:String x:Key="Dialog11">Client Number.</sys:String>
     <sys:String x:Key="Dialog12">Search Client</sys:String>
     <sys:String x:Key="Dialog13">Reset</sys:String>
-
+    <sys:String x:Key="Dialog14">Left Breast:</sys:String>
+    <sys:String x:Key="Dialog15">Right Breast:</sys:String>
+    
     <sys:String x:Key="Label1">Preview Digital Mammograph (This image will show on the MEIK Summary Report)</sys:String>
 
     <sys:String x:Key="Message_1">Failed to start MEIK software v. 5.6, Exception Message:</sys:String>
@@ -173,6 +175,7 @@
     <sys:String x:Key="UserListWinExaminationReportBtn">Examination Report</sys:String>
     <sys:String x:Key="UserListWinSummaryReportBtn">Summary Report</sys:String>
     <sys:String x:Key="UserListWinDeleteBtn">Delete</sys:String>
+    <sys:String x:Key="UserListWinEmailReportBtn">Send Report</sys:String>
     <sys:String x:Key="UserListWinPatientCardTitle">Client Information</sys:String>
     <sys:String x:Key="UserListWinNewBtn">New</sys:String>
     <sys:String x:Key="UserListWinEmailDataBtn">Send Data</sys:String>
@@ -268,7 +271,7 @@
     <sys:String x:Key="UserDataComplaintsTab">Complaints</sys:String>
     <sys:String x:Key="UserDataComplaints1">Pain</sys:String>
     <sys:String x:Key="UserDataComplaints2">Colostrum (within 5 days after delivery)</sys:String>
-    <sys:String x:Key="UserDataComplaints3">Serous discharge (yellowish)</sys:String>
+    <sys:String x:Key="UserDataComplaints3">Serious discharge (yellowish)</sys:String>
     <sys:String x:Key="UserDataComplaints4">Blood discharge</sys:String>
     <sys:String x:Key="UserDataComplaints5">Other</sys:String>
     <sys:String x:Key="UserDataComplaints6">Special conditions</sys:String>
@@ -364,7 +367,7 @@
     <sys:String x:Key="UserDataVisualTab">Visual</sys:String>
     <sys:String x:Key="UserDataVisual1">Red and swollen:</sys:String>
     <sys:String x:Key="UserDataVisual2">Palpable:</sys:String>
-    <sys:String x:Key="UserDataVisual3">Serous discharge:</sys:String>
+    <sys:String x:Key="UserDataVisual3">Serious discharge:</sys:String>
     <sys:String x:Key="UserDataVisual4">Wounds:</sys:String>
     <sys:String x:Key="UserDataVisual5">Scars:</sys:String>
     
@@ -568,12 +571,12 @@
     <sys:String x:Key="ReportContext_186">Probably benign findings</sys:String>
     <sys:String x:Key="ReportContext_187">Suspicious abnormality</sys:String>
     <sys:String x:Key="ReportContext_188" xml:space="preserve">Location: </sys:String>
-    <sys:String x:Key="ReportContext_189" xml:space="preserve">Recommend: </sys:String>
-    <sys:String x:Key="ReportContext_190">Date</sys:String>
+    <sys:String x:Key="ReportContext_189" xml:space="preserve">Recommendation: </sys:String>
+    <sys:String x:Key="ReportContext_190">Date of Interpretation：</sys:String>
     <sys:String x:Key="ReportContext_191" xml:space="preserve">MEIK Technician: </sys:String>
     <sys:String x:Key="ReportContext_192">Size:</sys:String>
     <sys:String x:Key="ReportContext_193">The above described results are based on interpretations at the time of the scan and must be correlated with previous mammogram and ultrasound results (if any), clinical history, clinical findings and other ancillary procedures.</sys:String>
-    <sys:String x:Key="ReportContext_194">MEIK is a screening procedure and is an adjunct modality for Mammography &amp; Breast Ultrasound.</sys:String>
+    <sys:String x:Key="ReportContext_194">*MEIK is a Digital Breast Exam (DBE) screening procedure and is an adjunct modality for the Cinical Breast Wxam, Mammography &amp; Breast Ultrasound.</sys:String>
     <sys:String x:Key="ReportContext_195">*Green marks indicate benign findings and red marks indicate suspicious changes</sys:String>
     <sys:String x:Key="ReportContext_196">PATIENT'S MEIK RESULT</sys:String>
     <sys:String x:Key="ReportContext_197">MEIK v.5.6 - Digital Breast Screening Summary Report</sys:String>
