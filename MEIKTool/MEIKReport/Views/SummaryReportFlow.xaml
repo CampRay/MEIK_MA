@@ -1,0 +1,1557 @@
+﻿<FlowDocument xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" ColumnWidth="734" 
+              PageHeight="1056" PageWidth="794" PagePadding="0" FontSize="12"
+              FontFamily="Arial,Microsoft YaHei" RenderOptions.BitmapScalingMode="NearestNeighbor" RenderOptions.EdgeMode="Aliased">
+    <FlowDocument.Background>
+        <ImageBrush ImageSource="/MEIKReport;component/Images/A4-bg.png" AlignmentY="Top" Stretch="Uniform">            
+        </ImageBrush>
+    </FlowDocument.Background>
+    <!--Page Header-->
+    <Table Padding="50,20,50,0">
+        <Table.Columns>
+            <TableColumn Width="*"></TableColumn>
+            <TableColumn Width="4*"></TableColumn>
+            <TableColumn Width="*"></TableColumn>
+        </Table.Columns>
+        <TableRowGroup>
+            <TableRow>                
+                <TableCell RowSpan="4" Name="logoImg1">
+                    <!--<TableCell.Background>
+                        <ImageBrush ImageSource="/MEIKReport;component/Images/logo_k.png" Stretch="Uniform" AlignmentY="Top"/>
+                    </TableCell.Background>-->
+                </TableCell>
+                <TableCell TextAlignment="Center" LineStackingStrategy="BlockLineHeight">
+                    <Paragraph LineHeight="10"/>
+                </TableCell>
+                <TableCell></TableCell>
+            </TableRow>
+            <TableRow Name="titleImg1">
+                <TableRow.Background>
+                    <ImageBrush ImageSource="/MEIKReport;component/Images/title.png" AlignmentY="Top" Stretch="Uniform"></ImageBrush>
+                </TableRow.Background>
+                
+                <TableCell TextAlignment="Center" LineStackingStrategy="BlockLineHeight">
+                    <Paragraph LineHeight="32">                        
+                    </Paragraph>
+                </TableCell>
+                <TableCell></TableCell>
+            </TableRow>
+            <TableRow>
+                
+                <TableCell TextAlignment="Center">
+                    <Paragraph>
+                        <TextBlock Text="快速乳房健康檢測報告" Foreground="#FF00657F" FontWeight="Bold" FontSize="28"></TextBlock>
+                    </Paragraph>
+                </TableCell>
+                <TableCell></TableCell>
+            </TableRow>
+            <TableRow>
+                
+                <TableCell TextAlignment="Center">
+                    <Paragraph>
+                        <TextBlock Text="Rapid Breast Health Screening Report" Foreground="#FF00657F" FontWeight="Bold" FontSize="18"/>
+                    </Paragraph>
+                </TableCell>
+                <TableCell></TableCell>
+            </TableRow>            
+        </TableRowGroup>
+    </Table>
+    <!--Personal info-->
+    <Table Padding="50,0,50,0">        
+        <TableRowGroup>
+            <TableRow>
+                <TableCell>
+                    <Paragraph>
+                        <Grid Width="692">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>                                
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="160"></ColumnDefinition>
+                                <ColumnDefinition Width="3*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>                            
+                            <Border BorderThickness="2,2,2,0" BorderBrush="#FF00657F" Background="#FF00657F"  CornerRadius="6,6,0,0" VerticalAlignment="Center">
+                                <TextBlock Foreground="White" Background="#FF00657F" HorizontalAlignment="Left" VerticalAlignment="Center" Text="客戶資料 Client Information" Margin="5,2,5,2" FontSize="12"></TextBlock>
+                            </Border>                            
+                            <Border Grid.Row="1" Grid.ColumnSpan="2" BorderThickness="1" BorderBrush="#FF00657F" Background="White">
+                                <Grid Width="692" HorizontalAlignment="Left" Margin="10">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="20"></RowDefinition>
+                                        <RowDefinition Height="20"></RowDefinition>
+                                        <RowDefinition Height="20"></RowDefinition>
+                                        <RowDefinition Height="20"></RowDefinition>
+                                        <RowDefinition Height="20"></RowDefinition>
+                                        <RowDefinition Height="20"></RowDefinition>
+                                        <RowDefinition Height="20"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <WrapPanel Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center">
+                                        <TextBlock Text="客戶號碼 Client Number: "></TextBlock>
+                                        <TextBlock Name="dataClientNum" Text="{Binding DataClientNum}"></TextBlock>
+                                    </WrapPanel>
+                                    <WrapPanel Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center">
+                                        <TextBlock Text="姓名 Name: "></TextBlock>
+                                        <TextBlock Name="dataName" Text="{Binding DataName}"></TextBlock>
+                                    </WrapPanel>
+                                    <WrapPanel Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center">
+                                        <TextBlock Text="年齡 Age: "></TextBlock>
+                                        <TextBlock Name="dataAge" Text="{Binding DataAge}"></TextBlock>
+                                    </WrapPanel>
+                                    <WrapPanel Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Center">
+                                        <TextBlock Text="身高 Height(cm): "></TextBlock>
+                                        <TextBlock Name="dataHeight" Text="{Binding DataHeight}"></TextBlock>
+                                    </WrapPanel>
+                                    <WrapPanel Grid.Row="4" HorizontalAlignment="Left" VerticalAlignment="Center">
+                                        <TextBlock Text="體重 Weight(kg): "></TextBlock>
+                                        <TextBlock Name="dataWeight" Text="{Binding DataWeight}"></TextBlock>
+                                    </WrapPanel>
+                                    <WrapPanel Grid.Row="5" HorizontalAlignment="Left" VerticalAlignment="Center">
+                                        <TextBlock Text="電話號碼 Mobile number: "></TextBlock>
+                                        <TextBlock Name="dataMobile" Text="{Binding DataMobile}"></TextBlock>
+                                    </WrapPanel>
+                                    <WrapPanel Grid.Row="6" HorizontalAlignment="Left" VerticalAlignment="Center">
+                                        <TextBlock Text="電郵 Email: "></TextBlock>
+                                        <TextBlock Name="dataEmail" Text="{Binding DataEmail}"></TextBlock>
+                                    </WrapPanel>
+                                </Grid>
+                            </Border>
+                        </Grid>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+            
+        </TableRowGroup>
+    </Table>
+    <!--Screen info-->
+    <Table Padding="50,0,50,0">
+        <TableRowGroup>
+            <TableRow>
+                <TableCell>
+                    <Paragraph>
+                        <Grid Width="692">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="146"></ColumnDefinition>
+                                <ColumnDefinition Width="3*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Border BorderThickness="2,2,2,0" BorderBrush="#FF00657F" Background="#FF00657F"  CornerRadius="6,6,0,0" VerticalAlignment="Center">
+                                <TextBlock Foreground="White" Background="#FF00657F" HorizontalAlignment="Left" VerticalAlignment="Center" Text="檢測記錄 Screen Record" Margin="5,2,5,2" FontSize="12"></TextBlock>
+                            </Border>
+                            <Border Grid.Row="1" Grid.ColumnSpan="2" BorderThickness="1" BorderBrush="#FF00657F" Background="White">
+                                <Grid Width="692" HorizontalAlignment="Left" Margin="10">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="20"></RowDefinition>
+                                        <RowDefinition Height="20"></RowDefinition>
+                                        <RowDefinition Height="20"></RowDefinition>
+                                        <RowDefinition Height="20"></RowDefinition>                                        
+                                    </Grid.RowDefinitions>
+                                    <WrapPanel Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center">
+                                        <TextBlock Text="檢測編號 Screen code: "></TextBlock>
+                                        <TextBlock Name="dataUserCode" Text="{Binding DataUserCode}"/>
+                                    </WrapPanel>
+                                    <WrapPanel Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center">
+                                        <TextBlock Text="檢測日期 Screen date: "></TextBlock>
+                                        <TextBlock Name="dataScreenDate" Text="{Binding DataScreenDate}"/>
+                                    </WrapPanel>
+                                    <WrapPanel Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center">
+                                        <TextBlock Text="檢測地點 Screen venue: "></TextBlock>
+                                        <TextBlock Name="dataScreenLocation" Text="{Binding DataScreenLocation}"></TextBlock>
+                                    </WrapPanel>
+                                    <WrapPanel Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Center">
+                                        <TextBlock Text="檢測員姓名 Technician Name: "></TextBlock>
+                                        <TextBlock Name="dataMeikTech" Text="{Binding Path=DataMeikTech}" ></TextBlock>
+                                    </WrapPanel>                                    
+                                </Grid>
+                            </Border>
+                        </Grid>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+        </TableRowGroup>
+    </Table>
+    <!--Screen Image-->
+    <Table Padding="50,0,50,0">
+        <TableRowGroup>
+            <TableRow>
+                <TableCell>
+                    <Paragraph>
+                        <Grid Width="692">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                                <RowDefinition Height="19"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="128"></ColumnDefinition>
+                                <ColumnDefinition Width="3*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Border BorderThickness="2,2,2,0" BorderBrush="#FF00657F" Background="#FF00657F"  CornerRadius="6,6,0,0" VerticalAlignment="Center">
+                                <TextBlock Foreground="White" Background="#FF00657F" HorizontalAlignment="Left" VerticalAlignment="Center" Text="檢測圖像 Screen Image" Margin="5,2,5,2" FontSize="12"></TextBlock>
+                            </Border>
+                            <Border Grid.Row="1" Grid.ColumnSpan="2" BorderThickness="1" BorderBrush="#FF00657F" Background="White">
+                                <Grid Width="692" HorizontalAlignment="Left" Margin="10,10,30,10">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="20"></RowDefinition>
+                                        <RowDefinition Height="20"></RowDefinition>
+                                        <RowDefinition Height="26"></RowDefinition>
+                                        <RowDefinition Height="10"></RowDefinition>
+                                        <RowDefinition Height="20"></RowDefinition>
+                                        <RowDefinition Height="20"></RowDefinition>                                        
+                                        <RowDefinition Height="80"></RowDefinition>
+                                        <RowDefinition Height="80"></RowDefinition>
+                                        <RowDefinition Height="230"></RowDefinition>
+                                        <RowDefinition Height="13"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="80"></ColumnDefinition>
+                                        <ColumnDefinition Width="572"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <WrapPanel Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                        <TextBlock Text="檢測圖像中，"></TextBlock>
+                                        <TextBlock Text="綠色標誌" Foreground="Green"></TextBlock>
+                                        <TextBlock Text="表示輕微電阻值改變，"></TextBlock>
+                                        <TextBlock Text="紅色標誌" Foreground="Red"></TextBlock>
+                                        <TextBlock Text="表示相對大電阻值改變。"></TextBlock>
+                                    </WrapPanel>
+                                    <WrapPanel Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                        <TextBlock Text="Screen image-"></TextBlock>
+                                        <TextBlock Text="Green marks" Foreground="Green"></TextBlock>
+                                        <TextBlock Text=" indicate minor electrical impedance changes,and "></TextBlock>
+                                        <TextBlock Text="red marks" Foreground="Red"></TextBlock>
+                                        <TextBlock Text=" indicate relatively high electrical impedance changes."></TextBlock>
+                                    </WrapPanel>
+                                    
+                                    <StackPanel Grid.Row="4" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Background="#FF00657F" Width="572">
+                                        <Grid Width="572">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="1.2*"/>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <TextBlock Grid.Column="0" Text="Layer(all)" HorizontalAlignment="Center" Foreground="White"></TextBlock>
+                                            <TextBlock Grid.Column="1" Text="Layer 1" HorizontalAlignment="Center" Foreground="White"></TextBlock>
+                                            <TextBlock Grid.Column="2" Text="Layer 2" HorizontalAlignment="Center" Foreground="White"></TextBlock>
+                                            <TextBlock Grid.Column="3" Text="Layer 3" HorizontalAlignment="Center" Foreground="White"></TextBlock>
+                                            <TextBlock Grid.Column="4" Text="Layer 4" HorizontalAlignment="Center" Foreground="White"></TextBlock>
+                                            <TextBlock Grid.Column="5" Text="Layer 5" HorizontalAlignment="Center" Foreground="White"></TextBlock>
+                                            <TextBlock Grid.Column="6" Text="Layer 6" HorizontalAlignment="Center" Foreground="White"></TextBlock>
+                                            <TextBlock Grid.Column="7" Text="Layer 7" HorizontalAlignment="Center" Foreground="White"></TextBlock>
+                                        </Grid>                                        
+                                    </StackPanel>
+                                    <WrapPanel Grid.Row="5" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center">
+                                        <Grid Width="572">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="1.2*"/>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <TextBlock Grid.Column="0" Text="Combined" HorizontalAlignment="Center"></TextBlock>
+                                            <TextBlock Grid.Column="1" Text="4mm" HorizontalAlignment="Center"></TextBlock>
+                                            <TextBlock Grid.Column="2" Text="11mm" HorizontalAlignment="Center"></TextBlock>
+                                            <TextBlock Grid.Column="3" Text="18mm" HorizontalAlignment="Center"></TextBlock>
+                                            <TextBlock Grid.Column="4" Text="25mm" HorizontalAlignment="Center"></TextBlock>
+                                            <TextBlock Grid.Column="5" Text="32mm" HorizontalAlignment="Center"></TextBlock>
+                                            <TextBlock Grid.Column="6" Text="39mm" HorizontalAlignment="Center"></TextBlock>
+                                            <TextBlock Grid.Column="7" Text="46mm" HorizontalAlignment="Center"></TextBlock>
+                                        </Grid>                                        
+                                    </WrapPanel>
+                                    <StackPanel Grid.Row="6" Width="75" Height="80" VerticalAlignment="Center" Margin="0,0,5,0">
+                                        <TextBlock Text=" " Height="20"></TextBlock>
+                                        <TextBlock Text="左乳" HorizontalAlignment="Right" VerticalAlignment="Center"></TextBlock>
+                                        <TextBlock Text="Left Breast" HorizontalAlignment="Right" VerticalAlignment="Center"></TextBlock>                                        
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="7" Width="75" Height="80" VerticalAlignment="Center" Margin="0,0,5,0">
+                                        <TextBlock Text=" " Height="20"></TextBlock>
+                                        <TextBlock Text="右乳" HorizontalAlignment="Right" VerticalAlignment="Center"></TextBlock>
+                                        <TextBlock Text="Right Breast" HorizontalAlignment="Right" VerticalAlignment="Center"></TextBlock>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="6" Grid.Column="1" Grid.RowSpan="3" Width="572" Height="390">
+                                        <Image Name="dataScreenShotImg" Stretch="Fill"/>
+                                    </StackPanel>
+                                </Grid>
+                            </Border>
+                            <StackPanel Grid.Row="2" Grid.ColumnSpan="2" VerticalAlignment="Center" Width="692">
+                                <TextBlock Text="續下頁 Continued on next page   P.1/4" HorizontalAlignment="Right" Padding="0,5,0,0"></TextBlock>
+                            </StackPanel>
+                        </Grid>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+           
+        </TableRowGroup>
+    </Table>
+    <!--Page Footer-->
+    <Paragraph Padding="0,14,0,0" LineStackingStrategy="BlockLineHeight">
+        <TextBlock Name="footerInfo1" Height="36" Width="794" Foreground="White" Padding="50,10,50,5" VerticalAlignment="Center" Background="#FF00657F" Text="Unit A-C, 7/F, 10 Knutsford Terrace, Tsim Sha Tsui, Kowloon, Hong Kong.    Tel. 3188 3562    Fax. 3188 3270"></TextBlock>
+    </Paragraph>
+
+    <!--Page Header-->
+    <Table Padding="50,20,50,0">
+        <Table.Columns>
+            <TableColumn Width="*"></TableColumn>
+            <TableColumn Width="4*"></TableColumn>
+            <TableColumn Width="*"></TableColumn>
+        </Table.Columns>
+        <TableRowGroup>
+            <TableRow>
+                <TableCell RowSpan="4" Name="logoImg2">
+                    <!--<TableCell.Background>
+                        <ImageBrush ImageSource="/MEIKReport;component/Images/logo_k.png" Stretch="Uniform" AlignmentY="Top"/>
+                    </TableCell.Background>-->
+                </TableCell>
+                <TableCell TextAlignment="Center" LineStackingStrategy="BlockLineHeight">
+                    <Paragraph LineHeight="10"/>
+                </TableCell>
+                <TableCell></TableCell>
+            </TableRow>
+            <TableRow Name="titleImg2">
+                <TableRow.Background>
+                    <ImageBrush ImageSource="/MEIKReport;component/Images/title.png" AlignmentY="Top" Stretch="Uniform"></ImageBrush>
+                </TableRow.Background>
+
+                <TableCell TextAlignment="Center" LineStackingStrategy="BlockLineHeight">
+                    <Paragraph LineHeight="36">
+                    </Paragraph>
+                </TableCell>
+                <TableCell></TableCell>
+            </TableRow>
+            <TableRow>
+
+                <TableCell TextAlignment="Center">
+                    <Paragraph>
+                        <TextBlock Text="快速乳房健康檢測報告" Foreground="#FF00657F" FontWeight="Bold" FontSize="28"></TextBlock>
+                    </Paragraph>
+                </TableCell>
+                <TableCell></TableCell>
+            </TableRow>
+            <TableRow>
+
+                <TableCell TextAlignment="Center">
+                    <Paragraph>
+                        <TextBlock Text="Rapid Breast Health Screening Report" Foreground="#FF00657F" FontWeight="Bold" FontSize="18"/>
+                    </Paragraph>
+                </TableCell>
+                <TableCell></TableCell>
+            </TableRow>
+        </TableRowGroup>
+    </Table>
+    <!--Screen Result-->
+    <Table Padding="50,0,50,0">
+        <TableRowGroup>
+            <TableRow>
+                <TableCell>
+                    <Paragraph>
+                        <Grid Width="692">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"></RowDefinition>
+                                <RowDefinition Height="702"></RowDefinition>                                
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="144"></ColumnDefinition>
+                                <ColumnDefinition Width="3*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Border BorderThickness="2,2,2,0" BorderBrush="#FF00657F" Background="#FF00657F"  CornerRadius="6,6,0,0" VerticalAlignment="Center">
+                                <TextBlock Foreground="White" Text="檢測結果 Screen Result" Margin="5,2,5,2" FontSize="12" Background="#FF00657F" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
+                            </Border>
+                            <Border Grid.Row="1" Grid.ColumnSpan="2" BorderThickness="1" BorderBrush="#FF00657F" Background="White">
+                                <Grid Width="692" HorizontalAlignment="Left" Margin="10">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="18"></RowDefinition>
+                                        <RowDefinition Height="10"></RowDefinition>
+                                        <RowDefinition Height="118"></RowDefinition>
+                                        <RowDefinition Height="5"></RowDefinition>
+                                        <RowDefinition Height="18"></RowDefinition>
+                                        <RowDefinition Height="458"></RowDefinition>
+                                        <RowDefinition Height="8"></RowDefinition>
+                                        <RowDefinition Height="14"></RowDefinition>
+                                        <RowDefinition Height="14"></RowDefinition>
+                                        <RowDefinition Height="14"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="230"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <WrapPanel Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center">
+                                        <TextBlock Text="平均電導率 Mean Electrical Conductivity" Width="260" Foreground="#FF00597F"></TextBlock>                                        
+                                    </WrapPanel>
+                                    <StackPanel Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="30,0,0,0">
+                                        <WrapPanel Width="160" HorizontalAlignment="Center">
+                                            <TextBlock Width="100" Text="左乳 Left Breast:"></TextBlock>
+                                            <TextBlock Name="dataLeftMeanECOfLesion" Text="{Binding DataLeftMeanECOfLesion}" Margin="5,0,0,0"/>
+                                        </WrapPanel>
+                                        <StackPanel Height="20"></StackPanel>
+                                        <WrapPanel Width="160" HorizontalAlignment="Center">
+                                            <TextBlock Width="100" Text="右乳 Right Breast:"></TextBlock>
+                                            <TextBlock Name="dataRightMeanECOfLesion" Text="{Binding DataRightMeanECOfLesion}" Margin="5,0,0,0"/>
+                                        </WrapPanel>
+                                    </StackPanel>                                                                                                                                            
+                                    <Grid Grid.Row="0" Grid.Column="1" Grid.RowSpan="3" HorizontalAlignment="Center">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="1.4*"/>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="80"/>
+                                            <ColumnDefinition Width="260"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Border  Grid.Row="0" Grid.Column="0" BorderBrush="Black" BorderThickness="1,1,1,1" Background="#FF35A2B4">
+                                            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                                                <TextBlock Text="年齡" FontSize="7" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                                                <TextBlock Text="Age" FontSize="7" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                                            </StackPanel>
+                                        </Border>
+                                        <Border Grid.Row="0" Grid.Column="1" BorderBrush="Black" BorderThickness="0,1,1,1" Background="#FF35A2B4">
+                                            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                                                <TextBlock Text="平均電導率正常範圍" FontSize="8" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                                                <TextBlock Text="*Mean Electrical Conductivity Normal Range" FontSize="8" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                                            </StackPanel>
+                                        </Border>                                        
+                                        <Border  Grid.Row="1" Grid.Column="0" BorderBrush="Black" BorderThickness="1,0,1,1" VerticalAlignment="Center">
+                                            <Label Content="&lt;29" FontSize="7" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+                                        </Border>
+                                        <Border  Grid.Row="1" Grid.Column="1" BorderBrush="Black" BorderThickness="0,0,1,1" VerticalAlignment="Center">
+                                            <Label Content="0.18 - 0.44" FontSize="7" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+                                        </Border>
+                                        <Border  Grid.Row="2" Grid.Column="0" BorderBrush="Black" BorderThickness="1,0,1,1">
+                                            <Label Content="30-39" FontSize="7" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+                                        </Border>
+                                        <Border  Grid.Row="2" Grid.Column="1" BorderBrush="Black" BorderThickness="0,0,1,1">
+                                            <Label Content="0.16 - 0.53" FontSize="7" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+                                        </Border>
+                                        <Border  Grid.Row="3" Grid.Column="0" BorderBrush="Black" BorderThickness="1,0,1,1">
+                                            <Label Content="40-49" FontSize="7" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+                                        </Border>
+                                        <Border  Grid.Row="3" Grid.Column="1" BorderBrush="Black" BorderThickness="0,0,1,1">
+                                            <Label Content="0.22 - 0.63" FontSize="7" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+                                        </Border>
+                                        <Border  Grid.Row="4" Grid.Column="0" BorderBrush="Black" BorderThickness="1,0,1,1">
+                                            <Label Content="50-59" FontSize="7" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+                                        </Border>
+                                        <Border  Grid.Row="4" Grid.Column="1" BorderBrush="Black" BorderThickness="0,0,1,1">
+                                            <Label Content="0.32 - 0.72" FontSize="7" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+                                        </Border>
+                                        <Border  Grid.Row="5" Grid.Column="0" BorderBrush="Black" BorderThickness="1,0,1,1">
+                                            <Label Content="60-69" FontSize="7" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+                                        </Border>
+                                        <Border  Grid.Row="5" Grid.Column="1" BorderBrush="Black" BorderThickness="0,0,1,1">
+                                            <Label Content="0.43 - 0.78" FontSize="7" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+                                        </Border>
+                                        <Border  Grid.Row="6" Grid.Column="0" BorderBrush="Black" BorderThickness="1,0,1,1">
+                                            <Label Content="&gt;70" FontSize="7" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+                                        </Border>
+                                        <Border  Grid.Row="6" Grid.Column="1" BorderBrush="Black" BorderThickness="0,0,1,1">
+                                            <Label Content="0.50 - 0.64" FontSize="7" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+                                        </Border>
+
+                                    </Grid>
+                                    
+                                    <WrapPanel Grid.Row="4" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Center">
+                                        <TextBlock Text="局部變化特徵 Description of Focal Changes" Foreground="#FF00597F"></TextBlock>
+                                    </WrapPanel>
+                                    <Grid Grid.Row="5" Grid.ColumnSpan="2" Margin="10,5,10,5">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="16"/>
+                                            <RowDefinition Height="16"/>
+                                            <RowDefinition Height="16"/>
+                                            <RowDefinition Height="16"/>
+                                            <RowDefinition Height="16"/>
+                                            <RowDefinition Height="16"/>
+                                            <RowDefinition Height="16"/>
+                                            <RowDefinition Height="16"/>
+                                            <RowDefinition Height="16"/>
+                                            <RowDefinition Height="16"/>
+                                            <RowDefinition Height="16"/>
+                                            <RowDefinition Height="16"/>
+                                            <RowDefinition Height="16"/>
+                                            <RowDefinition Height="16"/>
+                                            <RowDefinition Height="16"/>
+                                            <RowDefinition Height="16"/>
+                                            <RowDefinition Height="16"/>
+                                            <RowDefinition Height="16"/>
+                                            <RowDefinition Height="16"/>
+                                            <RowDefinition Height="16"/>
+                                            <RowDefinition Height="16"/>
+                                            <RowDefinition Height="16"/>
+                                            <RowDefinition Height="16"/>
+                                            <RowDefinition Height="16"/>
+                                            <RowDefinition Height="16"/>
+                                            <RowDefinition Height="16"/>
+                                            <RowDefinition Height="16"/>
+                                            <RowDefinition Height="16"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="170"/>
+                                            <ColumnDefinition Width="136"/>
+                                            <ColumnDefinition Width="10"/>
+                                            <ColumnDefinition Width="136"/>
+                                            <ColumnDefinition Width="220"/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock Text="右乳 Right Breast"></TextBlock>
+                                        <TextBlock Text="左乳 Left Breast" Grid.Row="0" Grid.Column="4"></TextBlock>
+                                        <WrapPanel Grid.Row="1">
+                                            <TextBlock Text="數量 Quantity: "></TextBlock>
+                                            <TextBlock Name="dataRightNumber" Text="{Binding DataRightNumber}"/>
+                                        </WrapPanel>
+                                        <WrapPanel Grid.Row="1" Grid.Column="4">
+                                            <TextBlock Text="數量 Quantity: "></TextBlock>
+                                            <TextBlock Name="dataLeftNumber" Text="{Binding DataLeftNumber}"/>
+                                        </WrapPanel>
+                                        <Grid Grid.Row="2" Grid.Column="3" Grid.RowSpan="8">
+                                            <Grid.Background>
+                                                <ImageBrush ImageSource="/Images/left.png" Stretch="UniformToFill" ></ImageBrush>
+                                            </Grid.Background>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="42"/>
+                                                <RowDefinition Height="70"/>
+                                                <RowDefinition Height="*"/>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="12"/>
+                                                <ColumnDefinition Width="70"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Canvas Name="L1_Canvas" Grid.Row="1" Grid.Column="1">
+                                                <TextBlock Name="L1_12" Text="x" Canvas.Top="4" Canvas.Left="32" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L1_1" Text="x" Canvas.Top="8" Canvas.Left="44" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L1_2" Text="x" Canvas.Top="15" Canvas.Left="54" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L1_3" Text="x" Canvas.Top="28" Canvas.Left="59" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L1_4" Text="x" Canvas.Top="41" Canvas.Left="54" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L1_5" Text="x" Canvas.Top="48" Canvas.Left="44" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L1_6" Text="x" Canvas.Top="52" Canvas.Left="32" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L1_7" Text="x" Canvas.Top="48" Canvas.Left="20" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L1_8" Text="x" Canvas.Top="41" Canvas.Left="10" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L1_9" Text="x" Canvas.Top="28" Canvas.Left="5" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L1_10" Text="x" Canvas.Top="15" Canvas.Left="10" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L1_11" Text="x" Canvas.Top="8" Canvas.Left="20" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                            </Canvas>
+                                        </Grid>
+                                        <Grid Grid.Row="2" Grid.Column="1" Grid.RowSpan="8">
+                                            <Grid.Background>
+                                                <ImageBrush ImageSource="/Images/right.png" Stretch="UniformToFill" ></ImageBrush>
+                                            </Grid.Background>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="42"/>
+                                                <RowDefinition Height="70"/>
+                                                <RowDefinition Height="*"/>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="56"/>
+                                                <ColumnDefinition Width="70"/>
+                                                <ColumnDefinition Width="5"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Canvas Grid.Row="1" Grid.Column="1">
+                                                <TextBlock Name="R1_12" Text="x" Canvas.Top="4" Canvas.Left="32" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R1_1" Text="x" Canvas.Top="8" Canvas.Left="44" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R1_2" Text="x" Canvas.Top="15" Canvas.Left="54" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R1_3" Text="x" Canvas.Top="28" Canvas.Left="59" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R1_4" Text="x" Canvas.Top="41" Canvas.Left="54" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R1_5" Text="x" Canvas.Top="48" Canvas.Left="44" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R1_6" Text="x" Canvas.Top="52" Canvas.Left="32" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R1_7" Text="x" Canvas.Top="48" Canvas.Left="20" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R1_8" Text="x" Canvas.Top="41" Canvas.Left="10" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R1_9" Text="x" Canvas.Top="28" Canvas.Left="5" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R1_10" Text="x" Canvas.Top="15" Canvas.Left="10" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R1_11" Text="x" Canvas.Top="8" Canvas.Left="20" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                            </Canvas>
+                                        </Grid>
+
+                                        <WrapPanel Grid.Row="3" Grid.Column="4">
+                                            <TextBlock Text="大小 Size: "></TextBlock>
+                                            <TextBlock Name="dataLeftSize" Text="{Binding DataLeftSize}"/>
+                                        </WrapPanel>
+                                        <WrapPanel Grid.Row="3" Grid.Column="0">
+                                            <TextBlock Text="大小 Size: "></TextBlock>
+                                            <TextBlock Name="dataRightSize" Text="{Binding DataRightSize}"/>
+                                        </WrapPanel>
+                                        <WrapPanel Grid.Row="4" Grid.Column="4">
+                                            <TextBlock Text="形狀 Shape: "></TextBlock>
+                                            <TextBlock Name="dataLeftShape" Text="{Binding DataLeftShape}"/>
+                                        </WrapPanel>
+                                        <WrapPanel Grid.Row="4" Grid.Column="0">
+                                            <TextBlock Text="形狀 Shape: "></TextBlock>
+                                            <TextBlock Name="dataRightShape" Text="{Binding DataRightShape}"/>
+                                        </WrapPanel>
+                                        <!--<WrapPanel Grid.Row="5" Grid.Column="4">
+                                            <TextBlock Text="周圍形狀: "></TextBlock>
+                                            <TextBlock Name="dataLeftContourAroundFocus" Text="{Binding DataLeftContourAroundFocus}"/>
+                                        </WrapPanel>-->
+                                        <!--<WrapPanel Grid.Row="5" Grid.Column="0">
+                                            <TextBlock Text="周圍形狀: "></TextBlock>
+                                            <TextBlock Name="dataRightContourAroundFocus" Text="{Binding DataRightContourAroundFocus}"/>
+                                        </WrapPanel>
+                                        <WrapPanel Grid.Row="6" Grid.Column="4">
+                                            <TextBlock Text="Contour around focus"></TextBlock>
+                                        </WrapPanel>
+                                        <WrapPanel Grid.Row="6" Grid.Column="0">
+                                            <TextBlock Text="Contour around focus"></TextBlock>
+                                        </WrapPanel>
+                                        <WrapPanel Grid.Row="7" Grid.Column="4">
+                                            <TextBlock Text="周圍組織: "></TextBlock>
+                                            <TextBlock Name="dataLeftSurroundingTissues" Text="{Binding DataLeftSurroundingTissues}"/>
+                                        </WrapPanel>
+                                        <WrapPanel Grid.Row="7" Grid.Column="0">
+                                            <TextBlock Text="周圍組織: "></TextBlock>
+                                            <TextBlock Name="dataRightSurroundingTissues" Text="{Binding DataRightSurroundingTissues}"/>
+                                        </WrapPanel>
+                                        <WrapPanel Grid.Row="8" Grid.Column="0">
+                                            <TextBlock Text="Surrounding tissues"></TextBlock>
+                                        </WrapPanel>
+                                        <WrapPanel Grid.Row="8" Grid.Column="4">
+                                            <TextBlock Text="Surrounding tissues"></TextBlock>
+                                        </WrapPanel>-->
+                                        <Grid Grid.Row="11" Grid.Column="1" Grid.RowSpan="8">
+                                            <Grid.Background>
+                                                <ImageBrush ImageSource="/Images/right.png" Stretch="UniformToFill" ></ImageBrush>
+                                            </Grid.Background>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="42"/>
+                                                <RowDefinition Height="70"/>
+                                                <RowDefinition Height="*"/>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="56"/>
+                                                <ColumnDefinition Width="70"/>
+                                                <ColumnDefinition Width="5"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Canvas Grid.Row="1" Grid.Column="1">
+                                                <TextBlock Name="R2_12" Text="x" Canvas.Top="4" Canvas.Left="32" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R2_1" Text="x" Canvas.Top="8" Canvas.Left="44" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R2_2" Text="x" Canvas.Top="15" Canvas.Left="54" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R2_3" Text="x" Canvas.Top="28" Canvas.Left="59" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R2_4" Text="x" Canvas.Top="41" Canvas.Left="54" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R2_5" Text="x" Canvas.Top="48" Canvas.Left="44" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R2_6" Text="x" Canvas.Top="52" Canvas.Left="32" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R2_7" Text="x" Canvas.Top="48" Canvas.Left="20" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R2_8" Text="x" Canvas.Top="41" Canvas.Left="10" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R2_9" Text="x" Canvas.Top="28" Canvas.Left="5" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R2_10" Text="x" Canvas.Top="15" Canvas.Left="10" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R2_11" Text="x" Canvas.Top="8" Canvas.Left="20" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                            </Canvas>
+                                        </Grid>
+                                        <Grid Grid.Row="11" Grid.Column="3" Grid.RowSpan="8">
+                                            <Grid.Background>
+                                                <ImageBrush ImageSource="/Images/left.png" Stretch="UniformToFill" ></ImageBrush>
+                                            </Grid.Background>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="42"/>
+                                                <RowDefinition Height="70"/>
+                                                <RowDefinition Height="*"/>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="12"/>
+                                                <ColumnDefinition Width="70"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Canvas Grid.Row="1" Grid.Column="1">
+                                                <TextBlock Name="L2_12" Text="x" Canvas.Top="4" Canvas.Left="32" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L2_1" Text="x" Canvas.Top="8" Canvas.Left="44" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L2_2" Text="x" Canvas.Top="15" Canvas.Left="54" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L2_3" Text="x" Canvas.Top="28" Canvas.Left="59" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L2_4" Text="x" Canvas.Top="41" Canvas.Left="54" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L2_5" Text="x" Canvas.Top="48" Canvas.Left="44" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L2_6" Text="x" Canvas.Top="52" Canvas.Left="32" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L2_7" Text="x" Canvas.Top="48" Canvas.Left="20" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L2_8" Text="x" Canvas.Top="41" Canvas.Left="10" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L2_9" Text="x" Canvas.Top="28" Canvas.Left="5" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L2_10" Text="x" Canvas.Top="15" Canvas.Left="10" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L2_11" Text="x" Canvas.Top="8" Canvas.Left="20" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                            </Canvas>
+                                        </Grid>
+
+                                        <WrapPanel Grid.Row="12" Grid.Column="4">
+                                            <TextBlock Text="大小 Size: "></TextBlock>
+                                            <TextBlock Name="dataLeftSize2" Text="{Binding DataLeftSize2}"/>
+                                        </WrapPanel>
+                                        <WrapPanel Grid.Row="12" Grid.Column="0">
+                                            <TextBlock Text="大小 Size: "></TextBlock>
+                                            <TextBlock Name="dataRightSize2" Text="{Binding DataRightSize2}"/>
+                                        </WrapPanel>
+                                        <WrapPanel Grid.Row="13" Grid.Column="4">
+                                            <TextBlock Text="形狀 Shape: "></TextBlock>
+                                            <TextBlock Name="dataLeftShape2" Text="{Binding DataLeftShape2}"/>
+                                        </WrapPanel>
+                                        <WrapPanel Grid.Row="13" Grid.Column="0">
+                                            <TextBlock Text="形狀 Shape: "></TextBlock>
+                                            <TextBlock Name="dataRightShape2" Text="{Binding DataRightShape2}"/>
+                                        </WrapPanel>
+                                        <!--<WrapPanel Grid.Row="14" Grid.Column="4">
+                                            <TextBlock Text="周圍形狀: "></TextBlock>
+                                            <TextBlock Name="dataLeftContourAroundFocus2" Text="{Binding DataLeftContourAroundFocus2}"/>
+                                        </WrapPanel>
+                                        <WrapPanel Grid.Row="14" Grid.Column="0">
+                                            <TextBlock Text="周圍形狀: "></TextBlock>
+                                            <TextBlock Name="dataRightContourAroundFocus2" Text="{Binding DataRightContourAroundFocus2}"/>
+                                        </WrapPanel>
+                                        <WrapPanel Grid.Row="15" Grid.Column="0">
+                                            <TextBlock Text="Contour around focus"></TextBlock>
+                                        </WrapPanel>
+                                        <WrapPanel Grid.Row="15" Grid.Column="4">
+                                            <TextBlock Text="Contour around focus"></TextBlock>
+                                        </WrapPanel>
+                                        <WrapPanel Grid.Row="16" Grid.Column="4">
+                                            <TextBlock Text="周圍組織: "></TextBlock>
+                                            <TextBlock Name="dataLeftSurroundingTissues2" Text="{Binding DataLeftSurroundingTissues2}"/>
+                                        </WrapPanel>
+                                        <WrapPanel Grid.Row="16" Grid.Column="0">
+                                            <TextBlock Text="周圍組織: "></TextBlock>
+                                            <TextBlock Name="dataRightSurroundingTissues2" Text="{Binding DataRightSurroundingTissues2}"/>
+                                        </WrapPanel>
+                                        <WrapPanel Grid.Row="17" Grid.Column="0">
+                                            <TextBlock Text="Surrounding tissues"></TextBlock>
+                                        </WrapPanel>
+                                        <WrapPanel Grid.Row="17" Grid.Column="4">
+                                            <TextBlock Text="Surrounding tissues"></TextBlock>
+                                        </WrapPanel>-->
+                                        <Grid Grid.Row="20" Grid.Column="1" Grid.RowSpan="8">
+                                            <Grid.Background>
+                                                <ImageBrush ImageSource="/Images/right.png" Stretch="UniformToFill"/>
+                                            </Grid.Background>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="42"/>
+                                                <RowDefinition Height="70"/>
+                                                <RowDefinition Height="*"/>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="56"/>
+                                                <ColumnDefinition Width="70"/>
+                                                <ColumnDefinition Width="5"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Canvas Grid.Row="1" Grid.Column="1">
+                                                <TextBlock Name="R3_12" Text="x" Canvas.Top="4" Canvas.Left="32" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R3_1" Text="x" Canvas.Top="8" Canvas.Left="44" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R3_2" Text="x" Canvas.Top="15" Canvas.Left="54" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R3_3" Text="x" Canvas.Top="28" Canvas.Left="59" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R3_4" Text="x" Canvas.Top="41" Canvas.Left="54" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R3_5" Text="x" Canvas.Top="48" Canvas.Left="44" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R3_6" Text="x" Canvas.Top="52" Canvas.Left="32" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R3_7" Text="x" Canvas.Top="48" Canvas.Left="20" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R3_8" Text="x" Canvas.Top="41" Canvas.Left="10" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R3_9" Text="x" Canvas.Top="28" Canvas.Left="5" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R3_10" Text="x" Canvas.Top="15" Canvas.Left="10" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R3_11" Text="x" Canvas.Top="8" Canvas.Left="20" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                            </Canvas>
+                                        </Grid>
+                                        <Grid Grid.Row="20" Grid.Column="3" Grid.RowSpan="8">
+                                            <Grid.Background>
+                                                <ImageBrush ImageSource="/Images/left.png" Stretch="UniformToFill" ></ImageBrush>
+                                            </Grid.Background>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="42"/>
+                                                <RowDefinition Height="70"/>
+                                                <RowDefinition Height="*"/>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="12"/>
+                                                <ColumnDefinition Width="70"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Canvas Grid.Row="1" Grid.Column="1">
+                                                <TextBlock Name="L3_12" Text="x" Canvas.Top="4" Canvas.Left="32" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L3_1" Text="x" Canvas.Top="8" Canvas.Left="44" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L3_2" Text="x" Canvas.Top="15" Canvas.Left="54" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L3_3" Text="x" Canvas.Top="28" Canvas.Left="59" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L3_4" Text="x" Canvas.Top="41" Canvas.Left="54" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L3_5" Text="x" Canvas.Top="48" Canvas.Left="44" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L3_6" Text="x" Canvas.Top="52" Canvas.Left="32" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L3_7" Text="x" Canvas.Top="48" Canvas.Left="20" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L3_8" Text="x" Canvas.Top="41" Canvas.Left="10" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L3_9" Text="x" Canvas.Top="28" Canvas.Left="5" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L3_10" Text="x" Canvas.Top="15" Canvas.Left="10" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L3_11" Text="x" Canvas.Top="8" Canvas.Left="20" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                            </Canvas>
+                                        </Grid>
+
+                                        <WrapPanel Grid.Row="21" Grid.Column="4">
+                                            <TextBlock Text="大小 Size: "></TextBlock>
+                                            <TextBlock Name="dataLeftSize3" Text="{Binding DataLeftSize3}"/>
+                                        </WrapPanel>
+                                        <WrapPanel Grid.Row="21" Grid.Column="0">
+                                            <TextBlock Text="大小 Size: "></TextBlock>
+                                            <TextBlock Name="dataRightSize3" Text="{Binding DataRightSize3}"/>
+                                        </WrapPanel>
+                                        <WrapPanel Grid.Row="22" Grid.Column="4">
+                                            <TextBlock Text="形狀 Shape: "></TextBlock>
+                                            <TextBlock Name="dataLeftShape3" Text="{Binding DataLeftShape3}"/>
+                                        </WrapPanel>
+                                        <WrapPanel Grid.Row="22" Grid.Column="0">
+                                            <TextBlock Text="形狀 Shape: "></TextBlock>
+                                            <TextBlock Name="dataRightShape3" Text="{Binding DataRightShape3}"/>
+                                        </WrapPanel>
+                                        <!--<WrapPanel Grid.Row="23" Grid.Column="4">
+                                            <TextBlock Text="周圍形狀: "></TextBlock>
+                                            <TextBlock Name="dataLeftContourAroundFocus3" Text="{Binding DataLeftContourAroundFocus3}"/>
+                                        </WrapPanel>
+                                        <WrapPanel Grid.Row="23" Grid.Column="0">
+                                            <TextBlock Text="周圍形狀: "></TextBlock>
+                                            <TextBlock Name="dataRightContourAroundFocus3" Text="{Binding DataRightContourAroundFocus3}"/>
+                                        </WrapPanel>
+                                        <WrapPanel Grid.Row="24" Grid.Column="0">
+                                            <TextBlock Text="Contour around focus"></TextBlock>
+                                        </WrapPanel>
+                                        <WrapPanel Grid.Row="24" Grid.Column="4">
+                                            <TextBlock Text="Contour around focus"></TextBlock>
+                                        </WrapPanel>
+                                        <WrapPanel Grid.Row="25" Grid.Column="4">
+                                            <TextBlock Text="周圍組織: "></TextBlock>
+                                            <TextBlock Name="dataLeftSurroundingTissues3" Text="{Binding DataLeftSurroundingTissues3}"/>
+                                        </WrapPanel>
+                                        <WrapPanel Grid.Row="25" Grid.Column="0">
+                                            <TextBlock Text="周圍組織: "></TextBlock>
+                                            <TextBlock Name="dataRightSurroundingTissues3" Text="{Binding DataRightSurroundingTissues3}"/>
+                                        </WrapPanel>
+                                        <WrapPanel Grid.Row="26" Grid.Column="0">
+                                            <TextBlock Text="Surrounding tissues"></TextBlock>
+                                        </WrapPanel>
+                                        <WrapPanel Grid.Row="26" Grid.Column="4">
+                                            <TextBlock Text="Surrounding tissues"></TextBlock>
+                                        </WrapPanel>-->
+                                    </Grid>
+
+                                    <TextBlock Grid.Row="7" Grid.ColumnSpan="4" FontSize="10" Text="圖形只顯示檢測圖中綠色或紅色標誌的部位，並非其實際大小，形狀和位置，最多各在左右乳房各顯示三個標誌." HorizontalAlignment="Center" ></TextBlock>
+                                    <TextBlock Grid.Row="8" Grid.ColumnSpan="4" FontSize="10" Text="Diagram indicates only the green or red markings in the screen image, not the actual size, " HorizontalAlignment="Center"></TextBlock>
+                                    <TextBlock Grid.Row="9" Grid.ColumnSpan="4" FontSize="10" Text="shape and position. Display shows up to a maximum of three points on the left or right breast." HorizontalAlignment="Center"></TextBlock>
+                                </Grid>
+                            </Border>
+                            
+                        </Grid>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+
+        </TableRowGroup>
+    </Table>
+    <!--Result-->
+    <Table Padding="50,0,50,0">
+        <TableRowGroup>
+            <TableRow>
+                <TableCell>
+                    <Paragraph>
+                        <Grid Width="692">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"></RowDefinition>
+                                <RowDefinition Height="148"></RowDefinition>
+                                <RowDefinition Height="19"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="118"></ColumnDefinition>
+                                <ColumnDefinition Width="3*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Border BorderThickness="2,2,2,0" BorderBrush="#FF00657F" Background="#FF00657F"  CornerRadius="6,6,0,0" VerticalAlignment="Center">
+                                <TextBlock Foreground="White" Background="#FF00657F" HorizontalAlignment="Left" VerticalAlignment="Center" Text="總覽 Overview" Margin="5,2,5,2" FontSize="12"></TextBlock>
+                            </Border>
+                            <Border Grid.Row="1" Grid.ColumnSpan="2" BorderThickness="1" BorderBrush="#FF00657F" Background="White">
+                                <Grid Width="692" HorizontalAlignment="Left" Margin="10">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="16"></RowDefinition>
+                                        <RowDefinition Height="16"></RowDefinition>
+                                        <RowDefinition Height="16"></RowDefinition>
+                                        <RowDefinition Height="16"></RowDefinition>
+                                        <RowDefinition Height="16"></RowDefinition>
+                                        <RowDefinition Height="10"></RowDefinition>
+                                        <RowDefinition Height="16"></RowDefinition>
+                                        <RowDefinition Height="1"></RowDefinition>
+                                        <RowDefinition Height="16"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <WrapPanel Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center">
+                                        <TextBlock Text="BI-EIM 分數 Bi-EIM Points: "></TextBlock>
+                                        <TextBlock Name="dataTotalPts" Text="{Binding DataTotalPts}"/>
+                                    </WrapPanel>
+                                    <WrapPanel Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center">
+                                        <TextBlock Text="結果分析 Result Analysis: " Width="140"></TextBlock>
+                                        <TextBlock Name="dataConclusion" Text="{Binding DataConclusion}"/>                                        
+                                    </WrapPanel>
+                                    <WrapPanel Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center">
+                                        <TextBlock Name="dataConclusionEN" Text="{Binding DataConclusion2}" Margin="140,0,0,0"/>
+                                    </WrapPanel>
+                                    <WrapPanel Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Center">
+                                        <TextBlock Text="建議覆檢 Suggestion Re-examination: " Width="205"></TextBlock>
+                                        <TextBlock Name="dataRecommendation" Text="{Binding DataRecommendation}"/>                                        
+                                    </WrapPanel>
+                                    <WrapPanel Grid.Row="4" HorizontalAlignment="Left" VerticalAlignment="Center">
+                                        <TextBlock Name="dataRecommendationEN" Text="{Binding DataComments}" Margin="205,0,0,0"/>
+                                    </WrapPanel>
+                                    <WrapPanel Visibility="Collapsed" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center" >
+                                        <TextBlock Text="深入檢查 Futher examination: "></TextBlock>
+                                        <TextBlock Name="dataFurtherExam" Text="{Binding DataFurtherExam}"/>
+                                    </WrapPanel>
+                                    <WrapPanel Visibility="Collapsed" Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,4,20,0">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="76"/>
+                                                <ColumnDefinition Width="570"/>
+                                            </Grid.ColumnDefinitions>
+                                            <TextBlock Text="說明 Comment: "></TextBlock>
+                                            <TextBlock Grid.Column="1" Name="dataComments" Text="{Binding DataComments}" TextWrapping="Wrap" />
+                                        </Grid>
+                                    </WrapPanel>
+                                    <TextBlock Name="dataSignDate" Grid.Row="6" Text="{Binding DataSignDate}"  Width="150" Padding="0,0,10,0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                                    <TextBlock Grid.Row="7" Height="1" Background="Black" Width="150" Padding="0,0,10,0" HorizontalAlignment="Right"></TextBlock>
+                                    <TextBlock Grid.Row="8" Text="日期 Date"  Width="150" Padding="0,0,10,0" HorizontalAlignment="Right" VerticalAlignment="Center"/>                                    
+                                </Grid>
+                            </Border>
+                            <Canvas Grid.Row="1"  Grid.Column="1" Margin="340,5,160,5">
+                                <Image Width="120" Height="120" Name="sealCanvas" Source="{x:Null}" />
+                            </Canvas>
+                            <StackPanel Grid.Row="2" Grid.ColumnSpan="2" VerticalAlignment="Center" Width="692">
+                                <TextBlock Text="續下頁 Continued on next page   P.2/4" HorizontalAlignment="Right" Padding="0,5,0,0"></TextBlock>
+                            </StackPanel>
+                        </Grid>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+
+        </TableRowGroup>
+    </Table>
+    <!--Page Footer-->
+    <Paragraph Padding="0,1,0,0" LineStackingStrategy="BlockLineHeight">
+        <TextBlock Name="footerInfo2" Height="36" Width="794" Foreground="White" Padding="50,10,50,5" VerticalAlignment="Center" Background="#FF00657F" Text="Unit A-C, 7/F, 10 Knutsford Terrace, Tsim Sha Tsui, Kowloon, Hong Kong.    Tel. 3188 3562    Fax. 3188 3270"></TextBlock>
+    </Paragraph>
+
+    <!--Page Header-->
+    <Table Padding="50,20,50,10">
+        <Table.Columns>
+            <TableColumn Width="*"></TableColumn>
+            <TableColumn Width="4*"></TableColumn>
+            <TableColumn Width="*"></TableColumn>
+        </Table.Columns>
+        <TableRowGroup>
+            <TableRow>
+                <TableCell RowSpan="4" Name="logoImg3">
+                    <!--<TableCell.Background>
+                        <ImageBrush ImageSource="/MEIKReport;component/Images/logo_k.png" Stretch="Uniform" AlignmentY="Top"/>
+                    </TableCell.Background>-->
+                </TableCell>
+                <TableCell TextAlignment="Center" LineStackingStrategy="BlockLineHeight">
+                    <Paragraph LineHeight="10"/>
+                </TableCell>
+                <TableCell></TableCell>
+            </TableRow>
+            <TableRow Name="titleImg3">
+                <TableRow.Background>
+                    <ImageBrush ImageSource="/MEIKReport;component/Images/title.png" AlignmentY="Top" Stretch="Uniform"></ImageBrush>
+                </TableRow.Background>
+
+                <TableCell TextAlignment="Center" LineStackingStrategy="BlockLineHeight">
+                    <Paragraph LineHeight="36">
+                    </Paragraph>
+                </TableCell>
+                <TableCell></TableCell>
+            </TableRow>
+            <TableRow>
+
+                <TableCell TextAlignment="Center">
+                    <Paragraph>
+                        <TextBlock Text="快速乳房健康檢測報告" Foreground="#FF00657F" FontWeight="Bold" FontSize="28"></TextBlock>
+                    </Paragraph>
+                </TableCell>
+                <TableCell></TableCell>
+            </TableRow>
+            <TableRow>
+
+                <TableCell TextAlignment="Center">
+                    <Paragraph>
+                        <TextBlock Text="Rapid Breast Health Screening Report" Foreground="#FF00657F" FontWeight="Bold" FontSize="18"/>
+                    </Paragraph>
+                </TableCell>
+                <TableCell></TableCell>
+            </TableRow>
+        </TableRowGroup>
+    </Table>    
+    <!--Comment-->
+    <Table Padding="50,0,50,0">
+        <TableRowGroup>
+            <TableRow>
+                <TableCell>
+                    <Paragraph TextAlignment="Left">
+                        <TextBlock Height="15" Text="多謝閣下選用《MEIK® 快速乳房健康檢測》服務。此為閣下的檢測報告。"></TextBlock>
+                        <TextBlock Height="15" Text="請注意，此報告内容只供專業醫生參考，不應作為诊断結果。關於閣下乳房健康情況的任何進一步疑問，請向相關醫生查詢。" Foreground="#FF35A2B4" TextWrapping="Wrap"></TextBlock>                        
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+        </TableRowGroup>
+    </Table>
+    <Table Padding="50,0,50,0">
+        <TableRowGroup>
+            <TableRow>
+                <TableCell>
+                    <Paragraph TextAlignment="Left">
+                        <TextBlock Height="15" Text="《MEIK® 快速乳房健康檢測》簡介" Foreground="#FF35A2B4"></TextBlock>                        
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell>
+                    <Paragraph TextAlignment="Left">
+                        <WrapPanel>
+                            <TextBlock Text="《MEIK® 快速乳房健康檢測》由國外引進，通過射頻電阻技術檢測乳房組織內不同種類細胞的電導性，及早找出有潛在風險的組織變化，定期監測，靈敏度高，根據以往臨床經驗可檢測出小至3毫米的可疑問題組織。此儀器已獲得歐盟CE，ISO9001、ISO13485及CFDA認可，並在全球26個國家的醫院及檢測中心使用，當中包括國家級政府醫院，安全性及可靠性高。 " TextWrapping="Wrap"></TextBlock>                            
+                        </WrapPanel>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+        </TableRowGroup>
+    </Table>
+    <Table Padding="50,0,50,0">
+        <TableRowGroup>
+            <TableRow>
+                <TableCell>
+                    <Paragraph TextAlignment="Left">
+                        <TextBlock Height="15" Text="報告導讀" Foreground="#FF35A2B4"></TextBlock>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell>
+                    <Paragraph TextAlignment="Left">
+                        <WrapPanel>
+                            <TextBlock Height="15" Text="《MEIK® 快速乳房健康檢測報告》主要分為四部份。" TextWrapping="Wrap"></TextBlock>
+                        </WrapPanel>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+        </TableRowGroup>
+    </Table>
+    <Table Padding="50,0,50,0">
+        <TableRowGroup>
+            <TableRow>
+                <TableCell>
+                    <Paragraph TextAlignment="Left">
+                        <TextBlock Height="15" Text="一·個人資料和檢測記錄" Foreground="#FF35A2B4"></TextBlock>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>            
+        </TableRowGroup>
+    </Table>
+    <Table Padding="50,0,50,0">
+        <TableRowGroup>
+            <TableRow>
+                <TableCell>
+                    <Paragraph TextAlignment="Left">
+                        <TextBlock Height="15" Text="二·乳房組織的電阻分層圖像" Foreground="#FF35A2B4"></TextBlock>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell>
+                    <Paragraph TextAlignment="Left">
+                        <WrapPanel>
+                            <TextBlock Text="此圖像是由MEIK®電腦分析系統根據量度乳房組織的電阻值數據生成。圖像顯示左乳和右乳的組織結構狀況，由表層到內層合共七層，每層相隔7毫米。" TextWrapping="Wrap"></TextBlock>
+                        </WrapPanel>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+        </TableRowGroup>
+    </Table>
+    <Table Padding="50,0,50,0">
+        <Table.Columns>
+            <TableColumn Width="100"></TableColumn>
+            <TableColumn Width="574"></TableColumn>
+            <TableColumn Width="20"></TableColumn>
+        </Table.Columns>
+        <TableRowGroup>                                    
+            <TableRow>
+                <TableCell ColumnSpan="3">
+                    <Paragraph TextAlignment="Left">
+                        <StackPanel Width="690">
+                            <TextBlock Height="15" Text="放大效果的乳房組織結構圖上。圖中用顏色標記顯示檢測到的明顯電阻組織變化。"></TextBlock>
+                        </StackPanel>
+                        <StackPanel Width="690">
+                            <TextBlock Height="15" Padding="20,0,0,0" Text="• 無顏色標記：乳房組織電阻值正常" TextWrapping="Wrap"></TextBlock>
+                        </StackPanel>
+                        <WrapPanel>
+                            <TextBlock Padding="20,0,0,0" Text="• " TextWrapping="Wrap"></TextBlock>
+                            <TextBlock Text="綠色標記" Foreground="Green" TextWrapping="Wrap"></TextBlock>
+                            <TextBlock Text="：輕微電阻改變，這類組織變化一般不會對身體健康構成影響，但仍建議定期監察其情況，以觀察有否發生更大的" TextWrapping="Wrap"></TextBlock>
+                            <TextBlock Padding="87,0,0,0" Text="轉變。" TextWrapping="Wrap"></TextBlock>
+                        </WrapPanel>
+                        <WrapPanel>
+                            <TextBlock Padding="20,0,0,0" Text="• " TextWrapping="Wrap"></TextBlock>
+                            <TextBlock Text="紅色標記" Foreground="Red" TextWrapping="Wrap"></TextBlock>
+                            <TextBlock Text="：相對大電阻值改變，根據數據庫資料比較，表示為疑似異常組織變化，建議密切監察。" TextWrapping="Wrap"></TextBlock>                            
+                        </WrapPanel>
+                    </Paragraph>
+                </TableCell>                
+            </TableRow>
+        </TableRowGroup>
+    </Table>
+    <Table Padding="50,0,50,0">
+        <TableRowGroup>
+            <TableRow>
+                <TableCell>
+                    <Paragraph TextAlignment="Left">
+                        <TextBlock Height="15" Text="三·檢測結果" Foreground="#FF35A2B4"></TextBlock>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell>
+                    <Paragraph TextAlignment="Left">
+                        <TextBlock Padding="20,0,0,0" Text="• 平均電導率 : 與同年齡婦女的左右乳房平均電導率對比。黑色數字表示正常範圍，紅色數字表示不正常範圍，一般情況下有較高機會患上乳腺疾病的風險, 建議密切監察。" TextWrapping="Wrap"></TextBlock>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell>
+                    <Paragraph TextAlignment="Left">
+                        
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell>
+                    <Paragraph TextAlignment="Left">
+                        <TextBlock Padding="20,0,0,0" Text="• 局部變化特徵 : 圖表並會列出左乳和右乳中三粒最明顯組織變化部位的特徵。" TextWrapping="Wrap"></TextBlock>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+        </TableRowGroup>
+    </Table>
+    <Table Padding="50,0,50,0">
+        <TableRowGroup>
+            <TableRow>
+                <TableCell>
+                    <Paragraph TextAlignment="Left">
+                        <TextBlock Height="15" Text="四·總覽" Foreground="#FF35A2B4"></TextBlock>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell>
+                    <Paragraph TextAlignment="Left">
+                        <TextBlock Padding="20,0,0,0" Text="• BI-EIM 分數 : 左右乳房中最明顯電阻組織變化的 (Breast Imaging Electrical Impedance Mammography)（BI-EIM）分數。BI-EIM 分數是根據左右乳房中最明顯電阻組織變化部位的特徵以及組織電阻值數據計算生成，分數由1至12分計算， 一般情況下，BI-EIM 分數5或以上表示檢測到疑似異常組織變化。" TextWrapping="Wrap"></TextBlock>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>            
+        </TableRowGroup>
+    </Table>    
+    <Table Padding="50,0,50,0">
+        <TableRowGroup>            
+            <TableRow>
+                <TableCell>
+                    <Paragraph TextAlignment="Left" Padding="100,0,0,0">
+                        <Grid HorizontalAlignment="Center">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="200"/>
+                                <ColumnDefinition Width="200"/>
+                            </Grid.ColumnDefinitions>
+                            <Border  Grid.Row="0" Grid.Column="0" BorderBrush="Black" BorderThickness="1,1,1,1" Background="#FF35A2B4">
+                                <Label Content="BI-EIM" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+                            </Border>
+                            <Border Grid.Row="0" Grid.Column="1" BorderBrush="Black" BorderThickness="0,1,1,1" Background="#FF35A2B4">
+                                <Label Content="風險評估" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+                            </Border>
+                            <Border Grid.Row="0" Grid.Column="2" BorderBrush="Black" BorderThickness="0,1,1,1" Background="#FF35A2B4">
+                                <Label Content="跟進建議" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+                            </Border>
+                            <Border  Grid.Row="1" Grid.Column="0" BorderBrush="Black" BorderThickness="1,0,1,1">
+                                <Label Content="1-4" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+                            </Border>
+                            <Border  Grid.Row="1" Grid.Column="1" BorderBrush="Black" BorderThickness="0,0,1,1">
+                                <Label Content="低風險" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+                            </Border>
+                            <Border  Grid.Row="1" Grid.Column="2" BorderBrush="Black" BorderThickness="0,0,1,1">
+                                <Label Content="6-12個月內覆檢" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+                            </Border>
+                            <Border  Grid.Row="2" Grid.Column="0" BorderBrush="Black" BorderThickness="1,0,1,1">
+                                <Label Content="5-7" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+                            </Border>
+                            <Border  Grid.Row="2" Grid.Column="1" BorderBrush="Black" BorderThickness="0,0,1,1">
+                                <Label Content="中風險" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+                            </Border>
+                            <Border  Grid.Row="2" Grid.Column="2" BorderBrush="Black" BorderThickness="0,0,1,1">
+                                <Label Content="1-6個月內覆檢" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+                            </Border>
+                            <Border  Grid.Row="3" Grid.Column="0" BorderBrush="Black" BorderThickness="1,0,1,1">
+                                <Label Content="8-12" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+                            </Border>
+                            <Border  Grid.Row="3" Grid.Column="1" BorderBrush="Black" BorderThickness="0,0,1,1">
+                                <Label Content="高風險" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+                            </Border>
+                            <Border  Grid.Row="3" Grid.Column="2" BorderBrush="Black" BorderThickness="0,0,1,1">
+                                <Label Content="轉介專科" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+                            </Border>
+                        </Grid>
+
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+        </TableRowGroup>
+    </Table>
+    <Table Padding="50,0,50,0">
+        <TableRowGroup>
+            <TableRow>
+                <TableCell>
+                    <Paragraph TextAlignment="Left">
+                        <TextBlock Padding="20,0,0,0" Text="• 結果分析 : 是次乳房健康檢測的總體評估。" TextWrapping="Wrap"></TextBlock>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+        </TableRowGroup>
+    </Table>
+    <Table Padding="50,0,50,0">
+        <TableRowGroup>
+            <TableRow>
+                <TableCell>
+                    <Paragraph TextAlignment="Left">
+                        <TextBlock Padding="20,0,0,0" Text="• 建議覆檢 : 根據結果分析的後續處理建議。" TextWrapping="Wrap"></TextBlock>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+        </TableRowGroup>
+    </Table>
+    <Table Padding="50,204,50,0">
+        <TableRowGroup>
+            <TableRow>
+                <TableCell>
+                    <Paragraph TextAlignment="Right">
+                        <TextBlock Text="續下頁 Continued on next page   P.3/4" HorizontalAlignment="Right" Padding="0,0,5,0"></TextBlock>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+        </TableRowGroup>
+    </Table>
+    <!--Page Footer-->
+    <Paragraph Padding="0,10,0,0" LineStackingStrategy="BlockLineHeight">
+        <TextBlock Name="footerInfo3" Height="36" Width="794" Foreground="White" Padding="50,10,50,5" VerticalAlignment="Center" Background="#FF00657F" Text="Unit A-C, 7/F, 10 Knutsford Terrace, Tsim Sha Tsui, Kowloon, Hong Kong.    Tel. 3188 3562    Fax. 3188 3270"></TextBlock>
+    </Paragraph>
+
+    <!--Page Header-->
+    <Table Padding="50,20,50,10">
+        <Table.Columns>
+            <TableColumn Width="*"></TableColumn>
+            <TableColumn Width="4*"></TableColumn>
+            <TableColumn Width="*"></TableColumn>
+        </Table.Columns>
+        <TableRowGroup>
+            <TableRow>
+                <TableCell RowSpan="4" Name="logoImg4">
+                    <!--<TableCell.Background>
+                        <ImageBrush ImageSource="/MEIKReport;component/Images/logo_k.png" Stretch="Uniform" AlignmentY="Top"/>
+                    </TableCell.Background>-->
+                </TableCell>
+                <TableCell TextAlignment="Center" LineStackingStrategy="BlockLineHeight">
+                    <Paragraph LineHeight="10"/>
+                </TableCell>
+                <TableCell></TableCell>
+            </TableRow>
+            <TableRow Name="titleImg4">
+                <TableRow.Background>
+                    <ImageBrush ImageSource="/MEIKReport;component/Images/title.png" AlignmentY="Top" Stretch="Uniform"></ImageBrush>
+                </TableRow.Background>
+
+                <TableCell TextAlignment="Center" LineStackingStrategy="BlockLineHeight">
+                    <Paragraph LineHeight="36">
+                    </Paragraph>
+                </TableCell>
+                <TableCell></TableCell>
+            </TableRow>
+            <TableRow>
+
+                <TableCell TextAlignment="Center">
+                    <Paragraph>
+                        <TextBlock Text="快速乳房健康檢測報告" Foreground="#FF00657F" FontWeight="Bold" FontSize="28"></TextBlock>
+                    </Paragraph>
+                </TableCell>
+                <TableCell></TableCell>
+            </TableRow>
+            <TableRow>
+
+                <TableCell TextAlignment="Center">
+                    <Paragraph>
+                        <TextBlock Text="Rapid Breast Health Screening Report" Foreground="#FF00657F" FontWeight="Bold" FontSize="18"/>
+                    </Paragraph>
+                </TableCell>
+                <TableCell></TableCell>
+            </TableRow>
+        </TableRowGroup>
+    </Table>
+    <!--Comment-->
+    <Table Padding="50,0,50,0">
+        <TableRowGroup>
+            <TableRow>
+                <TableCell>
+                    <Paragraph TextAlignment="Left">
+                        <TextBlock Height="15" Text="Thank you for choosing《MEIK® Rapid Breast Health Screening》service. Enclosed please find your MEIK® screen report."></TextBlock>
+                        <TextBlock Text="NOTE: Results indicated in the report act as a reference only. It is not a clinical diagnosis report. Clients should consult a specialist for further questions." Foreground="#FF35A2B4" TextWrapping="Wrap"></TextBlock>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+        </TableRowGroup>
+    </Table>
+    <Table Padding="50,0,50,0">
+        <TableRowGroup>
+            <TableRow>
+                <TableCell>
+                    <Paragraph TextAlignment="Left">
+                        <TextBlock Height="15" Text="INTRODUCTION OF 《MEIK® RAPID BREAST HEALTH SCREENING》" Foreground="#FF35A2B4"></TextBlock>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell>
+                    <Paragraph TextAlignment="Left">
+                        <WrapPanel>
+                            <TextBlock Text="《MEIK® Rapid Breast Health Screening》is an imported technology. It uses the Electrical Impedance Tomography (EIT) technique to measure electrical conductivity as a biomarker for various types of breast tissue, enabling early detection of abnormal changes of breast tissue. With high sensitivity and being non-invasive, it allows for screening suspicious tissue as small as 3 mm, and is best suited for close monitoring of any abnormalities. The MEIK® device is certified by EU CE, ISO9001, ISO13485 and CFDA, and is widely used in over 26 countries worldwide including national government hospitals. " TextWrapping="Wrap"></TextBlock>
+                        </WrapPanel>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+        </TableRowGroup>
+    </Table>
+    <Table Padding="50,0,50,0">
+        <TableRowGroup>
+            <TableRow>
+                <TableCell>
+                    <Paragraph TextAlignment="Left">
+                        <TextBlock Height="15" Text="REPORT GUIDELINE" Foreground="#FF35A2B4"></TextBlock>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell>
+                    <Paragraph TextAlignment="Left">
+                        <WrapPanel>
+                            <TextBlock Height="15" Text="The report consists of four parts." TextWrapping="Wrap"></TextBlock>
+                        </WrapPanel>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+        </TableRowGroup>
+    </Table>
+    <Table Padding="50,0,50,0">
+        <TableRowGroup>
+            <TableRow>
+                <TableCell>
+                    <Paragraph TextAlignment="Left">
+                        <TextBlock Height="15" Text="I: Client information and screen record." Foreground="#FF35A2B4"></TextBlock>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+        </TableRowGroup>
+    </Table>
+    <Table Padding="50,0,50,0">
+        <TableRowGroup>
+            <TableRow>
+                <TableCell>
+                    <Paragraph TextAlignment="Left">
+                        <TextBlock Height="15" Text="II: Screen Image" Foreground="#FF35A2B4"></TextBlock>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell>
+                    <Paragraph TextAlignment="Left">
+                        <WrapPanel>
+                            <TextBlock Text="This is the visual image of the breast tissues as reconstructed by MEIK computer from the electrical impedance measurement obtained from the screening. It shows both the left and right breast, covering 7 layers of the breast tissues from the top, each divided with 7 mm deep." TextWrapping="Wrap"></TextBlock>
+                        </WrapPanel>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+        </TableRowGroup>
+    </Table>
+    <Table Padding="50,0,50,0">
+        <Table.Columns>
+            <TableColumn Width="100"></TableColumn>
+            <TableColumn Width="574"></TableColumn>
+            <TableColumn Width="20"></TableColumn>
+        </Table.Columns>
+        <TableRowGroup>
+            <TableRow>
+                <TableCell ColumnSpan="3">
+                    <Paragraph TextAlignment="Left">
+                        <StackPanel Width="690">
+                            <TextBlock Text="Enlarged visual image of the breast tissues. Any detected tissue with significant electrical impedance changes are indicated with colored markers." TextWrapping="Wrap"></TextBlock>
+                        </StackPanel>
+                        <StackPanel Width="690">
+                            <TextBlock Height="15" Padding="20,0,0,0" Text="• No marker: Normal electrical impedance value in breast tissue." TextWrapping="Wrap"></TextBlock>
+                        </StackPanel>
+                        <WrapPanel>
+                            <TextBlock Padding="20,0,0,0" Text="• " TextWrapping="Wrap"></TextBlock>
+                            <TextBlock Text="GREEN marker" Foreground="Green" TextWrapping="Wrap"></TextBlock>
+                            <TextBlock Text="：Minor electrical impedance changes, probably due to benign lesions. Regular monitoring is recommended" TextWrapping="Wrap"></TextBlock>
+                            <TextBlock Padding="114,0,0,0" Text="to keep track of any further changes." TextWrapping="Wrap"></TextBlock>
+                        </WrapPanel>
+                        <WrapPanel>
+                            <TextBlock Padding="20,0,0,0" Text="• " TextWrapping="Wrap"></TextBlock>
+                            <TextBlock Text="RED marker" Foreground="Red" TextWrapping="Wrap"></TextBlock>
+                            <TextBlock Text="：Relatively high electrical impedance changes, indicative of suspicious abnormality in tissue changes. Close" TextWrapping="Wrap"></TextBlock>
+                            <TextBlock Padding="100,0,0,0" Text=" monitoring is recommended." TextWrapping="Wrap"></TextBlock>
+                        </WrapPanel>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+        </TableRowGroup>
+    </Table>
+    <Table Padding="50,0,50,0">
+        <TableRowGroup>
+            <TableRow>
+                <TableCell>
+                    <Paragraph TextAlignment="Left">
+                        <TextBlock Height="15" Text="III: Screen Result" Foreground="#FF35A2B4"></TextBlock>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell>
+                    <Paragraph TextAlignment="Left">
+                        <TextBlock Padding="20,0,0,0" Text="• Mean Electrical Conductivity : The measured mean electricity conductivity index of the left and right breast, as compared to the values for women of same age group. Black color means as normal. Red color means abnormal and will have relatively high risk of breast disease, regular monitoring is recommended." TextWrapping="Wrap"></TextBlock>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell>
+                    <Paragraph TextAlignment="Left">
+
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell>
+                    <Paragraph TextAlignment="Left">
+                        <TextBlock Padding="20,0,0,0" Text="• Description of Focal Changes : The 3 most obvious impedance changes of left and right breast are shown." TextWrapping="Wrap"></TextBlock>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+        </TableRowGroup>
+    </Table>
+    <Table Padding="50,0,50,0">
+        <TableRowGroup>
+            <TableRow>
+                <TableCell>
+                    <Paragraph TextAlignment="Left">
+                        <TextBlock Height="15" Text="IV: Overview" Foreground="#FF35A2B4"></TextBlock>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell>
+                    <Paragraph TextAlignment="Left">
+                        <TextBlock Padding="20,0,0,0" Text="• BI-EIM Points : The Breast Imaging Electrical Impedance Mammography, or BI-EIM, score for the most prominent lesion detected. This is derived based on the corresponding characteristics and measurement of electrical conductivity. The BI-EIM score is correlated with the Breast Imaging Reporting and Database System, ranging from point 1 to 12. In general, BI-EIM score of 5 or above is an indication of suspicious abnormality in one of the breasts." TextWrapping="Wrap"></TextBlock>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+        </TableRowGroup>
+    </Table>
+    <Table Padding="50,0,50,0">
+        <TableRowGroup>
+            <TableRow>
+                <TableCell>
+                    <Paragraph TextAlignment="Left" Padding="100,0,0,0">
+                        <Grid HorizontalAlignment="Center">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="200"/>
+                                <ColumnDefinition Width="200"/>
+                            </Grid.ColumnDefinitions>
+                            <Border  Grid.Row="0" Grid.Column="0" BorderBrush="Black" BorderThickness="1,1,1,1" Background="#FF35A2B4">
+                                <Label Content="BI-EIM" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+                            </Border>
+                            <Border Grid.Row="0" Grid.Column="1" BorderBrush="Black" BorderThickness="0,1,1,1" Background="#FF35A2B4">
+                                <Label Content="Risk Assessment" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+                            </Border>
+                            <Border Grid.Row="0" Grid.Column="2" BorderBrush="Black" BorderThickness="0,1,1,1" Background="#FF35A2B4">
+                                <Label Content="Recommendation" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+                            </Border>
+                            <Border  Grid.Row="1" Grid.Column="0" BorderBrush="Black" BorderThickness="1,0,1,1">
+                                <Label Content="1-4" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+                            </Border>
+                            <Border  Grid.Row="1" Grid.Column="1" BorderBrush="Black" BorderThickness="0,0,1,1">
+                                <Label Content="Low Risk" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+                            </Border>
+                            <Border  Grid.Row="1" Grid.Column="2" BorderBrush="Black" BorderThickness="0,0,1,1">
+                                <Label Content="6-12 months re-examination" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+                            </Border>
+                            <Border  Grid.Row="2" Grid.Column="0" BorderBrush="Black" BorderThickness="1,0,1,1">
+                                <Label Content="5-7" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+                            </Border>
+                            <Border  Grid.Row="2" Grid.Column="1" BorderBrush="Black" BorderThickness="0,0,1,1">
+                                <Label Content="Medium Risk" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+                            </Border>
+                            <Border  Grid.Row="2" Grid.Column="2" BorderBrush="Black" BorderThickness="0,0,1,1">
+                                <Label Content="1-6 months re-examination" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+                            </Border>
+                            <Border  Grid.Row="3" Grid.Column="0" BorderBrush="Black" BorderThickness="1,0,1,1">
+                                <Label Content="8-12" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+                            </Border>
+                            <Border  Grid.Row="3" Grid.Column="1" BorderBrush="Black" BorderThickness="0,0,1,1">
+                                <Label Content="High Risk" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+                            </Border>
+                            <Border  Grid.Row="3" Grid.Column="2" BorderBrush="Black" BorderThickness="0,0,1,1">
+                                <Label Content="Refer to specialist" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+                            </Border>
+                        </Grid>
+
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+        </TableRowGroup>
+    </Table>
+    <Table Padding="50,0,50,0">
+        <TableRowGroup>
+            <TableRow>
+                <TableCell>
+                    <Paragraph TextAlignment="Left">
+                        <TextBlock Padding="20,0,0,0" Text="• Result Analysis : The overall assessment of the screening test." TextWrapping="Wrap"></TextBlock>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+        </TableRowGroup>
+    </Table>
+    <Table Padding="50,0,50,0">
+        <TableRowGroup>
+            <TableRow>
+                <TableCell>
+                    <Paragraph TextAlignment="Left">
+                        <TextBlock Padding="20,0,0,0" Text="• Suggested Re-examination : Suggested follow-up procedure based on the result analysis." TextWrapping="Wrap"></TextBlock>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+        </TableRowGroup>
+    </Table>
+    <Table Padding="50,95,50,0">
+        <TableRowGroup>
+            <TableRow>
+                <TableCell>
+                    <Paragraph TextAlignment="Right">
+                        <TextBlock Text="P.4/4" HorizontalAlignment="Right" Padding="0,0,5,0"></TextBlock>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+        </TableRowGroup>
+    </Table>
+    <!--Page Footer-->
+    <Paragraph Padding="0,10,0,0" LineStackingStrategy="BlockLineHeight">
+        <TextBlock Name="footerInfo4" Height="36" Width="794" Foreground="White" Padding="50,10,50,5" VerticalAlignment="Center" Background="#FF00657F" Text="Unit A-C, 7/F, 10 Knutsford Terrace, Tsim Sha Tsui, Kowloon, Hong Kong.    Tel. 3188 3562    Fax. 3188 3270"></TextBlock>
+    </Paragraph>
+</FlowDocument>

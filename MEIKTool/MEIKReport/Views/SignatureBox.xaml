@@ -1,0 +1,52 @@
+﻿<Window x:Class="MEIKReport.SignatureBox"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Icon="/MEIKReport;component/Images/App_Icon.png"
+        Title="Doctor Signature Box" Height="230" Width="800" ShowInTaskbar="False" ResizeMode="NoResize" Closed="Window_Closed" Topmost="True" WindowStartupLocation="CenterOwner">    
+    <!--<Window.TaskbarItemInfo>
+        <TaskbarItemInfo Description="My Application" Overlay="/MEIKReport;component/Images/ProgressIcon.jpg" ProgressState="Normal"  ProgressValue="10" />
+    </Window.TaskbarItemInfo>-->
+
+    <Grid>
+        <Grid.Background>
+            <SolidColorBrush Color="Gray"></SolidColorBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="160"/>                  
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>                
+                
+            </Grid.ColumnDefinitions>
+            <WrapPanel Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0">
+                <Label Content="{StaticResource SignaureWinLab}"></Label>
+                <CheckBox Name="cbDefault" VerticalAlignment="Center"></CheckBox>
+                <Button Name="btnLoadSign" Width="120" Height="22" Content="{StaticResource SignaureWinLoadBtn}" Margin="15,0,0,0" Click="btnLoadSign_Click"></Button>
+                <Button Name="btnSaveSign" Width="100" Height="22" Content="{StaticResource CommonSaveBtn}" Margin="15,0,0,0" Click="btnSaveSign_Click"></Button>
+                <Button Name="btnClearSignBox" Width="100" Height="22" Content="{StaticResource SignaureWinClearBtn}" Margin="15,0,0,0" Click="btnClearSignBox_Click"></Button>
+                <Button Name="btnOkSignBox" Width="100" Height="22" Content="{StaticResource SignaureWinConfirmBtn}" Margin="15,0,0,0" Click="btnOkSignBox_Click"></Button>
+                <Button Name="btnClose" Width="100" Height="22" Content="{StaticResource CommonCloseBtn}" Margin="15,0,0,0" Click="btnClose_Click" ></Button>
+            </WrapPanel>            
+        </Grid>
+        <Grid Name="picGrid" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="2"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="1" Background="White" Height="156" Width="796" VerticalAlignment="Center" HorizontalAlignment="Left">
+                <InkCanvas Name="inkCanvas" Height="156" Width="796">
+                    <InkCanvas.DefaultDrawingAttributes>
+                        <DrawingAttributes Width="4" Height="4" Color="Black"/>
+                    </InkCanvas.DefaultDrawingAttributes>
+                </InkCanvas>
+            </StackPanel>
+        </Grid>        
+    </Grid>
+</Window>

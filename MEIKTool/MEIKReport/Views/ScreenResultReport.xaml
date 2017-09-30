@@ -1,0 +1,71 @@
+﻿<Window x:Class="MEIKReport.Views.ScreenResultReport"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ScreenResult" Height="510" Width="780" ShowInTaskbar="False" ResizeMode="NoResize" Topmost="True" WindowStartupLocation="CenterOwner">
+    <Grid>
+        <Grid.Background>
+            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.GradientInactiveCaptionColorKey}}"></SolidColorBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="28"/>
+            <RowDefinition Height="38"/>
+            <RowDefinition Height="2"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="200"/>
+        </Grid.ColumnDefinitions>
+        <WrapPanel Grid.Row="0" Grid.ColumnSpan="3" VerticalAlignment="Center" Margin="10,0,0,0">
+            <Label Content="{StaticResource Dialog5}" VerticalAlignment="Center" HorizontalAlignment="Left" FontWeight="Bold"></Label>
+            <Label Name="textScreenCode" Content="" VerticalAlignment="Center" Margin="2,0,0,0"></Label>
+        </WrapPanel>
+        
+        <WrapPanel Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0">
+            <StackPanel Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Center">
+                <Label FontSize="14" Content="{StaticResource Dialog14}"></Label>
+            </StackPanel>
+            <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <ComboBox Name="leftBreastResult" Height="26" Width="180" Style="{StaticResource NewComboBoxStyle}" IsSynchronizedWithCurrentItem="True" FontSize="14" Background="White" BorderBrush="#FF3E6E8F">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" >
+                                <TextBlock Text="{Binding Path=Name}" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                    <ComboBoxItem Content="{DynamicResource CommonResultNormal}" IsSelected="True"></ComboBoxItem>
+                    <ComboBoxItem Content="{DynamicResource CommonResultBenign}"></ComboBoxItem>
+                    <ComboBoxItem Content="{DynamicResource CommonResultSuspicious}"></ComboBoxItem>
+                </ComboBox>
+            </StackPanel>                        
+        </WrapPanel>
+        <WrapPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0">
+            <StackPanel Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Center">
+                <Label FontSize="14" Content="{StaticResource Dialog15}"></Label>
+            </StackPanel>
+            <StackPanel Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <ComboBox Name="rightBreastResult" Height="26" Width="180" Style="{StaticResource NewComboBoxStyle}" IsSynchronizedWithCurrentItem="True" FontSize="14" Background="White" BorderBrush="#FF3E6E8F">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" >
+                                <TextBlock Text="{Binding Path=Name}" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                    <ComboBoxItem Content="{DynamicResource CommonResultNormal}" IsSelected="True"></ComboBoxItem>
+                    <ComboBoxItem Content="{DynamicResource CommonResultBenign}"></ComboBoxItem>
+                    <ComboBoxItem Content="{DynamicResource CommonResultSuspicious}"></ComboBoxItem>
+                </ComboBox>
+            </StackPanel>            
+        </WrapPanel>
+        <Button Grid.Row="1" Grid.Column="2" Name="btnScreenShot" Width="160" Height="26" Content="{StaticResource CommonResultSubmit}" Margin="15,0,0,0" Click="btnSendScreenReport_Click"></Button>
+        <StackPanel Grid.Row="2" Grid.ColumnSpan="3" VerticalAlignment="Center" Height="2" Background="White"></StackPanel>           
+        <StackPanel Grid.Row="3" Grid.ColumnSpan="3" VerticalAlignment="Center"  Background="White" Margin="0">
+            <Image Name="dataScreenShotImg" Height="410" Width="772" />
+        </StackPanel>
+        <StackPanel Grid.Row="4" Grid.ColumnSpan="3" VerticalAlignment="Center" Height="2" Background="White"></StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,196 @@
+﻿<FixedPage xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"           
+               Height="1056" Width="794">
+    <Grid Grid.Column="1" Grid.Row="1" Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="40"/>
+            <ColumnDefinition Width="714"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="966"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        
+        <Grid Grid.Column="1" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height=".3*"/>
+                <RowDefinition Height=".2*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height=".2*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="1.2*"/>
+                <RowDefinition Height="*"/>
+                
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="2.5*"/>
+                <RowDefinition Height="7*"/>                
+                <RowDefinition Height="*"/>                
+                <RowDefinition Height="3*"/>
+                
+                <!--<RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>-->
+
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="80"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="80"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>                    
+                </Grid.RowDefinitions>
+                <Image Name="imgTitleLog" Source="/Images/Title.png" Grid.Row="0" Grid.Column="1"></Image>
+                <!--<Image Source="/logo.png" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2"></Image>-->
+                <!--<TextBlock Text="PATIENT'S MEIK RESULT" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" FontWeight="Bold" FontSize="18"/>
+                <TextBlock Text="MEIK v.5.6 - Digital Mammograph Summary Report" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" FontWeight="Bold" FontSize="18"/>-->
+                <TextBlock Text="{StaticResource ReportContext_196}" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" FontWeight="Bold" FontSize="20" VerticalAlignment="Bottom"/>
+                <TextBlock Text="{StaticResource ReportContext_197}" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" FontWeight="Bold" FontSize="20" VerticalAlignment="Center"/>
+            </Grid>
+            <Border Grid.Row="1" BorderBrush="Black" BorderThickness="0,0,0,2"></Border>
+            <StackPanel Grid.Row="2" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" >
+            </StackPanel>
+            <StackPanel Grid.Row="3" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left" >
+                <TextBlock Text="{StaticResource ReportContext_177}" FontWeight="Bold" FontSize="18"/>
+                <TextBlock Name="dataScreenDate" Text="{Binding DataScreenDate}" Width="500" TextDecorations="Underline" FontSize="18"/>                
+            </StackPanel>
+            <StackPanel Grid.Row="4" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left" >
+                <TextBlock Text="{StaticResource ReportContext_6}" FontWeight="Bold" FontSize="18"/>
+                <TextBlock Name="dataScreenLocation" Text="{Binding DataScreenLocation}" Width="500" FontWeight="Bold" FontSize="18"/>
+            </StackPanel>
+            <StackPanel Grid.Row="5" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left" >
+                <TextBlock Text="{StaticResource ReportContext_178}" FontWeight="Bold" FontSize="18"/>
+                <TextBlock Name="dataUserCode" Text="{Binding DataUserCode}" Width="480" FontWeight="Bold" FontSize="18"/>
+            </StackPanel>
+            <StackPanel Grid.Row="6" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left" >
+                <TextBlock Text="{StaticResource ReportContext_179}" FontWeight="Bold" FontSize="18"/>
+                <TextBlock Name="dataName" Text="{Binding DataName}" Width="500" FontWeight="Bold" FontSize="18"/>                
+            </StackPanel>
+            <StackPanel Grid.Row="7" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left" >
+                <TextBlock Text="{StaticResource ReportContext_10}" FontWeight="Bold" FontSize="18"/>
+                <TextBlock Name="dataAge" Text="{Binding DataAge}" Width="500" FontWeight="Bold" FontSize="18"/>
+            </StackPanel>
+            <Border Grid.Row="8" BorderBrush="Black" BorderThickness="0,0,0,1">
+            </Border>
+            <StackPanel Grid.Row="9" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left" >
+                <TextBlock Text="" Width="180"/>
+                <TextBlock Text="{StaticResource ReportContext_180}" Width="250" FontWeight="Bold" FontSize="18" TextDecorations="Underline"/>
+                <TextBlock Text="{StaticResource ReportContext_181}" Width="200" FontWeight="Bold" FontSize="18" TextDecorations="Underline"/>
+            </StackPanel>
+            <StackPanel Grid.Row="10" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left" >
+                <TextBlock Text="" Width="70"/>
+                <TextBlock Text="{StaticResource ReportContext_182}" FontWeight="Bold" FontSize="18"/>
+                <TextBlock Name="dataLeftMammaryGlandResult" Text="{Binding DataLeftMammaryGlandResult}" Width="230" FontSize="18"/>
+                <TextBlock Text="{StaticResource ReportContext_182}" FontWeight="Bold" FontSize="18"/>
+                <TextBlock Name="dataRightMammaryGlandResult" Text="{Binding DataRightMammaryGlandResult}" Width="260" FontSize="18"/>
+            </StackPanel>
+            <StackPanel Grid.Row="11" Orientation="Horizontal" HorizontalAlignment="Left" >
+                <TextBlock Text="{StaticResource ReportContext_188}" Width="150" FontWeight="Bold" FontSize="18"/>
+                <TextBlock Name="dataLeftSegment" Text="{Binding DataLeftSegment}" Width="260" FontSize="18" Margin="0,0,10,0"/>
+                <TextBlock Name="dataRightSegment" Text="{Binding DataRightSegment}" Width="250" FontSize="18"/>
+            </StackPanel>
+            <StackPanel Grid.Row="12" Orientation="Horizontal" HorizontalAlignment="Left" >
+                <TextBlock Text="{StaticResource ReportContext_192}" Width="150" FontWeight="Bold" FontSize="18"/>
+                <TextBlock Name="dataLeftSize" Text="{Binding DataLeftSize}" Width="260" FontSize="18" Margin="0,0,10,0"/>
+                <TextBlock Name="dataRightSize" Text="{Binding DataRightSize}" Width="250"  FontSize="18"/>
+            </StackPanel>            
+            <StackPanel Grid.Row="13" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left" >
+                <TextBlock Text="{StaticResource ReportContext_141}" Width="150" FontWeight="Bold" FontSize="18"/>
+                <!--<TextBlock Text="{StaticResource ReportContext_142}" Width="85" FontWeight="Bold" FontSize="18"/>-->
+                <TextBlock Name="dataTotalPts" Text="{Binding DataTotalPts}" Width="120" Margin="0,0,1,0" FontSize="18"/>
+                <TextBlock Text="{StaticResource ReportContext_143}" Width="150" FontWeight="Bold" FontSize="18"/>
+                <TextBlock Name="dataPoint" Text="{Binding DataPoint}" Width="250" Margin="0,0,1,0" FontSize="18"/>
+            </StackPanel>
+            <StackPanel Grid.Row="14" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left" >
+                <TextBlock Text="{StaticResource ReportContext_150}" Width="180" FontWeight="Bold" FontSize="18"/>
+                <TextBlock Name="dataBiRadsCategory" Text="{Binding DataBiRadsCategory}" Width="520" FontSize="18"/>
+            </StackPanel>
+            <StackPanel Grid.Row="15" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left" >
+                <TextBlock Text="{StaticResource ReportContext_157}" Width="150" FontWeight="Bold" FontSize="18"/>
+                <TextBlock Name="dataRecommendation" Text="{Binding DataRecommendation}" Width="520" FontSize="18" />
+            </StackPanel>
+            <StackPanel Grid.Row="16" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left" >
+                <TextBlock Text="{StaticResource ReportContext_232}" Width="185" FontWeight="Bold" FontSize="18"/>
+                <TextBlock Name="dataFurtherExam" Text="{Binding DataFurtherExam}" Width="520"  FontSize="18"/>
+            </StackPanel>
+            <StackPanel Grid.Row="17" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left" >
+                <TextBlock Text="{StaticResource ReportContext_165}" Width="130" FontWeight="Bold" FontSize="18"/>
+                <TextBlock Name="dataConclusion" Text="{Binding DataConclusion}" Width="580" FontSize="16"/>
+            </StackPanel>            
+            
+            <!--<StackPanel Grid.Row="15" Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Left" >
+                <TextBlock Text="" Width="110" FontWeight="Bold" FontSize="18"/>
+                <TextBlock Name="dataConclusion2" Text="{Binding DataConclusion2}" Width="600" FontSize="16"/>
+            </StackPanel>-->
+            <StackPanel Grid.Row="18" Orientation="Horizontal" HorizontalAlignment="Left">
+                <TextBlock Text="{StaticResource ReportContext_169}" Width="130" FontWeight="Bold" FontSize="18"/>
+                <TextBlock Name="dataComments" Text="{Binding DataComments}" Width="550" FontSize="18" TextWrapping="Wrap"/>                
+            </StackPanel>
+            <WrapPanel Grid.Row="19">
+                <StackPanel Name="techSignPanel" Height="28" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left" >
+                    <TextBlock Text="{StaticResource ReportContext_191}" Width="160" FontWeight="Bold" FontSize="18"/>
+                    <TextBlock Name="dataMeikTech" Text="{Binding DataMeikTech}" Width="230"  FontSize="18"/>
+                    <TextBlock Text="{StaticResource ReportContext_200}" Width="110" FontWeight="Bold" FontSize="18"/>
+                    <TextBlock Name="dataTechLicenseNo" Text="{Binding DataTechLicense}" Width="200"  FontSize="18"/>
+                </StackPanel>
+                <StackPanel Name="doctorSignPanel" Height="28" Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Left" >
+                    <TextBlock Text="{StaticResource ReportContext_173}" Width="160" FontWeight="Bold" FontSize="18"/>
+                    <TextBlock Name="dataDoctor" Text="{Binding DataDoctor}" Width="230" FontSize="18" />
+                    <TextBlock Text="{StaticResource ReportContext_200}" Width="110" FontWeight="Bold" FontSize="18"/>
+                    <TextBlock Name="dataDoctorLicenseNo" Text="{Binding DataDoctorLicense}" Width="200"  FontSize="18"/>
+                </StackPanel>
+                <!--<StackPanel Grid.Row="19" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left" >
+                <TextBlock Text="    Refer to surgeon for follow-up biopsy as soon as possible" Width="550" FontSize="16"/>
+            </StackPanel>-->
+                <Border Height="5" Width="714" BorderBrush="Black" BorderThickness="0,1,0,1"/>
+                <Grid Width="714" Height="120" Grid.RowSpan="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1.5*"/>
+                            <RowDefinition Height="4"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Name="dataSignDate" Text="{Binding DataSignDate}" VerticalAlignment="Bottom" Height="26" Width="140" FontSize="18"/>
+                        <Border Grid.Row="1" Grid.Column="0" Width="200" BorderBrush="Black" BorderThickness="0,1,0,0"/>
+                        <TextBlock Grid.Row="2" Grid.Column="0" Text="{StaticResource ReportContext_190}" Width="34" FontSize="16"/>
+                    </Grid>
+                    <Grid Grid.Column="1" Name="doctorSignGrid">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1.5*"/>
+                            <RowDefinition Height="4"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid Name="signPanel" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Center">
+                            <Image Name="dataSignImg" Height="60" Width="310"/>
+                        </Grid>
+                        <Border Grid.Row="1" Grid.Column="1" Width="320" BorderBrush="Black" BorderThickness="0,1,0,0"/>
+                        <TextBlock Grid.Row="2" Grid.Column="1" Text="{StaticResource ReportContext_174}" Width="130" FontSize="16"/>
+                    </Grid>
+                    
+                </Grid>
+            </WrapPanel>
+                                                
+        </Grid>
+    </Grid>
+</FixedPage>

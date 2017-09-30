@@ -1,0 +1,947 @@
+﻿<FlowDocument xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" ColumnWidth="734" 
+              PageHeight="1056" PageWidth="794" PagePadding="30,40,30,40"
+              FontFamily="Arial,Microsoft YaHei" FontSize="14">
+    <!--Page Header-->
+    <Table>
+        <TableRowGroup>
+            <TableRow>
+                <TableCell TextAlignment="Center">
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_198}" FontWeight="Bold" FontSize="16"></TextBlock>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell TextAlignment="Center">
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_199}" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16" TextDecorations="Underline"/>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>            
+        </TableRowGroup>
+    </Table>
+    <!--Personal info-->
+    <Table>
+        <Table.Columns>
+            <TableColumn Width="*"></TableColumn>
+            <TableColumn Width="*"></TableColumn>
+            <TableColumn Width="*"></TableColumn>
+        </Table.Columns>
+        <TableRowGroup>            
+            <TableRow>
+                <TableCell>
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_202}" FontWeight="Bold"/>
+                        <TextBlock Name="dataClientNum" Text="{Binding DataClientNum}"></TextBlock>                        
+                    </Paragraph>
+                </TableCell>
+                <TableCell>
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_9}" FontWeight="Bold"/>
+                        <TextBlock Name="dataUserCode" Text="{Binding DataUserCode}"/>                        
+                    </Paragraph>
+                </TableCell>
+                <TableCell>
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_2}" FontWeight="Bold"/>
+                        <TextBlock Name="dataScreenDate" Text="{Binding DataScreenDate}"/>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell ColumnSpan="3">
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_1}" FontWeight="Bold"/>
+                        <TextBlock Name="dataName" Text="{Binding DataName}" VerticalAlignment="Center" Width="250"></TextBlock>
+                        <TextBlock Text="{StaticResource ReportContext_10}" Margin="30,0,0,0" FontWeight="Bold"/>
+                        <TextBlock Name="dataAge" Text="{Binding DataAge}" Width="55"></TextBlock>
+                        <TextBlock Text="{StaticResource ReportContext_203}" Margin="5,0,0,0" FontWeight="Bold" VerticalAlignment="Center"/>
+                        <TextBlock Name="dataHeight" Text="{Binding DataHeight}" VerticalAlignment="Center" Width="60"></TextBlock>
+                        <TextBlock Text="{StaticResource ReportContext_11}" Margin="10,0,0,0" FontWeight="Bold"/>                        
+                        <TextBlock Name="dataWeight" Text="{Binding DataWeight}"></TextBlock>
+                        <TextBlock Text="{StaticResource ReportContext_13}"></TextBlock>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell ColumnSpan="3">
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_204}" FontWeight="Bold"/>
+                        <TextBlock Name="dataMobile" Text="{Binding DataMobile}" Width="220"></TextBlock>
+                        <TextBlock Text="{StaticResource ReportContext_205}" FontWeight="Bold"/>
+                        <TextBlock Name="dataEmail" Text="{Binding DataEmail}"></TextBlock>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell ColumnSpan="3">
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_6}" FontWeight="Bold"/>
+                        <TextBlock Name="dataScreenLocation" Text="{Binding DataScreenLocation}" Width="300"></TextBlock>
+                        <TextBlock Text="{StaticResource ReportContext_149}"  FontWeight="Bold"/>
+                        <TextBlock Name="dataMeikTech" Text="{Binding Path=DataMeikTech}" ></TextBlock>                       
+                    </Paragraph>
+                </TableCell>                
+            </TableRow>
+            
+            <TableRow>
+                <TableCell>
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_14}" FontWeight="Bold"/>
+                        <TextBlock Name="dataMenstrualCycle" Text="{Binding DataMenstrualCycle}" HorizontalAlignment="Left"/>
+                        
+                    </Paragraph>
+                </TableCell>
+                <TableCell>
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_23}" FontWeight="Bold"/>
+                        <TextBlock Name="dataSkinAffections" Text="{Binding DataSkinAffections}" HorizontalAlignment="Left"/>
+                    </Paragraph>
+                </TableCell>
+                <TableCell>
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_22}" FontWeight="Bold"/>
+                        <TextBlock Name="dataHormones" Text="{Binding DataHormones}"/>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell ColumnSpan="3" LineStackingStrategy="BlockLineHeight">
+                    <Paragraph BorderBrush="Black" BorderThickness="0,0,0,1" LineHeight="5"/>
+                </TableCell>
+            </TableRow>            
+        </TableRowGroup>
+    </Table>
+    <!--圖像特徵 電導特徵-->
+    <Table>
+        <Table.Columns>
+            <TableColumn Width="2*"/>
+            <TableColumn Width="*"/>
+            <TableColumn Width="*"/>
+            <TableColumn Width="*"/>
+        </Table.Columns>
+        <TableRowGroup>
+            <!--圖像特徵-->
+            <TableRow>
+                <TableCell ColumnSpan="2" LineHeight="15" TextAlignment="Right">
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_40}" FontWeight="Bold" Margin="0,0,50,0"/>
+                    </Paragraph>
+                </TableCell>
+                <TableCell>
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_41}"/>
+                        <TextBlock Name="dataLeftBreast" Text="{Binding DataLeftBreast}"></TextBlock>
+                    </Paragraph>
+                </TableCell>
+                <TableCell>
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_42}"/>
+                        <TextBlock Name="dataRightBreast" Text="{Binding DataRightBreast}"></TextBlock>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell ColumnSpan="2">
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_43}" Width="420" FontWeight="Bold"/>
+                    </Paragraph>
+                </TableCell>
+                <TableCell TextAlignment="Center">
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_44}" FontWeight="Bold" TextDecorations="Underline"/>
+                    </Paragraph>
+                </TableCell>
+                <TableCell TextAlignment="Center">
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_45}" FontWeight="Bold" TextDecorations="Underline"/>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+            <!--<TableRow>
+                <TableCell ColumnSpan="2">
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_46}"/>
+                    </Paragraph>
+                </TableCell>
+                <TableCell BorderBrush="Black" BorderThickness="0,0,1,0" TextAlignment="Center">
+                    <Paragraph>
+                        <TextBlock Name="dataLeftPalpableMass" Text="{Binding DataLeftPalpableMass}"/>
+                    </Paragraph>
+                </TableCell>
+                <TableCell TextAlignment="Center">
+                    <Paragraph>
+                        <TextBlock Name="dataRightPalpableMass" Text="{Binding DataRightPalpableMass}"/>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>-->
+            <TableRow>
+                <TableCell ColumnSpan="2">
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_47}"/>
+                    </Paragraph>
+                </TableCell>
+                <TableCell BorderBrush="Black" BorderThickness="0,0,1,0" TextAlignment="Center">
+                    <Paragraph>
+                        <TextBlock Name="dataLeftChangesOfElectricalConductivity" Text="{Binding DataLeftChangesOfElectricalConductivity}"/>
+                    </Paragraph>
+                </TableCell>
+                <TableCell TextAlignment="Center">
+                    <Paragraph>
+                        <TextBlock Name="dataRightChangesOfElectricalConductivity" Text="{Binding DataRightChangesOfElectricalConductivity}"/>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell ColumnSpan="2">
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_51}"/>
+                    </Paragraph>
+                </TableCell>
+                <TableCell BorderBrush="Black" BorderThickness="0,0,1,0" TextAlignment="Center">
+                    <Paragraph>
+                        <TextBlock Name="dataLeftMammaryStruct" Text="{Binding DataLeftMammaryStruct}"/>
+                    </Paragraph>
+                </TableCell>
+                <TableCell TextAlignment="Center">
+                    <Paragraph>
+                        <TextBlock Name="dataRightMammaryStruct" Text="{Binding DataRightMammaryStruct}"/>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell ColumnSpan="2">
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_54}"/>
+                    </Paragraph>
+                </TableCell>
+                <TableCell BorderBrush="Black" BorderThickness="0,0,1,0" TextAlignment="Center">
+                    <Paragraph>
+                        <TextBlock Name="dataLeftLactiferousSinusZone" Text="{Binding DataLeftLactiferousSinusZone}"/>
+                    </Paragraph>
+                </TableCell>
+                <TableCell TextAlignment="Center">
+                    <Paragraph>
+                        <TextBlock Name="dataRightLactiferousSinusZone" Text="{Binding DataRightLactiferousSinusZone}"/>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell ColumnSpan="2">
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_59}"/>
+                    </Paragraph>
+                </TableCell>
+                <TableCell BorderBrush="Black" BorderThickness="0,0,1,0" TextAlignment="Center">
+                    <Paragraph>
+                        <TextBlock Name="dataLeftMammaryContour" Text="{Binding DataLeftMammaryContour}"/>
+                    </Paragraph>
+                </TableCell>
+                <TableCell TextAlignment="Center">
+                    <Paragraph>
+                        <TextBlock Name="dataRightMammaryContour" Text="{Binding DataRightMammaryContour}"/>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+            
+            <TableRow>
+                <TableCell LineHeight="1">
+                </TableCell>
+            </TableRow>
+            
+            <TableRow>
+                <TableCell ColumnSpan="2">
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_63}" FontWeight="Bold" FontSize="13"/>
+                    </Paragraph>
+                </TableCell>
+                <TableCell BorderBrush="Black" BorderThickness="0,0,1,0" TextAlignment="Center">
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_44}" FontWeight="Bold" TextDecorations="Underline"/>
+                    </Paragraph>
+                </TableCell>
+                <TableCell TextAlignment="Center">
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_45}" FontWeight="Bold" TextDecorations="Underline"/>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+
+            <TableRow>
+                <TableCell ColumnSpan="2">
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_65}"/>
+                    </Paragraph>
+                </TableCell>
+                <TableCell BorderBrush="Black" BorderThickness="0,0,1,0" TextAlignment="Center">
+                    <Paragraph>
+                        <TextBlock Name="dataLeftNumber" Text="{Binding DataLeftNumber}"/>
+                    </Paragraph>
+                </TableCell>
+                <TableCell TextAlignment="Center">
+                    <Paragraph>
+                        <TextBlock Name="dataRightNumber" Text="{Binding DataRightNumber}"/>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell ColumnSpan="2">
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_64}"/>
+                    </Paragraph>
+                </TableCell>
+                <TableCell BorderBrush="Black" BorderThickness="0,0,1,0" TextAlignment="Center">
+                    <Paragraph>
+                        <TextBlock Name="dataLeftSegment" Text="{Binding DataLeftSegment}"/>
+                    </Paragraph>
+                </TableCell>
+                <TableCell TextAlignment="Center">
+                    <Paragraph>
+                        <TextBlock Name="dataRightSegment" Text="{Binding DataRightSegment}"/>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell ColumnSpan="2">
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_66}"/>
+                    </Paragraph>
+                </TableCell>
+                <TableCell BorderBrush="Black" BorderThickness="0,0,1,0" TextAlignment="Center">
+                    <Paragraph>
+                        <TextBlock Name="dataLeftSize" Text="{Binding DataLeftSize}"/>
+                    </Paragraph>
+                </TableCell>
+                <TableCell TextAlignment="Center">
+                    <Paragraph>
+                        <TextBlock Name="dataRightSize" Text="{Binding DataRightSize}"/>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell ColumnSpan="2">
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_67}"/>
+                    </Paragraph>
+                </TableCell>
+                <TableCell BorderBrush="Black" BorderThickness="0,0,1,0" TextAlignment="Center">
+                    <Paragraph>
+                        <TextBlock Name="dataLeftShape" Text="{Binding DataLeftShape}"/>
+                    </Paragraph>
+                </TableCell>
+                <TableCell TextAlignment="Center">
+                    <Paragraph>
+                        <TextBlock Name="dataRightShape" Text="{Binding DataRightShape}"/>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell ColumnSpan="2">
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_72}"/>
+                    </Paragraph>
+                </TableCell>
+                <TableCell BorderBrush="Black" BorderThickness="0,0,1,0" TextAlignment="Center">
+                    <Paragraph>
+                        <TextBlock Name="dataLeftContourAroundFocus" Text="{Binding DataLeftContourAroundFocus}"/>
+                    </Paragraph>
+                </TableCell>
+                <TableCell TextAlignment="Center">
+                    <Paragraph>
+                        <TextBlock Name="dataRightContourAroundFocus" Text="{Binding DataRightContourAroundFocus}"/>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell ColumnSpan="2">
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_76}"/>
+                    </Paragraph>
+                </TableCell>
+                <TableCell BorderBrush="Black" BorderThickness="0,0,1,0" TextAlignment="Center">
+                    <Paragraph>
+                        <TextBlock Name="dataLeftInternalElectricalStructure" Text="{Binding DataLeftInternalElectricalStructure}"/>
+                    </Paragraph>
+                </TableCell>
+                <TableCell TextAlignment="Center">
+                    <Paragraph>
+                        <TextBlock Name="dataRightInternalElectricalStructure" Text="{Binding DataRightInternalElectricalStructure}"/>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell ColumnSpan="2">
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_81}"/>
+                    </Paragraph>
+                </TableCell>
+                <TableCell BorderBrush="Black" BorderThickness="0,0,1,0" TextAlignment="Center">
+                    <Paragraph>
+                        <TextBlock Name="dataLeftSurroundingTissues" Text="{Binding DataLeftSurroundingTissues}"/>
+                    </Paragraph>
+                </TableCell>
+                <TableCell TextAlignment="Center">
+                    <Paragraph>
+                        <TextBlock Name="dataRightSurroundingTissues" Text="{Binding DataRightSurroundingTissues}"/>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell ColumnSpan="4" LineStackingStrategy="BlockLineHeight">
+                    <Paragraph LineHeight="2">
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+
+            <!--電導特徵-->
+            <TableRow>
+                <TableCell ColumnSpan="2">
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_88}" FontWeight="Bold"/>
+                    </Paragraph>
+                </TableCell>
+                <TableCell TextAlignment="Center">
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_44}" FontWeight="Bold" TextDecorations="Underline"/>
+                    </Paragraph>
+                </TableCell>
+                <TableCell TextAlignment="Center">
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_45}" FontWeight="Bold" TextDecorations="Underline"/>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell ColumnSpan="2" TextAlignment="Right">
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_89}" FontSize="10"/>
+                    </Paragraph>
+                </TableCell>                
+            </TableRow>
+            <!--<TableRow>
+                <TableCell>
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_90}"/>
+                    </Paragraph>
+                </TableCell>
+                <TableCell>
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_91}"/>
+                    </Paragraph>
+                </TableCell>
+                <TableCell BorderBrush="Black" BorderThickness="0,0,1,0" TextAlignment="Center">
+                    <Paragraph>
+                        <TextBlock Name="dataLeftOncomarkerHighlightBenignChanges" Text="{Binding DataLeftOncomarkerHighlightBenignChanges}"/>
+                    </Paragraph>
+                </TableCell>
+                <TableCell TextAlignment="Center">
+                    <Paragraph>
+                        <TextBlock Name="dataRightOncomarkerHighlightBenignChanges" Text="{Binding DataRightOncomarkerHighlightBenignChanges}"/>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>-->
+            <!--<TableRow>
+                <TableCell>
+                    <Paragraph>                        
+                    </Paragraph>
+                </TableCell>
+                <TableCell>
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_99}"/>
+                    </Paragraph>
+                </TableCell>
+                <TableCell BorderBrush="Black" BorderThickness="0,0,1,0" TextAlignment="Center">
+                    <Paragraph>
+                        <TextBlock Name="dataLeftOncomarkerHighlightSuspiciousChanges" Text="{Binding DataLeftOncomarkerHighlightSuspiciousChanges}"/>
+                    </Paragraph>
+                </TableCell>
+                <TableCell TextAlignment="Center">
+                    <Paragraph>
+                        <TextBlock Name="dataRightOncomarkerHighlightSuspiciousChanges" Text="{Binding DataRightOncomarkerHighlightSuspiciousChanges}"/>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>-->
+
+            <TableRow>
+                <TableCell>
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_100}"/>
+                    </Paragraph>
+                </TableCell>
+                <TableCell>
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_101}"/>
+                    </Paragraph>
+                </TableCell>
+                <TableCell BorderBrush="Black" BorderThickness="0,0,1,0" TextAlignment="Center">
+                    <Paragraph>
+                        <TextBlock Name="dataLeftMeanElectricalConductivity1" Text="{Binding DataLeftMeanElectricalConductivity1}"/>
+                    </Paragraph>
+                </TableCell>
+                <TableCell TextAlignment="Center">
+                    <Paragraph>
+                        <TextBlock Name="dataRightMeanElectricalConductivity1" Text="{Binding DataRightMeanElectricalConductivity1}"/>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell>
+                    <Paragraph>
+                    </Paragraph>
+                </TableCell>
+                <TableCell>
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_102}"/>
+                    </Paragraph>
+                </TableCell>
+                <TableCell BorderBrush="Black" BorderThickness="0,0,1,0" TextAlignment="Center">
+                    <Paragraph>
+                        <TextBlock Name="dataLeftMeanElectricalConductivity2" Text="{Binding DataLeftMeanElectricalConductivity2}"/>
+                    </Paragraph>
+                </TableCell>
+                <TableCell TextAlignment="Center">
+                    <Paragraph>
+                        <TextBlock Name="dataRightMeanElectricalConductivity2" Text="{Binding DataRightMeanElectricalConductivity2}"/>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell>
+                    <Paragraph>
+                    </Paragraph>
+                </TableCell>
+                <TableCell>
+                    <Paragraph>
+                        <TextBlock Name="dataMeanElectricalConductivity3" Text="{Binding DataMeanElectricalConductivity3}"/>
+                    </Paragraph>
+                </TableCell>
+                <TableCell BorderBrush="Black" BorderThickness="0,0,1,0" TextAlignment="Center">
+                    <Paragraph>
+                        <TextBlock Name="dataLeftMeanElectricalConductivity3" Text="{Binding DataLeftMeanElectricalConductivity3}"/>
+                    </Paragraph>
+                </TableCell>
+                <TableCell TextAlignment="Center">
+                    <Paragraph>
+                        <TextBlock Name="dataRightMeanElectricalConductivity3" Text="{Binding DataRightMeanElectricalConductivity3}"/>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+
+            <TableRow>
+                <TableCell>
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_106}"/>
+                    </Paragraph>
+                </TableCell>
+                <TableCell>
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_101}"/>
+                        <TextBlock Text="(-0.07-0.07)" Margin="10,0,0,0" />
+                    </Paragraph>
+                </TableCell>
+                <TableCell ColumnSpan="2" TextAlignment="Center">
+                    <Paragraph>
+                        <TextBlock Name="dataLeftComparativeElectricalConductivity1" Text="{Binding DataLeftComparativeElectricalConductivity1}"/>
+                    </Paragraph>
+                </TableCell>                
+            </TableRow>
+            <TableRow>
+                <TableCell>
+                    <Paragraph>
+                    </Paragraph>
+                </TableCell>
+                <TableCell>
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_102}"/>
+                        <TextBlock Text="(-0.10-0.10)" Margin="10,0,0,0" />
+                    </Paragraph>
+                </TableCell>                
+                <TableCell ColumnSpan="2" TextAlignment="Center">
+                    <Paragraph>
+                        <TextBlock Name="dataLeftComparativeElectricalConductivity2" Text="{Binding DataLeftComparativeElectricalConductivity2}"/>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell>
+                    <Paragraph>
+                    </Paragraph>
+                </TableCell>
+                <TableCell>
+                    <Paragraph>
+                        <TextBlock Name="dataComparativeElectricalConductivity3" Text="{Binding DataComparativeElectricalConductivity3}"/>
+                    </Paragraph>
+                </TableCell>                
+                <TableCell ColumnSpan="2" TextAlignment="Center">
+                    <Paragraph>
+                        <TextBlock Name="dataLeftComparativeElectricalConductivity3" Text="{Binding DataLeftComparativeElectricalConductivity3}"/>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+            <!--左右側乳腺差異-->
+            <TableRow>
+                <TableCell>
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_107}"/>
+                    </Paragraph>
+                </TableCell>
+                <TableCell>
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_101}"/>
+                        <TextBlock Text="( &lt; 40% )" Margin="10,0,0,0" />
+                    </Paragraph>
+                </TableCell>
+                <TableCell ColumnSpan="2" TextAlignment="Center">
+                    <Paragraph>
+                        <TextBlock Name="dataLeftDivergenceBetweenHistograms1" Text="{Binding DataLeftDivergenceBetweenHistograms1}" Width="70"/>                        
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell>
+                    <Paragraph>
+                    </Paragraph>
+                </TableCell>
+                <TableCell>
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_102}"/>
+                        <TextBlock Text="(  &lt; 40% )" Margin="10,0,0,0" />
+                    </Paragraph>
+                </TableCell>
+                <TableCell ColumnSpan="2" TextAlignment="Center">
+                    <Paragraph>
+                        <TextBlock Name="dataLeftDivergenceBetweenHistograms2" Text="{Binding DataLeftDivergenceBetweenHistograms2}" Width="70"/>                        
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell>
+                    <Paragraph>
+                    </Paragraph>
+                </TableCell>
+                <TableCell>
+                    <Paragraph>
+                        <TextBlock Name="dataDivergenceBetweenHistograms3" Text="{Binding DataDivergenceBetweenHistograms3}"/>
+                    </Paragraph>
+                </TableCell>
+                <TableCell ColumnSpan="2" TextAlignment="Center">
+                    <Paragraph>
+                        <TextBlock Name="dataLeftDivergenceBetweenHistograms3" Text="{Binding DataLeftDivergenceBetweenHistograms3}" Width="70"/>                        
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+
+            <!--<TableRow>
+                <TableCell ColumnSpan="2">
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_108}"/>
+                    </Paragraph>
+                </TableCell>                
+                <TableCell BorderBrush="Black" BorderThickness="0,0,1,0" TextAlignment="Center">
+                    <Paragraph>
+                        <TextBlock Name="dataLeftComparisonWithNorm" Text="{Binding DataLeftComparisonWithNorm}" Width="70"/>
+                        <TextBlock>%</TextBlock>
+                    </Paragraph>
+                </TableCell>
+                <TableCell TextAlignment="Center">
+                    <Paragraph>
+                        <TextBlock Name="dataRightComparisonWithNorm" Text="{Binding DataRightComparisonWithNorm}" Width="70"/>
+                        <TextBlock>%</TextBlock>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>-->
+
+            <TableRow>
+                <TableCell>
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_109}"/>
+                    </Paragraph>
+                </TableCell>
+                <TableCell TextAlignment="Right">
+                    <Paragraph>
+                        <TextBlock Text="(-0.11-0.11)" Margin="0,0,0,5"/>
+                    </Paragraph>
+                </TableCell>
+                <TableCell BorderBrush="Black" BorderThickness="0,0,1,0" TextAlignment="Center">
+                    <Paragraph>
+                        <TextBlock Name="dataLeftPhaseElectricalConductivity" Text="{Binding DataLeftPhaseElectricalConductivity}"/>                        
+                    </Paragraph>
+                </TableCell>
+                <TableCell TextAlignment="Center">
+                    <Paragraph>
+                        <TextBlock Name="dataRightPhaseElectricalConductivity" Text="{Binding DataRightPhaseElectricalConductivity}"/>                        
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+
+            <TableRow>
+                <TableCell>
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_110}"/>
+                    </Paragraph>
+                </TableCell>
+                <TableCell>
+                    <Paragraph>
+                        <TextBlock Name="dataAgeElectricalConductivityReference" Text="{Binding DataAgeElectricalConductivityReference}" TextAlignment="Right" Margin="0,0,0,5"/>
+                    </Paragraph>
+                </TableCell>
+                <TableCell BorderBrush="Black" BorderThickness="0,0,1,0" TextAlignment="Center">
+                    <Paragraph>
+                        <TextBlock Name="dataLeftAgeElectricalConductivity" Text="{Binding DataLeftAgeElectricalConductivity}"/>
+                    </Paragraph>
+                </TableCell>
+                <TableCell TextAlignment="Center">
+                    <Paragraph>
+                        <TextBlock Name="dataRightAgeElectricalConductivity" Text="{Binding DataRightAgeElectricalConductivity}"/>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell ColumnSpan="4" LineStackingStrategy="BlockLineHeight">
+                    <Paragraph BorderBrush="Black" BorderThickness="0,0,0,1" LineHeight="5">                        
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+        </TableRowGroup>
+    </Table>
+    <!--總結-->
+    <Table>  
+        <Table.Columns>
+            <TableColumn Width="*"></TableColumn>
+        </Table.Columns>
+        <TableRowGroup>
+            <TableRow>
+                <TableCell>
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_115}" FontWeight="Bold" Width="110"/>
+                        <TextBlock Name="dataExamConclusion" Text="{Binding DataExamConclusion}"/>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell>
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_121}" FontWeight="Bold" />
+                        <TextBlock Name="dataLeftMammaryGland" Text="{Binding DataLeftMammaryGland}"/>                        
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell>
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_127}" FontWeight="Bold" Margin="10,0,0,0"/>
+                        <TextBlock Name="dataLeftAgeRelated" Text="{Binding DataLeftAgeRelated}"/>                  
+                    </Paragraph>
+                </TableCell>                
+            </TableRow>
+            <!--<TableRow>                
+                <TableCell>
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_141}" Width="50" FontWeight="Bold" Margin="10,0,0,0"/>
+                        <TextBlock Text="{StaticResource ReportContext_142}" Width="70" FontWeight="Bold"/>
+                        <TextBlock Name="dataLeftTotalPts" Text="{Binding DataLeftTotalPts}"/>                        
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell>
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_150}" Width="120" FontWeight="Bold" Margin="10,0,0,0"/>
+                        <TextBlock Name="dataLeftBiRadsCategory" Text="{Binding DataLeftBiRadsCategory}"/>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>-->
+            <TableRow>
+                <TableCell>
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_182}" Margin="10,0,0,0" FontWeight="Bold"/>
+                        <TextBlock Name="dataLeftMammaryGlandResult" Text="{Binding DataLeftMammaryGlandResult}"/>
+                    </Paragraph>
+                </TableCell>                
+            </TableRow>
+            <TableRow>
+                <TableCell LineStackingStrategy="BlockLineHeight">
+                    <Paragraph LineHeight="3"/>
+                </TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell>
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_139}" FontWeight="Bold" />
+                        <TextBlock Name="dataRightMammaryGland" Text="{Binding DataRightMammaryGland}"/>
+                    </Paragraph>
+                </TableCell>                
+            </TableRow>
+            <TableRow>
+                <TableCell>
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_127}" FontWeight="Bold" Margin="10,0,0,0"/>
+                        <TextBlock Name="dataRightAgeRelated" Text="{Binding DataRightAgeRelated}"/>
+                    </Paragraph>
+                </TableCell>                
+            </TableRow>
+            <!--<TableRow>
+                <TableCell >
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_141}" Width="50" FontWeight="Bold" Margin="10,0,0,0"/>
+                        <TextBlock Text="{StaticResource ReportContext_142}" Width="70" FontWeight="Bold"/>
+                        <TextBlock Name="dataRightTotalPts" Text="{Binding DataRightTotalPts}"/>                        
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell >
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_150}" Width="120" FontWeight="Bold" Margin="10,0,0,0"/>
+                        <TextBlock Name="dataRightBiRadsCategory" Text="{Binding DataRightBiRadsCategory}"/>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>-->     
+            <TableRow>            
+                <TableCell>
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_182}" Margin="10,0,0,0" FontWeight="Bold"/>
+                        <TextBlock Name="dataRightMammaryGlandResult" Text="{Binding DataRightMammaryGlandResult}"/>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell LineStackingStrategy="BlockLineHeight">
+                    <Paragraph BorderBrush="Black" BorderThickness="0,0,0,1" LineHeight="3"/>
+                </TableCell>
+            </TableRow>
+        </TableRowGroup>        
+    </Table>
+    <!--評分-->
+    <Table>
+        <Table.Columns>
+            <TableColumn Width="*"></TableColumn>
+        </Table.Columns>
+        <TableRowGroup>
+            <TableRow>
+                <TableCell>
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_141}" Width="110" FontWeight="Bold"/>
+                        <!--<TextBlock Text="{StaticResource ReportContext_142}" Width="70" FontWeight="Bold"/>-->
+                        <TextBlock Name="dataTotalPts" Text="{Binding DataTotalPts}"/>
+                        <!--<TextBlock Text="{StaticResource ReportContext_143}" Margin="5,0,0,0" FontWeight="Bold"/>-->                        
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell>
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_150}" Width="150" FontWeight="Bold"/>
+                        <TextBlock Name="dataBiRadsCategory" Text="{Binding DataBiRadsCategory}"/>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+                        
+        </TableRowGroup>
+    </Table>
+    
+    <!--評論-->
+    <Table>
+        <Table.Columns>
+            <TableColumn Width="*"></TableColumn>
+        </Table.Columns>
+        <TableRowGroup>            
+            <TableRow>
+                <TableCell>
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_226}" Width="150" FontWeight="Bold"/>
+                        <TextBlock Name="dataConclusion" Text="{Binding DataConclusion}"/>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell>
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_157}" Width="150" FontWeight="Bold"/>
+                        <TextBlock Name="dataRecommendation" Text="{Binding DataRecommendation}"/>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell>
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_189}" Width="150" FontWeight="Bold"/>
+                        <TextBlock Name="dataFurtherExam" Text="{Binding DataFurtherExam}"/>
+                    </Paragraph>
+                </TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell>
+                    <Table CellSpacing="0">
+                        <Table.Columns>
+                            <TableColumn Width="*"/>
+                            <TableColumn Width="4*"/>
+                        </Table.Columns>
+                        <TableRowGroup>
+                            <TableRow>
+                                <TableCell>
+                                    <Paragraph>
+                                        <TextBlock Text="{StaticResource ReportContext_227}" FontWeight="Bold"/>
+                                    </Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph>
+                                        <TextBlock Name="dataComments" Text="{Binding DataComments}" TextWrapping="Wrap" />
+                                    </Paragraph>
+                                </TableCell>
+                            </TableRow>
+                        </TableRowGroup>
+                    </Table>
+                </TableCell>
+            </TableRow>
+        </TableRowGroup>
+    </Table>    
+    <!--簽名-->
+    <Table>
+        <Table.Columns>
+            <TableColumn Width="4*"></TableColumn>
+            <TableColumn Width="2*"></TableColumn>
+            <TableColumn Width="4*"></TableColumn>
+        </Table.Columns>
+        <TableRowGroup IsEnabled="False">
+            <TableRow>
+                <TableCell>
+                    <Paragraph>
+                       
+                    </Paragraph>
+                </TableCell>
+                <TableCell></TableCell>
+                <TableCell RowSpan="2">
+                    <BlockUIContainer>
+                        <Image Name="dataSignImg"/>
+                    </BlockUIContainer>
+                </TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell>
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_173}" Width="120" FontWeight="Bold"/>
+                        <TextBlock Name="dataDoctor" Text="{Binding DataDoctor}"/>
+                    </Paragraph>
+                </TableCell>
+                <TableCell>
+                    <Paragraph>
+                        <TextBlock Text="{StaticResource ReportContext_174}" FontWeight="Bold"/>
+                    </Paragraph>                    
+                </TableCell>                
+            </TableRow>
+        </TableRowGroup>
+    </Table>
+    <Table>
+        <TableRowGroup>
+            <TableRow>
+                <TableCell>
+                    <BlockUIContainer>
+                        <Image Name="dataScreenShotImg"/>
+                    </BlockUIContainer>
+                </TableCell>
+            </TableRow>
+        </TableRowGroup>
+    </Table>
+</FlowDocument>

@@ -1,0 +1,641 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <sys:String x:Key="MainWinMenuTitle">Choose an operating mode</sys:String>
+    <sys:String x:Key="MainWinMenuScreening">Screening</sys:String>
+    <sys:String x:Key="MainWinMenuDiagnostics">Diagnostics</sys:String>
+    <sys:String x:Key="MainWinMenuReport">Report</sys:String>
+    <sys:String x:Key="MainWinMenuPerferences">System Setup</sys:String>
+    <sys:String x:Key="MainWinMenuRecords">Data Log</sys:String>
+    <sys:String x:Key="MainWinMenuExit">Exit</sys:String>
+    <sys:String x:Key="MainWinDeviceNo">Device Number: </sys:String>
+    <sys:String x:Key="MainWinMenuReceive">Receive Data</sys:String>
+    <sys:String x:Key="MainWinMenuReceiveReport">Receive Report</sys:String>
+    <sys:String x:Key="MainWinMenuReceiveClient">Search Client</sys:String>
+
+    <sys:String x:Key="CommonExitBtn">Exit</sys:String>
+    <sys:String x:Key="CommonPreviewBtn">Preview</sys:String>
+    <sys:String x:Key="CommonPrintBtn">Print</sys:String>
+    <sys:String x:Key="CommonExportBtn">Output Report</sys:String>
+    <sys:String x:Key="CommonSaveBtn">Save</sys:String>
+    <sys:String x:Key="CommonSaveAsBtn">Save as...</sys:String>
+    <sys:String x:Key="CommonOpenBtn">Diagnostics</sys:String>
+    <sys:String x:Key="CommonAddBtn">Add</sys:String>
+    <sys:String x:Key="CommonDeleteBtn">Delete</sys:String>
+    <sys:String x:Key="CommonCloseBtn">Close</sys:String>
+    <sys:String x:Key="CommonUpdateBtn">Update Protocol</sys:String>
+    <sys:String x:Key="CommonCancelBtn">Cancel</sys:String>
+    <sys:String x:Key="CommonArchiveBtn">Open</sys:String>
+    <sys:String x:Key="CommonUsernameLab">Username</sys:String>
+    <sys:String x:Key="CommonPwdLab">Password</sys:String>
+    <sys:String x:Key="CommonOKBtn">OK</sys:String>
+    <sys:String x:Key="CommonExportSelectBtn">Select PDF Template</sys:String>
+    <sys:String x:Key="CommonExportNuvoMedBtn">NuvoTEK PDF</sys:String>
+    <sys:String x:Key="CommonExportGoodUnionBtn">GoodUnino PDF</sys:String>
+    <sys:String x:Key="CommonStatusScreen">Screened</sys:String>
+    <sys:String x:Key="CommonAnalysisBtn">Analysis</sys:String>
+    <sys:String x:Key="CommonStatusReceived">Data Received</sys:String>    
+    <sys:String x:Key="CommonStatusReportSent">Report Sent</sys:String>
+    <sys:String x:Key="CommonStatusReportDone">Report Done</sys:String>
+    <sys:String x:Key="CommonPreviewSelect">Preview Report</sys:String>
+    <sys:String x:Key="CommonPreviewLF">Long Form Report</sys:String>
+    <sys:String x:Key="CommonPreviewSFI">Client Report</sys:String>
+    <sys:String x:Key="CommonResultNormal">Normal</sys:String>
+    <sys:String x:Key="CommonResultBenign">Benign</sys:String>
+    <sys:String x:Key="CommonResultSuspicious">Suspicious</sys:String>
+    <sys:String x:Key="CommonResultSubmit">Upload Screen Report</sys:String>
+
+
+    <sys:String x:Key="RecordsWin1" xml:space="preserve">Client Count: </sys:String>
+    <sys:String x:Key="RecordsWin2" xml:space="preserve">Total # of Screening Sessions: </sys:String>
+    <sys:String x:Key="RecordsWin3">Export to Excel</sys:String>
+    <sys:String x:Key="RecordsWin4">Search</sys:String>
+    <sys:String x:Key="RecordsWin5">From Date:</sys:String>
+    <sys:String x:Key="RecordsWin6">To Date:</sys:String>
+    <sys:String x:Key="Excel1">MRN#(Code)</sys:String>
+    <sys:String x:Key="Excel2">Client Name</sys:String>
+    <sys:String x:Key="Excel3">Description</sys:String>
+    <sys:String x:Key="Excel4">Time Stamp</sys:String>
+    <sys:String x:Key="Excel5">Client Archive Folder</sys:String>
+    <sys:String x:Key="Excel6">Screening Date Time</sys:String>
+    <sys:String x:Key="Excel7">Client No.</sys:String>    
+    <sys:String x:Key="Excel8">Mobile</sys:String>
+    <sys:String x:Key="Excel9">Email</sys:String>
+    <sys:String x:Key="Excel10">Birthday</sys:String>
+    <sys:String x:Key="Excel11">Download</sys:String>
+    
+    <sys:String x:Key="MailSubject">Screening Records</sys:String>
+    
+    <sys:String x:Key="Dialog1">Please input client's name</sys:String>
+    <sys:String x:Key="Dialog2">Last Name:</sys:String>
+    <sys:String x:Key="Dialog3">First Name:</sys:String>
+    <sys:String x:Key="Dialog4">Middle Name:</sys:String>
+    <sys:String x:Key="Dialog5">Screen Code:</sys:String>
+    <sys:String x:Key="Dialog6">Create</sys:String>
+    <sys:String x:Key="Dialog7">Cancel</sys:String>
+    <sys:String x:Key="Dialog8">Technician:</sys:String>
+    <sys:String x:Key="Dialog9">Mobile:</sys:String>
+    <sys:String x:Key="Dialog10">Email:</sys:String>
+    <sys:String x:Key="Dialog11">Client Number.</sys:String>
+    <sys:String x:Key="Dialog12">Search Client</sys:String>
+    <sys:String x:Key="Dialog13">Reset</sys:String>
+    <sys:String x:Key="Dialog14">Left Breast:</sys:String>
+    <sys:String x:Key="Dialog15">Right Breast:</sys:String>
+    
+    <sys:String x:Key="Label1">Preview Digital Mammograph (This image will show on the MEIK Summary Report)</sys:String>
+
+    <sys:String x:Key="Message_1">Failed to start MEIK software v. 5.6, Exception Message:</sys:String>
+    <sys:String x:Key="Message_2">Report is saved successfully.</sys:String>
+    <sys:String x:Key="Message_3">Failed to save the report. Error:</sys:String>
+    <sys:String x:Key="Message_4">Do you want to save the report?</sys:String>
+    <sys:String x:Key="Message_5">Exported the PDF file successfully.</sys:String>
+    <sys:String x:Key="Message_6">Saved the report file successfully.</sys:String>
+    <sys:String x:Key="Message_7">Do you want to save the report?</sys:String>
+    <sys:String x:Key="Message_8">Please select a patient.</sys:String>
+    <sys:String x:Key="Message_9">Failed to load the report setting. Exception:</sys:String>
+    <sys:String x:Key="Message_10">Failed to capture the screen. Please use the left mouse button to drag on the screen after you clicked the button Capture Screen.</sys:String>
+    <sys:String x:Key="Message_11">Please input a name.</sys:String>
+    <sys:String x:Key="Message_12">This name already exists.</sys:String>
+    <sys:String x:Key="Message_13">Failed to save the report setting. Exception:</sys:String>
+    <sys:String x:Key="Message_14">Saved the report setting successfully.</sys:String>
+    <sys:String x:Key="Message_15">You did't configure the mail account or configured the mail account incorrectly.</sys:String>
+    <sys:String x:Key="Message_16">The user's report has not been created, please fill and save the report first.</sys:String>
+    <sys:String x:Key="Message_17">Are you sure to send all of the data to Data Center?</sys:String>
+    <sys:String x:Key="Message_18">Sent the data successfully.</sys:String>
+    <sys:String x:Key="Message_19">Failed to send email, Exception:</sys:String>
+    <sys:String x:Key="Message_20">Failed to load the report setting. Exception:</sys:String>
+    <sys:String x:Key="Message_21">The {0} directory Cannot be packaged up  as a ZIP file. Exception:</sys:String>
+    <sys:String x:Key="Message_22">Please input last name.</sys:String>
+    <sys:String x:Key="Message_23">Created the patient folder successfully.</sys:String>
+    <sys:String x:Key="Message_24">The patient folder {0} already exists.</sys:String>
+    <sys:String x:Key="Message_25">Failed to create the patient folder {0} {1}</sys:String>
+    <sys:String x:Key="Message_26">Can not find the protocol document in the patient folder, please invoke the Protocol function on the Diagnostics window to generate the protocol document first.</sys:String>
+    <sys:String x:Key="Message_27">Update date from the protocol document to the examination report successfully.</sys:String>
+    <sys:String x:Key="Message_28">Please select a technician, if there have not any optional, you should add technician on the System Setup page.</sys:String>
+    <sys:String x:Key="Message_29">The value not allowed to contain ';' or '|'.</sys:String>
+    <sys:String x:Key="Message_30">Updated the patient card successfully.</sys:String>
+    <sys:String x:Key="Message_31">Failed to update the patient card, Exception Message: </sys:String>
+    <sys:String x:Key="Message_32">Failed to load the patient card {0}, Error Message:</sys:String>
+    <sys:String x:Key="Message_33">Could not update date from the protocol document {0}, the document is being used, please close the document first.</sys:String>
+    <sys:String x:Key="Message_34">No captured image</sys:String>
+    <sys:String x:Key="Message_35">Please select at least one MRN</sys:String>
+    <sys:String x:Key="Message_36">{0} patient's data upload failed, Error Messages as follow：</sys:String>
+    <sys:String x:Key="Message_37">Received data successfully.</sys:String>
+    <sys:String x:Key="Message_38">The data reception is complete, but there are some error: </sys:String>
+    <sys:String x:Key="Message_39">Failed to create the patient folder, Error Message: </sys:String>
+    <sys:String x:Key="Message_40">Failed to download the file, Error Message: </sys:String>
+    <sys:String x:Key="Message_41">Failed to upzip the file to local folder, Error Message:</sys:String>
+    <sys:String x:Key="Message_42">Failed to receive the patient's data, Error Messages：</sys:String>
+    <sys:String x:Key="Message_43">There is no data need to receive.</sys:String>
+    <sys:String x:Key="Message_44">Failed to download the report file, Error Message:</sys:String>
+    <sys:String x:Key="Message_45">Failed to receive the report data, Error Messages：</sys:String>
+    <!--<sys:String x:Key="Message_46">Are you sure to update the software now? That will close the software, please save you data first.</sys:String>-->
+    <sys:String x:Key="Message_46">A new version of software is available, do you want to update now?</sys:String>
+    <sys:String x:Key="Message_47">Failed to query the version information from server, Error Message:</sys:String>
+    <sys:String x:Key="Message_48">Got the newer version successfully.</sys:String>
+    <sys:String x:Key="Message_49">Password incorrect</sys:String>
+    <sys:String x:Key="Message_50">Are you sure to delete the selected folder?</sys:String>
+    <sys:String x:Key="Message_51">Failed to start up the setup package, Error Message:</sys:String>
+    <sys:String x:Key="Message_52">Failed to upload the data, Error Message:</sys:String>
+    <sys:String x:Key="Message_53">Please enter numeric digits only.</sys:String>
+    <sys:String x:Key="Message_54">Please enter a number from 0 to 23.</sys:String>
+    <sys:String x:Key="Message_55">Please enter a number from 0 to 59.</sys:String>
+    <sys:String x:Key="Message_56">Please enter a number from 0 to 99.</sys:String>
+    <sys:String x:Key="Message_57">Please enter a number from 1 to 12.</sys:String>
+    <sys:String x:Key="Message_58">Please enter a number from 1 to 31.</sys:String>
+    <sys:String x:Key="Message_59">Please enter a valid year</sys:String>
+    <sys:String x:Key="Message_60">Please enter a number less than 500</sys:String>
+    <sys:String x:Key="Message_61">Please enter a valid mobile number</sys:String>
+    <sys:String x:Key="Message_62">Your Analysis is different with Oncomarker Highlight, please recheck and verify the report is correct！</sys:String>
+    <sys:String x:Key="Message_63">BI-RADS Category is different with Oncomarker Highlight, please recheck and verify the report is correct！</sys:String>
+    <sys:String x:Key="Message_64">Please must enter three digits of the MEIK device number.</sys:String>
+    <sys:String x:Key="Message_65">Are you sure to delete all selected user archives?</sys:String>
+    <sys:String x:Key="Message_66">Please configure the transfer mode first.</sys:String>
+    <sys:String x:Key="Message_67">UserName is required.</sys:String>
+    <sys:String x:Key="Message_68">Password is required.</sys:String>
+    <sys:String x:Key="Message_69">Logon failed, userName or password incorrect.</sys:String>
+    <sys:String x:Key="Message_70">Please configure the device number first.</sys:String>
+    <sys:String x:Key="Message_71">Please entry the license number.</sys:String>
+    <sys:String x:Key="Message_72">Failed to activate the license online, Error Message:</sys:String>
+    <sys:String x:Key="Message_73">You have successfully activated the license.</sys:String>
+    <sys:String x:Key="Message_74">PDF report files have not been created, please click "Output Report" button to generates the report files in PDF format first.</sys:String>
+    <sys:String x:Key="Message_75">All of the screen data files have been archived successfully.</sys:String>
+    <sys:String x:Key="Message_76">Failed to load the patient card {0}, Error Message:</sys:String>
+    <sys:String x:Key="Message_77">There have no zip files in {0}</sys:String>
+    <sys:String x:Key="Message_78">Please input a email address.</sys:String>
+    <sys:String x:Key="Message_79">Please input a valid email address.</sys:String>
+    <sys:String x:Key="Message_80">This email address already exists.</sys:String>
+    <sys:String x:Key="Message_81">All of the report data files have been archived successfully.</sys:String>
+    <sys:String x:Key="Message_82">Please select a email address, if there have not any optional, you should add email on the System Setup page.</sys:String>
+    <sys:String x:Key="Message_83">Please select a doctor name, if there have not any optional, you should add doctor name on the System Setup page.</sys:String>
+    <sys:String x:Key="Message_84">Please input a device number first.</sys:String>
+    <sys:String x:Key="Message_85">Please select a logo for this device number.</sys:String>
+    <sys:String x:Key="Message_86">This logo for the device number already exists.</sys:String>
+    <sys:String x:Key="Message_87">Please input at least one search filed.</sys:String>
+    <sys:String x:Key="Message_88">Result analysis for the MEIK Screening</sys:String>
+    <sys:String x:Key="Message_89">Result analysis: {0}</sys:String>
+    <sys:String x:Key="Message_90">Lack mammograph screenshots</sys:String>
+
+    <sys:String x:Key="UserListWinBrowerLab">Selection of archive</sys:String>
+    <sys:String x:Key="UserListWinBrowerBtn">Browse...</sys:String>
+    <sys:String x:Key="UserListWinEditReportBtn">Edit Report</sys:String>
+    <sys:String x:Key="UserListWinExaminationReportBtn">Examination Report</sys:String>
+    <sys:String x:Key="UserListWinSummaryReportBtn">Summary Report</sys:String>
+    <sys:String x:Key="UserListWinDeleteBtn">Delete</sys:String>
+    <sys:String x:Key="UserListWinEmailReportBtn">Send Report</sys:String>
+    <sys:String x:Key="UserListWinPatientCardTitle">Client Information</sys:String>
+    <sys:String x:Key="UserListWinNewBtn">New</sys:String>
+    <sys:String x:Key="UserListWinEmailDataBtn">Send Data</sys:String>
+    <sys:String x:Key="UserListWinImage">Capture</sys:String>
+    <sys:String x:Key="UserListWinResult">Screen Result</sys:String>
+
+    <sys:String x:Key="SignaureWinLab">Set as default signature</sys:String>
+    <sys:String x:Key="SignaureWinLoadBtn">Load Signature</sys:String>
+    <sys:String x:Key="SignaureWinClearBtn">Clear</sys:String>
+    <sys:String x:Key="SignaureWinConfirmBtn">Confirm</sys:String>
+    
+
+    <sys:String x:Key="SettingReportTitle">Default Report Setting</sys:String>
+    <sys:String x:Key="SettingReportDesc">There are some initial report parameters, you can change that at any time.</sys:String>
+    <sys:String x:Key="SettingReportTabTitle">System Setting</sys:String>
+    <sys:String x:Key="SettingReportNameGroupHeader">Doctors Initial</sys:String>
+    <sys:String x:Key="SettingReportDoctorNameLab">Doctors</sys:String>
+    <sys:String x:Key="SettingReportTechNameLab">Technicians</sys:String>
+    <sys:String x:Key="SettingReportDoctorRequired">Doctor name required</sys:String>
+    <sys:String x:Key="SettingReportTechRequired">Technician name required</sys:String>
+    <sys:String x:Key="SettingReportPrintGroupHeader">Default Printer Paper Size</sys:String>
+    <sys:String x:Key="SettingReportTransferGroupHeader">Dafault Transfer Mode</sys:String>
+    <sys:String x:Key="SettingEmailTitle">Default Mail Setting</sys:String>
+    <sys:String x:Key="SettingEmailDesc">There are some initial mail parameters, you can change that at any time.</sys:String>
+    <sys:String x:Key="SettingEmailTabTitle"> Mail Setting </sys:String>
+    <sys:String x:Key="SettingEmailHost">SMTP Host</sys:String>
+    <sys:String x:Key="SettingEmailPort">SMTP Port</sys:String>
+    <sys:String x:Key="SettingEmailSSL">Use SSL</sys:String>
+    <sys:String x:Key="SettingEmailUsername">SMTP Username</sys:String>
+    <sys:String x:Key="SettingEmailPassword">SMTP Password</sys:String>
+    <sys:String x:Key="SettingEmailFrom">My Mail Address</sys:String>
+    <sys:String x:Key="SettingEmailTo">To Mail Address</sys:String>
+    <sys:String x:Key="SettingEmailAddress">Email Address</sys:String>
+    <sys:String x:Key="SettingEmailSubject">Mail Subject</sys:String>
+    <sys:String x:Key="SettingEmailBody">Mail Body</sys:String>
+    <sys:String x:Key="SettingReportFullName">Full Name</sys:String>
+    <sys:String x:Key="SettingReportLicense">License No</sys:String>
+    <sys:String x:Key="SettingVersionTitle">System Info</sys:String>
+    <sys:String x:Key="SettingVersionLab">Version:</sys:String>
+    <sys:String x:Key="SettingOperModelLab">Operation Mode:</sys:String>
+    <sys:String x:Key="SettingTechModel">Technician</sys:String>
+    <sys:String x:Key="SettingDoctorModel">Doctor</sys:String>
+    <sys:String x:Key="SettingAdminModel">Administrator</sys:String>
+    <sys:String x:Key="SettingVersionCheckLab">Software Updater:</sys:String>
+    <sys:String x:Key="SettingVersionCheckInfo1">Your version is up-to-date.</sys:String>
+    <sys:String x:Key="SettingVersionCheckInfo2">A new version is available, you can update this software now.</sys:String>
+    <sys:String x:Key="SettingVersionUpdate">Update Now</sys:String>
+    <sys:String x:Key="SettingFTPTabTitle">FTP Setting</sys:String>
+    <sys:String x:Key="SettingFTPUrl">FTP URL</sys:String>
+    <sys:String x:Key="SettingFTPUsername">FTP Username</sys:String>
+    <sys:String x:Key="SettingFTPPassword">FTP Password</sys:String>
+    <sys:String x:Key="SettingScreenVenue">Screen Venue</sys:String>
+    <sys:String x:Key="SettingDeviceId">Device Number</sys:String>
+    <sys:String x:Key="SettingImageTitle">Report Logo</sys:String>
+    <sys:String x:Key="SettingUploadLogo">Company Logo</sys:String>
+    <sys:String x:Key="SettingSealIcon">Company Seal</sys:String>
+    <sys:String x:Key="SettingCompanyInfo">Company Address</sys:String>
+    <sys:String x:Key="SettingLogoSelect">Browse...</sys:String>
+    <sys:String x:Key="SettingLogoDefault">Default</sys:String>
+    <sys:String x:Key="SettingCompanyTitle">Company Info</sys:String>
+    <sys:String x:Key="SettingUploadIcon">Company info for devices</sys:String>
+
+    <sys:String x:Key="UserDataPersonalTab">Personal Data</sys:String>
+    <sys:String x:Key="UserDataPersonal1">Last name:</sys:String>
+    <sys:String x:Key="UserDataPersonal2">First name:</sys:String>
+    <sys:String x:Key="UserDataPersonal3">Middle name:</sys:String>
+    <sys:String x:Key="UserDataPersonal4">Date of Birth:</sys:String>
+    <sys:String x:Key="UserDataPersonal5">Date of screening:</sys:String>
+    <sys:String x:Key="UserDataPersonal6">Address Line 1:</sys:String>
+    <sys:String x:Key="UserDataPersonal7">day</sys:String>
+    <sys:String x:Key="UserDataPersonal8">month</sys:String>
+    <sys:String x:Key="UserDataPersonal9">year</sys:String>
+    <sys:String x:Key="UserDataPersona20">Others:</sys:String>
+    <sys:String x:Key="UserDataPersona21">NO</sys:String>
+    <sys:String x:Key="UserDataPersona22">YES</sys:String>
+    <sys:String x:Key="UserDataPersona23">Height(cm):</sys:String>
+    <sys:String x:Key="UserDataPersona24">Weight(kg):</sys:String>
+    <sys:String x:Key="UserDataPersona25">Mobile number:</sys:String>
+    <sys:String x:Key="UserDataPersona26">Email:</sys:String>
+    <sys:String x:Key="UserDataPersona27">Language used for report:</sys:String>
+    <sys:String x:Key="UserDataPersona28">Chinese</sys:String>
+    <sys:String x:Key="UserDataPersona29">English</sys:String>
+    <sys:String x:Key="UserDataPersona30">Client Number:</sys:String>
+    <sys:String x:Key="UserDataPersona31">Address Line 2:</sys:String>
+    <sys:String x:Key="UserDataPersona32">City:</sys:String>
+    <sys:String x:Key="UserDataPersona33">State/Province:</sys:String>
+    <sys:String x:Key="UserDataPersona34">Zip Code:</sys:String>
+    <sys:String x:Key="UserDataPersona35">Country:</sys:String>
+    <sys:String x:Key="UserDataPersona36">Free/Demo</sys:String>
+
+    <sys:String x:Key="UserDataFamilyTab">Family History</sys:String>
+    <sys:String x:Key="UserDataFamily1">Breast Cancer:</sys:String>
+    <sys:String x:Key="UserDataFamily2">Uterine Cancer:</sys:String>
+    <sys:String x:Key="UserDataFamily3">Cervical Cancer:</sys:String>
+    <sys:String x:Key="UserDataFamily4">Ovarian Cancer:</sys:String>
+    <sys:String x:Key="UserDataFamily5">Mother, sister</sys:String>
+    <sys:String x:Key="UserDataFamily6">Aunt, cousin</sys:String>
+    <sys:String x:Key="UserDataFamily7">Grand mother, grand aunt</sys:String>
+    
+    
+    <sys:String x:Key="UserDataComplaintsTab">Complaints</sys:String>
+    <sys:String x:Key="UserDataComplaints1">Pain</sys:String>
+    <sys:String x:Key="UserDataComplaints2">Colostrum (within 5 days after delivery)</sys:String>
+    <sys:String x:Key="UserDataComplaints3">Serious discharge (yellowish)</sys:String>
+    <sys:String x:Key="UserDataComplaints4">Blood discharge</sys:String>
+    <sys:String x:Key="UserDataComplaints5">Other</sys:String>
+    <sys:String x:Key="UserDataComplaints6">Special conditions</sys:String>
+    <sys:String x:Key="UserDataComplaints7">Pregnancy:</sys:String>
+    <sys:String x:Key="UserDataComplaints8">Lactation:</sys:String>
+    <sys:String x:Key="UserDataComplaints9">Duration (weeks)</sys:String>
+    <sys:String x:Key="UserDataComplaints10">Breast Implants:</sys:String>
+    <sys:String x:Key="UserDataComplaints11">Right Breast</sys:String>
+    <sys:String x:Key="UserDataComplaints12">, Year</sys:String>
+    <sys:String x:Key="UserDataComplaints13">Left Breast</sys:String>
+    <sys:String x:Key="UserDataComplaints14">Materials:</sys:String>
+    <sys:String x:Key="UserDataComplaints15">Cohesive Silicon Gel</sys:String>
+    <sys:String x:Key="UserDataComplaints16">Autologous fat transfer</sys:String>
+    <sys:String x:Key="UserDataComplaints17">Others</sys:String>
+    <sys:String x:Key="UserDataComplaints18">Duration (weeks)</sys:String>
+    <sys:String x:Key="UserDataComplaints19">Palpable lumps</sys:String>
+    <sys:String x:Key="UserDataComplaints20">If any, mark position in diagram</sys:String>
+    <sys:String x:Key="UserDataComplaints21">Degree:</sys:String>
+    <sys:String x:Key="UserDataComplaints22">[Mild]</sys:String>
+    <sys:String x:Key="UserDataComplaints23">[Severe]</sys:String>
+
+    <sys:String x:Key="UserDataMenstrualTab">Menstrual Condition</sys:String>
+    <sys:String x:Key="UserDataMenstrual1">First day of last menstruation period (day/month):</sys:String>
+    <sys:String x:Key="UserDataMenstrual2">(months)</sys:String>
+    <sys:String x:Key="UserDataMenstrual3">(years)</sys:String>
+
+    <sys:String x:Key="UserDataAnamnesisTab">Anamnesis</sys:String>
+    <sys:String x:Key="UserDataAnamnesis1">Menses</sys:String>
+    <sys:String x:Key="UserDataAnamnesis2">Menstrual cycle disorder</sys:String>
+    <sys:String x:Key="UserDataAnamnesis3">Postmenopause</sys:String>
+    <sys:String x:Key="UserDataAnamnesis4">Hormonal contraceptives</sys:String>
+    <sys:String x:Key="UserDataAnamnesis5">Brand name:</sys:String>
+    <sys:String x:Key="UserDataAnamnesis6">Administration period:</sys:String>
+    <sys:String x:Key="UserDataAnamnesis7">Somatic diseases</sys:String>
+    <sys:String x:Key="UserDataAnamnesis8">Adiposity</sys:String>
+    <sys:String x:Key="UserDataAnamnesis9">Essential hypertension</sys:String>
+    <sys:String x:Key="UserDataAnamnesis10">Diabetes</sys:String>
+    <sys:String x:Key="UserDataAnamnesis11">Thyroid gland diseases</sys:String>
+    <sys:String x:Key="UserDataAnamnesis12">Other</sys:String>
+    <sys:String x:Key="UserDataAnamnesis13">Gynecologic</sys:String>
+    <sys:String x:Key="UserDataAnamnesis14">Infertility</sys:String>
+    <sys:String x:Key="UserDataAnamnesis15">Ovary diseases</sys:String>
+    <sys:String x:Key="UserDataAnamnesis16">Inflammation</sys:String>
+    <sys:String x:Key="UserDataAnamnesis17">Cyst</sys:String>
+    <sys:String x:Key="UserDataAnamnesis18">Cancer</sys:String>
+    <sys:String x:Key="UserDataAnamnesis19">Endometriosis</sys:String>
+    <sys:String x:Key="UserDataAnamnesis20">Other</sys:String>
+    <sys:String x:Key="UserDataAnamnesis21">Uterus diseases</sys:String>
+    <sys:String x:Key="UserDataAnamnesis22">Myoma</sys:String>
+    <sys:String x:Key="UserDataAnamnesis23">Obstetric</sys:String>
+    <sys:String x:Key="UserDataAnamnesis24">Times:</sys:String>
+    <sys:String x:Key="UserDataAnamnesis25">Abortions/Miscarriage(s)</sys:String>
+    <sys:String x:Key="UserDataAnamnesis26">Birth(s)</sys:String>
+    <sys:String x:Key="UserDataAnamnesis27">Lactation (past history)</sys:String>
+    <sys:String x:Key="UserDataAnamnesis28">Under 1 month</sys:String>
+    <sys:String x:Key="UserDataAnamnesis29">Under 1 year</sys:String>
+    <sys:String x:Key="UserDataAnamnesis30">Over 1 year</sys:String>
+    <sys:String x:Key="UserDataAnamnesis31">Norm</sys:String>
+    <sys:String x:Key="UserDataAnamnesis32">Deviations</sys:String>
+
+    <sys:String x:Key="UserDataDiseaseTab">Breast diseases</sys:String>
+    <sys:String x:Key="UserDataDisease1">Trauma</sys:String>
+    <sys:String x:Key="UserDataDisease2">Mastitis</sys:String>
+    <sys:String x:Key="UserDataDisease3">Fibrous-cystic mastopathy</sys:String>
+    <sys:String x:Key="UserDataDisease4">Cysts</sys:String>
+    <sys:String x:Key="UserDataDisease5">Cancer</sys:String>
+    <sys:String x:Key="UserDataDisease6">Other</sys:String>
+
+    <sys:String x:Key="UserDataExaminationsTab">Examinations</sys:String>
+    <sys:String x:Key="UserDataExaminations1">Palpation</sys:String>
+    <sys:String x:Key="UserDataExaminations2">Changes</sys:String>
+    <sys:String x:Key="UserDataExaminations3">Diffuse</sys:String>
+    <sys:String x:Key="UserDataExaminations4">Focal</sys:String>
+    <sys:String x:Key="UserDataExaminations5">Comment</sys:String>
+    <sys:String x:Key="UserDataExaminations6">Ultrasound</sys:String>
+    <sys:String x:Key="UserDataExaminations7">Mammography</sys:String>
+    <sys:String x:Key="UserDataExaminations8">Biopsy</sys:String>
+    <sys:String x:Key="UserDataExaminations9">Diagnosis</sys:String>
+    <sys:String x:Key="UserDataExaminations10">Cancer</sys:String>
+    <sys:String x:Key="UserDataExaminations11">Proliferation</sys:String>
+    <sys:String x:Key="UserDataExaminations12">Dysplasia</sys:String>
+    <sys:String x:Key="UserDataExaminations13">Intraductal papilloma</sys:String>
+    <sys:String x:Key="UserDataExaminations14">Fibroadenoma</sys:String>
+    <sys:String x:Key="UserDataExaminations15">Other (description)</sys:String>
+    <sys:String x:Key="UserDataExaminations16">Year</sys:String>
+    <sys:String x:Key="UserDataExaminations17">Normal</sys:String>
+    <sys:String x:Key="UserDataExaminations18">Abnormal:</sys:String>
+    <sys:String x:Key="UserDataExaminations19">Result:</sys:String>
+    <sys:String x:Key="UserDataExaminations20">Diagnosis:</sys:String>
+    <sys:String x:Key="UserDataExaminations21">EIM Point:</sys:String>
+    <sys:String x:Key="UserDataExaminations22">MEIK Screening</sys:String>
+
+    <sys:String x:Key="UserDataVisualTab">Visual</sys:String>
+    <sys:String x:Key="UserDataVisual1">Red and swollen:</sys:String>
+    <sys:String x:Key="UserDataVisual2">Palpable:</sys:String>
+    <sys:String x:Key="UserDataVisual3">Serious discharge:</sys:String>
+    <sys:String x:Key="UserDataVisual4">Wounds:</sys:String>
+    <sys:String x:Key="UserDataVisual5">Scars:</sys:String>
+    
+    
+    
+    <sys:String x:Key="ReportContext_1" xml:space="preserve">Full name: </sys:String>
+    <sys:String x:Key="ReportContext_2" xml:space="preserve">Screen Date: </sys:String>
+    <sys:String x:Key="ReportContext_3" xml:space="preserve">Gender: </sys:String>
+    <sys:String x:Key="ReportContext_4">Female</sys:String>
+    <sys:String x:Key="ReportContext_5">Male</sys:String>
+    <sys:String x:Key="ReportContext_6" xml:space="preserve">Screen Venue: </sys:String>
+    <sys:String x:Key="ReportContext_7" xml:space="preserve">Address: </sys:String>
+    <sys:String x:Key="ReportContext_8" xml:space="preserve">Health insurance card: </sys:String>
+    <sys:String x:Key="ReportContext_9" xml:space="preserve">Screen Code: </sys:String>
+    <sys:String x:Key="ReportContext_10" xml:space="preserve">Age: </sys:String>
+    <sys:String x:Key="ReportContext_11" xml:space="preserve">Weight: </sys:String>
+    <sys:String x:Key="ReportContext_12">Lbs</sys:String>
+    <sys:String x:Key="ReportContext_13">Kgs</sys:String>
+    <sys:String x:Key="ReportContext_14" xml:space="preserve">Menstrual cycle: </sys:String>
+    <sys:String x:Key="ReportContext_15">Phase 1</sys:String>
+    <sys:String x:Key="ReportContext_16">Phase 2</sys:String>
+    <sys:String x:Key="ReportContext_17">1 and 2 phase</sys:String>
+    <sys:String x:Key="ReportContext_18">Dysmenorrhea</sys:String>
+    <sys:String x:Key="ReportContext_19">Amenorrhea</sys:String>
+    <sys:String x:Key="ReportContext_20">Pregnancy</sys:String>
+    <sys:String x:Key="ReportContext_21">Lactation</sys:String>
+    <sys:String x:Key="ReportContext_24">Postmenopause</sys:String>
+    
+    <sys:String x:Key="ReportContext_22" xml:space="preserve">Hormones: </sys:String>
+    <sys:String x:Key="ReportContext_23" xml:space="preserve">Skin affections: </sys:String>
+    <!--<sys:String x:Key="ReportContext_24">YES</sys:String>-->
+    <sys:String x:Key="ReportContext_25">NO</sys:String>
+    <sys:String x:Key="ReportContext_26">Nevus</sys:String>
+    <sys:String x:Key="ReportContext_27">Wart</sys:String>
+    <sys:String x:Key="ReportContext_28">Acne</sys:String>
+    <sys:String x:Key="ReportContext_29">Scar after surgery</sys:String>
+    <sys:String x:Key="ReportContext_30">Consequences of burns</sys:String>
+    <sys:String x:Key="ReportContext_31">Sunburns</sys:String>
+    <sys:String x:Key="ReportContext_32" xml:space="preserve">Pertinent/Family history of breast cancer: </sys:String>
+    
+    <sys:String x:Key="ReportContext_33">Positive</sys:String>
+    <sys:String x:Key="ReportContext_34">Negative</sys:String>
+
+    <sys:String x:Key="ReportContext_35" xml:space="preserve">Ultrasound/Mammogram findings: </sys:String>
+    <sys:String x:Key="ReportContext_36">No UTZ / Mammo</sys:String>
+    <sys:String x:Key="ReportContext_37">Negative</sys:String>
+    <sys:String x:Key="ReportContext_38">Benign</sys:String>
+    <sys:String x:Key="ReportContext_39">Suspicious</sys:String>
+    <sys:String x:Key="ReportContext_40">Screen Images Chosen:</sys:String>
+    <sys:String x:Key="ReportContext_41" xml:space="preserve">Left Breast: </sys:String>
+    <sys:String x:Key="ReportContext_42" xml:space="preserve">Right Breast: </sys:String>
+    <sys:String x:Key="ReportContext_43">VISUAL CHARACTERISTIC OF THE IMAGE</sys:String>
+    <sys:String x:Key="ReportContext_44">LEFT</sys:String>
+    <sys:String x:Key="ReportContext_45">RIGHT</sys:String>
+    <sys:String x:Key="ReportContext_46">Palpable Mass:</sys:String>
+    <sys:String x:Key="ReportContext_47">Focal / Diffuse changes of electrical conductivity</sys:String>
+    <sys:String x:Key="ReportContext_48">No</sys:String>
+    <sys:String x:Key="ReportContext_49">Focal</sys:String>
+    <sys:String x:Key="ReportContext_50">Diffuse</sys:String>
+    <sys:String x:Key="ReportContext_51">Mammary gland structure</sys:String>
+    <sys:String x:Key="ReportContext_52">Preserved</sys:String>
+    <sys:String x:Key="ReportContext_53">Altered</sys:String>
+    <sys:String x:Key="ReportContext_54">Lactiferous sinus zone</sys:String>
+    <sys:String x:Key="ReportContext_55">Not visualized</sys:String>
+    <sys:String x:Key="ReportContext_56">Not Dilated</sys:String>
+    <sys:String x:Key="ReportContext_57">Dilated</sys:String>
+    <sys:String x:Key="ReportContext_58">Granulated</sys:String>
+    <sys:String x:Key="ReportContext_59">Mammary gland contour</sys:String>
+    <sys:String x:Key="ReportContext_60">Preserved</sys:String>
+    <sys:String x:Key="ReportContext_61">Thickened</sys:String>
+    <sys:String x:Key="ReportContext_62">Deformed</sys:String>
+    <sys:String x:Key="ReportContext_63">DESCRIPTION OF FOCAL CHANGES OF ELECTRICAL CONDUCTIVITY</sys:String>
+    <sys:String x:Key="ReportContext_64">Segment</sys:String>
+    <sys:String x:Key="ReportContext_65">Number</sys:String>
+    <sys:String x:Key="ReportContext_66">Size</sys:String>
+    <sys:String x:Key="ReportContext_67">Shape</sys:String>
+    <sys:String x:Key="ReportContext_68">Round</sys:String>
+    <sys:String x:Key="ReportContext_69">Oval</sys:String>
+    <sys:String x:Key="ReportContext_70">Lobular</sys:String>
+    <sys:String x:Key="ReportContext_71">Irregular</sys:String>
+    <sys:String x:Key="ReportContext_72">Contour around focus</sys:String>
+    <sys:String x:Key="ReportContext_73">Distinct</sys:String>
+    <sys:String x:Key="ReportContext_74">Hyperimpedance</sys:String>
+    <sys:String x:Key="ReportContext_75">Indistinct</sys:String>
+    <sys:String x:Key="ReportContext_76">Internal electrical structure</sys:String>
+    <sys:String x:Key="ReportContext_77">Hyperimpedance</sys:String>
+    <sys:String x:Key="ReportContext_78">Isoimpedance</sys:String>
+    <sys:String x:Key="ReportContext_79">Hypoimpedance</sys:String>
+    <sys:String x:Key="ReportContext_80">Animpedance</sys:String>
+    <sys:String x:Key="ReportContext_81">Surrounding tissues and peripheral contour</sys:String>
+    <sys:String x:Key="ReportContext_82">Preserved</sys:String>
+    <sys:String x:Key="ReportContext_83">Structure disturbance</sys:String>
+    <sys:String x:Key="ReportContext_84">Structure displacement</sys:String>
+    <sys:String x:Key="ReportContext_85">Thickening</sys:String>
+    <sys:String x:Key="ReportContext_86">Extrusion</sys:String>
+    <sys:String x:Key="ReportContext_87">Retraction</sys:String>
+    <sys:String x:Key="ReportContext_88">QUANTITATIVE CHARACTERISTICS</sys:String>
+    <sys:String x:Key="ReportContext_89">Reference values</sys:String>
+    <sys:String x:Key="ReportContext_90">Oncomarker Highlight</sys:String>
+    <sys:String x:Key="ReportContext_91">Benign Changes</sys:String>
+    <sys:String x:Key="ReportContext_92">1st Layer</sys:String>
+    <sys:String x:Key="ReportContext_93">2st Layer</sys:String>
+    <sys:String x:Key="ReportContext_94">3st Layer</sys:String>
+    <sys:String x:Key="ReportContext_95">4st Layer</sys:String>
+    <sys:String x:Key="ReportContext_96">5st Layer</sys:String>
+    <sys:String x:Key="ReportContext_97">6st Layer</sys:String>
+    <sys:String x:Key="ReportContext_98">7st Layer</sys:String>
+    <sys:String x:Key="ReportContext_99">Suspicious Changes</sys:String>
+    <sys:String x:Key="ReportContext_100">Mean electrical conductivity</sys:String>
+    <sys:String x:Key="ReportContext_101">1 phase</sys:String>
+    <sys:String x:Key="ReportContext_102">2 phase</sys:String>
+    <sys:String x:Key="ReportContext_103">Postmenopausal</sys:String>
+    <sys:String x:Key="ReportContext_104">Pregnant</sys:String>
+    <sys:String x:Key="ReportContext_105">Lactating</sys:String>
+    <sys:String x:Key="ReportContext_106">Comparative electrical conductivity</sys:String>
+    <sys:String x:Key="ReportContext_107">Divergence between histograms</sys:String>
+    <sys:String x:Key="ReportContext_108">Comparison with Norm</sys:String>
+    <sys:String x:Key="ReportContext_109">Phase electrical conductivity</sys:String>
+    <sys:String x:Key="ReportContext_110">Age-related electrical conductivity</sys:String>
+    <sys:String x:Key="ReportContext_111">&lt; 5 pct</sys:String>
+    <sys:String x:Key="ReportContext_112">5 - 95 pct</sys:String>
+    <sys:String x:Key="ReportContext_113">&gt; 95 pct</sys:String>
+    <sys:String x:Key="ReportContext_114">Age Value of EC</sys:String>
+    <sys:String x:Key="ReportContext_115">Conclusion:</sys:String>
+    <sys:String x:Key="ReportContext_116">Pubertal Period</sys:String>
+    <sys:String x:Key="ReportContext_117">Early childbearing age</sys:String>
+    <sys:String x:Key="ReportContext_118">Childbearing age</sys:String>
+    <sys:String x:Key="ReportContext_119">Perimenopausal period</sys:String>
+    <sys:String x:Key="ReportContext_120">Postmenopausal period</sys:String>
+    <sys:String x:Key="ReportContext_121">Left mammary gland:</sys:String>
+    <sys:String x:Key="ReportContext_122">Amorphous type of mammary gland structure</sys:String>
+    <sys:String x:Key="ReportContext_123">Mixed type with amorphous component predominance</sys:String>
+    <sys:String x:Key="ReportContext_124">Mixed type of mammary gland structure</sys:String>
+    <sys:String x:Key="ReportContext_125">Mixed type with ductal component predominance</sys:String>
+    <sys:String x:Key="ReportContext_126">Ductal type of mammary gland structure</sys:String>
+    <sys:String x:Key="ReportContext_127" xml:space="preserve">Age-related electrical conductivity: </sys:String>
+    <sys:String x:Key="ReportContext_128">Mean EC of  lesion:</sys:String>
+    <sys:String x:Key="ReportContext_129">Findings:</sys:String>
+    <sys:String x:Key="ReportContext_130">No Focal changes of electroconductivity detected</sys:String>
+    <sys:String x:Key="ReportContext_131">Focal changes of electroconductivity detected </sys:String>
+    <sys:String x:Key="ReportContext_132">Result:</sys:String>
+    <sys:String x:Key="ReportContext_133">Left mammary gland:</sys:String>
+    <sys:String x:Key="ReportContext_134">No abnormal changes detected</sys:String>
+    <sys:String x:Key="ReportContext_135">Benign lesion detected</sys:String>
+    <sys:String x:Key="ReportContext_136">Probably Benign Findings</sys:String>
+    <sys:String x:Key="ReportContext_137">Suspicious abnormality detected</sys:String>
+    <sys:String x:Key="ReportContext_138">Highly Suggestive of Malignancy</sys:String>
+    <sys:String x:Key="ReportContext_139">Right mammary gland:</sys:String>
+    <sys:String x:Key="ReportContext_140">Right mammary gland:</sys:String>
+    <sys:String x:Key="ReportContext_141">BI-EIM Total Pts:</sys:String>
+    <sys:String x:Key="ReportContext_142" xml:space="preserve">Total Pts: </sys:String>
+    <sys:String x:Key="ReportContext_143" xml:space="preserve">Point / Category: </sys:String>
+    <sys:String x:Key="ReportContext_144">0-1 pt - 1 Category</sys:String>
+    <sys:String x:Key="ReportContext_145">2-3 pts - 2 Category</sys:String>
+    <sys:String x:Key="ReportContext_146">4 pt - 3 Category</sys:String>
+    <sys:String x:Key="ReportContext_147">5-7 pts - 4 Category</sys:String>
+    <sys:String x:Key="ReportContext_148">8 pt - 5 Category</sys:String>
+    <sys:String x:Key="ReportContext_149" xml:space="preserve">Technician Name: </sys:String>
+    <sys:String x:Key="ReportContext_150" xml:space="preserve">BI-EIM category: </sys:String>
+    <sys:String x:Key="ReportContext_151">0 Category - Poor Image - Re-Screen</sys:String>
+    <sys:String x:Key="ReportContext_152">1 Category - No pathological changes detected</sys:String>
+    <sys:String x:Key="ReportContext_153">2 Category - Benign lesion</sys:String>
+    <sys:String x:Key="ReportContext_154">3 Category - Probably benign findings</sys:String>
+    <sys:String x:Key="ReportContext_155">4 Category - Suspicious abnormality</sys:String>
+    <sys:String x:Key="ReportContext_156">5 Category - Highly suggestive malignancy</sys:String>
+    <sys:String x:Key="ReportContext_157" xml:space="preserve">Suggestion: </sys:String>
+    <sys:String x:Key="ReportContext_158">MEIK examination in 3 months</sys:String>
+    <sys:String x:Key="ReportContext_159">MEIK examination in 6 months</sys:String>
+    <sys:String x:Key="ReportContext_160">MEIK examination in 1 year</sys:String>
+    <sys:String x:Key="ReportContext_161" xml:space="preserve">Further Examination: </sys:String>
+    <sys:String x:Key="ReportContext_162">Routine mammography</sys:String>
+    <sys:String x:Key="ReportContext_163">Re-examination in 6 months</sys:String>
+    <!--<sys:String x:Key="ReportContext_164">Breast Ultrasound and Standard Mammogram</sys:String>-->
+    <sys:String x:Key="ReportContext_164">Biopsy</sys:String>
+    <sys:String x:Key="ReportContext_171">Consult physician for necessary examination</sys:String>
+    <sys:String x:Key="ReportContext_165" xml:space="preserve">Comments 01: </sys:String>
+    
+    <sys:String x:Key="ReportContext_228">No abnormal changes detected</sys:String>
+    <sys:String x:Key="ReportContext_166">No abnormal changes detected, (MEC) belong to high risk group</sys:String>
+    <sys:String x:Key="ReportContext_167">Benign lesion detected</sys:String>
+    <sys:String x:Key="ReportContext_229">Benign lesion detected, (MEC) belong to high risk group</sys:String>    
+    <sys:String x:Key="ReportContext_168">Suspicious abnormality detected</sys:String>
+    <sys:String x:Key="ReportContext_230">Highly suspicious abnormality detected</sys:String>
+    
+    <sys:String x:Key="ReportContext_169" xml:space="preserve">Comments 02: </sys:String>
+    <sys:String x:Key="ReportContext_170">View Image</sys:String>    
+    <sys:String x:Key="ReportContext_172">Refer to Surgeon – Follow up Biopsy</sys:String>
+    <sys:String x:Key="ReportContext_173" xml:space="preserve">Medical Interpreter: </sys:String>
+    <sys:String x:Key="ReportContext_174" xml:space="preserve">Medical Interpreter's Signature: </sys:String>
+    <sys:String x:Key="ReportContext_175">Capture Image</sys:String>
+    <sys:String x:Key="ReportContext_176">Remove Image</sys:String>
+    <sys:String x:Key="ReportContext_177" xml:space="preserve">Date of Screening: </sys:String>
+    <sys:String x:Key="ReportContext_178" xml:space="preserve">Medical Record No.(MRN)</sys:String>
+    <sys:String x:Key="ReportContext_179" xml:space="preserve">Name: </sys:String>
+    <sys:String x:Key="ReportContext_180">Left Breast</sys:String>
+    <sys:String x:Key="ReportContext_181">Right Breast</sys:String>
+    <sys:String x:Key="ReportContext_182" xml:space="preserve">Finding: </sys:String>
+    <sys:String x:Key="ReportContext_183">Probably benign findings</sys:String>
+    <sys:String x:Key="ReportContext_184">No pathological changes</sys:String>
+    <sys:String x:Key="ReportContext_185">Benign findings</sys:String>
+    <sys:String x:Key="ReportContext_186">Probably benign findings</sys:String>
+    <sys:String x:Key="ReportContext_187">Suspicious abnormality</sys:String>
+    <sys:String x:Key="ReportContext_188" xml:space="preserve">Location: </sys:String>
+    <sys:String x:Key="ReportContext_189" xml:space="preserve">Recommendation: </sys:String>
+    <sys:String x:Key="ReportContext_190">Date of Interpretation：</sys:String>
+    <sys:String x:Key="ReportContext_191" xml:space="preserve">MEIK Technician: </sys:String>
+    <sys:String x:Key="ReportContext_192">Size:</sys:String>
+    <sys:String x:Key="ReportContext_193">The above described results are based on interpretations at the time of the scan and must be correlated with previous mammogram and ultrasound results (if any), clinical history, clinical findings and other ancillary procedures.</sys:String>
+    <sys:String x:Key="ReportContext_194">*MEIK is a Digital Breast Exam (DBE) screening procedure and is an adjunct modality for the Cinical Breast Wxam, Mammography &amp; Breast Ultrasound.</sys:String>
+    <sys:String x:Key="ReportContext_195">*Green marks indicate benign findings and red marks indicate suspicious changes</sys:String>
+    <sys:String x:Key="ReportContext_196">PATIENT'S MEIK RESULT</sys:String>
+    <sys:String x:Key="ReportContext_197">MEIK DIGITAL BREAST SCREENING REPORT</sys:String>
+    <sys:String x:Key="ReportContext_198">Mammary Glands Electrical Impedance Examination Report</sys:String>
+    <sys:String x:Key="ReportContext_199">Mammograph – MEIK v.5.6</sys:String>
+    <sys:String x:Key="ReportContext_200">License No: </sys:String>
+    <sys:String x:Key="ReportContext_201">BI-EIM category:  0 Category - Poor Image; 1 Category - No pathological changes detected; 2 Category - Benign lesion; 3 Category - Probably benign findings; 4 Category - Suspicious abnormality </sys:String>
+    <sys:String x:Key="ReportContext_202">Client Number:</sys:String>
+    <sys:String x:Key="ReportContext_203">Height(cm):</sys:String>
+    <sys:String x:Key="ReportContext_204">Mobile Number:</sys:String>
+    <sys:String x:Key="ReportContext_205">Email:</sys:String>
+
+    <sys:String x:Key="ReportContext_206">1</sys:String>
+    <sys:String x:Key="ReportContext_207">2</sys:String>
+    <sys:String x:Key="ReportContext_208">3</sys:String>
+    <sys:String x:Key="ReportContext_209">Numerous</sys:String>
+    <sys:String x:Key="ReportContext_210">4 o'clock</sys:String>
+    <sys:String x:Key="ReportContext_211">5 o'clock</sys:String>
+    <sys:String x:Key="ReportContext_212">6 o'clock</sys:String>
+    <sys:String x:Key="ReportContext_213">7 o'clock</sys:String>
+    <sys:String x:Key="ReportContext_214">8 o'clock</sys:String>
+    <sys:String x:Key="ReportContext_215">9 o'clock</sys:String>
+    <sys:String x:Key="ReportContext_216">10 o'clock</sys:String>
+    <sys:String x:Key="ReportContext_217">11 o'clock</sys:String>
+    <sys:String x:Key="ReportContext_218">12 o'clock</sys:String>
+    <sys:String x:Key="ReportContext_219">1 o'clock</sys:String>
+    <sys:String x:Key="ReportContext_220">1-</sys:String>
+    <sys:String x:Key="ReportContext_221">2-</sys:String>
+    <sys:String x:Key="ReportContext_222">3-</sys:String>
+    <sys:String x:Key="ReportContext_223">2 o'clock</sys:String>
+    <sys:String x:Key="ReportContext_224">3 o'clock</sys:String>
+    <sys:String x:Key="ReportContext_225">mm</sys:String>
+    <sys:String x:Key="ReportContext_226">Analysis:</sys:String>
+    <sys:String x:Key="ReportContext_227">Comments:</sys:String>
+    <sys:String x:Key="ReportContext_231">MEIK re-examination in 1 phase menstrual cycle</sys:String>
+    <sys:String x:Key="ReportContext_232" xml:space="preserve">Further examination: </sys:String>
+    <!--<sys:String x:Key="ReportContext_233">Poor Image, need to re-screen</sys:String>-->
+    <sys:String x:Key="ReportContext_233">Description</sys:String>
+    <sys:String x:Key="ReportContext_234">Comments</sys:String>
+    <sys:String x:Key="ReportContext_235" xml:space="preserve">Medical Interpreter's Signature</sys:String>
+    <sys:String x:Key="ReportContext_236">Poor Image, need to re-screen</sys:String>
+    <sys:String x:Key="ReportContext_237">Benign Changes</sys:String>
+    <sys:String x:Key="ReportContext_238">Benign Changes, (MEC) belong to high risk group</sys:String>
+    <sys:String x:Key="ReportContext_239">MEIK re-examination in 2 phase menstrual cycle</sys:String>
+    <sys:String x:Key="ReportContext_240">Routine ultrasound</sys:String>
+    <sys:String x:Key="ReportContext_241">Routine ultrasound &amp; mammography</sys:String>
+</ResourceDictionary>

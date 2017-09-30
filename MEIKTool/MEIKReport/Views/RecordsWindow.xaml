@@ -1,0 +1,94 @@
+﻿<Window x:Class="MEIKReport.RecordsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"        
+        Icon="/Images/App_Icon.png"
+        ShowInTaskbar="False" 
+        WindowStartupLocation="CenterScreen" Topmost="True"
+        Title="Screening Records" Height="600" Width="1000">
+    <Window.Resources>
+        <CollectionViewSource x:Key="PatientSource" />
+    </Window.Resources>
+    <Grid>        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="1"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="470"/>
+            <RowDefinition Height="*"/>            
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <WrapPanel Grid.Row="0" Grid.Column="0" VerticalAlignment="Bottom">
+            <Label FontSize="18" VerticalContentAlignment="Bottom" Margin="5,0,0,0" Content="{StaticResource RecordsWin1}"></Label>
+            <TextBlock Name="patientTimes" VerticalAlignment="Center" FontSize="18" FontWeight="Bold"></TextBlock>
+        </WrapPanel>        
+        <WrapPanel Grid.Row="0" Grid.Column="1" VerticalAlignment="Bottom">
+            <Label FontSize="18" VerticalContentAlignment="Bottom" Margin="5,0,0,0" Content="{StaticResource RecordsWin2}"></Label>
+            <TextBlock Name="txtTimes" VerticalAlignment="Center" FontSize="18" FontWeight="Bold"></TextBlock>
+        </WrapPanel>
+        <Border Grid.Row="1" Grid.ColumnSpan="2" BorderBrush="Black" BorderThickness="0,0,0,1" Margin="5,0,5,0"></Border>
+        <Grid Grid.Row="2" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="200"/>
+            </Grid.ColumnDefinitions>
+            <WrapPanel VerticalAlignment="Center" Margin="10,10,10,0">
+                <Label FontSize="16" VerticalContentAlignment="Bottom" Margin="5,0,0,0" Content="{StaticResource RecordsWin5}"></Label>
+                <DatePicker Name="fromDate" Width="110" Height="25" Text="" BorderThickness="0"/>               
+                <Label FontSize="16" VerticalContentAlignment="Bottom" Margin="15,0,0,0" Content="{StaticResource RecordsWin6}"></Label>
+                <DatePicker Name="toDate" Width="110" Height="25" Text="" BorderThickness="0"/>                
+                <Button Name="btnSearch" Height="22" Width="100" Content="{StaticResource RecordsWin4}" FontSize="12" Margin="15,0,0,0" Click="btnSearch_Click"></Button>                
+            </WrapPanel>
+            <StackPanel Grid.Column="1" VerticalAlignment="Center" Margin="10,10,20,0">
+                <Button Name="export" Height="22" Width="150" Content="{StaticResource RecordsWin3}" Click="export_Click" FontSize="12"></Button>
+            </StackPanel>
+        </Grid>
+        
+        <StackPanel Grid.ColumnSpan="2" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10,2,10,10">
+            <!--<TextBlock Name="screeningTimes" FontSize="46" FontWeight="Bold">5</TextBlock>-->
+            <DataGrid Name="patientGrid" Grid.Column="1" Grid.Row="2" Height="450" ColumnHeaderStyle="{StaticResource columnHeaderStyle}" AutoGenerateColumns="False" RowHeaderWidth="0" FontSize="16" >
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="" Width="1.2*" IsReadOnly="True" Binding="{Binding Path=Code}">
+                        <DataGridTextColumn.ElementStyle>
+                            <Style TargetType="TextBlock">
+                                <Setter Property="TextWrapping" Value="Wrap"/>
+                                <Setter Property="Height" Value="auto"/>
+                                <Setter Property="Padding" Value="2"/>
+                            </Style>
+                        </DataGridTextColumn.ElementStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Header="{StaticResource Excel2}" Width="2.5*" IsReadOnly="True" Binding="{Binding Path=Name}">
+                        <DataGridTextColumn.ElementStyle>
+                            <Style TargetType="TextBlock">
+                                <Setter Property="TextWrapping" Value="Wrap"/>
+                                <Setter Property="Height" Value="auto"/>
+                                <Setter Property="Padding" Value="2"/>
+                            </Style>
+                        </DataGridTextColumn.ElementStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Header="{StaticResource Excel4}" Width="2*" IsReadOnly="True" Binding="{Binding Path=ScreenDate}" >
+                        <DataGridTextColumn.ElementStyle>
+                            <Style TargetType="TextBlock">
+                                <Setter Property="TextWrapping" Value="Wrap"/>
+                                <Setter Property="Height" Value="auto"/>
+                                <Setter Property="Padding" Value="2"/>
+                            </Style>
+                        </DataGridTextColumn.ElementStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Header="{StaticResource Excel3}" Width="4*" IsReadOnly="True" Binding="{Binding Path=Desc}">
+                        <DataGridTextColumn.ElementStyle>
+                            <Style TargetType="TextBlock">
+                                <Setter Property="TextWrapping" Value="Wrap"/>
+                                <Setter Property="Height" Value="auto"/>
+                                <Setter Property="Padding" Value="2"/>
+                            </Style>
+                        </DataGridTextColumn.ElementStyle>
+                    </DataGridTextColumn>
+                                     
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>        
+    </Grid>
+</Window>
