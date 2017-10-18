@@ -272,7 +272,6 @@
 		<row><td>NewBinary7</td><td/><td>&lt;ISProductFolder&gt;\Redist\Language Independent\OS Independent\ReinstIco.ibd</td></row>
 		<row><td>NewBinary8</td><td/><td>&lt;ISProductFolder&gt;\Redist\Language Independent\OS Independent\RemoveIco.ibd</td></row>
 		<row><td>NewBinary9</td><td/><td>&lt;ISProductFolder&gt;\Redist\Language Independent\OS Independent\SetupIcon.ibd</td></row>
-		<row><td>SetAllUsers.dll</td><td/><td>&lt;ISRedistPlatformDependentFolder&gt;\SetAllUsers.dll</td></row>
 	</table>
 
 	<table name="BindImage">
@@ -341,12 +340,12 @@
 		<col def="S0">ISDotNetInstallerArgsCommit</col>
 		<col def="S0">ISDotNetInstallerArgsUninstall</col>
 		<col def="S0">ISDotNetInstallerArgsRollback</col>
-		<row><td>ICSharpCode.SharpZipLib.dll</td><td>{6F1A099E-83D0-42C1-AE62-CB92BF2605B5}</td><td>INSTALLDIR</td><td>2</td><td/><td>icsharpcode.sharpziplib.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ICSharpCode.SharpZipLib.dll</td><td>{8709EC2D-DDBF-4EFC-A96B-2ECC15E9F8C1}</td><td>INSTALLDIR</td><td>2</td><td/><td>icsharpcode.sharpziplib.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td>{755EA532-991F-4D18-B18E-EF766D14A2DF}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>IS_ININSTALL_SHORTCUT</td><td>{62C38458-21E7-47DC-93FC-DAD5C1B26590}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>MEIKReport.exe</td><td>{8AF55C79-DC7F-435B-975A-EE06A6550AD9}</td><td>INSTALLDIR</td><td>2</td><td/><td>meikreport.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Xceed.Wpf.Toolkit.dll</td><td>{F7DFF978-3AD4-4E1A-9720-1DBD5AC388BB}</td><td>INSTALLDIR</td><td>2</td><td/><td>xceed.wpf.toolkit.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>gxpswin32.exe</td><td>{9E575994-C603-46C1-A0C0-DFB8398630CC}</td><td>INSTALLDIR</td><td>2</td><td/><td>gxpswin32.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>MEIKReport.exe</td><td>{1B121C59-0EEF-432A-A4AD-E6C212528F19}</td><td>INSTALLDIR</td><td>2</td><td/><td>meikreport.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Xceed.Wpf.Toolkit.dll</td><td>{629A8C66-29BA-4108-AD2F-2C4E5AF9E343}</td><td>INSTALLDIR</td><td>2</td><td/><td>xceed.wpf.toolkit.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>gxpswin32.exe</td><td>{F648C364-A1B9-42DB-AADF-C9AE4688F36E}</td><td>INSTALLDIR</td><td>2</td><td/><td>gxpswin32.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 	</table>
 
 	<table name="Condition">
@@ -1071,13 +1070,11 @@
 		<col def="S0">Target</col>
 		<col def="I4">ExtendedType</col>
 		<col def="S255">ISComments</col>
-		<row><td>ISPreventDowngrade</td><td>19</td><td/><td>[IS_PREVENT_DOWNGRADE_EXIT]</td><td/><td/></row>
 		<row><td>ISPrint</td><td>1</td><td>SetAllUsers.dll</td><td>PrintScrollableText</td><td/><td>Prints the contents of a ScrollableText control on a dialog.</td></row>
 		<row><td>ISRunSetupTypeAddLocalEvent</td><td>1</td><td>ISExpHlp.dll</td><td>RunSetupTypeAddLocalEvent</td><td/><td>Run the AddLocal events associated with the Next button on the Setup Type dialog.</td></row>
 		<row><td>ISSelfRegisterCosting</td><td>1</td><td>ISSELFREG.DLL</td><td>ISSelfRegisterCosting</td><td/><td/></row>
 		<row><td>ISSelfRegisterFiles</td><td>3073</td><td>ISSELFREG.DLL</td><td>ISSelfRegisterFiles</td><td/><td/></row>
 		<row><td>ISSelfRegisterFinalize</td><td>1</td><td>ISSELFREG.DLL</td><td>ISSelfRegisterFinalize</td><td/><td/></row>
-		<row><td>ISSetAllUsers</td><td>257</td><td>SetAllUsers.dll</td><td>SetAllUsers</td><td/><td/></row>
 		<row><td>ISUnSelfRegisterFiles</td><td>3073</td><td>ISSELFREG.DLL</td><td>ISUnSelfRegisterFiles</td><td/><td/></row>
 		<row><td>LaunchProgramFileFromSetupCompleteSuccess</td><td>1</td><td>NewBinary19</td><td>LaunchProgram</td><td/><td/></row>
 		<row><td>SetARPINSTALLLOCATION</td><td>51</td><td>ARPINSTALLLOCATION</td><td>[INSTALLDIR]</td><td/><td/></row>
@@ -1153,11 +1150,12 @@
 		<row><td>FavoritesFolder</td><td>TARGETDIR</td><td>.:FAVORI~1|Favorites</td><td/><td>0</td><td/></row>
 		<row><td>FontsFolder</td><td>TARGETDIR</td><td>.:Fonts</td><td/><td>0</td><td/></row>
 		<row><td>GlobalAssemblyCache</td><td>TARGETDIR</td><td>.:Global~1|GlobalAssemblyCache</td><td/><td>0</td><td/></row>
-		<row><td>INSTALLDIR</td><td>MEIKREPORT</td><td>.</td><td/><td>0</td><td/></row>
+		<row><td>INSTALLDIR</td><td>MEIKTOOL</td><td>.</td><td/><td>0</td><td/></row>
 		<row><td>ISCommonFilesFolder</td><td>CommonFilesFolder</td><td>Instal~1|InstallShield</td><td/><td>0</td><td/></row>
 		<row><td>ISYourDataBaseDir</td><td>INSTALLDIR</td><td>Database</td><td/><td>0</td><td/></row>
 		<row><td>LocalAppDataFolder</td><td>TARGETDIR</td><td>.:LocalA~1|LocalAppData</td><td/><td>0</td><td/></row>
-		<row><td>MEIKREPORT</td><td>ProgramFilesFolder</td><td>MEIKTool</td><td/><td>0</td><td/></row>
+		<row><td>MEIKASIA</td><td>ProgramFilesFolder</td><td>MEIKAsia</td><td/><td>0</td><td/></row>
+		<row><td>MEIKTOOL</td><td>MEIKASIA</td><td>MEIKTool</td><td/><td>0</td><td/></row>
 		<row><td>MyPicturesFolder</td><td>TARGETDIR</td><td>.:MyPict~1|MyPictures</td><td/><td>0</td><td/></row>
 		<row><td>NetHoodFolder</td><td>TARGETDIR</td><td>.:NetHood</td><td/><td>0</td><td/></row>
 		<row><td>PersonalFolder</td><td>TARGETDIR</td><td>.:Personal</td><td/><td>0</td><td/></row>
@@ -1179,7 +1177,8 @@
 		<row><td>USERPROFILE</td><td>TARGETDIR</td><td>.:USERPR~1|UserProfile</td><td/><td>0</td><td/></row>
 		<row><td>WindowsFolder</td><td>TARGETDIR</td><td>.:Windows</td><td/><td>0</td><td/></row>
 		<row><td>WindowsVolume</td><td>TARGETDIR</td><td>.:WinRoot</td><td/><td>0</td><td/></row>
-		<row><td>meiktool</td><td>ProgramMenuFolder</td><td>MEIKTool</td><td/><td>1</td><td/></row>
+		<row><td>meikasia</td><td>ProgramMenuFolder</td><td>MEIKAsia</td><td/><td>1</td><td/></row>
+		<row><td>meiktool1</td><td>meikasia</td><td>MEIKTool</td><td/><td>1</td><td/></row>
 	</table>
 
 	<table name="DrLocator">
@@ -1891,11 +1890,11 @@
 		<col def="S255">ISBuildSourcePath</col>
 		<col def="I4">ISAttributes</col>
 		<col def="S72">ISComponentSubFolder_</col>
-		<row><td>config.ini</td><td>ISX_DEFAULTCOMPONENT</td><td>Config.ini</td><td>0</td><td/><td/><td/><td>1</td><td>D:\NewGit\MEIKReport\MEIKTool\MEIKReport\bin\Release\Config.ini</td><td>1</td><td/></row>
-		<row><td>gxpswin32.exe</td><td>gxpswin32.exe</td><td>GXPSWI~1.EXE|gxpswin32.exe</td><td>0</td><td/><td/><td/><td>1</td><td>D:\NewGit\MEIKReport\MEIKTool\MEIKReport\bin\Release\gxpswin32.exe</td><td>1</td><td/></row>
-		<row><td>icsharpcode.sharpziplib.dll</td><td>ICSharpCode.SharpZipLib.dll</td><td>ICSHAR~1.DLL|ICSharpCode.SharpZipLib.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\NewGit\MEIKReport\MEIKTool\MEIKReport\bin\Release\ICSharpCode.SharpZipLib.dll</td><td>1</td><td/></row>
-		<row><td>meikreport.exe</td><td>MEIKReport.exe</td><td>MEIKRE~1.EXE|MEIKReport.exe</td><td>0</td><td/><td/><td/><td>1</td><td>D:\NewGit\MEIKReport\MEIKTool\MEIKReport\bin\Release\MEIKReport.exe</td><td>1</td><td/></row>
-		<row><td>xceed.wpf.toolkit.dll</td><td>Xceed.Wpf.Toolkit.dll</td><td>XCEEDW~1.DLL|Xceed.Wpf.Toolkit.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\NewGit\MEIKReport\MEIKTool\MEIKReport\bin\Release\Xceed.Wpf.Toolkit.dll</td><td>1</td><td/></row>
+		<row><td>config.ini</td><td>ISX_DEFAULTCOMPONENT</td><td>Config.ini</td><td>0</td><td/><td/><td/><td>1</td><td>D:\NewGit\MEIK_MA\MEIKTool\MEIKReport\bin\Release\Config.ini</td><td>1</td><td/></row>
+		<row><td>gxpswin32.exe</td><td>gxpswin32.exe</td><td>GXPSWI~1.EXE|gxpswin32.exe</td><td>0</td><td/><td/><td/><td>1</td><td>D:\NewGit\MEIK_MA\MEIKTool\MEIKReport\bin\Release\gxpswin32.exe</td><td>1</td><td/></row>
+		<row><td>icsharpcode.sharpziplib.dll</td><td>ICSharpCode.SharpZipLib.dll</td><td>ICSHAR~1.DLL|ICSharpCode.SharpZipLib.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\NewGit\MEIK_MA\MEIKTool\MEIKReport\bin\Release\ICSharpCode.SharpZipLib.dll</td><td>1</td><td/></row>
+		<row><td>meikreport.exe</td><td>MEIKReport.exe</td><td>MEIKRE~1.EXE|MEIKReport.exe</td><td>0</td><td/><td/><td/><td>1</td><td>D:\NewGit\MEIK_MA\MEIKTool\MEIKReport\bin\Release\MEIKReport.exe</td><td>1</td><td/></row>
+		<row><td>xceed.wpf.toolkit.dll</td><td>Xceed.Wpf.Toolkit.dll</td><td>XCEEDW~1.DLL|Xceed.Wpf.Toolkit.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\NewGit\MEIK_MA\MEIKTool\MEIKReport\bin\Release\Xceed.Wpf.Toolkit.dll</td><td>1</td><td/></row>
 	</table>
 
 	<table name="FileSFPCatalog">
@@ -2038,12 +2037,12 @@
 		<col def="S0">FTPLocation</col>
 		<col def="S0">HTTPLocation</col>
 		<col def="S0">Miscellaneous</col>
-		<row><td>ICSharpCode.SharpZipLib.dll</td><td/><td/><td>_D6A53B2B_3A66_44D8_BCFF_251CEC0F62D9_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ICSharpCode.SharpZipLib.dll</td><td/><td/><td>_32A9DDDF_7EEC_4676_92E8_3045A9169647_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_F21A897F_23B2_46DF_A6D3_07CFC1BFE9BB_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>IS_ININSTALL_SHORTCUT</td><td/><td/><td>_0B91B8B6_2A9D_4C6A_A2C7_94690F647201_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>MEIKReport.exe</td><td/><td/><td>_BD58203A_6AF3_4BBD_80FC_472C2EE49890_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Xceed.Wpf.Toolkit.dll</td><td/><td/><td>_8855B42A_C91D_485A_8B88_9971733FE0E7_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>gxpswin32.exe</td><td/><td/><td>_3406A2E6_6D0E_4F35_BB9B_24A627C15485_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>MEIKReport.exe</td><td/><td/><td>_379D8D56_1FA6_493E_8D22_B9226D20BF12_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Xceed.Wpf.Toolkit.dll</td><td/><td/><td>_00950282_08A3_4E42_8FC3_E1FE65EC6723_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>gxpswin32.exe</td><td/><td/><td>_4CACC04D_0B5D_448A_B131_489631A7D9AD_FILTER</td><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="ISCustomActionReference">
@@ -2632,7 +2631,7 @@
 		<col def="I2">Encoded</col>
 		<col def="S0">Comment</col>
 		<col def="I4">TimeStamp</col>
-		<row><td>COMPANY_NAME</td><td>1033</td><td>meikasia</td><td>0</td><td/><td>1042605009</td></row>
+		<row><td>COMPANY_NAME</td><td>1033</td><td>MEIKAsia</td><td>0</td><td/><td>-1926931345</td></row>
 		<row><td>DN_AlwaysInstall</td><td>1033</td><td>Always Install</td><td>0</td><td/><td>-1515929332</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_COLOR</td><td>1033</td><td>The color settings of your system are not adequate for running [ProductName].</td><td>0</td><td/><td>-1515929332</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_DOTNETVERSION45FULL</td><td>1033</td><td>Microsoft .NET Framework 4.5 Full package or greater needs to be installed for this installation to continue.</td><td>0</td><td/><td>-1515937364</td></row>
@@ -3457,7 +3456,8 @@
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME18</td><td>1033</td><td>LAUNCH~1.EXE|Launch gxpswin32.exe</td><td>0</td><td/><td>1956983274</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME19</td><td>1033</td><td>MEIKTool.exe</td><td>0</td><td/><td>1957028330</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME2</td><td>1033</td><td>MEIKReport</td><td>0</td><td/><td>-1515920788</td></row>
-		<row><td>IDS_SHORTCUT_DISPLAY_NAME20</td><td>1033</td><td>Uninstall</td><td>0</td><td/><td>1956983306</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME21</td><td>1033</td><td>LAUNCH~1.EXE|Launch gxpswin32.exe</td><td>0</td><td/><td>-1926914929</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME22</td><td>1033</td><td>MEIKTool2.0</td><td>0</td><td/><td>-1926918993</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME3</td><td>1033</td><td>Uninstall</td><td>0</td><td/><td>-1515955572</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME4</td><td>1033</td><td>Uninstall</td><td>0</td><td/><td>-1381714540</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME5</td><td>1033</td><td>Uninstall</td><td>0</td><td/><td>1042569614</td></row>
@@ -3753,13 +3753,15 @@
 		<row><td>IDS__TargetReq_DESC_PROCESSOR</td><td>1033</td><td>The processor is not adequate for running [ProductName].</td><td>0</td><td/><td>-1515929332</td></row>
 		<row><td>IDS__TargetReq_DESC_RAM</td><td>1033</td><td>The amount of RAM is not adequate for running [ProductName].</td><td>0</td><td/><td>-1515929332</td></row>
 		<row><td>IDS__TargetReq_DESC_RESOLUTION</td><td>1033</td><td>The screen resolution is not adequate for running [ProductName].</td><td>0</td><td/><td>-1515929332</td></row>
-		<row><td>ID_STRING1</td><td>1033</td><td>http://www.meikasia.com</td><td>0</td><td/><td>1042605009</td></row>
+		<row><td>ID_STRING1</td><td>1033</td><td>http://www.MEIKAsia.com</td><td>0</td><td/><td>-1926931345</td></row>
 		<row><td>ID_STRING10</td><td>1033</td><td>MEIKReport</td><td>0</td><td/><td>547740811</td></row>
 		<row><td>ID_STRING11</td><td>1033</td><td>LAUNCH~1.EXE|Launch MEIKReport.exe</td><td>0</td><td/><td>-1322925568</td></row>
 		<row><td>ID_STRING12</td><td>1033</td><td>MEIKTool.exe</td><td>0</td><td/><td>1957021070</td></row>
-		<row><td>ID_STRING2</td><td>1033</td><td>meikasia</td><td>0</td><td/><td>1042605009</td></row>
+		<row><td>ID_STRING13</td><td>1033</td><td>MEIKTool2.0</td><td>0</td><td/><td>-1926953777</td></row>
+		<row><td>ID_STRING14</td><td>1033</td><td>Uninstall</td><td>0</td><td/><td>-1926931249</td></row>
+		<row><td>ID_STRING2</td><td>1033</td><td>MEIKAsia</td><td>0</td><td/><td>-1926931345</td></row>
 		<row><td>ID_STRING3</td><td>1033</td><td>admin@campray.com</td><td>0</td><td/><td>-1515978388</td></row>
-		<row><td>ID_STRING4</td><td>1033</td><td>http://www.meikasia.com</td><td>0</td><td/><td>1042605009</td></row>
+		<row><td>ID_STRING4</td><td>1033</td><td>http://www.MEIKAsia.com</td><td>0</td><td/><td>-1926931345</td></row>
 		<row><td>ID_STRING5</td><td>1033</td><td>MEIK report tool</td><td>0</td><td/><td>1042602961</td></row>
 		<row><td>ID_STRING6</td><td>1033</td><td>http://www.meikasia.com</td><td>0</td><td/><td>-1515939476</td></row>
 		<row><td>ID_STRING7</td><td>1033</td><td>Contact:  admin@campray.com</td><td>0</td><td/><td>-1515978356</td></row>
@@ -3879,6 +3881,7 @@
 		<col def="S255">ISBuildSourcePath</col>
 		<col def="I2">ISIconIndex</col>
 		<row><td>ARPPRODUCTICON.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\setupicon.ico</td><td>0</td></row>
+		<row><td>MEIKReport.exe1_4F2B5EF4B82B4373A34E7F5E46680D02.exe</td><td/><td>D:\NewGit\MEIK_MA\MEIKTool\MEIKReport\bin\Release\MEIKReport.exe</td><td>0</td></row>
 		<row><td>MEIKReport.exe1_876127B5A8C449D1A98EFCF6E7246578.exe</td><td/><td>D:\NewGit\MEIK_Cloud\MEIKTool\MEIKReport\bin\Release\MEIKReport.exe</td><td>0</td></row>
 		<row><td>MEIKReport.exe1_89FC67BFFF6B4BB6900481CA6B2A07F5.exe</td><td/><td>D:\NewGit\MEIK_Cloud\MEIKTool\MEIKReport\bin\Release\MEIKReport.exe</td><td>0</td></row>
 		<row><td>MEIKReport.exe1_C08D6BCC6BF847EE804F43285499CEC7.exe</td><td/><td>D:\NewGit\MEIK_Standalone\MEIKReport\MEIKReport\bin\Release\MEIKReport.exe</td><td>0</td></row>
@@ -3886,11 +3889,12 @@
 		<row><td>MEIKReport.exe1_ED740BECC9EB490D8CD739CBA6E31ABA.exe</td><td/><td>C:\Users\CampRay\Downloads\20170101\MEIK_Cloud\MEIKTool\MEIKReport\bin\Release\MEIKReport.exe</td><td>0</td></row>
 		<row><td>MEIKReport.exe_0849CB8D3FD844ADADFBE6F87867B05F.exe</td><td/><td>D:\NewGit\MEIK_Standalone\MEIKReport\MEIKReport\bin\Release\MEIKReport.exe</td><td>0</td></row>
 		<row><td>MEIKReport.exe_64D0B2C8BBA24A42B01BF08C9511BB34.exe</td><td/><td>D:\NewGit\MEIKReport\MEIKTool\MEIKReport\bin\Release\MEIKReport.exe</td><td>0</td></row>
+		<row><td>MEIKReport.exe_76CA4F00B7094963A98EF59DBDAF7E0D.exe</td><td/><td>D:\NewGit\MEIK_MA\MEIKTool\MEIKReport\bin\Release\MEIKReport.exe</td><td>0</td></row>
 		<row><td>MEIKReport.exe_79023F282B8C40D88EEC6A3937C274E0.exe</td><td/><td>C:\Users\CampRay\Downloads\20170101\MEIK_Cloud\MEIKTool\MEIKReport\bin\Release\MEIKReport.exe</td><td>0</td></row>
 		<row><td>MEIKReport.exe_85F4D511E8DC46FE88D32A7035A6B44B.exe</td><td/><td>D:\NewGit\MEIK_Cloud\MEIKTool\MEIKReport\bin\Release\MEIKReport.exe</td><td>0</td></row>
 		<row><td>MEIKReport.exe_AA6E3F31D94B487DB4523D657ADC369F.exe</td><td/><td>D:\NewGit\MEIK_Cloud\MEIKTool\MEIKReport\bin\Release\MEIKReport.exe</td><td>0</td></row>
 		<row><td>MEIKReport.vshost._7BD749EAFA0D43B4A4D4630570F6F862.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
-		<row><td>UNINST_Uninstall_M_DD2A27CEEDBF4AF386601B5D85158B4A.exe</td><td/><td>C:\Program Files (x86)\InstallShield\2015LE\Redist\Language Independent\OS Independent\uninstall.ico</td><td>0</td></row>
+		<row><td>NewShortcut1_2F0931ECFDEB48C9A72A6F0D7B248933.exe</td><td/><td>C:\Program Files (x86)\InstallShield\2015LE\Redist\Language Independent\OS Independent\uninstall.ico</td><td>0</td></row>
 	</table>
 
 	<table name="IniFile">
@@ -3931,12 +3935,10 @@
 		<row><td>DuplicateFiles</td><td/><td>4210</td><td>DuplicateFiles</td><td/></row>
 		<row><td>FileCost</td><td/><td>900</td><td>FileCost</td><td/></row>
 		<row><td>FindRelatedProducts</td><td>NOT ISSETUPDRIVEN</td><td>420</td><td>FindRelatedProducts</td><td/></row>
-		<row><td>ISPreventDowngrade</td><td>ISFOUNDNEWERPRODUCTVERSION</td><td>450</td><td/><td/></row>
 		<row><td>ISRunSetupTypeAddLocalEvent</td><td>Not Installed And Not ISRUNSETUPTYPEADDLOCALEVENT</td><td>1050</td><td>ISRunSetupTypeAddLocalEvent</td><td/></row>
 		<row><td>ISSelfRegisterCosting</td><td/><td>2201</td><td/><td/></row>
 		<row><td>ISSelfRegisterFiles</td><td/><td>5601</td><td/><td/></row>
 		<row><td>ISSelfRegisterFinalize</td><td/><td>6601</td><td/><td/></row>
-		<row><td>ISSetAllUsers</td><td>Not Installed</td><td>10</td><td/><td/></row>
 		<row><td>ISUnSelfRegisterFiles</td><td/><td>2202</td><td/><td/></row>
 		<row><td>InstallFiles</td><td/><td>4000</td><td>InstallFiles</td><td/></row>
 		<row><td>InstallFinalize</td><td/><td>6600</td><td>InstallFinalize</td><td/></row>
@@ -4053,8 +4055,6 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>ExecuteAction</td><td/><td>1300</td><td>ExecuteAction</td><td/></row>
 		<row><td>FileCost</td><td/><td>900</td><td>FileCost</td><td/></row>
 		<row><td>FindRelatedProducts</td><td/><td>430</td><td>FindRelatedProducts</td><td/></row>
-		<row><td>ISPreventDowngrade</td><td>ISFOUNDNEWERPRODUCTVERSION</td><td>450</td><td/><td/></row>
-		<row><td>ISSetAllUsers</td><td>Not Installed</td><td>10</td><td/><td/></row>
 		<row><td>InstallWelcome</td><td>Not Installed</td><td>1210</td><td>InstallWelcome</td><td/></row>
 		<row><td>IsolateComponents</td><td/><td>950</td><td>IsolateComponents</td><td/></row>
 		<row><td>LaunchConditions</td><td>Not Installed</td><td>410</td><td>LaunchConditions</td><td/></row>
@@ -4405,9 +4405,9 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>PROGMSG_IIS_ROLLBACKVROOTS</td><td>##IDS_PROGMSG_IIS_ROLLBACKVROOTS##</td><td/></row>
 		<row><td>PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS</td><td>##IDS_PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS##</td><td/></row>
 		<row><td>PROGRAMFILETOLAUNCHATEND</td><td>[INSTALLDIR]MEIKReport.exe</td><td/></row>
-		<row><td>ProductCode</td><td>{0F004749-B205-4B4E-85C5-09E65D56E214}</td><td/></row>
+		<row><td>ProductCode</td><td>{D506B776-9C2C-4D9A-859F-4E3E81097FD2}</td><td/></row>
 		<row><td>ProductName</td><td>MEIKTool</td><td/></row>
-		<row><td>ProductVersion</td><td>1.1.3</td><td/></row>
+		<row><td>ProductVersion</td><td>2.0.1</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
 		<row><td>ProgressType1</td><td>Installing</td><td/></row>
 		<row><td>ProgressType2</td><td>installed</td><td/></row>
@@ -4420,10 +4420,10 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>SERIALNUMBER</td><td/><td/></row>
 		<row><td>SERIALNUMVALSUCCESSRETVAL</td><td>1</td><td/></row>
 		<row><td>SHOWLAUNCHPROGRAM</td><td>-1</td><td/></row>
-		<row><td>SecureCustomProperties</td><td>USERNAME;COMPANYNAME;ISX_SERIALNUM;SUPPORTDIR;DOTNETVERSION45FULL;ISACTIONPROP1</td><td/></row>
+		<row><td>SecureCustomProperties</td><td>USERNAME;COMPANYNAME;ISX_SERIALNUM;SUPPORTDIR;DOTNETVERSION45FULL</td><td/></row>
 		<row><td>SelectedSetupType</td><td>##IDS__DisplayName_Typical##</td><td/></row>
 		<row><td>SetupType</td><td>Typical</td><td/></row>
-		<row><td>UpgradeCode</td><td>{F07E4A73-A13D-4AE1-B1E9-702DC398524A}</td><td/></row>
+		<row><td>UpgradeCode</td><td>{69CF62A8-DAE3-4C7F-9B41-7D8CFD3E1E4A}</td><td/></row>
 		<row><td>_IsMaintenance</td><td>Change</td><td/></row>
 		<row><td>_IsSetupTypeMin</td><td>Typical</td><td/></row>
 	</table>
@@ -4486,8 +4486,8 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="i2">InstallMode</col>
 		<row><td>FileKey1</td><td>gxpswin32.exe</td><td/><td>meikasia</td><td>2</td></row>
 		<row><td>FileKey2</td><td>gxpswin32.exe</td><td/><td>meiktool1</td><td>2</td></row>
-		<row><td>MEIKReport.exe</td><td>MEIKReport.exe</td><td/><td>meiktool</td><td>2</td></row>
-		<row><td>UNINST_Uninstall_MEIKTool</td><td>IS_ININSTALL_SHORTCUT</td><td/><td>meiktool</td><td>2</td></row>
+		<row><td>MEIKReport.exe</td><td>MEIKReport.exe</td><td/><td>meiktool1</td><td>2</td></row>
+		<row><td>NewShortcut1</td><td>ISX_DEFAULTCOMPONENT</td><td/><td>meiktool1</td><td>2</td></row>
 	</table>
 
 	<table name="RemoveIniFile">
@@ -4573,9 +4573,9 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S255">ISComments</col>
 		<col def="S255">ISShortcutName</col>
 		<col def="I4">ISAttributes</col>
-		<row><td>MEIKReport.exe</td><td>meiktool</td><td>##IDS_SHORTCUT_DISPLAY_NAME19##</td><td>MEIKReport.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>MEIKReport.exe_64D0B2C8BBA24A42B01BF08C9511BB34.exe</td><td>1</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
-		<row><td>MEIKReport.exe1</td><td>DesktopFolder</td><td>##IDS_SHORTCUT_DISPLAY_NAME19##</td><td>MEIKReport.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>MEIKReport.exe1_D3F70D54B6AC4621A541B047D229A8BC.exe</td><td>1</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
-		<row><td>UNINST_Uninstall_MEIKTool</td><td>meiktool</td><td>##IDS_SHORTCUT_DISPLAY_NAME20##</td><td>IS_ININSTALL_SHORTCUT</td><td>[SystemFolder]msiexec.exe</td><td>/x {0F004749-B205-4B4E-85C5-09E65D56E214}</td><td/><td/><td>UNINST_Uninstall_M_DD2A27CEEDBF4AF386601B5D85158B4A.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>MEIKReport.exe</td><td>meiktool1</td><td>##IDS_SHORTCUT_DISPLAY_NAME22##</td><td>MEIKReport.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>MEIKReport.exe_76CA4F00B7094963A98EF59DBDAF7E0D.exe</td><td>1</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>MEIKReport.exe1</td><td>DesktopFolder</td><td>##IDS_SHORTCUT_DISPLAY_NAME22##</td><td>MEIKReport.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>MEIKReport.exe1_4F2B5EF4B82B4373A34E7F5E46680D02.exe</td><td>1</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>NewShortcut1</td><td>meiktool1</td><td>##ID_STRING14##</td><td>ISX_DEFAULTCOMPONENT</td><td>[SystemFolder]MsiExec.exe</td><td>/x [ProductCode]</td><td/><td/><td>NewShortcut1_2F0931ECFDEB48C9A72A6F0D7B248933.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="Signature">
@@ -4697,7 +4697,6 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S255">Remove</col>
 		<col def="s72">ActionProperty</col>
 		<col def="S72">ISDisplayName</col>
-		<row><td>{F07E4A73-A13D-4AE1-B1E9-702DC398524A}</td><td>1.0.0</td><td>9.9.9</td><td>1033</td><td>768</td><td/><td>ISACTIONPROP1</td><td>NewUpgradeEntry1</td></row>
 	</table>
 
 	<table name="Verb">

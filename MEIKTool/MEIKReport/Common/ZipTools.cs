@@ -115,7 +115,7 @@ namespace MEIKReport.Common
             }
             if (fileType == 2)
             {
-                fileFilter = @".+(\.pdf)|(\.dat)|(\.xml)";
+                fileFilter = @".+(\.pdf)|(\.dat)|(\.xml)|(\.csv)";
             }
             if (fileType == 3)
             {

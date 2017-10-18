@@ -38,8 +38,8 @@
     <sys:String x:Key="CommonStatusReportSent">Report Sent</sys:String>
     <sys:String x:Key="CommonStatusReportDone">Report Done</sys:String>
     <sys:String x:Key="CommonPreviewSelect">Preview Report</sys:String>
-    <sys:String x:Key="CommonPreviewLF">Long Form Report</sys:String>
-    <sys:String x:Key="CommonPreviewSFI">Client Report</sys:String>
+    <sys:String x:Key="CommonPreviewLF">GoodUnion Report</sys:String>
+    <sys:String x:Key="CommonPreviewSFI">Summary Report</sys:String>
     <sys:String x:Key="CommonResultNormal">Normal</sys:String>
     <sys:String x:Key="CommonResultBenign">Benign</sys:String>
     <sys:String x:Key="CommonResultSuspicious">Suspicious</sys:String>

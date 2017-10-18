@@ -222,7 +222,7 @@ namespace MEIKReport
                     //}
                 }
 
-                if (!string.IsNullOrEmpty(shortFormReport.DataRightLocation) && doc.FindName("L1_Canvas") != null)
+                if (!string.IsNullOrEmpty(shortFormReport.DataRightLocation) && doc.FindName("R1_Canvas") != null)
                 {
                     if (shortFormReport.DataRightLocation.StartsWith("12"))
                     {
@@ -291,7 +291,7 @@ namespace MEIKReport
 
                 }
 
-                if (!string.IsNullOrEmpty(shortFormReport.DataLeftLocation2) && doc.FindName("L1_Canvas") != null)
+                if (!string.IsNullOrEmpty(shortFormReport.DataLeftLocation2) && doc.FindName("L2_Canvas") != null)
                 {
                     if (shortFormReport.DataLeftLocation2.StartsWith("12"))
                     {
@@ -360,7 +360,7 @@ namespace MEIKReport
 
                 }
 
-                if (!string.IsNullOrEmpty(shortFormReport.DataRightLocation2) && doc.FindName("L1_Canvas") != null)
+                if (!string.IsNullOrEmpty(shortFormReport.DataRightLocation2) && doc.FindName("R2_Canvas") != null)
                 {
                     if (shortFormReport.DataRightLocation2.StartsWith("12"))
                     {
@@ -429,7 +429,7 @@ namespace MEIKReport
 
                 }
 
-                if (!string.IsNullOrEmpty(shortFormReport.DataLeftLocation3) && doc.FindName("L1_Canvas") != null)
+                if (!string.IsNullOrEmpty(shortFormReport.DataLeftLocation3) && doc.FindName("L3_Canvas") != null)
                 {
                     if (shortFormReport.DataLeftLocation3.StartsWith("12"))
                     {
@@ -498,7 +498,7 @@ namespace MEIKReport
                 }
 
 
-                if (!string.IsNullOrEmpty(shortFormReport.DataRightLocation3) && doc.FindName("L1_Canvas") != null)
+                if (!string.IsNullOrEmpty(shortFormReport.DataRightLocation3) && doc.FindName("R3_Canvas") != null)
                 {
                     if (shortFormReport.DataRightLocation3.StartsWith("12"))
                     {

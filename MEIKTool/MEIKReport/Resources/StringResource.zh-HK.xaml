@@ -40,8 +40,8 @@
     <sys:String x:Key="CommonStatusReportDone">報告完成</sys:String>
     <sys:String x:Key="CommonLicenseLab">授權編號</sys:String>
     <sys:String x:Key="CommonPreviewSelect">預覽報告</sys:String>
-    <sys:String x:Key="CommonPreviewLF">Long Form Report</sys:String>
-    <sys:String x:Key="CommonPreviewSFI">Client Report</sys:String>
+    <sys:String x:Key="CommonPreviewLF">GoodUnion Report</sys:String>
+    <sys:String x:Key="CommonPreviewSFI">Summary Report</sys:String>
     <sys:String x:Key="CommonResultNormal">正常</sys:String>
     <sys:String x:Key="CommonResultBenign">良性</sys:String>
     <sys:String x:Key="CommonResultSuspicious">可疑</sys:String>

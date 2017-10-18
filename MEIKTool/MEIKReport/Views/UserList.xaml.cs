@@ -4302,7 +4302,8 @@ namespace MEIKReport
                 {
                     LoadDataModel();
                     var reportModel = CloneReportModel();
-                    PrintPreviewWindow previewWnd = new PrintPreviewWindow("Views/ExaminationReportFlow.xaml", false, reportModel);
+                    //PrintPreviewWindow previewWnd = new PrintPreviewWindow("Views/ExaminationReportFlow.xaml", false, reportModel);
+                    PrintPreviewWindow previewWnd = new PrintPreviewWindow("Views/GoodUnionReportFlow.xaml", false, reportModel);
                     previewWnd.Owner = this;
                     previewWnd.ShowInTaskbar = false;
                     previewWnd.ShowDialog();
@@ -5392,7 +5393,8 @@ namespace MEIKReport
                 string strName = person.SurName + (string.IsNullOrEmpty(person.GivenName) ? "" : "," + person.GivenName) + (string.IsNullOrEmpty(person.OtherName) ? "" : " " + person.OtherName) + ".pdf";
                 //生成Examination报告的PDF文件
                 string lfPdfFile = folderName + System.IO.Path.DirectorySeparatorChar + person.Code + " LF - " + strName;
-                string lfReportTempl = "Views/ExaminationReportFlow.xaml";
+                //string lfReportTempl = "Views/ExaminationReportFlow.xaml";
+                string lfReportTempl = "Views/GoodUnionReportFlow.xaml";
                 ExportFlowDocumentPDF(lfReportTempl, lfPdfFile, reportModel);
 
                 //生成Summary报告的PDF文件
@@ -5417,6 +5419,10 @@ namespace MEIKReport
                 //strName = person.SurName + (string.IsNullOrEmpty(person.GivenName) ? "" : "," + person.GivenName) + (string.IsNullOrEmpty(person.OtherName) ? "" : " " + person.OtherName) + ".xls";
                 //string xlsFile = person.ArchiveFolder + System.IO.Path.DirectorySeparatorChar + person.Code + " - " + strName;
                 //ExportExcel(xlsFile, reportModel);
+
+                //導出到csv文件                
+                string csvFile = person.ArchiveFolder + System.IO.Path.DirectorySeparatorChar + person.Code + ".csv ";
+                ExportCSV(csvFile, reportModel);
 
                 MessageBox.Show(this, App.Current.FindResource("Message_5").ToString());
             }
@@ -5572,6 +5578,143 @@ namespace MEIKReport
                 book.SaveAs(excelFile, Microsoft.Office.Interop.Excel.XlFileFormat.xlExcel8, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlNoChange, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
                 book.Close();
                 excelApp.Quit();
+            }
+            catch (Exception exe)
+            {
+                MessageBox.Show(exe.Message);
+            }
+        }
+
+        /// <summary>
+        ///导出Long Form到Excel文件 
+        /// </summary>
+        /// <param name="reportTempl"></param>
+        /// <param name="pdfFile"></param>
+        /// <param name="reportModel"></param>
+        private void ExportCSV(string csvFile, ShortFormReport reportModel)
+        {
+            try
+            {
+                if (File.Exists(csvFile))
+                {
+                    File.Delete(csvFile);
+                }
+                NameValueCollection nvc = new NameValueCollection();
+                nvc.Add(App.Current.FindResource("ReportContext_202").ToString(), reportModel.DataClientNum);
+                nvc.Add(App.Current.FindResource("ReportContext_9").ToString(), reportModel.DataUserCode);
+                nvc.Add(App.Current.FindResource("ReportContext_2").ToString(), reportModel.DataScreenDate);
+                nvc.Add(App.Current.FindResource("ReportContext_1").ToString(), reportModel.DataName);
+                nvc.Add(App.Current.FindResource("ReportContext_10").ToString(), reportModel.DataAge);
+                nvc.Add(App.Current.FindResource("ReportContext_203").ToString(), reportModel.DataHeight);
+                nvc.Add(App.Current.FindResource("ReportContext_11").ToString(), reportModel.DataWeight + " Kgs");
+                nvc.Add(App.Current.FindResource("ReportContext_204").ToString(), reportModel.DataMobile);
+                nvc.Add(App.Current.FindResource("ReportContext_205").ToString(), reportModel.DataEmail);
+                nvc.Add(App.Current.FindResource("ReportContext_6").ToString(), reportModel.DataScreenLocation);
+                nvc.Add(App.Current.FindResource("ReportContext_149").ToString(), reportModel.DataMeikTech);
+                nvc.Add(App.Current.FindResource("ReportContext_14").ToString(), reportModel.DataMenstrualCycle);
+                nvc.Add(App.Current.FindResource("ReportContext_23").ToString(), reportModel.DataSkinAffections);
+                nvc.Add(App.Current.FindResource("ReportContext_22").ToString(), reportModel.DataHormones);
+                nvc.Add(App.Current.FindResource("ReportContext_40").ToString() + "(" + App.Current.FindResource("ReportContext_44").ToString() + ")", reportModel.DataLeftBreast);
+                nvc.Add(App.Current.FindResource("ReportContext_40").ToString() + "(" + App.Current.FindResource("ReportContext_45").ToString() + ")", reportModel.DataRightBreast);
+                nvc.Add(App.Current.FindResource("ReportContext_47").ToString() + "(" + App.Current.FindResource("ReportContext_44").ToString() + ")", reportModel.DataLeftChangesOfElectricalConductivity);
+                nvc.Add(App.Current.FindResource("ReportContext_47").ToString() + "(" + App.Current.FindResource("ReportContext_45").ToString() + ")", reportModel.DataRightChangesOfElectricalConductivity);
+                nvc.Add(App.Current.FindResource("ReportContext_51").ToString() + "(" + App.Current.FindResource("ReportContext_44").ToString() + ")", reportModel.DataLeftMammaryStruct);
+                nvc.Add(App.Current.FindResource("ReportContext_51").ToString() + "(" + App.Current.FindResource("ReportContext_45").ToString() + ")", reportModel.DataRightMammaryStruct);
+                nvc.Add(App.Current.FindResource("ReportContext_54").ToString() + "(" + App.Current.FindResource("ReportContext_44").ToString() + ")", reportModel.DataLeftLactiferousSinusZone);
+                nvc.Add(App.Current.FindResource("ReportContext_54").ToString() + "(" + App.Current.FindResource("ReportContext_45").ToString() + ")", reportModel.DataRightLactiferousSinusZone);
+                nvc.Add(App.Current.FindResource("ReportContext_59").ToString() + "(" + App.Current.FindResource("ReportContext_44").ToString() + ")", reportModel.DataLeftMammaryContour);
+                nvc.Add(App.Current.FindResource("ReportContext_59").ToString() + "(" + App.Current.FindResource("ReportContext_45").ToString() + ")", reportModel.DataRightMammaryContour);
+                nvc.Add(App.Current.FindResource("ReportContext_65").ToString() + "(" + App.Current.FindResource("ReportContext_44").ToString() + ")", reportModel.DataLeftNumber);
+                nvc.Add(App.Current.FindResource("ReportContext_65").ToString() + "(" + App.Current.FindResource("ReportContext_45").ToString() + ")", reportModel.DataRightNumber);
+                nvc.Add(App.Current.FindResource("ReportContext_64").ToString() + "(" + App.Current.FindResource("ReportContext_44").ToString() + ")", reportModel.DataLeftLocation);
+                nvc.Add(App.Current.FindResource("ReportContext_64").ToString() + "(" + App.Current.FindResource("ReportContext_45").ToString() + ")", reportModel.DataRightLocation);
+                nvc.Add(App.Current.FindResource("ReportContext_66").ToString() + "(" + App.Current.FindResource("ReportContext_44").ToString() + ")", string.IsNullOrEmpty(reportModel.DataLeftSize) ? "" : reportModel.DataLeftSize + " mm");
+                nvc.Add(App.Current.FindResource("ReportContext_66").ToString() + "(" + App.Current.FindResource("ReportContext_45").ToString() + ")", string.IsNullOrEmpty(reportModel.DataRightSize) ? "" : reportModel.DataLeftSize + " mm");
+                nvc.Add(App.Current.FindResource("ReportContext_67").ToString() + "(" + App.Current.FindResource("ReportContext_44").ToString() + ")", reportModel.DataLeftShape);
+                nvc.Add(App.Current.FindResource("ReportContext_67").ToString() + "(" + App.Current.FindResource("ReportContext_45").ToString() + ")", reportModel.DataRightShape);
+                nvc.Add(App.Current.FindResource("ReportContext_72").ToString() + "(" + App.Current.FindResource("ReportContext_44").ToString() + ")", reportModel.DataLeftContourAroundFocus);
+                nvc.Add(App.Current.FindResource("ReportContext_72").ToString() + "(" + App.Current.FindResource("ReportContext_45").ToString() + ")", reportModel.DataRightContourAroundFocus);
+                nvc.Add(App.Current.FindResource("ReportContext_76").ToString() + "(" + App.Current.FindResource("ReportContext_44").ToString() + ")", reportModel.DataLeftInternalElectricalStructure);
+                nvc.Add(App.Current.FindResource("ReportContext_76").ToString() + "(" + App.Current.FindResource("ReportContext_45").ToString() + ")", reportModel.DataRightInternalElectricalStructure);
+                nvc.Add(App.Current.FindResource("ReportContext_81").ToString() + "(" + App.Current.FindResource("ReportContext_44").ToString() + ")", reportModel.DataLeftSurroundingTissues);
+                nvc.Add(App.Current.FindResource("ReportContext_81").ToString() + "(" + App.Current.FindResource("ReportContext_45").ToString() + ")", reportModel.DataRightSurroundingTissues);
+
+                nvc.Add(App.Current.FindResource("ReportContext_100").ToString() + " - " + App.Current.FindResource("ReportContext_101").ToString() + "(" + App.Current.FindResource("ReportContext_44").ToString() + ")", reportModel.DataLeftMeanElectricalConductivity1);
+                nvc.Add(App.Current.FindResource("ReportContext_100").ToString() + " - " + App.Current.FindResource("ReportContext_101").ToString() + "(" + App.Current.FindResource("ReportContext_45").ToString() + ")", reportModel.DataRightMeanElectricalConductivity1);
+                nvc.Add(App.Current.FindResource("ReportContext_100").ToString() + " - " + App.Current.FindResource("ReportContext_102").ToString() + "(" + App.Current.FindResource("ReportContext_44").ToString() + ")", reportModel.DataLeftMeanElectricalConductivity2);
+                nvc.Add(App.Current.FindResource("ReportContext_100").ToString() + " - " + App.Current.FindResource("ReportContext_102").ToString() + "(" + App.Current.FindResource("ReportContext_45").ToString() + ")", reportModel.DataRightMeanElectricalConductivity2);
+                nvc.Add(App.Current.FindResource("ReportContext_100").ToString() + " - " + reportModel.DataMeanElectricalConductivity3 + "(" + App.Current.FindResource("ReportContext_44").ToString() + ")", reportModel.DataLeftMeanElectricalConductivity3);
+                nvc.Add(App.Current.FindResource("ReportContext_100").ToString() + " - " + reportModel.DataMeanElectricalConductivity3 + "(" + App.Current.FindResource("ReportContext_45").ToString() + ")", reportModel.DataRightMeanElectricalConductivity3);
+                nvc.Add(App.Current.FindResource("ReportContext_106").ToString() + " - " + App.Current.FindResource("ReportContext_101").ToString(), reportModel.DataLeftComparativeElectricalConductivity1);
+                nvc.Add(App.Current.FindResource("ReportContext_106").ToString() + " - " + App.Current.FindResource("ReportContext_102").ToString(), reportModel.DataLeftComparativeElectricalConductivity2);
+                nvc.Add(App.Current.FindResource("ReportContext_106").ToString() + " - " + reportModel.DataComparativeElectricalConductivity3, reportModel.DataLeftComparativeElectricalConductivity3);
+                nvc.Add(App.Current.FindResource("ReportContext_107").ToString() + " - " + App.Current.FindResource("ReportContext_101").ToString(), reportModel.DataLeftDivergenceBetweenHistograms1);
+                nvc.Add(App.Current.FindResource("ReportContext_107").ToString() + " - " + App.Current.FindResource("ReportContext_102").ToString(), reportModel.DataLeftDivergenceBetweenHistograms2);
+                nvc.Add(App.Current.FindResource("ReportContext_107").ToString() + " - " + reportModel.DataDivergenceBetweenHistograms3, reportModel.DataLeftDivergenceBetweenHistograms3);
+                nvc.Add(App.Current.FindResource("ReportContext_109").ToString() + "(" + App.Current.FindResource("ReportContext_44").ToString() + ")", reportModel.DataLeftPhaseElectricalConductivity);
+                nvc.Add(App.Current.FindResource("ReportContext_109").ToString() + "(" + App.Current.FindResource("ReportContext_45").ToString() + ")", reportModel.DataRightPhaseElectricalConductivity);
+                nvc.Add(App.Current.FindResource("ReportContext_110").ToString() + "[" + App.Current.FindResource("ReportContext_110").ToString() + "]" + "(" + App.Current.FindResource("ReportContext_44").ToString() + ")", reportModel.DataLeftAgeElectricalConductivity);
+                nvc.Add(App.Current.FindResource("ReportContext_110").ToString() + "[" + App.Current.FindResource("ReportContext_110").ToString() + "]" + "(" + App.Current.FindResource("ReportContext_45").ToString() + ")", reportModel.DataRightAgeElectricalConductivity);
+
+                nvc.Add(App.Current.FindResource("ReportContext_115").ToString(), reportModel.DataExamConclusion);
+
+                nvc.Add(App.Current.FindResource("ReportContext_121").ToString(), reportModel.DataLeftMammaryGland);
+                nvc.Add(App.Current.FindResource("ReportContext_139").ToString(), reportModel.DataRightMammaryGland);
+
+                nvc.Add(App.Current.FindResource("ReportContext_127").ToString() + "(" + App.Current.FindResource("ReportContext_44").ToString() + ")", reportModel.DataLeftAgeRelated);
+                nvc.Add(App.Current.FindResource("ReportContext_127").ToString() + "(" + App.Current.FindResource("ReportContext_45").ToString() + ")", reportModel.DataRightAgeRelated);
+
+                nvc.Add(App.Current.FindResource("ReportContext_182").ToString() + "(" + App.Current.FindResource("ReportContext_44").ToString() + ")", reportModel.DataLeftMammaryGlandResult);
+                nvc.Add(App.Current.FindResource("ReportContext_182").ToString() + "(" + App.Current.FindResource("ReportContext_45").ToString() + ")", reportModel.DataRightMammaryGlandResult);
+
+                nvc.Add(App.Current.FindResource("ReportContext_141").ToString() + App.Current.FindResource("ReportContext_142").ToString(), reportModel.DataTotalPts);
+                nvc.Add(App.Current.FindResource("ReportContext_150").ToString(), reportModel.DataBiRadsCategory);
+                nvc.Add(App.Current.FindResource("ReportContext_226").ToString(), reportModel.DataConclusion);
+                nvc.Add(App.Current.FindResource("ReportContext_157").ToString(), reportModel.DataRecommendation);
+                nvc.Add(App.Current.FindResource("ReportContext_227").ToString(), reportModel.DataComments);
+                nvc.Add(App.Current.FindResource("ReportContext_173").ToString(), reportModel.DataDoctor);
+                nvc.Add(App.Current.FindResource("ReportContext_200").ToString(), reportModel.DataDoctorLicense);
+
+                nvc.Add(App.Current.FindResource("ReportContext_190").ToString(), reportModel.DataSignDate);
+
+                StringBuilder sb = new StringBuilder();
+                StringBuilder sb1 = new StringBuilder();
+                for (int i = 0; i < nvc.Count; i++)
+                {
+                    var key = nvc.GetKey(i);
+                    var value = nvc[i];
+                    if (key.Contains('"'))
+                    {
+                        key = key.Replace("\"", "\"\"");//替换英文冒号 英文冒号需要换成两个冒号                  
+                    }
+                    if (key.Contains('"') || key.Contains('\r') || key.Contains('\n') || key.Contains(' '))
+                    {
+                        sb.Append("\"" + key + "\",");
+                    }
+                    else
+                    {
+                        sb.Append(key + ",");
+                    }
+
+                    if (value.Contains('"'))
+                    {
+                        value = value.Replace("\"", "\"\"");//替换英文冒号 英文冒号需要换成两个冒号                  
+                    }
+                    if (value.Contains('"') || value.Contains('\r') || value.Contains('\n') || value.Contains(' '))
+                    {
+                        sb1.Append("\"" + value + "\",");
+                    }
+                    else
+                    {
+                        sb1.Append(value + ",");
+                    }                                       
+                }
+                FileStream fs = new FileStream(csvFile, FileMode.Create, FileAccess.Write);
+                StreamWriter sw = new StreamWriter(fs, System.Text.Encoding.UTF8);
+                sw.WriteLine(sb.ToString());
+                sw.WriteLine(sb1.ToString());
+                sw.Close();
+                fs.Close();
             }
             catch (Exception exe)
             {
@@ -6746,7 +6889,7 @@ namespace MEIKReport
                         string strName = person.SurName + (string.IsNullOrEmpty(person.GivenName) ? "" : "," + person.GivenName) + (string.IsNullOrEmpty(person.OtherName) ? "" : " " + person.OtherName) + ".pdf";
                         //生成Examination报告的PDF文件
                         string lfPdfFile = folderName + System.IO.Path.DirectorySeparatorChar + person.Code + " LF - " + strName;
-                        string lfReportTempl = "Views/ExaminationReportFlow.xaml";
+                        string lfReportTempl = "Views/GoodUnionReportFlow.xaml";
                         ExportFlowDocumentPDF(lfReportTempl, lfPdfFile, reportModel);
 
                         //生成Summary报告的PDF文件
@@ -6787,7 +6930,7 @@ namespace MEIKReport
                         string strName = person.SurName + (string.IsNullOrEmpty(person.GivenName) ? "" : "," + person.GivenName) + (string.IsNullOrEmpty(person.OtherName) ? "" : " " + person.OtherName) + ".pdf";
                         //生成Examination报告的PDF文件
                         string lfPdfFile = folderName + System.IO.Path.DirectorySeparatorChar + person.Code + " LF - " + strName;
-                        string lfReportTempl = "Views/ExaminationReportFlow.xaml";
+                        string lfReportTempl = "Views/GoodUnionReportFlow.xaml";
                         ExportFlowDocumentPDF(lfReportTempl, lfPdfFile, reportModel);
 
                         //生成Summary报告的PDF文件
@@ -6824,8 +6967,8 @@ namespace MEIKReport
         {
            
             var person = this.CodeListBox.SelectedItem as Person;
-
-            ScreenResultReport screenResultReport = new ScreenResultReport(person);
+            var reportModel = CloneReportModel();
+            ScreenResultReport screenResultReport = new ScreenResultReport(person, reportModel);
             screenResultReport.ShowDialog();
             
         }

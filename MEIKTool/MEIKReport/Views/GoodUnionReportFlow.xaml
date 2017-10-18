@@ -374,8 +374,8 @@
                                         <RowDefinition Height="118"></RowDefinition>
                                         <RowDefinition Height="5"></RowDefinition>
                                         <RowDefinition Height="18"></RowDefinition>
-                                        <RowDefinition Height="446"></RowDefinition>
-                                        <RowDefinition Height="20"></RowDefinition>
+                                        <RowDefinition Height="458"></RowDefinition>
+                                        <RowDefinition Height="8"></RowDefinition>
                                         <RowDefinition Height="14"></RowDefinition>
                                         <RowDefinition Height="14"></RowDefinition>
                                         <RowDefinition Height="14"></RowDefinition>
@@ -469,97 +469,361 @@
                                     </WrapPanel>
                                     <Grid Grid.Row="5" Grid.ColumnSpan="2" Margin="10,5,10,5">
                                         <Grid.RowDefinitions>
-                                            <RowDefinition Height="30"/>
-                                            <RowDefinition Height="30"/>
-                                            <RowDefinition Height="30"/>
-                                            <RowDefinition Height="30"/>
-                                            <RowDefinition Height="310"/>                                                                                      
+                                            <RowDefinition Height="16"/>
+                                            <RowDefinition Height="16"/>
+                                            <RowDefinition Height="16"/>
+                                            <RowDefinition Height="16"/>
+                                            <RowDefinition Height="16"/>
+                                            <RowDefinition Height="16"/>
+                                            <RowDefinition Height="16"/>
+                                            <RowDefinition Height="16"/>
+                                            <RowDefinition Height="16"/>
+                                            <RowDefinition Height="16"/>
+                                            <RowDefinition Height="16"/>
+                                            <RowDefinition Height="16"/>
+                                            <RowDefinition Height="16"/>
+                                            <RowDefinition Height="16"/>
+                                            <RowDefinition Height="16"/>
+                                            <RowDefinition Height="16"/>
+                                            <RowDefinition Height="16"/>
+                                            <RowDefinition Height="16"/>
+                                            <RowDefinition Height="16"/>
+                                            <RowDefinition Height="16"/>
+                                            <RowDefinition Height="16"/>
+                                            <RowDefinition Height="16"/>
+                                            <RowDefinition Height="16"/>
+                                            <RowDefinition Height="16"/>
+                                            <RowDefinition Height="16"/>
+                                            <RowDefinition Height="16"/>
+                                            <RowDefinition Height="16"/>
+                                            <RowDefinition Height="16"/>
                                         </Grid.RowDefinitions>
                                         <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="50"/>
-                                            <ColumnDefinition Width="296"/>
+                                            <ColumnDefinition Width="170"/>
+                                            <ColumnDefinition Width="136"/>
                                             <ColumnDefinition Width="10"/>
-                                            <ColumnDefinition Width="296"/>
-                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="136"/>
+                                            <ColumnDefinition Width="220"/>
                                         </Grid.ColumnDefinitions>
-                                        <TextBlock Text="右乳 Right Breast" Grid.Row="0" Grid.Column="1" Margin="100,0,0,0"></TextBlock>
-                                        <TextBlock Text="左乳 Left Breast" Grid.Row="0" Grid.Column="3" Margin="30,0,0,0"></TextBlock>
-                                        <WrapPanel Grid.Row="1" Grid.Column="3"  Margin="30,0,0,0">
-                                            <TextBlock Text="大小 Size: "></TextBlock>
-                                            <TextBlock Name="dataLeftSize" Text="{Binding DataLeftSize}"/>
+                                        <TextBlock Text="右乳 Right Breast"></TextBlock>
+                                        <TextBlock Text="左乳 Left Breast" Grid.Row="0" Grid.Column="4"></TextBlock>
+                                        <WrapPanel Grid.Row="1">
+                                            <TextBlock Text="數量 Quantity: "></TextBlock>
+                                            <TextBlock Name="dataRightNumber" Text="{Binding DataRightNumber}"/>
                                         </WrapPanel>
-                                        <WrapPanel Grid.Row="1" Grid.Column="1"  Margin="100,0,0,0">
-                                            <TextBlock Text="大小 Size: "></TextBlock>
-                                            <TextBlock Name="dataRightSize" Text="{Binding DataRightSize}"/>
+                                        <WrapPanel Grid.Row="1" Grid.Column="4">
+                                            <TextBlock Text="數量 Quantity: "></TextBlock>
+                                            <TextBlock Name="dataLeftNumber" Text="{Binding DataLeftNumber}"/>
                                         </WrapPanel>
-                                        <WrapPanel Grid.Row="2" Grid.Column="3"  Margin="30,0,0,0">
-                                            <TextBlock Text="形狀 Shape: "></TextBlock>
-                                            <TextBlock Name="dataLeftShape" Text="{Binding DataLeftShape}"/>
-                                        </WrapPanel>
-                                        <WrapPanel Grid.Row="2" Grid.Column="1"  Margin="100,0,0,0">
-                                            <TextBlock Text="形狀 Shape: "></TextBlock>
-                                            <TextBlock Name="dataRightShape" Text="{Binding DataRightShape}"/>
-                                        </WrapPanel>
-                                        
-                                        <Grid Grid.Row="4" Grid.Column="3">
+                                        <Grid Grid.Row="2" Grid.Column="3" Grid.RowSpan="8">
                                             <Grid.Background>
                                                 <ImageBrush ImageSource="/Images/left.png" Stretch="UniformToFill" ></ImageBrush>
                                             </Grid.Background>
                                             <Grid.RowDefinitions>
-                                                <RowDefinition Height="106"/>
-                                                <RowDefinition Height="150"/>
+                                                <RowDefinition Height="42"/>
+                                                <RowDefinition Height="70"/>
                                                 <RowDefinition Height="*"/>
                                             </Grid.RowDefinitions>
                                             <Grid.ColumnDefinitions>
-                                                <ColumnDefinition Width="28"/>
-                                                <ColumnDefinition Width="150"/>
+                                                <ColumnDefinition Width="12"/>
+                                                <ColumnDefinition Width="70"/>
                                                 <ColumnDefinition Width="*"/>
                                             </Grid.ColumnDefinitions>
                                             <Canvas Name="L1_Canvas" Grid.Row="1" Grid.Column="1">
-                                                <TextBlock Name="L1_12" Text="x" Canvas.Top="6" Canvas.Left="68" FontSize="26" Visibility="Collapsed"></TextBlock>
-                                                <TextBlock Name="L1_1" Text="x" Canvas.Top="19" Canvas.Left="94" FontSize="26" Visibility="Collapsed"></TextBlock>
-                                                <TextBlock Name="L1_2" Text="x" Canvas.Top="34" Canvas.Left="116" FontSize="26" Visibility="Collapsed"></TextBlock>
-                                                <TextBlock Name="L1_3" Text="x" Canvas.Top="60" Canvas.Left="121" FontSize="26" Visibility="Collapsed"></TextBlock>
-                                                <TextBlock Name="L1_4" Text="x" Canvas.Top="90" Canvas.Left="116" FontSize="26" Visibility="Collapsed"></TextBlock>
-                                                <TextBlock Name="L1_5" Text="x" Canvas.Top="108" Canvas.Left="94" FontSize="26" Visibility="Collapsed"></TextBlock>
-                                                <TextBlock Name="L1_6" Text="x" Canvas.Top="110" Canvas.Left="68" FontSize="26" Visibility="Collapsed"></TextBlock>
-                                                <TextBlock Name="L1_7" Text="x" Canvas.Top="108" Canvas.Left="41" FontSize="26" Visibility="Collapsed"></TextBlock>
-                                                <TextBlock Name="L1_8" Text="x" Canvas.Top="90" Canvas.Left="22" FontSize="26" Visibility="Collapsed"></TextBlock>
-                                                <TextBlock Name="L1_9" Text="x" Canvas.Top="60" Canvas.Left="15" FontSize="26" Visibility="Collapsed"></TextBlock>
-                                                <TextBlock Name="L1_10" Text="x" Canvas.Top="34" Canvas.Left="22" FontSize="26" Visibility="Collapsed"></TextBlock>
-                                                <TextBlock Name="L1_11" Text="x" Canvas.Top="19" Canvas.Left="41" FontSize="26" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L1_12" Text="x" Canvas.Top="4" Canvas.Left="32" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L1_1" Text="x" Canvas.Top="8" Canvas.Left="44" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L1_2" Text="x" Canvas.Top="15" Canvas.Left="54" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L1_3" Text="x" Canvas.Top="28" Canvas.Left="59" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L1_4" Text="x" Canvas.Top="41" Canvas.Left="54" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L1_5" Text="x" Canvas.Top="48" Canvas.Left="44" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L1_6" Text="x" Canvas.Top="52" Canvas.Left="32" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L1_7" Text="x" Canvas.Top="48" Canvas.Left="20" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L1_8" Text="x" Canvas.Top="41" Canvas.Left="10" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L1_9" Text="x" Canvas.Top="28" Canvas.Left="5" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L1_10" Text="x" Canvas.Top="15" Canvas.Left="10" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L1_11" Text="x" Canvas.Top="8" Canvas.Left="20" FontSize="11" Visibility="Collapsed"></TextBlock>
                                             </Canvas>
                                         </Grid>
-                                        <Grid Grid.Row="4" Grid.Column="1">
+                                        <Grid Grid.Row="2" Grid.Column="1" Grid.RowSpan="8">
                                             <Grid.Background>
                                                 <ImageBrush ImageSource="/Images/right.png" Stretch="UniformToFill" ></ImageBrush>
                                             </Grid.Background>
                                             <Grid.RowDefinitions>
-                                                <RowDefinition Height="106"/>
-                                                <RowDefinition Height="150"/>
+                                                <RowDefinition Height="42"/>
+                                                <RowDefinition Height="70"/>
                                                 <RowDefinition Height="*"/>
                                             </Grid.RowDefinitions>
                                             <Grid.ColumnDefinitions>
-                                                <ColumnDefinition Width="123"/>
-                                                <ColumnDefinition Width="150"/>
-                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="56"/>
+                                                <ColumnDefinition Width="70"/>
+                                                <ColumnDefinition Width="5"/>
                                             </Grid.ColumnDefinitions>
-                                            <Canvas Name="R1_Canvas" Grid.Row="1" Grid.Column="1">
-                                                <TextBlock Name="R1_12" Text="x" Canvas.Top="6" Canvas.Left="68" FontSize="26" Visibility="Collapsed"></TextBlock>
-                                                <TextBlock Name="R1_1" Text="x" Canvas.Top="19" Canvas.Left="94" FontSize="26" Visibility="Collapsed"></TextBlock>
-                                                <TextBlock Name="R1_2" Text="x" Canvas.Top="34" Canvas.Left="116" FontSize="26" Visibility="Collapsed"></TextBlock>
-                                                <TextBlock Name="R1_3" Text="x" Canvas.Top="60" Canvas.Left="121" FontSize="26" Visibility="Collapsed"></TextBlock>
-                                                <TextBlock Name="R1_4" Text="x" Canvas.Top="90" Canvas.Left="116" FontSize="26" Visibility="Collapsed"></TextBlock>
-                                                <TextBlock Name="R1_5" Text="x" Canvas.Top="108" Canvas.Left="94" FontSize="26" Visibility="Collapsed"></TextBlock>
-                                                <TextBlock Name="R1_6" Text="x" Canvas.Top="110" Canvas.Left="68" FontSize="26" Visibility="Collapsed"></TextBlock>
-                                                <TextBlock Name="R1_7" Text="x" Canvas.Top="108" Canvas.Left="41" FontSize="26" Visibility="Collapsed"></TextBlock>
-                                                <TextBlock Name="R1_8" Text="x" Canvas.Top="90" Canvas.Left="22" FontSize="26" Visibility="Collapsed"></TextBlock>
-                                                <TextBlock Name="R1_9" Text="x" Canvas.Top="60" Canvas.Left="15" FontSize="26" Visibility="Collapsed"></TextBlock>
-                                                <TextBlock Name="R1_10" Text="x" Canvas.Top="34" Canvas.Left="22" FontSize="26" Visibility="Collapsed"></TextBlock>
-                                                <TextBlock Name="R1_11" Text="x" Canvas.Top="19" Canvas.Left="41" FontSize="26" Visibility="Collapsed"></TextBlock>
+                                            <Canvas Grid.Row="1" Grid.Column="1">
+                                                <TextBlock Name="R1_12" Text="x" Canvas.Top="4" Canvas.Left="32" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R1_1" Text="x" Canvas.Top="8" Canvas.Left="44" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R1_2" Text="x" Canvas.Top="15" Canvas.Left="54" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R1_3" Text="x" Canvas.Top="28" Canvas.Left="59" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R1_4" Text="x" Canvas.Top="41" Canvas.Left="54" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R1_5" Text="x" Canvas.Top="48" Canvas.Left="44" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R1_6" Text="x" Canvas.Top="52" Canvas.Left="32" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R1_7" Text="x" Canvas.Top="48" Canvas.Left="20" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R1_8" Text="x" Canvas.Top="41" Canvas.Left="10" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R1_9" Text="x" Canvas.Top="28" Canvas.Left="5" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R1_10" Text="x" Canvas.Top="15" Canvas.Left="10" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R1_11" Text="x" Canvas.Top="8" Canvas.Left="20" FontSize="11" Visibility="Collapsed"></TextBlock>
                                             </Canvas>
                                         </Grid>
-                                                                                                                                                                                                        
+
+                                        <WrapPanel Grid.Row="3" Grid.Column="4">
+                                            <TextBlock Text="大小 Size: "></TextBlock>
+                                            <TextBlock Name="dataLeftSize" Text="{Binding DataLeftSize}"/>
+                                        </WrapPanel>
+                                        <WrapPanel Grid.Row="3" Grid.Column="0">
+                                            <TextBlock Text="大小 Size: "></TextBlock>
+                                            <TextBlock Name="dataRightSize" Text="{Binding DataRightSize}"/>
+                                        </WrapPanel>
+                                        <WrapPanel Grid.Row="4" Grid.Column="4">
+                                            <TextBlock Text="形狀 Shape: "></TextBlock>
+                                            <TextBlock Name="dataLeftShape" Text="{Binding DataLeftShape}"/>
+                                        </WrapPanel>
+                                        <WrapPanel Grid.Row="4" Grid.Column="0">
+                                            <TextBlock Text="形狀 Shape: "></TextBlock>
+                                            <TextBlock Name="dataRightShape" Text="{Binding DataRightShape}"/>
+                                        </WrapPanel>
+                                        <!--<WrapPanel Grid.Row="5" Grid.Column="4">
+                                            <TextBlock Text="周圍形狀: "></TextBlock>
+                                            <TextBlock Name="dataLeftContourAroundFocus" Text="{Binding DataLeftContourAroundFocus}"/>
+                                        </WrapPanel>-->
+                                        <!--<WrapPanel Grid.Row="5" Grid.Column="0">
+                                            <TextBlock Text="周圍形狀: "></TextBlock>
+                                            <TextBlock Name="dataRightContourAroundFocus" Text="{Binding DataRightContourAroundFocus}"/>
+                                        </WrapPanel>
+                                        <WrapPanel Grid.Row="6" Grid.Column="4">
+                                            <TextBlock Text="Contour around focus"></TextBlock>
+                                        </WrapPanel>
+                                        <WrapPanel Grid.Row="6" Grid.Column="0">
+                                            <TextBlock Text="Contour around focus"></TextBlock>
+                                        </WrapPanel>
+                                        <WrapPanel Grid.Row="7" Grid.Column="4">
+                                            <TextBlock Text="周圍組織: "></TextBlock>
+                                            <TextBlock Name="dataLeftSurroundingTissues" Text="{Binding DataLeftSurroundingTissues}"/>
+                                        </WrapPanel>
+                                        <WrapPanel Grid.Row="7" Grid.Column="0">
+                                            <TextBlock Text="周圍組織: "></TextBlock>
+                                            <TextBlock Name="dataRightSurroundingTissues" Text="{Binding DataRightSurroundingTissues}"/>
+                                        </WrapPanel>
+                                        <WrapPanel Grid.Row="8" Grid.Column="0">
+                                            <TextBlock Text="Surrounding tissues"></TextBlock>
+                                        </WrapPanel>
+                                        <WrapPanel Grid.Row="8" Grid.Column="4">
+                                            <TextBlock Text="Surrounding tissues"></TextBlock>
+                                        </WrapPanel>-->
+                                        <Grid Grid.Row="11" Grid.Column="1" Grid.RowSpan="8">
+                                            <Grid.Background>
+                                                <ImageBrush ImageSource="/Images/right.png" Stretch="UniformToFill" ></ImageBrush>
+                                            </Grid.Background>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="42"/>
+                                                <RowDefinition Height="70"/>
+                                                <RowDefinition Height="*"/>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="56"/>
+                                                <ColumnDefinition Width="70"/>
+                                                <ColumnDefinition Width="5"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Canvas Grid.Row="1" Grid.Column="1">
+                                                <TextBlock Name="R2_12" Text="x" Canvas.Top="4" Canvas.Left="32" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R2_1" Text="x" Canvas.Top="8" Canvas.Left="44" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R2_2" Text="x" Canvas.Top="15" Canvas.Left="54" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R2_3" Text="x" Canvas.Top="28" Canvas.Left="59" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R2_4" Text="x" Canvas.Top="41" Canvas.Left="54" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R2_5" Text="x" Canvas.Top="48" Canvas.Left="44" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R2_6" Text="x" Canvas.Top="52" Canvas.Left="32" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R2_7" Text="x" Canvas.Top="48" Canvas.Left="20" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R2_8" Text="x" Canvas.Top="41" Canvas.Left="10" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R2_9" Text="x" Canvas.Top="28" Canvas.Left="5" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R2_10" Text="x" Canvas.Top="15" Canvas.Left="10" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R2_11" Text="x" Canvas.Top="8" Canvas.Left="20" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                            </Canvas>
+                                        </Grid>
+                                        <Grid Grid.Row="11" Grid.Column="3" Grid.RowSpan="8">
+                                            <Grid.Background>
+                                                <ImageBrush ImageSource="/Images/left.png" Stretch="UniformToFill" ></ImageBrush>
+                                            </Grid.Background>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="42"/>
+                                                <RowDefinition Height="70"/>
+                                                <RowDefinition Height="*"/>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="12"/>
+                                                <ColumnDefinition Width="70"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Canvas Grid.Row="1" Grid.Column="1">
+                                                <TextBlock Name="L2_12" Text="x" Canvas.Top="4" Canvas.Left="32" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L2_1" Text="x" Canvas.Top="8" Canvas.Left="44" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L2_2" Text="x" Canvas.Top="15" Canvas.Left="54" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L2_3" Text="x" Canvas.Top="28" Canvas.Left="59" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L2_4" Text="x" Canvas.Top="41" Canvas.Left="54" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L2_5" Text="x" Canvas.Top="48" Canvas.Left="44" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L2_6" Text="x" Canvas.Top="52" Canvas.Left="32" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L2_7" Text="x" Canvas.Top="48" Canvas.Left="20" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L2_8" Text="x" Canvas.Top="41" Canvas.Left="10" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L2_9" Text="x" Canvas.Top="28" Canvas.Left="5" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L2_10" Text="x" Canvas.Top="15" Canvas.Left="10" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L2_11" Text="x" Canvas.Top="8" Canvas.Left="20" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                            </Canvas>
+                                        </Grid>
+
+                                        <WrapPanel Grid.Row="12" Grid.Column="4">
+                                            <TextBlock Text="大小 Size: "></TextBlock>
+                                            <TextBlock Name="dataLeftSize2" Text="{Binding DataLeftSize2}"/>
+                                        </WrapPanel>
+                                        <WrapPanel Grid.Row="12" Grid.Column="0">
+                                            <TextBlock Text="大小 Size: "></TextBlock>
+                                            <TextBlock Name="dataRightSize2" Text="{Binding DataRightSize2}"/>
+                                        </WrapPanel>
+                                        <WrapPanel Grid.Row="13" Grid.Column="4">
+                                            <TextBlock Text="形狀 Shape: "></TextBlock>
+                                            <TextBlock Name="dataLeftShape2" Text="{Binding DataLeftShape2}"/>
+                                        </WrapPanel>
+                                        <WrapPanel Grid.Row="13" Grid.Column="0">
+                                            <TextBlock Text="形狀 Shape: "></TextBlock>
+                                            <TextBlock Name="dataRightShape2" Text="{Binding DataRightShape2}"/>
+                                        </WrapPanel>
+                                        <!--<WrapPanel Grid.Row="14" Grid.Column="4">
+                                            <TextBlock Text="周圍形狀: "></TextBlock>
+                                            <TextBlock Name="dataLeftContourAroundFocus2" Text="{Binding DataLeftContourAroundFocus2}"/>
+                                        </WrapPanel>
+                                        <WrapPanel Grid.Row="14" Grid.Column="0">
+                                            <TextBlock Text="周圍形狀: "></TextBlock>
+                                            <TextBlock Name="dataRightContourAroundFocus2" Text="{Binding DataRightContourAroundFocus2}"/>
+                                        </WrapPanel>
+                                        <WrapPanel Grid.Row="15" Grid.Column="0">
+                                            <TextBlock Text="Contour around focus"></TextBlock>
+                                        </WrapPanel>
+                                        <WrapPanel Grid.Row="15" Grid.Column="4">
+                                            <TextBlock Text="Contour around focus"></TextBlock>
+                                        </WrapPanel>
+                                        <WrapPanel Grid.Row="16" Grid.Column="4">
+                                            <TextBlock Text="周圍組織: "></TextBlock>
+                                            <TextBlock Name="dataLeftSurroundingTissues2" Text="{Binding DataLeftSurroundingTissues2}"/>
+                                        </WrapPanel>
+                                        <WrapPanel Grid.Row="16" Grid.Column="0">
+                                            <TextBlock Text="周圍組織: "></TextBlock>
+                                            <TextBlock Name="dataRightSurroundingTissues2" Text="{Binding DataRightSurroundingTissues2}"/>
+                                        </WrapPanel>
+                                        <WrapPanel Grid.Row="17" Grid.Column="0">
+                                            <TextBlock Text="Surrounding tissues"></TextBlock>
+                                        </WrapPanel>
+                                        <WrapPanel Grid.Row="17" Grid.Column="4">
+                                            <TextBlock Text="Surrounding tissues"></TextBlock>
+                                        </WrapPanel>-->
+                                        <Grid Grid.Row="20" Grid.Column="1" Grid.RowSpan="8">
+                                            <Grid.Background>
+                                                <ImageBrush ImageSource="/Images/right.png" Stretch="UniformToFill"/>
+                                            </Grid.Background>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="42"/>
+                                                <RowDefinition Height="70"/>
+                                                <RowDefinition Height="*"/>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="56"/>
+                                                <ColumnDefinition Width="70"/>
+                                                <ColumnDefinition Width="5"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Canvas Grid.Row="1" Grid.Column="1">
+                                                <TextBlock Name="R3_12" Text="x" Canvas.Top="4" Canvas.Left="32" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R3_1" Text="x" Canvas.Top="8" Canvas.Left="44" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R3_2" Text="x" Canvas.Top="15" Canvas.Left="54" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R3_3" Text="x" Canvas.Top="28" Canvas.Left="59" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R3_4" Text="x" Canvas.Top="41" Canvas.Left="54" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R3_5" Text="x" Canvas.Top="48" Canvas.Left="44" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R3_6" Text="x" Canvas.Top="52" Canvas.Left="32" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R3_7" Text="x" Canvas.Top="48" Canvas.Left="20" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R3_8" Text="x" Canvas.Top="41" Canvas.Left="10" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R3_9" Text="x" Canvas.Top="28" Canvas.Left="5" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R3_10" Text="x" Canvas.Top="15" Canvas.Left="10" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="R3_11" Text="x" Canvas.Top="8" Canvas.Left="20" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                            </Canvas>
+                                        </Grid>
+                                        <Grid Grid.Row="20" Grid.Column="3" Grid.RowSpan="8">
+                                            <Grid.Background>
+                                                <ImageBrush ImageSource="/Images/left.png" Stretch="UniformToFill" ></ImageBrush>
+                                            </Grid.Background>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="42"/>
+                                                <RowDefinition Height="70"/>
+                                                <RowDefinition Height="*"/>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="12"/>
+                                                <ColumnDefinition Width="70"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Canvas Grid.Row="1" Grid.Column="1">
+                                                <TextBlock Name="L3_12" Text="x" Canvas.Top="4" Canvas.Left="32" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L3_1" Text="x" Canvas.Top="8" Canvas.Left="44" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L3_2" Text="x" Canvas.Top="15" Canvas.Left="54" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L3_3" Text="x" Canvas.Top="28" Canvas.Left="59" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L3_4" Text="x" Canvas.Top="41" Canvas.Left="54" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L3_5" Text="x" Canvas.Top="48" Canvas.Left="44" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L3_6" Text="x" Canvas.Top="52" Canvas.Left="32" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L3_7" Text="x" Canvas.Top="48" Canvas.Left="20" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L3_8" Text="x" Canvas.Top="41" Canvas.Left="10" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L3_9" Text="x" Canvas.Top="28" Canvas.Left="5" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L3_10" Text="x" Canvas.Top="15" Canvas.Left="10" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                                <TextBlock Name="L3_11" Text="x" Canvas.Top="8" Canvas.Left="20" FontSize="11" Visibility="Collapsed"></TextBlock>
+                                            </Canvas>
+                                        </Grid>
+
+                                        <WrapPanel Grid.Row="21" Grid.Column="4">
+                                            <TextBlock Text="大小 Size: "></TextBlock>
+                                            <TextBlock Name="dataLeftSize3" Text="{Binding DataLeftSize3}"/>
+                                        </WrapPanel>
+                                        <WrapPanel Grid.Row="21" Grid.Column="0">
+                                            <TextBlock Text="大小 Size: "></TextBlock>
+                                            <TextBlock Name="dataRightSize3" Text="{Binding DataRightSize3}"/>
+                                        </WrapPanel>
+                                        <WrapPanel Grid.Row="22" Grid.Column="4">
+                                            <TextBlock Text="形狀 Shape: "></TextBlock>
+                                            <TextBlock Name="dataLeftShape3" Text="{Binding DataLeftShape3}"/>
+                                        </WrapPanel>
+                                        <WrapPanel Grid.Row="22" Grid.Column="0">
+                                            <TextBlock Text="形狀 Shape: "></TextBlock>
+                                            <TextBlock Name="dataRightShape3" Text="{Binding DataRightShape3}"/>
+                                        </WrapPanel>
+                                        <!--<WrapPanel Grid.Row="23" Grid.Column="4">
+                                            <TextBlock Text="周圍形狀: "></TextBlock>
+                                            <TextBlock Name="dataLeftContourAroundFocus3" Text="{Binding DataLeftContourAroundFocus3}"/>
+                                        </WrapPanel>
+                                        <WrapPanel Grid.Row="23" Grid.Column="0">
+                                            <TextBlock Text="周圍形狀: "></TextBlock>
+                                            <TextBlock Name="dataRightContourAroundFocus3" Text="{Binding DataRightContourAroundFocus3}"/>
+                                        </WrapPanel>
+                                        <WrapPanel Grid.Row="24" Grid.Column="0">
+                                            <TextBlock Text="Contour around focus"></TextBlock>
+                                        </WrapPanel>
+                                        <WrapPanel Grid.Row="24" Grid.Column="4">
+                                            <TextBlock Text="Contour around focus"></TextBlock>
+                                        </WrapPanel>
+                                        <WrapPanel Grid.Row="25" Grid.Column="4">
+                                            <TextBlock Text="周圍組織: "></TextBlock>
+                                            <TextBlock Name="dataLeftSurroundingTissues3" Text="{Binding DataLeftSurroundingTissues3}"/>
+                                        </WrapPanel>
+                                        <WrapPanel Grid.Row="25" Grid.Column="0">
+                                            <TextBlock Text="周圍組織: "></TextBlock>
+                                            <TextBlock Name="dataRightSurroundingTissues3" Text="{Binding DataRightSurroundingTissues3}"/>
+                                        </WrapPanel>
+                                        <WrapPanel Grid.Row="26" Grid.Column="0">
+                                            <TextBlock Text="Surrounding tissues"></TextBlock>
+                                        </WrapPanel>
+                                        <WrapPanel Grid.Row="26" Grid.Column="4">
+                                            <TextBlock Text="Surrounding tissues"></TextBlock>
+                                        </WrapPanel>-->
                                     </Grid>
 
                                     <TextBlock Grid.Row="7" Grid.ColumnSpan="4" FontSize="10" Text="圖形只顯示檢測圖中綠色或紅色標誌的部位，並非其實際大小，形狀和位置，最多各在左右乳房各顯示三個標誌." HorizontalAlignment="Center" ></TextBlock>
