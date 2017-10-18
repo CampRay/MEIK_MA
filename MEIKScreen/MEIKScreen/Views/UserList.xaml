@@ -255,7 +255,7 @@
                 </Button>
             </WrapPanel>            
             <WrapPanel Name="reportButtonPanel" Grid.Column="2" HorizontalAlignment="left" VerticalAlignment="Center">
-                <Button Name="btnViewImg" Width="110" Height="42" FontSize="13" FontWeight="Bold" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Click="btnViewImg_Click" Content="{DynamicResource UserListWinImage}" Background="{x:Null}" Foreground="White" Cursor="Hand">
+                <Button Visibility="Collapsed" Name="btnViewImg" Width="110" Height="42" FontSize="13" FontWeight="Bold" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Click="btnViewImg_Click" Content="{DynamicResource UserListWinImage}" Background="{x:Null}" Foreground="White" Cursor="Hand">
                     <Button.Template>
                         <ControlTemplate TargetType="{x:Type Button}">
                             <WrapPanel Width="{TemplateBinding Width}" Height="{TemplateBinding Height}" HorizontalAlignment="left" VerticalAlignment="Center">

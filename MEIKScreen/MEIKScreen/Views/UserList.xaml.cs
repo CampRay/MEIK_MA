@@ -67,7 +67,7 @@ namespace MEIKScreen
             //}
             string month = DateTime.Now.ToShortDateString();
             //修改原始MEIK程序中的档案改变日期，让原始MEIK程序运行时跨月份打开程序不会出现提示对话框
-            OperateIniFile.WriteIniData("Base", "Archive change date", month, App.meikFolder + System.IO.Path.DirectorySeparatorChar + "MEIK.ini");
+            OperateIniFile.WriteIniData("Base", "Archive change date", month, App.meikIniFilePath);
             ////建立当天文件夹          
             //string dayFolder = App.reportSettingModel.DataBaseFolder + System.IO.Path.DirectorySeparatorChar + DateTime.Now.ToString("MM_yyyy") + System.IO.Path.DirectorySeparatorChar + DateTime.Now.ToString("dd");
             //建立当月文件夹          
@@ -1061,33 +1061,16 @@ namespace MEIKScreen
                     double sizeValue = groupValue / 10;
                     //循环处理选择的每一个患者档案
                     foreach (Person selectedUser in selectedUserList)
-                    {
-                        //string dataFile = dataFolder + System.IO.Path.DirectorySeparatorChar + selectedUser.Code + ".dat";
-                        //string dataFile = selectedUser.ArchiveFolder + System.IO.Path.DirectorySeparatorChar + selectedUser.Code + ".dat";                        
-
-                        //把检测员名称和证书写入.ini文件
-                        //try
-                        //{
-                        //    OperateIniFile.WriteIniData("Report", "Technician Name", selectedUser.TechName, selectedUser.IniFilePath);
-                        //    OperateIniFile.WriteIniData("Report", "Technician License", selectedUser.TechLicense, selectedUser.IniFilePath);
-                        //    OperateIniFile.WriteIniData("Report", "Screen Venue", App.reportSettingModel.ScreenVenue, selectedUser.IniFilePath);                            
-                        //}
-                        //catch (Exception exe)
-                        //{
-                        //    //如果不能写入ini文件
-                        //    FileHelper.SetFolderPower(selectedUser.ArchiveFolder, "Everyone", "FullControl");
-                        //    FileHelper.SetFolderPower(selectedUser.ArchiveFolder, "Users", "FullControl");
-                        //}
-
+                    {                        
                         Dispatcher.Invoke(updatePbDelegate, System.Windows.Threading.DispatcherPriority.Background, new object[] { System.Windows.Controls.ProgressBar.ValueProperty, Convert.ToDouble(groupValue * n + sizeValue) });
                         //如果没有截取图片，则不允许上传数据
-                        if (!File.Exists(selectedUser.ArchiveFolder + System.IO.Path.DirectorySeparatorChar + selectedUser.Code + ".png"))
-                        {
-                            errMsg.Add(selectedUser.Code + " :: " + App.Current.FindResource("Message_90").ToString());
-                            continue;
-                        }                        
+                        //if (!File.Exists(selectedUser.ArchiveFolder + System.IO.Path.DirectorySeparatorChar + selectedUser.Code + ".png"))
+                        //{
+                        //    errMsg.Add(selectedUser.Code + " :: " + App.Current.FindResource("Message_90").ToString());
+                        //    continue;
+                        //}                        
 
-                        //先生成自动生成的PDF文件
+                        ////先生成自动生成的PDF文件
                         //string sfPdfFile = "";
                         //string csvFile = "";
                         //if (App.reportSettingModel.TransferMode == TransferMode.CloudServer)
@@ -1108,7 +1091,7 @@ namespace MEIKScreen
                         //    reportModel.DataMeikTech = string.IsNullOrEmpty(selectedUser.TechName) ? "N/A" : selectedUser.TechName;
                         //    reportModel.DataSignDate = reportModel.DataScreenDate;
                         //    reportModel.DataPoint = (selectedUser.LeftResult > selectedUser.RightResult ? selectedUser.LeftResult : selectedUser.RightResult) + "";
-                        //    reportModel.DataLeftTotalPts = selectedUser.LeftResult+"";
+                        //    reportModel.DataLeftTotalPts = selectedUser.LeftResult + "";
                         //    reportModel.DataRightTotalPts = selectedUser.RightResult + "";
                         //    reportModel.DataLeftBiRadsCategory = selectedUser.LeftResult == 2 ? "發現可疑病理性改變 Suspicious changes detected" : (selectedUser.LeftResult == 1 ? "發現良性病理性改變 Benign changes detected" : "正常 Normal");
                         //    reportModel.DataRightBiRadsCategory = selectedUser.RightResult == 2 ? "發現可疑病理性改變 Suspicious changes detected" : (selectedUser.RightResult == 1 ? "發現良性病理性改變 Benign changes detected" : "正常 Normal");
@@ -1162,9 +1145,15 @@ namespace MEIKScreen
                                 jObject["free"] = selectedUser.Free;
                                 jObject["venue"] = selectedUser.ScreenVenue;
                                 jObject["result"] = selectedUser.Result;
+
+                                //jObject["age"] = selectedUser.Age;
+                                //jObject["height"] = selectedUser.Height;
+                                //jObject["weight"] = selectedUser.Weight;
+                                //jObject["screendate"] = selectedUser.RegYear + "-" + selectedUser.RegMonth + "-" + selectedUser.RegDate; ;
+                                //jObject["techname"] = selectedUser.TechName;
                                 NameValueCollection nvlist=new NameValueCollection();
                                 nvlist.Add("jsonStr", jObject.ToString());
-                                string resStr=HttpWebTools.UploadFile(App.reportSettingModel.CloudPath + "/api/sendData", zipFile, nvlist, App.reportSettingModel.CloudToken);
+                                string resStr = HttpWebTools.UploadFile(App.reportSettingModel.CloudPath + "/api/sendData", zipFile, nvlist, App.reportSettingModel.CloudToken);
                                 var jsonObj = JObject.Parse(resStr);
                                 bool status = (bool)jsonObj["status"];
                                 if (status)
@@ -1175,7 +1164,7 @@ namespace MEIKScreen
                                     OperateIniFile.WriteIniData("Report", "Status", "DS", selectedUser.IniFilePath);
                                     selectedUser.Uploaded = Visibility.Visible.ToString();
 
-                                    //上传自动生成的PDF报告
+                                    ////上传自动生成的PDF报告
                                     //if (File.Exists(sfPdfFile))
                                     //{
                                     //    JObject jObject1 = new JObject();
@@ -1198,7 +1187,7 @@ namespace MEIKScreen
                                 }
 
                                 //try
-                                //{                                    
+                                //{
                                 //    File.Delete(csvFile);//删除生成的CSV文件
                                 //    File.Delete(sfPdfFile);//删除生成的PDF文件                                
                                 //}
@@ -1249,17 +1238,7 @@ namespace MEIKScreen
                         Dispatcher.Invoke(updatePbDelegate, System.Windows.Threading.DispatcherPriority.Background, new object[] { System.Windows.Controls.ProgressBar.ValueProperty, Convert.ToDouble(groupValue * n + sizeValue * 9) });
                         
                         n++;
-                    }
-
-                    //try
-                    //{
-                    //    //发送通知邮件  
-                    //    SendEmail((selectedUserList.Count - errMsg.Count), true);
-                    //}
-                    //catch (Exception ex3)
-                    //{
-                    //    errMsg.Add(App.Current.FindResource("Message_19").ToString() + " " + ex3.Message);
-                    //}
+                    }                   
 
                     Dispatcher.Invoke(updatePbDelegate, System.Windows.Threading.DispatcherPriority.Background, new object[] { System.Windows.Controls.ProgressBar.ValueProperty, Convert.ToDouble(100) });
                     //显示没有成功发送数据的错误消息
@@ -1335,9 +1314,7 @@ namespace MEIKScreen
                     {
                         item.Icon = "/Images/id_card_ok.png";
                     }
-                    var selectItem = e.AddedItems[0] as Person;
-                    string meikiniFile = App.meikFolder + System.IO.Path.DirectorySeparatorChar + "MEIK.ini";
-                    OperateIniFile.WriteIniData("Base", "Patients base", selectItem.ArchiveFolder, meikiniFile);
+                    var selectItem = e.AddedItems[0] as Person;                                        
 
                     if (selectItem.ReportLanguage)
                     {
@@ -1762,25 +1739,45 @@ namespace MEIKScreen
         {
             try
             {                                
-                string meikiniFile = App.meikFolder + System.IO.Path.DirectorySeparatorChar + "MEIK.ini";
+                
                 var selectItem = this.CodeListBox.SelectedItem as Person;
                 if (selectItem != null)
                 {
-                    //修改原始MEIK程序中的患者档案目录，让原始MEIK程序运行后直接打开此患者档案
-                    OperateIniFile.WriteIniData("Base", "Patients base", selectItem.ArchiveFolder, meikiniFile);
+                    //先读取旧的档案目录
+                    string archiveFolder = OperateIniFile.ReadIniData("Base", "Patients base", "", App.meikIniFilePath);                    
+                    IntPtr mainWinHwnd = Win32Api.FindWindowEx(IntPtr.Zero, IntPtr.Zero, "TfmMain", null);
+                    //如果沒有找到MEIKMA主窗体显示，则重启MEIKMA                    
+                    if (mainWinHwnd == IntPtr.Zero)
+                    {
+                        var mainWin = this.Owner as MainWindow;
+                        mainWin.StartApp(selectItem.ArchiveFolder);
+                    }
+                    else
+                    {
+                        //判断旧的档案目录和新的档案目录是否一样，不一样则重启MEIKMA
+                        if (!archiveFolder.Equals(selectItem.ArchiveFolder))
+                        {
+                            var mainWin = this.Owner as MainWindow;
+                            mainWin.StartApp(selectItem.ArchiveFolder);
+                        }                        
+                    }
+
+                    
                     try
                     {
                         Clipboard.SetText(selectItem.Code);
                         //打开MEIK 5.6MA
                         App.opendWin = this;
-                        IntPtr mainWinHwnd = Win32Api.FindWindowEx(IntPtr.Zero, IntPtr.Zero, "TfmMain", null);
-                        //如果主窗体不存在
-                        if (mainWinHwnd == IntPtr.Zero)
+                        //this.WindowState = WindowState.Minimized;
+                        if (App.meikWinHwnd != IntPtr.Zero)
                         {
-                            IntPtr diagnosticsBtnHwnd = Win32Api.FindWindowEx(App.splashWinHwnd, IntPtr.Zero, null, App.strScreening);
-                            Win32Api.SendMessage(diagnosticsBtnHwnd, Win32Api.WM_CLICK, 0, 0);
+                            Win32Api.ShowWindow(App.meikWinHwnd, 3);
+                            Win32Api.SetForegroundWindow(App.meikWinHwnd);
                         }
-                        
+                        //触发List点击事件
+                        //IntPtr listBtnHwnd = Win32Api.FindWindowEx(App.meikWinHwnd, IntPtr.Zero, null, App.strList);
+                        //Win32Api.SendMessage(listBtnHwnd, Win32Api.WM_CLICK, 0, 0);
+                                           
                     }
                     catch (Exception) { }
                    
@@ -1788,10 +1785,8 @@ namespace MEIKScreen
                 else
                 {
                     //修改原始MEIK程序中的患者档案目录，让原始MEIK程序运行后直接打开此患者档案
-                    OperateIniFile.WriteIniData("Base", "Patients base", App.dataFolder, meikiniFile);
-                }
-                
-                this.WindowState = WindowState.Minimized;
+                    OperateIniFile.WriteIniData("Base", "Patients base", App.dataFolder, App.meikIniFilePath);
+                }                                
             }
             catch (Exception ex)
             {
@@ -4260,13 +4255,13 @@ namespace MEIKScreen
                 sw.WriteLine(titleData.ToString());
 
                 StringBuilder data = new StringBuilder();
-                data.Append(reportModel.DataClientNum + ",");
-                data.Append(reportModel.DataName + ",");
+                data.Append("\"" + reportModel.DataClientNum + "\",");
+                data.Append("\""+reportModel.DataName + "\",");
                 data.Append(reportModel.DataAge + ",");
                 data.Append(reportModel.DataHeight + ",");
                 data.Append(reportModel.DataWeight + ",");
-                data.Append(reportModel.DataMobile + ",");
-                data.Append(reportModel.DataEmail + ",");
+                data.Append("\"" + reportModel.DataMobile + "\",");
+                data.Append("\"" + reportModel.DataEmail + "\",");
                 data.Append(reportModel.DataUserCode + ",");
                 data.Append(reportModel.DataScreenDate + ",");
                 string str = reportModel.DataScreenLocation;
@@ -4274,7 +4269,7 @@ namespace MEIKScreen
                 {
                     str = str.Replace("\"", "\"\"");//替换英文冒号 英文冒号需要换成两个冒号                  
                 }
-                if (str.Contains('"') || str.Contains('\r') || str.Contains('\n'))
+                if (str.Contains('"') || str.Contains('\r') || str.Contains('\n')|| str.Contains(' '))
                 {
                     data.Append("\"" + str + "\",");
                 }
@@ -4307,6 +4302,6 @@ namespace MEIKScreen
             }
             catch { }
         }
-        
+       
     }
 }

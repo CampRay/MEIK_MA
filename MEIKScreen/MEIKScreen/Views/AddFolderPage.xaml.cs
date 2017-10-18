@@ -109,8 +109,8 @@ namespace MEIKScreen
 
 
                         //創建Crd文件
-                        //string patientCrdFile = patientFolder + System.IO.Path.DirectorySeparatorChar + this.txtPatientCode.Text + ".crd";
-                        //File.Copy(patientFile, patientCrdFile, true);
+                        string patientCrdFile = patientFolder + System.IO.Path.DirectorySeparatorChar + this.txtPatientCode.Text + ".crd";
+                        File.Copy(patientFile, patientCrdFile, true);
 
 
                         OperateIniFile.WriteIniData("Report", "Technician Name Required", App.reportSettingModel.ShowTechSignature.ToString(), patientFile);

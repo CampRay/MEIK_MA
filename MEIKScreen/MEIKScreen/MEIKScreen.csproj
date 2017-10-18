@@ -295,6 +295,9 @@
     <None Include="Config.ini">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="MEIKMA\MEIKMA.ini">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -324,6 +327,21 @@
     <Resource Include="Images\title.png" />
     <Resource Include="Images\search.png" />
     <Resource Include="Images\search_hover.png" />
+    <Content Include="MEIKMA\DELZIP179.DLL">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MEIKMA\ftd2xx.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MEIKMA\MEIKMA.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MEIKMA\mingwm10.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MEIKMA\reit.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Xceed.Wpf.Toolkit.dll" />
     <Resource Include="Images\App_Icon.png" />
     <Resource Include="Images\bg.jpg" />

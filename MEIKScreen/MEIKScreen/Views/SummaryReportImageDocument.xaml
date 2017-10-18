@@ -43,7 +43,7 @@
                 </Grid.RowDefinitions>                
                 <Image Name="imgTitleLog" Source="/Images/title.png" Grid.Row="0"></Image>
                 <TextBlock Text="快速乳房健康檢測報告" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="30" Foreground="#FF00657F"/>
-                <TextBlock Text="Rapid Breast Health Screening Report" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="18" Foreground="#FF00657F" FontFamily="Adobe Gothic Std B"/>
+                <TextBlock Text="Rapid Breast Health Screening Report" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="18" Foreground="#FF00657F"/>
             </Grid>
             
             <Grid Grid.Row="2">
@@ -175,7 +175,7 @@
                         <TextBlock Name="dataResultLeft" Text="{Binding DataLeftBiRadsCategory}" VerticalAlignment="Center" Width="500" FontSize="12"/>
                     </StackPanel>
                     <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Left" >
-                        <TextBlock Text="左乳 Left Breast: " VerticalAlignment="Center" FontWeight="Bold" FontSize="12" Margin="0,0,5,0"/>
+                        <TextBlock Text="右乳 Right Breast: " VerticalAlignment="Center" FontWeight="Bold" FontSize="12" Margin="0,0,5,0"/>
                         <TextBlock Name="dataResultRight" Text="{Binding DataRightBiRadsCategory}" VerticalAlignment="Center" Width="500" FontSize="12"/>
                     </StackPanel>
                     <TextBlock Name="dataSignDate" Grid.Row="2" Text="{Binding DataSignDate}"  Width="150" Padding="0,0,10,0" HorizontalAlignment="Right" VerticalAlignment="Center"/>

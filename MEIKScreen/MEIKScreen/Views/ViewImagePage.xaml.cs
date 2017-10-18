@@ -53,20 +53,39 @@ namespace MEIKScreen
             {
                 try
                 {
+                    string archiveFolder = OperateIniFile.ReadIniData("Base", "Patients base", "", App.meikIniFilePath);                    
                     IntPtr mainWinHwnd = Win32Api.FindWindowEx(IntPtr.Zero, IntPtr.Zero, "TfmMain", null);
-                    //如果當前顯示的是主窗体                    
+                    //如果沒有找到MEIKMA主窗体显示，则重启MEIKMA                    
                     if (mainWinHwnd == IntPtr.Zero)
                     {
-                        IntPtr screenBtnHwnd = Win32Api.FindWindowEx(App.splashWinHwnd, IntPtr.Zero, null, App.strScreening);
-                        Win32Api.SendMessage(screenBtnHwnd, Win32Api.WM_CLICK, 0, 0);
+                        var mainWin=this.Owner.Owner as MainWindow;
+                        mainWin.StartApp(_person.ArchiveFolder);
+                    }
+                    else
+                    {
+                        
+                        if (!archiveFolder.Equals(_person.ArchiveFolder))
+                        {
+                            var mainWin = this.Owner.Owner as MainWindow;
+                            mainWin.StartApp(_person.ArchiveFolder);
+                        }
                     }
                 }
                 catch { }
+
+                
 
                 this.WindowState = WindowState.Minimized;     
                 //this.Owner.Visibility = Visibility.Hidden;
                 this.Owner.WindowState = WindowState.Minimized;
                 App.opendWin = this;
+                //让MEIKMA窗口显示在最前面
+                if (App.meikWinHwnd != IntPtr.Zero)
+                {
+                    Win32Api.ShowWindow(App.meikWinHwnd, 3);
+                    Win32Api.SetForegroundWindow(App.meikWinHwnd);
+                }
+
                 MEIKScreen.Views.ScreenCapture screenCaptureWin = new MEIKScreen.Views.ScreenCapture(_person);
                 screenCaptureWin.callbackMethod = LoadScreenShot;
                 screenCaptureWin.ShowDialog();

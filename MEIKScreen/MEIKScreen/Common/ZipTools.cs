@@ -111,7 +111,7 @@ namespace MEIKScreen.Common
             string fileFilter = "";
             if (deviceType == 1)
             {
-                fileFilter = @".+(\.crd)|(\.ini)|(\.tdb)|(\.pdf)|(\.xml)|(\.png)|(\.csv)";
+                fileFilter = @".+(\.crd)|(\.ini)|(\.tdb)|(\.pdf)|(\.xml)|(\.png)|(\.jpg)|(\.csv)";
             }
             if (deviceType == 2)
             {
