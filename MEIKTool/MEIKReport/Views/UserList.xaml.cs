@@ -5682,7 +5682,7 @@ namespace MEIKReport
                 for (int i = 0; i < nvc.Count; i++)
                 {
                     var key = nvc.GetKey(i);
-                    var value = nvc[i];
+                    var value = (nvc[i] == null ? "" : nvc[i]);
                     if (key.Contains('"'))
                     {
                         key = key.Replace("\"", "\"\"");//替换英文冒号 英文冒号需要换成两个冒号                  
@@ -6966,9 +6966,8 @@ namespace MEIKReport
         private void btnResult_Click(object sender, RoutedEventArgs e)
         {
            
-            var person = this.CodeListBox.SelectedItem as Person;
-            var reportModel = CloneReportModel();
-            ScreenResultReport screenResultReport = new ScreenResultReport(person, reportModel);
+            var person = this.CodeListBox.SelectedItem as Person;            
+            ScreenResultReport screenResultReport = new ScreenResultReport(person);
             screenResultReport.ShowDialog();
             
         }

@@ -105,7 +105,7 @@ namespace MEIKReport.Common
         /// </summary>
         /// <param name="SourceFolderPath"></param>
         /// <param name="zipFile"></param>
-        /// <param name="fileType">1 用戶檢測數據，2 報告數據， 3 pdf報告</param>
+        /// <param name="fileType">1 用戶檢測數據，2 報告數據， 3 pdf報告, 4 csv和圖片數據</param>
         public void ZipFiles(string SourceFolderPath, string zipFile, int fileType)
         {
             string fileFilter = "";
@@ -120,6 +120,10 @@ namespace MEIKReport.Common
             if (fileType == 3)
             {
                 fileFilter = @".+(\.pdf)";
+            }
+            if (fileType == 4)
+            {
+                fileFilter = @".+(\.jpg)|(\.csv)";
             }
             (new FastZip()).CreateZip(zipFile, SourceFolderPath, true, fileFilter);
             //using (ZipFile zip = ZipFile.Create(zipFile))

@@ -144,11 +144,11 @@ namespace MEIKReport.Common
 
             // 写入结束边界 
             requestStream.Write(endBoundaryBytes, 0, endBoundaryBytes.Length);
-
+            fileStream.Close();
             WebResponse responce = webrequest.GetResponse();
             Stream s = responce.GetResponseStream();
             StreamReader sr = new StreamReader(s);
-
+                         
             return sr.ReadToEnd();
         }
 
