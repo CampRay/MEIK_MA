@@ -111,7 +111,7 @@ namespace MEIKReport.Common
             string fileFilter = "";
             if (fileType == 1)
             {
-                fileFilter = @".+(\.crd)|(\.ini)|(\.tdb)";
+                fileFilter = @".+(\.crd)|(\.ini)|(\.tdb)|(\.pdf)|(\.xml)|(\.png)|(\.jpg)|(\.csv)";
             }
             if (fileType == 2)
             {

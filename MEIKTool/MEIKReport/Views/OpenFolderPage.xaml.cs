@@ -62,7 +62,8 @@ namespace MEIKReport
         private TreeViewItem AddDirectoryItems(DirectoryInfo folder)
         {
             TreeViewItem folderItem = new TreeViewItem { Header = folder.Name,Tag=folder.FullName, IsExpanded = false };
-            foreach (var subfolder in folder.GetDirectories())
+            var set = folder.GetDirectories().OrderByDescending(x => x.Name);
+            foreach (var subfolder in set)
             {
                 folderItem.Items.Add(AddDirectoryItems(subfolder));
             }

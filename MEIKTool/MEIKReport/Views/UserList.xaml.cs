@@ -350,20 +350,7 @@ namespace MEIKReport
                 else
                 {
                     reportButtonPanel.Visibility = Visibility.Hidden;                    
-                }
-
-                string meikiniFile = App.meikFolder + System.IO.Path.DirectorySeparatorChar + "MEIK.ini";
-                var selectItem = this.CodeListBox.SelectedItem as Person;
-                if (selectItem != null)
-                {                                        
-                    //修改原始MEIK程序中的患者档案目录，让原始MEIK程序运行后直接打开此患者档案
-                    OperateIniFile.WriteIniData("Base", "Patients base", selectItem.ArchiveFolder, meikiniFile);
-                }
-                else
-                {
-                    //修改原始MEIK程序中的患者档案目录，让原始MEIK程序运行后直接打开此患者档案
-                    OperateIniFile.WriteIniData("Base", "Patients base", folderName, meikiniFile);
-                }
+                }                
             }
             catch (Exception ex)
             {
@@ -911,7 +898,7 @@ namespace MEIKReport
                                 jObject["firstname"] = selectedUser.GivenName;
                                 jObject["lastname"] = selectedUser.SurName;
                                 jObject["othername"] = selectedUser.OtherName;
-                                jObject["birthday"] = selectedUser.BirthYear + "/" + selectedUser.BirthMonth + "/" + selectedUser.BirthDate;
+                                jObject["birthday"] = selectedUser.BirthYear + "/" + selectedUser.BirthMonth.PadLeft(2, '0') + "/" + selectedUser.BirthDate.PadLeft(2, '0');
                                 jObject["mobile"] = selectedUser.Mobile;
                                 jObject["email"] = selectedUser.Email;
                                 jObject["clientnumber"] = selectedUser.ClientNumber;
@@ -924,7 +911,7 @@ namespace MEIKReport
                                 nvlist.Add("jsonStr", jObject.ToString());
                                 //先上传PDF文件
                                 string strName = selectedUser.SurName + (string.IsNullOrEmpty(selectedUser.GivenName) ? "" : "," + selectedUser.GivenName) + (string.IsNullOrEmpty(selectedUser.OtherName) ? "" : " " + selectedUser.OtherName) + ".pdf";
-                                string pdfFile = selectedUser.ArchiveFolder + System.IO.Path.DirectorySeparatorChar + selectedUser.Code + " SFI - " + strName;
+                                string pdfFile = selectedUser.ArchiveFolder + System.IO.Path.DirectorySeparatorChar + selectedUser.Code + " - " + strName;
                                 if (!File.Exists(pdfFile))
                                 {
                                     errMsg.Add(selectedUser.Code + " :: " + App.Current.FindResource("Message_74").ToString());
@@ -1088,9 +1075,7 @@ namespace MEIKReport
                     {
                         item.Icon = "/Images/id_card_ok.png";
                     }
-                    var selectItem = e.AddedItems[0] as Person;
-                    string meikiniFile = App.meikFolder + System.IO.Path.DirectorySeparatorChar + "MEIK.ini";
-                    OperateIniFile.WriteIniData("Base", "Patients base", selectItem.ArchiveFolder, meikiniFile);
+                    var selectItem = e.AddedItems[0] as Person;                                        
 
                     
                     if (selectItem.PalpableLumps)
@@ -1501,6 +1486,11 @@ namespace MEIKReport
             loadReportData();
         }               
 
+        /// <summary>
+        /// 点击检查按钮
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnScreening_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -4328,26 +4318,59 @@ namespace MEIKReport
         private void btnOpenDiagn_Click(object sender, RoutedEventArgs e)
         {
             try
-            {
-                App.opendWin = this;
-                IntPtr mainWinHwnd = Win32Api.FindWindowEx(IntPtr.Zero, IntPtr.Zero, "TfmMain", null);
-                //如果主窗体不存在
-                if (mainWinHwnd == IntPtr.Zero)
+            {                                
+                
+                var selectItem = this.CodeListBox.SelectedItem as Person;
+                if (selectItem != null)
                 {
-                    IntPtr diagnosticsBtnHwnd = Win32Api.FindWindowEx(App.splashWinHwnd, IntPtr.Zero, null, App.strDiagnostics);
-                    Win32Api.SendMessage(diagnosticsBtnHwnd, Win32Api.WM_CLICK, 0, 0);
+                    //先读取旧的档案目录
+                    string archiveFolder = OperateIniFile.ReadIniData("Base", "Patients base", "", App.meikIniFilePath);                    
+                    IntPtr mainWinHwnd = Win32Api.FindWindowEx(IntPtr.Zero, IntPtr.Zero, "TfmMain", null);
+                    //如果沒有找到MEIKMA主窗体显示，则重启MEIKMA                    
+                    if (mainWinHwnd == IntPtr.Zero)
+                    {
+                        var mainWin = this.Owner as MainWindow;
+                        mainWin.StartApp(selectItem.ArchiveFolder);
+                    }
+                    else
+                    {
+                        //判断旧的档案目录和新的档案目录是否一样，不一样则重启MEIKMA
+                        if (!archiveFolder.Equals(selectItem.ArchiveFolder))
+                        {
+                            var mainWin = this.Owner as MainWindow;
+                            mainWin.StartApp(selectItem.ArchiveFolder);
+                        }                        
+                    }
+
+                    
+                    try
+                    {
+                        //Clipboard.SetText(selectItem.Code);
+                        //打开MEIK 5.6MA
+                        App.opendWin = this;
+                        //this.WindowState = WindowState.Minimized;
+                        if (App.meikWinHwnd != IntPtr.Zero)
+                        {
+                            Win32Api.ShowWindow(App.meikWinHwnd, 3);
+                            Win32Api.SetForegroundWindow(App.meikWinHwnd);
+                        }
+                        //触发List点击事件
+                        //IntPtr listBtnHwnd = Win32Api.FindWindowEx(App.meikWinHwnd, IntPtr.Zero, null, App.strList);
+                        //Win32Api.SendMessage(listBtnHwnd, Win32Api.WM_CLICK, 0, 0);
+                                           
+                    }
+                    catch (Exception) { }
+                   
                 }
                 else
                 {
-                    this.StartMouseHook();
-                }
-                //WinMinimized();
-                
-
-
+                    //修改原始MEIK程序中的患者档案目录，让原始MEIK程序运行后直接打开此患者档案
+                    OperateIniFile.WriteIniData("Base", "Patients base", App.dataFolder, App.meikIniFilePath);
+                }                                
             }
             catch (Exception ex)
             {
+                this.Visibility = Visibility.Visible;
                 MessageBox.Show(this, "System Exception: " + ex.Message);
             }
         }
@@ -4612,6 +4635,11 @@ namespace MEIKReport
             generatePoints();
         }
 
+        /// <summary>
+        /// 点击Save按钮保存报告数据
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void save_Click(object sender, RoutedEventArgs e)
         {            
             SaveReport(null);
@@ -5391,25 +5419,29 @@ namespace MEIKReport
 
                 string folderName = person.ArchiveFolder;
                 string strName = person.SurName + (string.IsNullOrEmpty(person.GivenName) ? "" : "," + person.GivenName) + (string.IsNullOrEmpty(person.OtherName) ? "" : " " + person.OtherName) + ".pdf";
-                //生成Examination报告的PDF文件
-                string lfPdfFile = folderName + System.IO.Path.DirectorySeparatorChar + person.Code + " LF - " + strName;
-                //string lfReportTempl = "Views/ExaminationReportFlow.xaml";
-                string lfReportTempl = "Views/GoodUnionReportFlow.xaml";
-                ExportFlowDocumentPDF(lfReportTempl, lfPdfFile, reportModel);
+                string pdfFile = folderName + System.IO.Path.DirectorySeparatorChar + person.Code + " - " + strName;
+                if (previewComb.SelectedIndex == 2)
+                {
+                    string sfReportTempl = "Views/SummaryReportFlow.xaml";
+                    var clientReportModel = CloneClientReportModel();
+                    ExportFlowDocumentPDF(sfReportTempl, pdfFile, clientReportModel, "A4");
+                }
+                else
+                {
+                    string lfReportTempl = "Views/GoodUnionReportFlow.xaml";
+                    ExportFlowDocumentPDF(lfReportTempl, pdfFile, reportModel);
+                }
+                ////生成Examination报告的PDF文件
+                //string lfPdfFile = folderName + System.IO.Path.DirectorySeparatorChar + person.Code + " LF - " + strName;                
+                //string lfReportTempl = "Views/GoodUnionReportFlow.xaml";
+                //ExportFlowDocumentPDF(lfReportTempl, lfPdfFile, reportModel);
 
-                //生成Summary报告的PDF文件
-                string sfPdfFile = folderName + System.IO.Path.DirectorySeparatorChar + person.Code + " SFI - " + strName;
-                //string sfReportTempl = "Views/SummaryReportDocument.xaml";
-                string sfReportTempl = "Views/SummaryReportFlow.xaml";
-                //if (shortFormReportModel.DataScreenShotImg != null)
-                //{
-                //    sfPdfFile = folderName + System.IO.Path.DirectorySeparatorChar + person.Code + "SFI - " + strName;
-                //    sfReportTempl = "Views/SummaryReportImageDocument.xaml";
-                //}
-                //ExportPDF(sfReportTempl, sfPdfFile, reportModel);
+                ////生成Summary报告的PDF文件
+                //string sfPdfFile = folderName + System.IO.Path.DirectorySeparatorChar + person.Code + " SFI - " + strName;                
+                //string sfReportTempl = "Views/SummaryReportFlow.xaml";                
+                //var clientReportModel = CloneClientReportModel();
+                //ExportFlowDocumentPDF(sfReportTempl, sfPdfFile, clientReportModel, "A4");
 
-                var clientReportModel = CloneClientReportModel();
-                ExportFlowDocumentPDF(sfReportTempl, sfPdfFile, clientReportModel, "A4");
                 //保存報表完成狀態
                 person.Status = "RD";
                 person.StatusText = App.Current.FindResource("CommonStatusReportDone").ToString();                

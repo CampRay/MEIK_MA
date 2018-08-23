@@ -342,6 +342,9 @@
     <None Include="Config.ini">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="MEIKMD\MEIKMD.ini">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -367,6 +370,21 @@
     <Resource Include="Images\sort_normal.png" />
     <Resource Include="Images\result.png" />
     <Resource Include="Images\result_hover.png" />
+    <None Include="MEIKMD\DELZIP179.DLL">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MEIKMD\FTD2XX.DLL">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MEIKMD\MEIKMD.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MEIKMD\mingwm10.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="MEIKMD\reit.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <Content Include="Xceed.Wpf.Toolkit.dll" />
     <Resource Include="Images\A4-bg.png" />
     <Resource Include="Images\App_Icon.png" />

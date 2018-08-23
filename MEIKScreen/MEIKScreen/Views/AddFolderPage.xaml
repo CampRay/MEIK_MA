@@ -67,7 +67,7 @@
             <Label FontSize="14" Height="28" Content="{DynamicResource  Dialog5}"></Label>
         </StackPanel>
         <StackPanel Grid.Row="7" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center">
-            <TextBox Name="txtPatientCode" Width="180" Height="28" FontSize="14" BorderBrush="#FF3E6E8F"></TextBox>
+            <TextBox Name="txtPatientCode" Width="180" Height="28" FontSize="14" BorderBrush="#FF3E6E8F" IsEnabled="False"></TextBox>
         </StackPanel>
         <StackPanel Grid.Row="8" HorizontalAlignment="Right" VerticalAlignment="Center">
             <Label FontSize="14" Content="{StaticResource Dialog8}"></Label>

@@ -3501,7 +3501,7 @@
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME26</td><td>1033</td><td>Uninstall2.0</td><td>0</td><td/><td>-458928754</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME27</td><td>1033</td><td>Uninstall</td><td>0</td><td/><td>-458895025</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME28</td><td>1033</td><td>LAUNCH~1.EXE|Launch gxpswin32.exe</td><td>0</td><td/><td>-458948077</td></row>
-		<row><td>IDS_SHORTCUT_DISPLAY_NAME29</td><td>1033</td><td>MEIKScreen2.0</td><td>0</td><td/><td>-458909165</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME29</td><td>1033</td><td>MEIKScreen</td><td>0</td><td/><td>-1163491060</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME3</td><td>1033</td><td>Uninstall</td><td>0</td><td/><td>-1650142942</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME30</td><td>1033</td><td>LAUNCH~1.EXE|Launch MEIKMA.exe</td><td>0</td><td/><td>-1792705652</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME4</td><td>1033</td><td>Uninstall</td><td>0</td><td/><td>-1776002026</td></row>
@@ -3803,7 +3803,7 @@
 		<row><td>ID_STRING11</td><td>1033</td><td>MEIKScreen.exe</td><td>0</td><td/><td>-1591397226</td></row>
 		<row><td>ID_STRING12</td><td>1033</td><td>MEIKScreen.exe</td><td>0</td><td/><td>-240843913</td></row>
 		<row><td>ID_STRING13</td><td>1033</td><td>LAUNCH~1.EXE|Launch MEIKScreen.exe</td><td>0</td><td/><td>-1801073740</td></row>
-		<row><td>ID_STRING14</td><td>1033</td><td>Uninstall2.0</td><td>0</td><td/><td>-458903021</td></row>
+		<row><td>ID_STRING14</td><td>1033</td><td>Uninstall</td><td>0</td><td/><td>-1163482868</td></row>
 		<row><td>ID_STRING15</td><td>1033</td><td>MEIKScreen2.0</td><td>0</td><td/><td>-458888685</td></row>
 		<row><td>ID_STRING2</td><td>1033</td><td>MEIKAsia</td><td>0</td><td/><td>-1926919057</td></row>
 		<row><td>ID_STRING3</td><td>1033</td><td>Contact:  admin@campray.com</td><td>0</td><td/><td>-1650143551</td></row>
@@ -4459,9 +4459,9 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>PROGMSG_IIS_ROLLBACKVROOTS</td><td>##IDS_PROGMSG_IIS_ROLLBACKVROOTS##</td><td/></row>
 		<row><td>PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS</td><td>##IDS_PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS##</td><td/></row>
 		<row><td>PROGRAMFILETOLAUNCHATEND</td><td>[INSTALLDIR]MEIKScreen.exe</td><td/></row>
-		<row><td>ProductCode</td><td>{59C6BD81-CD22-4D95-8063-4D54443BDE5D}</td><td/></row>
+		<row><td>ProductCode</td><td>{CA4B224C-73B6-4147-B150-9136207A63C6}</td><td/></row>
 		<row><td>ProductName</td><td>MEIKScreen</td><td/></row>
-		<row><td>ProductVersion</td><td>2.0.2</td><td/></row>
+		<row><td>ProductVersion</td><td>2.0.4</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
 		<row><td>ProgressType1</td><td>Installing</td><td/></row>
 		<row><td>ProgressType2</td><td>installed</td><td/></row>

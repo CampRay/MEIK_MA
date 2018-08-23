@@ -76,22 +76,14 @@ namespace MEIKReport
                 App.Current.Resources.MergedDictionaries.Remove(new ResourceDictionary() { Source = new Uri(@"/Resources/StringResource.zh-HK.xaml", UriKind.RelativeOrAbsolute) });
                 App.Current.Resources.MergedDictionaries.Add(new ResourceDictionary() { Source = new Uri(@"/Resources/StringResource.xaml", UriKind.RelativeOrAbsolute) });
             }
-            InitializeComponent();
-            //labDeviceNo.Content = deviceNo;
+            InitializeComponent();            
             this.Visibility = Visibility.Collapsed;
-            //string MeikDataBaseFolder = OperateIniFile.ReadIniData("Base", "Data base", "C:\MEIKData", System.AppDomain.CurrentDomain.BaseDirectory + "Config.ini");
-            //string dayFolder = MeikDataBaseFolder + System.IO.Path.DirectorySeparatorChar + DateTime.Now.ToString("MM_yyyy") + System.IO.Path.DirectorySeparatorChar + DateTime.Now.ToString("dd");
-            //if (!Directory.Exists(dayFolder))
-            //{
-            //    Directory.CreateDirectory(dayFolder);
-            //}
-            //App.dataFolder = dayFolder;
         }
         
                
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {                        
-            StartApp();
+            //StartApp();
             mouseHook.MouseUp += new System.Windows.Forms.MouseEventHandler(mouseHook_MouseUp);
             btnReport_Click(null, null);
             //启用键盘钩子
@@ -117,16 +109,22 @@ namespace MEIKReport
             mouseHook.Stop();
         }
 
-        public void StartApp()
+        public void StartApp(string archiveFolder)
         {
             try
             {
-                App.splashWinHwnd = Win32Api.FindWindowEx(IntPtr.Zero, IntPtr.Zero, "TfmSplash", null);
-                if (Win32Api.IsWindow(App.splashWinHwnd))//MEIK程序已经启动时
+                //判斷是否有MEIKMD的主介面
+                App.meikWinHwnd = Win32Api.FindWindowEx(IntPtr.Zero, IntPtr.Zero, "TfmMain", null);
+                if (Win32Api.IsWindow(App.meikWinHwnd))//MEIK程序已经启动时
                 {
-                    btnExit_Click(null, null);
+                    try
+                    {
+                        IntPtr exitBtnHwnd = Win32Api.FindWindowEx(App.meikWinHwnd, IntPtr.Zero, null, App.strExit);
+                        Win32Api.SendMessage(exitBtnHwnd, Win32Api.WM_CLICK, 0, 0);
+                    }
+                    catch { }
                 }
-                StartMeik();                
+                StartMeik(archiveFolder);
             }
             catch (Exception ex)
             {
@@ -134,80 +132,34 @@ namespace MEIKReport
             }
         }
 
-        private void StartMeik()
+        private void StartMeik(string archiveFolder)
         {            
-            string meikPath = App.meikFolder + "\\MEIK.exe";
-            string newMeikPath = App.meikFolder + "\\App.dll";
-            bool meikExists = File.Exists(meikPath);
-            bool newMeikExists = File.Exists(newMeikPath);
-            if (meikExists || newMeikExists)
+            //再修改原始MEIK程序中的患者档案目录，让原始MEIK程序运行后直接打开此患者档案
+            OperateIniFile.WriteIniData("Base", "Patients base", archiveFolder, App.meikIniFilePath);
+            string meikPath = App.meikFolder + System.IO.Path.DirectorySeparatorChar + "MEIKMD.exe";            
+            bool meikExists = File.Exists(meikPath);            
+            if (meikExists)
             {
-                //if (meikExists)
-                //{
-                //    File.SetAttributes(meikPath, FileAttributes.Hidden);
-                //}
-                if (!meikExists && newMeikExists)
-                {
-                    try
-                    {
-                        FileInfo fi = new FileInfo(newMeikPath);
-                        fi.MoveTo(meikPath);
-                    }
-                    catch (Exception)
-                    {
-                    }
-                }
                 try
                 {
                     //启动外部程序
-                    AppProc = Process.Start(meikPath);
-                    if (AppProc != null)
+                    //AppProc = Process.Start(meikPath);
+                    AppProc = new Process();
+                    AppProc.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                    AppProc.StartInfo.FileName = meikPath;
+                    if (System.Environment.OSVersion.Version.Major >= 6)
                     {
-                        AppProc.StartInfo.WindowStyle = ProcessWindowStyle.Hidden; //隐藏
-                        //proc.WaitForExit();//等待外部程序退出后才能往下执行
-                        AppProc.WaitForInputIdle();
-                        /**这段代码是把其他程序的窗体嵌入到当前窗体中**/
-                        IntPtr appWinHandle = AppProc.MainWindowHandle;
-                        App.splashWinHwnd = Win32Api.FindWindowEx(IntPtr.Zero, IntPtr.Zero, "TfmSplash", null);
-                        //监视进程退出
-                        AppProc.EnableRaisingEvents = true;
-                        //指定退出事件方法
-                        AppProc.Exited += new EventHandler(proc_Exited);
-                        //设置程序嵌入到当前窗体
-                        Win32Api.MoveWindow(App.splashWinHwnd, 0, 0, 720, 576, true);
-                        // Set new process's parent to this window   
-                        Win32Api.SetParent(App.splashWinHwnd, meikPanel.Handle);
-                        //Add WS_CHILD window style to child window 
-                        const int GWL_STYLE = -16;
-                        const int WS_CHILD = 0x40000000;
-                        int style = Win32Api.GetWindowLong(App.splashWinHwnd, GWL_STYLE);
-                        style = style | WS_CHILD;
-                        Win32Api.SetWindowLong(App.splashWinHwnd, GWL_STYLE, style);
-
-                        ////把WPF窗口句柄转换为对象，但只针对WPF窗体
-                        //HwndSource hwndSource = HwndSource.FromHwnd(splashWinHwnd);
-                        //Window wnd = hwndSource.RootVisual as Window;
+                        AppProc.StartInfo.Verb = "runas";//以管理員權限運行
+                    }
+                    if (AppProc.Start()) {                       
+                        AppProc.WaitForInputIdle();                                             
+                        App.meikWinHwnd = Win32Api.FindWindowEx(IntPtr.Zero, IntPtr.Zero, "TfmMain", null); 
                     }
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(App.Current.FindResource("Message_1").ToString() +" "+ ex.Message);
-                }
-                finally
-                {
-                    //try
-                    //{
-                    //    if (File.Exists(newMeikPath))
-                    //    {
-                    //        File.Delete(newMeikPath);
-                    //    }
-                    //    FileInfo fi = new FileInfo(meikPath);
-                    //    fi.MoveTo(newMeikPath);
-                    //}
-                    //catch (Exception)
-                    //{                        
-                    //}
-                }
+                }                
             }
             else
             {
@@ -267,38 +219,32 @@ namespace MEIKReport
 
         }
 
-        private void btnExit_Click(object sender, RoutedEventArgs e)
-        {            
-            exitMeik();
-        }
-
         public void exitMeik()
         {
             try
-            {
-                IntPtr exitBtnHwnd = Win32Api.FindWindowEx(App.splashWinHwnd, IntPtr.Zero, null, App.strExit);
-                Win32Api.SendMessage(exitBtnHwnd, Win32Api.WM_CLICK, 0, 0);
-                App.splashWinHwnd = Win32Api.FindWindowEx(meikPanel.Handle, IntPtr.Zero, "TfmSplash", null);
-                if (App.splashWinHwnd != IntPtr.Zero)
+            {                
+                if (App.meikWinHwnd != IntPtr.Zero)
                 {
-                    exitBtnHwnd = Win32Api.FindWindowEx(App.splashWinHwnd, IntPtr.Zero, null, App.strExit); 
+                    IntPtr exitBtnHwnd = Win32Api.FindWindowEx(App.meikWinHwnd, IntPtr.Zero, null, App.strExit);
                     Win32Api.SendMessage(exitBtnHwnd, Win32Api.WM_CLICK, 0, 0);
                 }
 
             }
             catch (Exception)
             {
+                //this.Close();
+                if (!AppProc.HasExited)
+                {
+                    AppProc.Kill();
+                }
+            }
+            finally
+            {
                 this.Close();
             }
         }
 
-        /// <summary>
-        ///启动外部程序退出事件
-        /// </summary>
-        void proc_Exited(object sender, EventArgs e)
-        {
-            this.Dispatcher.Invoke(new Action(delegate { this.Close(); }));            
-        }      
+        
 
         /// <summary>
         /// 鼠标按下的钩子回调方法
@@ -325,7 +271,7 @@ namespace MEIKReport
                         {
                             this.Visibility = Visibility.Visible;                            
                         }
-                        this.StartMouseHook();
+                        this.StopMouseHook();
                     }
                 }                
             }                        
