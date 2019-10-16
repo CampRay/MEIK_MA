@@ -4452,9 +4452,9 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>PROGMSG_IIS_ROLLBACKVROOTS</td><td>##IDS_PROGMSG_IIS_ROLLBACKVROOTS##</td><td/></row>
 		<row><td>PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS</td><td>##IDS_PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS##</td><td/></row>
 		<row><td>PROGRAMFILETOLAUNCHATEND</td><td>[INSTALLDIR]MEIKReport.exe</td><td/></row>
-		<row><td>ProductCode</td><td>{BF6B1D3D-BFBC-4A54-8274-3D0C35D93020}</td><td/></row>
+		<row><td>ProductCode</td><td>{6A71C8CA-2322-4F51-9776-34BB434DC799}</td><td/></row>
 		<row><td>ProductName</td><td>MEIKTool</td><td/></row>
-		<row><td>ProductVersion</td><td>2.0.4</td><td/></row>
+		<row><td>ProductVersion</td><td>2.0.5</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
 		<row><td>ProgressType1</td><td>Installing</td><td/></row>
 		<row><td>ProgressType2</td><td>installed</td><td/></row>

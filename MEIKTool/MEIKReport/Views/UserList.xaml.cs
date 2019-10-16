@@ -415,6 +415,7 @@ namespace MEIKReport
 
                             //Personal Data
                             person.ClientNumber = OperateIniFile.ReadIniData(personalData, "clientnumber", "", NextFile.FullName);
+                            person.ClientID = OperateIniFile.ReadIniData(personalData, "clientID", "", NextFile.FullName);
                             person.SurName = OperateIniFile.ReadIniData(personalData, "surname", "", NextFile.FullName);
                             person.GivenName = OperateIniFile.ReadIniData(personalData, "given name", "", NextFile.FullName);
                             person.OtherName = OperateIniFile.ReadIniData(personalData, "other name", "", NextFile.FullName);
@@ -928,7 +929,6 @@ namespace MEIKReport
                                     bool status = (bool)jsonObj["status"];
                                     if (status)
                                     {
-
                                         selectedUser.Status = "RS";
                                         selectedUser.StatusText = App.Current.FindResource("CommonStatusReportSent").ToString();
                                         //保存已发送狀態
@@ -4197,6 +4197,7 @@ namespace MEIKReport
                         shortFormReportModel.DataScreenDate = DateTime.ParseExact("20" + person.Code.Substring(0, 6), "yyyyMMdd", System.Globalization.CultureInfo.CurrentCulture).ToString("yyyy年MM月dd日");
                     }
                     shortFormReportModel.DataClientNum = person.ClientNumber;
+                    shortFormReportModel.DataClientID = person.ClientID;
                     shortFormReportModel.DataName = person.SurName + ", " + person.GivenName + " " + person.OtherName;
                     shortFormReportModel.DataAge = person.Age + "";
                     shortFormReportModel.DataAddress = person.Address;
@@ -4303,6 +4304,15 @@ namespace MEIKReport
                     LoadDataModel();
                     var reportModel = CloneClientReportModel();
                     PrintPreviewWindow previewWnd = new PrintPreviewWindow("Views/SummaryReportFlow.xaml", false, reportModel);
+                    previewWnd.Owner = this;
+                    previewWnd.ShowInTaskbar = false;
+                    previewWnd.ShowDialog();
+                }
+                else if (comboBox.SelectedIndex == 3)
+                {
+                    LoadDataModel();
+                    var reportModel = CloneReportModel();                    
+                    PrintPreviewWindow previewWnd = new PrintPreviewWindow("Views/NewReportFlow.xaml", false, reportModel);
                     previewWnd.Owner = this;
                     previewWnd.ShowInTaskbar = false;
                     previewWnd.ShowDialog();
@@ -4808,19 +4818,7 @@ namespace MEIKReport
         private void LoadDataModel()
         {
             var person = this.CodeListBox.SelectedItem as Person; 
-            //shortFormReportModel.DataClientNum = this.dataClientNum.Text;
-            //shortFormReportModel.DataUserCode = this.dataUserCode.Text;
-            //shortFormReportModel.DataAge = this.dataAge.Text;            
-            //shortFormReportModel.DataName = this.dataName.Text;
-            //shortFormReportModel.DataScreenDate = this.dataScreenDate.Text;
-            //shortFormReportModel.DataScreenLocation = this.dataScreenLocation.Text;
-            //shortFormReportModel.DataScreenLocation = person.ScreenVenue;
-            //shortFormReportModel.DataAddress = this.dataAddress.Text;
-            //shortFormReportModel.DataAddress = person.Address;
-            //shortFormReportModel.DataGender = this.dataGender.SelectedIndex.ToString();
-            //shortFormReportModel.DataHealthCard = this.dataHealthCard.Text;
-            //shortFormReportModel.DataWeight = this.dataWeight.Text;
-            //shortFormReportModel.DataWeightUnit = this.dataWeightUnit.SelectedIndex.ToString();
+
             shortFormReportModel.DataMenstrualCycle = this.dataMenstrualCycle.SelectedIndex.ToString();
             shortFormReportModel.DataHormones = this.dataHormones.Text;
             shortFormReportModel.DataSkinAffections = this.dataSkinAffections.SelectedIndex.ToString();                       
@@ -5023,6 +5021,24 @@ namespace MEIKReport
         {
             ShortFormReport reportModel = shortFormReportModel.Clone();
             reportModel = shortFormReportModel.Clone();
+            //新報告添加字段
+            reportModel.DataBreastCancerDesc = this.txtBreastCancerDesc.Text;
+            reportModel.DataUterineCancerDesc = this.txtUterineCancerDesc.Text;
+            reportModel.DataCervicalCancerDesc = this.txtCervicalCancerDesc.Text;
+            reportModel.DataOvarianCancerDesc = this.txtOvarianCancerDesc.Text;
+            reportModel.DataOtherDesc = this.txtOtherDesc.Text;
+            reportModel.DataMenstrualCycleDisorderDesc = this.txtMenstrualCycleDisorderDesc.Text;
+            reportModel.DataObstetricDesc = this.txtObstetricDesc.Text;
+            reportModel.DataDiseasesOtherDesc = this.txtDiseasesOtherDesc.Text;
+            reportModel.DataOvaryOtherDesc = this.txtOvaryOtherDesc.Text;
+            reportModel.DataUterusOtherDesc = this.txtUterusOtherDesc.Text;
+            reportModel.DataSomaticOtherDesc = this.txtSomaticOtherDesc.Text;
+            reportModel.DataPalpationDesc = this.txtPalpationDesc.Text;
+            reportModel.DataUltrasoundnDesc = this.txtUltrasoundnDesc.Text;
+            reportModel.DataMammographyDesc = this.txtMammographyDesc.Text;
+            reportModel.DataBiopsyOtherDesc = this.txtBiopsyOtherDesc.Text;
+            reportModel.DataMeikScreenDesc = this.txtMEIKScreenDesc.Text;
+            
             //reportModel.DataGender = this.dataGender.Text;
             //reportModel.DataWeightUnit = this.dataWeightUnit.Text;
             reportModel.DataMenstrualCycle = this.dataMenstrualCycle.Text;
@@ -5156,7 +5172,8 @@ namespace MEIKReport
         private ShortFormReport CloneClientReportModel()
         {
             ShortFormReport reportModel = shortFormReportModel.Clone();
-            reportModel = shortFormReportModel.Clone();
+            reportModel = shortFormReportModel.Clone();            
+
             //reportModel.DataGender = this.dataGender.Text;
             //reportModel.DataWeightUnit = this.dataWeightUnit.Text;
             reportModel.DataMenstrualCycle = this.dataMenstrualCycle.Text;
@@ -5426,9 +5443,14 @@ namespace MEIKReport
                     var clientReportModel = CloneClientReportModel();
                     ExportFlowDocumentPDF(sfReportTempl, pdfFile, clientReportModel, "A4");
                 }
-                else
+                else if (previewComb.SelectedIndex == 1)
                 {
                     string lfReportTempl = "Views/GoodUnionReportFlow.xaml";
+                    ExportFlowDocumentPDF(lfReportTempl, pdfFile, reportModel);
+                }
+                else if (previewComb.SelectedIndex == 3)
+                {                    
+                    string lfReportTempl = "Views/NewReportFlow.xaml";
                     ExportFlowDocumentPDF(lfReportTempl, pdfFile, reportModel);
                 }
                 ////生成Examination报告的PDF文件
@@ -5791,10 +5813,16 @@ namespace MEIKReport
         {
             if (reportModel != null)
             {
+                page.DataContext = reportModel;
                 var textBlock1 = page.FindName("dataClientNum") as TextBlock;
                 if (textBlock1 != null)
                 {
                     textBlock1.Text = string.IsNullOrEmpty(reportModel.DataClientNum) ? "N/A" : reportModel.DataClientNum;
+                }
+                textBlock1 = page.FindName("dataClientID") as TextBlock;
+                if (textBlock1 != null)
+                {
+                    textBlock1.Text = string.IsNullOrEmpty(reportModel.DataClientID) ? "N/A" : reportModel.DataClientID;
                 }
                 textBlock1 = page.FindName("dataUserCode") as TextBlock;
                 if (textBlock1 != null)
@@ -5841,6 +5869,120 @@ namespace MEIKReport
                 {
                     textBlock1.Text = string.IsNullOrEmpty(reportModel.DataEmail) ? "N/A" : reportModel.DataEmail; 
                 }
+                //添加新報告字段
+                textBlock1 = page.FindName("dataBreastCancerDesc") as TextBlock;
+                if (textBlock1 != null)
+                {
+                    textBlock1.Text = reportModel.DataBreastCancerDesc;
+                }
+                textBlock1 = page.FindName("dataUterineCancerDesc") as TextBlock;
+                if (textBlock1 != null)
+                {
+                    textBlock1.Text = reportModel.DataUterineCancerDesc;
+                }
+                textBlock1 = page.FindName("dataCervicalCancerDesc") as TextBlock;
+                if (textBlock1 != null)
+                {
+                    textBlock1.Text = reportModel.DataCervicalCancerDesc;
+                }
+                textBlock1 = page.FindName("dataOvarianCancerDesc") as TextBlock;
+                if (textBlock1 != null)
+                {
+                    textBlock1.Text = reportModel.DataOvarianCancerDesc;
+                }
+                textBlock1 = page.FindName("dataOtherDesc") as TextBlock;
+                if (textBlock1 != null)
+                {
+                    textBlock1.Text = reportModel.DataOtherDesc;
+                }
+                textBlock1 = page.FindName("dataMenstrualCycleDisorderDesc") as TextBlock;
+                if (textBlock1 != null)
+                {
+                    textBlock1.Text = reportModel.DataMenstrualCycleDisorderDesc;
+                }
+                textBlock1 = page.FindName("dataObstetricDesc") as TextBlock;
+                if (textBlock1 != null)
+                {
+                    textBlock1.Text = reportModel.DataObstetricDesc;
+                }
+                textBlock1 = page.FindName("dataDiseasesOtherDesc") as TextBlock;
+                if (textBlock1 != null)
+                {
+                    textBlock1.Text = reportModel.DataDiseasesOtherDesc;
+                }
+                textBlock1 = page.FindName("dataOvaryOtherDesc") as TextBlock;
+                if (textBlock1 != null)
+                {
+                    textBlock1.Text = reportModel.DataOvaryOtherDesc;
+                }
+                textBlock1 = page.FindName("dataUterusOtherDesc") as TextBlock;
+                if (textBlock1 != null)
+                {
+                    textBlock1.Text = reportModel.DataUterusOtherDesc;
+                }
+                textBlock1 = page.FindName("dataSomaticOtherDesc") as TextBlock;
+                if (textBlock1 != null)
+                {
+                    textBlock1.Text = reportModel.DataSomaticOtherDesc;
+                }
+                textBlock1 = page.FindName("dataPalpationDesc") as TextBlock;
+                if (textBlock1 != null)
+                {
+                    textBlock1.Text = reportModel.DataPalpationDesc;
+                }
+                textBlock1 = page.FindName("dataUltrasoundnDesc") as TextBlock;
+                if (textBlock1 != null)
+                {
+                    textBlock1.Text = reportModel.DataUltrasoundnDesc;
+                }
+                textBlock1 = page.FindName("dataMammographyDesc") as TextBlock;
+                if (textBlock1 != null)
+                {
+                    textBlock1.Text = reportModel.DataMammographyDesc;
+                }
+                textBlock1 = page.FindName("dataBiopsyOtherDesc") as TextBlock;
+                if (textBlock1 != null)
+                {
+                    textBlock1.Text = reportModel.DataBiopsyOtherDesc;
+                }
+                textBlock1 = page.FindName("dataMeikScreenDesc") as TextBlock;
+                if (textBlock1 != null)
+                {
+                    textBlock1.Text = reportModel.DataMeikScreenDesc;
+                }
+                textBlock1 = page.FindName("dataLeftComparativeElectricalConductivity1") as TextBlock;
+                if (textBlock1 != null)
+                {
+                    textBlock1.Text = reportModel.DataLeftComparativeElectricalConductivity1;
+                }
+                textBlock1 = page.FindName("dataLeftComparativeElectricalConductivity2") as TextBlock;
+                if (textBlock1 != null)
+                {
+                    textBlock1.Text = reportModel.DataLeftComparativeElectricalConductivity2;
+                }
+                textBlock1 = page.FindName("dataLeftComparativeElectricalConductivity3") as TextBlock;
+                if (textBlock1 != null)
+                {
+                    textBlock1.Text = reportModel.DataLeftComparativeElectricalConductivity3;
+                }
+                textBlock1 = page.FindName("dataLeftDivergenceBetweenHistograms1") as TextBlock;
+                if (textBlock1 != null)
+                {
+                    textBlock1.Text = reportModel.DataLeftDivergenceBetweenHistograms1;
+                }
+                textBlock1 = page.FindName("dataLeftDivergenceBetweenHistograms2") as TextBlock;
+                if (textBlock1 != null)
+                {
+                    textBlock1.Text = reportModel.DataLeftDivergenceBetweenHistograms1;
+                }
+                textBlock1 = page.FindName("dataLeftDivergenceBetweenHistograms3") as TextBlock;
+                if (textBlock1 != null)
+                {
+                    textBlock1.Text = reportModel.DataLeftDivergenceBetweenHistograms1;
+                }
+
+
+
                 textBlock1 = page.FindName("dataLeftBreast") as TextBlock;
                 if (textBlock1 != null)
                 {
@@ -6352,6 +6494,50 @@ namespace MEIKReport
                 {
                     textBlock1.Text = reportModel.DataSignDate;
                 }
+                //新報告字段
+                if (!String.IsNullOrEmpty(reportModel.DataComparativeElectricalConductivity3))
+                {
+                    var dataComparativeElectricalConductivity3 = page.FindName("dataComparativeElectricalConductivity3") as TextBlock;
+                    var selectedIndex = Convert.ToInt32(reportModel.DataComparativeElectricalConductivity3);
+                    switch (selectedIndex)
+                    {
+                        case 1:
+                            dataComparativeElectricalConductivity3.Text = App.Current.FindResource("ReportContext_103").ToString();
+                            break;
+                        case 2:
+                            dataComparativeElectricalConductivity3.Text = App.Current.FindResource("ReportContext_104").ToString();
+                            break;
+                        case 3:
+                            dataComparativeElectricalConductivity3.Text = App.Current.FindResource("ReportContext_105").ToString();
+                            break;
+                        default:
+                            dataComparativeElectricalConductivity3.Text = "";
+                            break;
+                    }
+                }
+
+                if (!String.IsNullOrEmpty(reportModel.DataDivergenceBetweenHistograms3))
+                {
+                    var dataDivergenceBetweenHistograms3 = page.FindName("dataDivergenceBetweenHistograms3") as TextBlock;
+                    var selectedIndex1 = Convert.ToInt32(reportModel.DataDivergenceBetweenHistograms3);
+                    switch (selectedIndex1)
+                    {
+                        case 1:
+                            dataDivergenceBetweenHistograms3.Text = App.Current.FindResource("ReportContext_103").ToString();
+                            break;
+                        case 2:
+                            dataDivergenceBetweenHistograms3.Text = App.Current.FindResource("ReportContext_104").ToString();
+                            break;
+                        case 3:
+                            dataDivergenceBetweenHistograms3.Text = App.Current.FindResource("ReportContext_105").ToString();
+                            break;
+                        default:
+                            dataDivergenceBetweenHistograms3.Text = "";
+                            break;
+                    }
+                }
+
+
 
                 if (!string.IsNullOrEmpty(reportModel.DataLeftLocation) && page.FindName("L1_Canvas") != null)
                 {
@@ -6923,6 +7109,11 @@ namespace MEIKReport
                         string lfPdfFile = folderName + System.IO.Path.DirectorySeparatorChar + person.Code + " LF - " + strName;
                         string lfReportTempl = "Views/GoodUnionReportFlow.xaml";
                         ExportFlowDocumentPDF(lfReportTempl, lfPdfFile, reportModel);
+
+                        //生成Examination报告的PDF文件
+                        string newPdfFile = folderName + System.IO.Path.DirectorySeparatorChar + person.Code + " - " + strName;
+                        string newReportTempl = "Views/GoodUnionReportFlow.xaml";
+                        ExportFlowDocumentPDF(newReportTempl, newPdfFile, reportModel);
 
                         //生成Summary报告的PDF文件
                         string sfPdfFile = folderName + System.IO.Path.DirectorySeparatorChar + person.Code + " SFI - " + strName;

@@ -40,6 +40,7 @@
     <sys:String x:Key="CommonPreviewSelect">Preview Report</sys:String>
     <sys:String x:Key="CommonPreviewLF">GoodUnion Report</sys:String>
     <sys:String x:Key="CommonPreviewSFI">Summary Report</sys:String>
+    <sys:String x:Key="CommonPreviewNew">New Report</sys:String>
     <sys:String x:Key="CommonResultNormal">Normal</sys:String>
     <sys:String x:Key="CommonResultBenign">Benign</sys:String>
     <sys:String x:Key="CommonResultSuspicious">Suspicious</sys:String>
@@ -272,6 +273,7 @@
     <sys:String x:Key="UserDataPersona34">Zip Code:</sys:String>
     <sys:String x:Key="UserDataPersona35">Country:</sys:String>
     <sys:String x:Key="UserDataPersona36">Free/Demo</sys:String>
+    <sys:String x:Key="UserDataPersona37">ID Card Number:</sys:String>
 
     <sys:String x:Key="UserDataFamilyTab">Family History</sys:String>
     <sys:String x:Key="UserDataFamily1">Breast Cancer:</sys:String>

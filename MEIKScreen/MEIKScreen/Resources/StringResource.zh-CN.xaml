@@ -241,6 +241,8 @@
     <sys:String x:Key="UserDataPersona33">州/省:</sys:String>
     <sys:String x:Key="UserDataPersona34">邮编:</sys:String>
     <sys:String x:Key="UserDataPersona35">国家:</sys:String>
+    <sys:String x:Key="UserDataPersona36">免費/演示</sys:String>
+    <sys:String x:Key="UserDataPersona37">香港身份证:</sys:String>
 
     <sys:String x:Key="UserDataFamilyTab">家族病歷</sys:String>
     <sys:String x:Key="UserDataFamily1">乳癌:</sys:String>

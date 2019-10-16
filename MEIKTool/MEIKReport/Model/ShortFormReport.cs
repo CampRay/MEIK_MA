@@ -16,6 +16,14 @@ namespace MEIKReport.Model
             get { return dataClientNum; }
             set { dataClientNum = value; }
         }
+        //身份證號
+        private string dataClientID;
+
+        public string DataClientID
+        {
+            get { return dataClientID; }
+            set { dataClientID = value; }
+        }
 
         private string dataScreenDate;
 
@@ -75,6 +83,119 @@ namespace MEIKReport.Model
         {
             get { return dataEmail; }
             set { dataEmail = value; }
+        }
+
+        //新報告添加的字段
+        private string dataBreastCancerDesc;
+        public string DataBreastCancerDesc
+        {
+            get { return dataBreastCancerDesc; }
+            set { dataBreastCancerDesc = value; }
+        }
+
+        private string dataUterineCancerDesc;
+        public string DataUterineCancerDesc
+        {
+            get { return dataUterineCancerDesc; }
+            set { dataUterineCancerDesc = value; }
+        }
+
+        private string dataCervicalCancerDesc;
+        public string DataCervicalCancerDesc
+        {
+            get { return dataCervicalCancerDesc; }
+            set { dataCervicalCancerDesc = value; }
+        }
+
+        private string dataOvarianCancerDesc;
+        public string DataOvarianCancerDesc
+        {
+            get { return dataOvarianCancerDesc; }
+            set { dataOvarianCancerDesc = value; }
+        }
+
+        private string dataOtherDesc;
+        public string DataOtherDesc
+        {
+            get { return dataOtherDesc; }
+            set { dataOtherDesc = value; }
+        }
+
+        private string dataMenstrualCycleDisorderDesc;
+        public string DataMenstrualCycleDisorderDesc
+        {
+            get { return dataMenstrualCycleDisorderDesc; }
+            set { dataMenstrualCycleDisorderDesc = value; }
+        }
+
+        private string dataObstetricDesc;
+        public string DataObstetricDesc
+        {
+            get { return dataObstetricDesc; }
+            set { dataObstetricDesc = value; }
+        }
+
+        private string dataDiseasesOtherDesc;
+        public string DataDiseasesOtherDesc
+        {
+            get { return dataDiseasesOtherDesc; }
+            set { dataDiseasesOtherDesc = value; }
+        }        
+
+        private string dataOvaryOtherDesc;
+        public string DataOvaryOtherDesc
+        {
+            get { return dataOvaryOtherDesc; }
+            set { dataOvaryOtherDesc = value; }
+        }
+
+        private string dataUterusOtherDesc;
+        public string DataUterusOtherDesc
+        {
+            get { return dataUterusOtherDesc; }
+            set { dataUterusOtherDesc = value; }
+        }
+
+        private string dataSomaticOtherDesc;
+        public string DataSomaticOtherDesc
+        {
+            get { return dataSomaticOtherDesc; }
+            set { dataSomaticOtherDesc = value; }
+        }
+
+        private string dataPalpationDesc;
+        public string DataPalpationDesc
+        {
+            get { return dataPalpationDesc; }
+            set { dataPalpationDesc = value; }
+        }
+
+        private string dataUltrasoundnDesc;
+        public string DataUltrasoundnDesc
+        {
+            get { return dataUltrasoundnDesc; }
+            set { dataUltrasoundnDesc = value; }
+        }
+
+        private string dataMammographyDesc;
+        public string DataMammographyDesc
+        {
+            get { return dataMammographyDesc; }
+            set { dataMammographyDesc = value; }
+        }
+
+        private string dataBiopsyOtherDesc;
+        public string DataBiopsyOtherDesc
+        {
+            get { return dataBiopsyOtherDesc; }
+            set { dataBiopsyOtherDesc = value; }
+        }
+
+        private string dataMeikScreenDesc;
+        public string DataMeikScreenDesc
+        {
+            get { return dataMeikScreenDesc; }
+            set { dataMeikScreenDesc = value; }
         }
 
 

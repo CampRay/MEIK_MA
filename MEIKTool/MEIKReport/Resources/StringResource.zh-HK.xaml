@@ -42,6 +42,7 @@
     <sys:String x:Key="CommonPreviewSelect">預覽報告</sys:String>
     <sys:String x:Key="CommonPreviewLF">GoodUnion Report</sys:String>
     <sys:String x:Key="CommonPreviewSFI">Summary Report</sys:String>
+    <sys:String x:Key="CommonPreviewNew">New Report</sys:String>    
     <sys:String x:Key="CommonResultNormal">正常</sys:String>
     <sys:String x:Key="CommonResultBenign">良性</sys:String>
     <sys:String x:Key="CommonResultSuspicious">可疑</sys:String>
@@ -260,6 +261,7 @@
     <sys:String x:Key="UserDataPersona34">郵編:</sys:String>
     <sys:String x:Key="UserDataPersona35">國家:</sys:String>
     <sys:String x:Key="UserDataPersona36">免費/演示</sys:String>
+    <sys:String x:Key="UserDataPersona37">身份證号:</sys:String>
 
     <sys:String x:Key="UserDataFamilyTab">家族病歷</sys:String>
     <sys:String x:Key="UserDataFamily1">乳癌:</sys:String>

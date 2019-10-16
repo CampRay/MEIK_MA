@@ -16,6 +16,13 @@ namespace MEIKScreen.Model
             get { return dataClientNum; }
             set { dataClientNum = value; }
         }
+        private string dataClientID;
+
+        public string DataClientID
+        {
+            get { return dataClientID; }
+            set { dataClientID = value; }
+        }
 
         private string dataScreenDate;
 

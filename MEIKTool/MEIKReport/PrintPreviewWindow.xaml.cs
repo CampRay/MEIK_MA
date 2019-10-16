@@ -568,7 +568,7 @@ namespace MEIKReport
                 }
                 #endregion
 
-
+                
                 var signImage = doc.FindName("dataSignImg") as Image;
                 if (signImage != null && shortFormReport.DataSignImg != null)
                 {
@@ -613,6 +613,47 @@ namespace MEIKReport
                     rightMeanECOfLesionTextBlock.Foreground = new SolidColorBrush(Color.FromRgb(0xFF, 0x00, 0x00));
                 }
 
+                if (!String.IsNullOrEmpty(shortFormReport.DataComparativeElectricalConductivity3))
+                {
+                    var dataComparativeElectricalConductivity3 = doc.FindName("dataComparativeElectricalConductivity3") as TextBlock;
+                    var selectedIndex = Convert.ToInt32(shortFormReport.DataComparativeElectricalConductivity3);
+                    switch (selectedIndex)
+                    {
+                        case 1:
+                            dataComparativeElectricalConductivity3.Text = App.Current.FindResource("ReportContext_103").ToString();
+                            break;
+                        case 2:
+                            dataComparativeElectricalConductivity3.Text = App.Current.FindResource("ReportContext_104").ToString();
+                            break;
+                        case 3:
+                            dataComparativeElectricalConductivity3.Text = App.Current.FindResource("ReportContext_105").ToString();
+                            break;
+                        default:
+                            dataComparativeElectricalConductivity3.Text = "";
+                            break;
+                    }
+                }
+
+                if (!String.IsNullOrEmpty(shortFormReport.DataDivergenceBetweenHistograms3))
+                {
+                    var dataDivergenceBetweenHistograms3 = doc.FindName("dataDivergenceBetweenHistograms3") as TextBlock;
+                    var selectedIndex1 = Convert.ToInt32(shortFormReport.DataDivergenceBetweenHistograms3);
+                    switch (selectedIndex1)
+                    {
+                        case 1:
+                            dataDivergenceBetweenHistograms3.Text = App.Current.FindResource("ReportContext_103").ToString();
+                            break;
+                        case 2:
+                            dataDivergenceBetweenHistograms3.Text = App.Current.FindResource("ReportContext_104").ToString();
+                            break;
+                        case 3:
+                            dataDivergenceBetweenHistograms3.Text = App.Current.FindResource("ReportContext_105").ToString();
+                            break;
+                        default:
+                            dataDivergenceBetweenHistograms3.Text = "";
+                            break;
+                    }
+                }
                 //替换头部图片
                 var titleRow = doc.FindName("titleImg") as TableRow;
                 if (titleRow != null && !App.reportSettingModel.DefaultLogo)
@@ -658,19 +699,40 @@ namespace MEIKReport
                                 var logoCell3 = doc.FindName("logoImg3") as TableCell;
                                 var logoCell4 = doc.FindName("logoImg4") as TableCell;
                                 logoCell1.Background = brush;
-                                logoCell2.Background = brush;
-                                logoCell3.Background = brush;
-                                logoCell4.Background = brush;
+                                if (logoCell2 != null)
+                                {
+                                    logoCell2.Background = brush;
+                                }
+                                if (logoCell3 != null)
+                                {
+                                    logoCell3.Background = brush;
+                                }
+                                if (logoCell4 != null)
+                                {
+                                    logoCell4.Background = brush;
+                                }
                             }
 
                             var footText1 = doc.FindName("footerInfo1") as TextBlock;
                             var footText2 = doc.FindName("footerInfo2") as TextBlock;
                             var footText3 = doc.FindName("footerInfo3") as TextBlock;
                             var footText4 = doc.FindName("footerInfo4") as TextBlock;
-                            footText1.Text = item.Address;
-                            footText2.Text = item.Address;
-                            footText3.Text = item.Address;
-                            footText4.Text = item.Address;
+                            if (footText1 != null)
+                            {
+                                footText1.Text = item.Address;
+                            }
+                            if (footText2 != null)
+                            {
+                                footText2.Text = item.Address;
+                            }
+                            if (footText3 != null)
+                            {
+                                footText3.Text = item.Address;
+                            }
+                            if (footText4 != null)
+                            {
+                                footText4.Text = item.Address;
+                            }
 
                             if (File.Exists(AppDomain.CurrentDomain.BaseDirectory + item.Device + "_s.png"))
                             {

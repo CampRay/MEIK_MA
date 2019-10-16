@@ -371,77 +371,81 @@
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
                         <TextBlock Grid.Row="0" Grid.Column="0" Width="Auto" VerticalAlignment="Center" HorizontalAlignment="Right" Text="{DynamicResource UserDataPersona30}" Margin="0,0,3,0"></TextBlock>
-                        <WrapPanel Grid.Row="0" Grid.Column="1">
+                        <WrapPanel Grid.Row="0" Grid.Column="1" VerticalAlignment="Center">
                             <TextBox Name="txtClientNum" Width="150" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Text="{Binding Path=ClientNumber}" PreviewTextInput="txtClientNum_PreviewTextInput"></TextBox>
                             <TextBlock  Width="Auto" VerticalAlignment="Center" Margin="50,0,3,0" Text="{DynamicResource Dialog8}"></TextBlock>
                             <TextBlock  Width="Auto" VerticalAlignment="Center" Margin="10,0,3,0" Text="{Binding Path=TechName}"></TextBlock>
                         </WrapPanel>
-                        
-                        <WrapPanel Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center">
-                            <TextBlock Grid.Row="1" Grid.Column="0" Width="Auto"  Text="{DynamicResource UserDataPersonal1}" Margin="0,0,3,0"></TextBlock>                             
-                        </WrapPanel>
+                        <TextBlock Grid.Row="1" Grid.Column="0" Width="Auto" HorizontalAlignment="Right" VerticalAlignment="Center"  Text="{DynamicResource UserDataPersona37}" Margin="0,0,3,0"></TextBlock>                        
                         <WrapPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Center">
+                            <TextBox Name="txtClientID" Width="350" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Text="{Binding Path=ClientID}"></TextBox>
+                        </WrapPanel>
+
+                        <WrapPanel Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center">
+                            <TextBlock Grid.Row="2" Grid.Column="0" Width="Auto"  Text="{DynamicResource UserDataPersonal1}" Margin="0,0,3,0"></TextBlock>                             
+                        </WrapPanel>
+                        <WrapPanel Grid.Row="2" Grid.Column="1" VerticalAlignment="Center">
                             <TextBox Name="txtName" Width="120" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Text="{Binding Path=SurName}"></TextBox>
                             <TextBlock  Width="Auto" VerticalAlignment="Center" Margin="5,0,3,0" Text="{DynamicResource UserDataPersonal2}"></TextBlock>
                             <TextBox  Name="txtGivenName" Width="120" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Text="{Binding Path=GivenName}"></TextBox>
                             <TextBlock Width="Auto" VerticalAlignment="Center" Margin="5,0,3,0" Text="{DynamicResource UserDataPersonal3}"></TextBlock>                                                        
                             <TextBox Name="txtOtherName" Width="120" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Text="{Binding Path=OtherName}"></TextBox>
                         </WrapPanel>
-                        <WrapPanel Grid.Row="2" Grid.Column="1" VerticalAlignment="Center">
+                        <WrapPanel Grid.Row="3" Grid.Column="1" VerticalAlignment="Center">
                             <TextBlock Width="60" TextAlignment="Center"  Text="{DynamicResource UserDataPersonal7}"></TextBlock>
                             <TextBlock Width="60" TextAlignment="Center"  Text="{DynamicResource UserDataPersonal8}"></TextBlock>
                             <TextBlock Width="60" TextAlignment="Center" Text="{DynamicResource UserDataPersonal9}"></TextBlock>
                         </WrapPanel>
-                        <TextBlock Grid.Row="3" Grid.Column="0" Width="Auto" HorizontalAlignment="Right" VerticalAlignment="Center"  Text="{DynamicResource UserDataPersonal4}" Margin="0,0,3,0"></TextBlock>
+                        <TextBlock Grid.Row="4" Grid.Column="0" Width="Auto" HorizontalAlignment="Right" VerticalAlignment="Center"  Text="{DynamicResource UserDataPersonal4}" Margin="0,0,3,0"></TextBlock>
                         <TextBlock Visibility="Collapsed" Grid.Row="5" Grid.Column="0" Width="Auto" Text="{DynamicResource UserDataPersonal5}"></TextBlock>                                                                       
-                        <WrapPanel Grid.Row="3" Grid.Column="1" VerticalAlignment="Center">
+                        <WrapPanel Grid.Row="4" Grid.Column="1" VerticalAlignment="Center">
                             <TextBox Name="txtBirthDate" Width="52" HorizontalContentAlignment="Center" Text="{Binding Path=BirthDate}" PreviewTextInput="Day_PreviewTextInput"></TextBox>
                             <TextBlock Width="15" VerticalAlignment="Center" TextAlignment="Center">/</TextBlock>
                             <TextBox Name="txtBirthMonth" Width="52" HorizontalContentAlignment="Center" Text="{Binding Path=BirthMonth}" PreviewTextInput="Month_PreviewTextInput"></TextBox>
                             <TextBlock Width="15" VerticalAlignment="Center" TextAlignment="Center">/</TextBlock>
                             <TextBox Name="txtBirthYear" Width="52" HorizontalContentAlignment="Center" Text="{Binding Path=BirthYear}" PreviewTextInput="Year_PreviewTextInput"></TextBox>
                         </WrapPanel>
-                        <WrapPanel Grid.Row="3" Grid.Column="1" Visibility="Collapsed">
+                        <WrapPanel Grid.Row="4" Grid.Column="1" Visibility="Collapsed">
                             <TextBox Name="txtRegDate" Width="52" HorizontalContentAlignment="Center" Text="{Binding Path=RegDate}"></TextBox>
                             <Label Width="15">/</Label>
                             <TextBox Name="txttRegMonth" Width="52" HorizontalContentAlignment="Center" Text="{Binding Path=RegMonth}"></TextBox>
                             <Label Width="15">/</Label>
                             <TextBox Name="txttRegYear" Width="52" HorizontalContentAlignment="Center" Text="{Binding Path=RegYear}"></TextBox>
                         </WrapPanel>
-                        <TextBlock Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" TextAlignment="Right" Width="Auto" Text="{DynamicResource UserDataPersona23}" Margin="0,0,3,0"></TextBlock>
-                        <WrapPanel Grid.Row="4" Grid.Column="1" VerticalAlignment="Center">
+                        <TextBlock Grid.Row="5" Grid.Column="0" VerticalAlignment="Center" TextAlignment="Right" Width="Auto" Text="{DynamicResource UserDataPersona23}" Margin="0,0,3,0"></TextBlock>
+                        <WrapPanel Grid.Row="5" Grid.Column="1" VerticalAlignment="Center">
                             <TextBox Name="txtHeight" Width="100" Text="{Binding Path=Height}" PreviewTextInput="Weight_PreviewTextInput"></TextBox>
                             <TextBlock Text="{DynamicResource UserDataPersona24}" Margin="10,0,3,0" VerticalAlignment="Center" TextAlignment="Right"></TextBlock>
                             <TextBox Name="txtWeight" Width="100" Text="{Binding Path=Weight}" PreviewTextInput="Weight_PreviewTextInput"></TextBox>                                             
                         </WrapPanel>
-                        <TextBlock Grid.Row="5" Grid.Column="0" Width="Auto" HorizontalAlignment="Right" VerticalAlignment="Center"  Text="{DynamicResource UserDataPersonal6}" Margin="0,0,3,0"></TextBlock>
-                        <WrapPanel Grid.Row="5" Grid.Column="1" VerticalAlignment="Center">
+                        <TextBlock Grid.Row="6" Grid.Column="0" Width="Auto" HorizontalAlignment="Right" VerticalAlignment="Center"  Text="{DynamicResource UserDataPersonal6}" Margin="0,0,3,0"></TextBlock>
+                        <WrapPanel Grid.Row="6" Grid.Column="1" VerticalAlignment="Center">
                             <TextBox Name="txtAddress" Width="500" HorizontalAlignment="Left" Text="{Binding Path=Address}" Height="26"></TextBox>                            
                         </WrapPanel>
-                        <TextBlock Grid.Row="6" Grid.Column="0" Width="Auto" HorizontalAlignment="Right" VerticalAlignment="Center"  Text="{DynamicResource UserDataPersona31}" Margin="0,0,3,0"></TextBlock>
-                        <WrapPanel Grid.Row="6" Grid.Column="1" VerticalAlignment="Center">                            
+                        <TextBlock Grid.Row="7" Grid.Column="0" Width="Auto" HorizontalAlignment="Right" VerticalAlignment="Center"  Text="{DynamicResource UserDataPersona31}" Margin="0,0,3,0"></TextBlock>
+                        <WrapPanel Grid.Row="7" Grid.Column="1" VerticalAlignment="Center">                            
                             <TextBox Name="txtAddress2" Width="500" HorizontalAlignment="Left" Text="{Binding Path=Address2}" Height="26"></TextBox>
                         </WrapPanel>                        
-                        <TextBlock Grid.Row="7" Grid.Column="0" Width="Auto" HorizontalAlignment="Right" VerticalAlignment="Center"  Text="{DynamicResource UserDataPersona32}" Margin="0,0,3,0"></TextBlock>
-                        <WrapPanel Grid.Row="7" Grid.Column="1" VerticalAlignment="Center">
+                        <TextBlock Grid.Row="8" Grid.Column="0" Width="Auto" HorizontalAlignment="Right" VerticalAlignment="Center"  Text="{DynamicResource UserDataPersona32}" Margin="0,0,3,0"></TextBlock>
+                        <WrapPanel Grid.Row="8" Grid.Column="1" VerticalAlignment="Center">
                             <TextBox Name="txtCity" Width="140" HorizontalAlignment="Left" Text="{Binding Path=City}" Height="26"></TextBox>                         
                             <TextBlock Width="Auto" HorizontalAlignment="Right" VerticalAlignment="Center"  Text="{DynamicResource UserDataPersona33}" Margin="10,0,3,0"></TextBlock>
                             <TextBox Name="txtProvince" Width="140" HorizontalAlignment="Left" Text="{Binding Path=Province}" Height="26"></TextBox>                            
                             <TextBlock Width="Auto" HorizontalAlignment="Right" VerticalAlignment="Center"  Text="{DynamicResource UserDataPersona34}" Margin="10,0,3,0"></TextBlock>
                             <TextBox Name="txtZipCode" Width="80" HorizontalAlignment="Left" Text="{Binding Path=ZipCode}" Height="26"></TextBox>
                         </WrapPanel>
-                        <TextBlock Grid.Row="8" Grid.Column="0" VerticalAlignment="Center" Width="Auto" Text="{DynamicResource UserDataPersona35}" TextAlignment="Right" Margin="0,0,3,0"></TextBlock>
-                        <WrapPanel Grid.Row="8" Grid.Column="1" VerticalAlignment="Center">
+                        <TextBlock Grid.Row="9" Grid.Column="0" VerticalAlignment="Center" Width="Auto" Text="{DynamicResource UserDataPersona35}" TextAlignment="Right" Margin="0,0,3,0"></TextBlock>
+                        <WrapPanel Grid.Row="9" Grid.Column="1" VerticalAlignment="Center">
                             <TextBox Name="txtCountry" Width="300"  Text="{Binding Path=Country}"></TextBox>
                         </WrapPanel>
-                        <TextBlock Grid.Row="9" Grid.Column="0" VerticalAlignment="Center" Width="Auto" Text="{DynamicResource UserDataPersona25}" TextAlignment="Right" Margin="0,0,3,0"></TextBlock>
-                        <WrapPanel Grid.Row="9" Grid.Column="1" VerticalAlignment="Center">
+                        <TextBlock Grid.Row="10" Grid.Column="0" VerticalAlignment="Center" Width="Auto" Text="{DynamicResource UserDataPersona25}" TextAlignment="Right" Margin="0,0,3,0"></TextBlock>
+                        <WrapPanel Grid.Row="10" Grid.Column="1" VerticalAlignment="Center">
                             <TextBox Name="txtMobileNumber" Width="200"  Text="{Binding Path=Mobile}" PreviewTextInput="Mobile_PreviewTextInput"></TextBox>
                             <TextBlock Text="{DynamicResource UserDataPersona26}" VerticalAlignment="Center" TextAlignment="Right" Margin="10,0,3,0"></TextBlock>
                             <TextBox Name="txtEmail" Width="200" Text="{Binding Path=Email}"></TextBox>
                         </WrapPanel>
                         <TextBlock Visibility="Collapsed" Grid.Row="10" Grid.Column="0" VerticalAlignment="Center" Width="Auto" Text="{DynamicResource UserDataPersona36}" TextAlignment="Right" Margin="0,0,3,0"></TextBlock>
-                        <WrapPanel Grid.Row="10" Grid.Column="1" VerticalAlignment="Center">
+                        <WrapPanel Grid.Row="11" Grid.Column="1" VerticalAlignment="Center">
                             <CheckBox Name="chkFree" Content="{DynamicResource UserDataPersona36}" IsChecked="{Binding Path=Free}"></CheckBox>
                         </WrapPanel>
                         <TextBlock Visibility="Collapsed" Grid.Row="7" Grid.Column="0" VerticalAlignment="Center" Width="Auto" TextAlignment="Right"  Text="{DynamicResource UserDataPersona27}" Margin="0,0,3,0"></TextBlock>

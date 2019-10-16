@@ -256,6 +256,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Views\NewReportFlow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\GoodUnionReportFlow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

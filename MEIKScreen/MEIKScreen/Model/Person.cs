@@ -10,6 +10,13 @@ namespace MEIKScreen.Model
             set { clientNumber = value; OnPropertyChanged("ClientNumber"); }
         }
 
+        private string clientID;
+        public string ClientID
+        {
+            get { return clientID; }
+            set { clientID = value; OnPropertyChanged("ClientID"); }
+        }
+
         private string cid;
         public string Cid
         {

@@ -231,6 +231,12 @@ namespace MEIKScreen
                         }
                         string info = (string)jsonObj["info"];
                         MessageBox.Show(this, info);
+						LicensePage licensePage = new LicensePage();            
+						var dialogRes = licensePage.ShowDialog();
+						if (!dialogRes.HasValue || !dialogRes.Value)
+						{
+							this.Close();
+						}
                     }
                     catch { }
                     return false;
@@ -610,6 +616,7 @@ namespace MEIKScreen
 
                             //Personal Data
                             person.ClientNumber = OperateIniFile.ReadIniData(personalData, "clientnumber", "", NextFile.FullName);
+                            person.ClientID = OperateIniFile.ReadIniData(personalData, "clientID", "", NextFile.FullName);
                             person.SurName = OperateIniFile.ReadIniData(personalData, "surname", "", NextFile.FullName);
                             person.GivenName = OperateIniFile.ReadIniData(personalData, "given name", "", NextFile.FullName);
                             person.OtherName = OperateIniFile.ReadIniData(personalData, "other name", "", NextFile.FullName);
@@ -2197,6 +2204,8 @@ namespace MEIKScreen
                 //Personal Data
                 person.ClientNumber = this.txtClientNum.Text;
                 OperateIniFile.WriteIniData(personalData, "clientnumber", this.txtClientNum.Text, person.IniFilePath);
+                person.ClientID = this.txtClientID.Text;
+                OperateIniFile.WriteIniData(personalData, "clientID", this.txtClientID.Text, person.IniFilePath);
                 person.SurName = this.txtName.Text;
                 OperateIniFile.WriteIniData(personalData, "surname", this.txtName.Text, person.IniFilePath);
                 person.GivenName = this.txtGivenName.Text;
@@ -2583,6 +2592,7 @@ namespace MEIKScreen
                 OperateIniFile.WriteIniData(palpation, "focal", this.checkPalpationFocal.IsChecked.Value ? "1" : "0", person.IniFilePath);
                 person.PalpationDesc = this.txtPalpationDesc.Text;
                 var palpationDesc = this.txtPalpationDesc.Text.Replace("\r\n", ";;");
+                OperateIniFile.WriteIniData(palpation, "description", palpationDesc, person.IniFilePath);
                 OperateIniFile.WriteIniData(palpation, "palpation normal", this.radPalpationStatusNormal.IsChecked.Value ? "1" : "0", person.IniFilePath);
                 OperateIniFile.WriteIniData(palpation, "palpation status", this.radPalpationStatusAbnormal.IsChecked.Value ? "1" : "0", person.IniFilePath);                
 
@@ -4241,6 +4251,7 @@ namespace MEIKScreen
                 StreamWriter sw = new StreamWriter(fs, System.Text.Encoding.UTF8);
                 StringBuilder titleData = new StringBuilder();
                 titleData.Append("Client Number,");
+                titleData.Append("HKID,");
                 titleData.Append("Name,");
                 titleData.Append("Age,");
                 titleData.Append("Height,");
@@ -4256,6 +4267,7 @@ namespace MEIKScreen
 
                 StringBuilder data = new StringBuilder();
                 data.Append("\"" + reportModel.DataClientNum + "\",");
+                data.Append("\"" + reportModel.DataClientID + "\",");
                 data.Append("\""+reportModel.DataName + "\",");
                 data.Append(reportModel.DataAge + ",");
                 data.Append(reportModel.DataHeight + ",");
