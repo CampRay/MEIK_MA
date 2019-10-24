@@ -5022,22 +5022,12 @@ namespace MEIKReport
             ShortFormReport reportModel = shortFormReportModel.Clone();
             reportModel = shortFormReportModel.Clone();
             //新報告添加字段
-            reportModel.DataBreastCancerDesc = this.txtBreastCancerDesc.Text;
-            reportModel.DataUterineCancerDesc = this.txtUterineCancerDesc.Text;
-            reportModel.DataCervicalCancerDesc = this.txtCervicalCancerDesc.Text;
-            reportModel.DataOvarianCancerDesc = this.txtOvarianCancerDesc.Text;
+            reportModel.DataFamilyCancerDesc = this.txtFamilyCancerDesc.Text;
             reportModel.DataOtherDesc = this.txtOtherDesc.Text;
-            reportModel.DataMenstrualCycleDisorderDesc = this.txtMenstrualCycleDisorderDesc.Text;
+            reportModel.DataPostmenopauseDesc = this.txtPostmenopauseDesc.Text;
             reportModel.DataObstetricDesc = this.txtObstetricDesc.Text;
-            reportModel.DataDiseasesOtherDesc = this.txtDiseasesOtherDesc.Text;
-            reportModel.DataOvaryOtherDesc = this.txtOvaryOtherDesc.Text;
-            reportModel.DataUterusOtherDesc = this.txtUterusOtherDesc.Text;
-            reportModel.DataSomaticOtherDesc = this.txtSomaticOtherDesc.Text;
-            reportModel.DataPalpationDesc = this.txtPalpationDesc.Text;
-            reportModel.DataUltrasoundnDesc = this.txtUltrasoundnDesc.Text;
-            reportModel.DataMammographyDesc = this.txtMammographyDesc.Text;
-            reportModel.DataBiopsyOtherDesc = this.txtBiopsyOtherDesc.Text;
-            reportModel.DataMeikScreenDesc = this.txtMEIKScreenDesc.Text;
+            reportModel.DataGynecologicOtherDesc = this.txtGynecologicOtherDesc.Text;
+            reportModel.DataExaminationsOtherDesc = this.txtExaminationsDesc.Text;            
             
             //reportModel.DataGender = this.dataGender.Text;
             //reportModel.DataWeightUnit = this.dataWeightUnit.Text;
@@ -5870,86 +5860,38 @@ namespace MEIKReport
                     textBlock1.Text = string.IsNullOrEmpty(reportModel.DataEmail) ? "N/A" : reportModel.DataEmail; 
                 }
                 //添加新報告字段
-                textBlock1 = page.FindName("dataBreastCancerDesc") as TextBlock;
+                textBlock1 = page.FindName("dataFamilyCancerDesc") as TextBlock;
                 if (textBlock1 != null)
                 {
-                    textBlock1.Text = reportModel.DataBreastCancerDesc;
-                }
-                textBlock1 = page.FindName("dataUterineCancerDesc") as TextBlock;
-                if (textBlock1 != null)
-                {
-                    textBlock1.Text = reportModel.DataUterineCancerDesc;
-                }
-                textBlock1 = page.FindName("dataCervicalCancerDesc") as TextBlock;
-                if (textBlock1 != null)
-                {
-                    textBlock1.Text = reportModel.DataCervicalCancerDesc;
-                }
-                textBlock1 = page.FindName("dataOvarianCancerDesc") as TextBlock;
-                if (textBlock1 != null)
-                {
-                    textBlock1.Text = reportModel.DataOvarianCancerDesc;
+                    textBlock1.Text = reportModel.DataFamilyCancerDesc;
                 }
                 textBlock1 = page.FindName("dataOtherDesc") as TextBlock;
                 if (textBlock1 != null)
                 {
                     textBlock1.Text = reportModel.DataOtherDesc;
                 }
-                textBlock1 = page.FindName("dataMenstrualCycleDisorderDesc") as TextBlock;
+                textBlock1 = page.FindName("dataPostmenopauseDesc") as TextBlock;
                 if (textBlock1 != null)
                 {
-                    textBlock1.Text = reportModel.DataMenstrualCycleDisorderDesc;
+                    textBlock1.Text = reportModel.DataPostmenopauseDesc;
                 }
                 textBlock1 = page.FindName("dataObstetricDesc") as TextBlock;
                 if (textBlock1 != null)
                 {
                     textBlock1.Text = reportModel.DataObstetricDesc;
                 }
-                textBlock1 = page.FindName("dataDiseasesOtherDesc") as TextBlock;
+                textBlock1 = page.FindName("dataGynecologicOtherDesc") as TextBlock;
                 if (textBlock1 != null)
                 {
-                    textBlock1.Text = reportModel.DataDiseasesOtherDesc;
+                    textBlock1.Text = reportModel.DataGynecologicOtherDesc;
                 }
-                textBlock1 = page.FindName("dataOvaryOtherDesc") as TextBlock;
+                textBlock1 = page.FindName("dataExaminationsOtherDesc") as TextBlock;
                 if (textBlock1 != null)
                 {
-                    textBlock1.Text = reportModel.DataOvaryOtherDesc;
+                    textBlock1.Text = reportModel.DataExaminationsOtherDesc;
                 }
-                textBlock1 = page.FindName("dataUterusOtherDesc") as TextBlock;
-                if (textBlock1 != null)
-                {
-                    textBlock1.Text = reportModel.DataUterusOtherDesc;
-                }
-                textBlock1 = page.FindName("dataSomaticOtherDesc") as TextBlock;
-                if (textBlock1 != null)
-                {
-                    textBlock1.Text = reportModel.DataSomaticOtherDesc;
-                }
-                textBlock1 = page.FindName("dataPalpationDesc") as TextBlock;
-                if (textBlock1 != null)
-                {
-                    textBlock1.Text = reportModel.DataPalpationDesc;
-                }
-                textBlock1 = page.FindName("dataUltrasoundnDesc") as TextBlock;
-                if (textBlock1 != null)
-                {
-                    textBlock1.Text = reportModel.DataUltrasoundnDesc;
-                }
-                textBlock1 = page.FindName("dataMammographyDesc") as TextBlock;
-                if (textBlock1 != null)
-                {
-                    textBlock1.Text = reportModel.DataMammographyDesc;
-                }
-                textBlock1 = page.FindName("dataBiopsyOtherDesc") as TextBlock;
-                if (textBlock1 != null)
-                {
-                    textBlock1.Text = reportModel.DataBiopsyOtherDesc;
-                }
-                textBlock1 = page.FindName("dataMeikScreenDesc") as TextBlock;
-                if (textBlock1 != null)
-                {
-                    textBlock1.Text = reportModel.DataMeikScreenDesc;
-                }
+                
+
                 textBlock1 = page.FindName("dataLeftComparativeElectricalConductivity1") as TextBlock;
                 if (textBlock1 != null)
                 {

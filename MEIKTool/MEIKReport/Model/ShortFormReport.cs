@@ -86,32 +86,11 @@ namespace MEIKReport.Model
         }
 
         //新報告添加的字段
-        private string dataBreastCancerDesc;
-        public string DataBreastCancerDesc
+        private string dataFamilyCancerDesc;
+        public string DataFamilyCancerDesc
         {
-            get { return dataBreastCancerDesc; }
-            set { dataBreastCancerDesc = value; }
-        }
-
-        private string dataUterineCancerDesc;
-        public string DataUterineCancerDesc
-        {
-            get { return dataUterineCancerDesc; }
-            set { dataUterineCancerDesc = value; }
-        }
-
-        private string dataCervicalCancerDesc;
-        public string DataCervicalCancerDesc
-        {
-            get { return dataCervicalCancerDesc; }
-            set { dataCervicalCancerDesc = value; }
-        }
-
-        private string dataOvarianCancerDesc;
-        public string DataOvarianCancerDesc
-        {
-            get { return dataOvarianCancerDesc; }
-            set { dataOvarianCancerDesc = value; }
+            get { return dataFamilyCancerDesc; }
+            set { dataFamilyCancerDesc = value; }
         }
 
         private string dataOtherDesc;
@@ -121,11 +100,11 @@ namespace MEIKReport.Model
             set { dataOtherDesc = value; }
         }
 
-        private string dataMenstrualCycleDisorderDesc;
-        public string DataMenstrualCycleDisorderDesc
+        private string dataPostmenopauseDesc;
+        public string DataPostmenopauseDesc
         {
-            get { return dataMenstrualCycleDisorderDesc; }
-            set { dataMenstrualCycleDisorderDesc = value; }
+            get { return dataPostmenopauseDesc; }
+            set { dataPostmenopauseDesc = value; }
         }
 
         private string dataObstetricDesc;
@@ -135,68 +114,19 @@ namespace MEIKReport.Model
             set { dataObstetricDesc = value; }
         }
 
-        private string dataDiseasesOtherDesc;
-        public string DataDiseasesOtherDesc
+        private string dataGynecologicOtherDesc;
+        public string DataGynecologicOtherDesc
         {
-            get { return dataDiseasesOtherDesc; }
-            set { dataDiseasesOtherDesc = value; }
-        }        
-
-        private string dataOvaryOtherDesc;
-        public string DataOvaryOtherDesc
-        {
-            get { return dataOvaryOtherDesc; }
-            set { dataOvaryOtherDesc = value; }
+            get { return dataGynecologicOtherDesc; }
+            set { dataGynecologicOtherDesc = value; }
         }
 
-        private string dataUterusOtherDesc;
-        public string DataUterusOtherDesc
+        private string dataExaminationsOtherDesc;
+        public string DataExaminationsOtherDesc
         {
-            get { return dataUterusOtherDesc; }
-            set { dataUterusOtherDesc = value; }
-        }
-
-        private string dataSomaticOtherDesc;
-        public string DataSomaticOtherDesc
-        {
-            get { return dataSomaticOtherDesc; }
-            set { dataSomaticOtherDesc = value; }
-        }
-
-        private string dataPalpationDesc;
-        public string DataPalpationDesc
-        {
-            get { return dataPalpationDesc; }
-            set { dataPalpationDesc = value; }
-        }
-
-        private string dataUltrasoundnDesc;
-        public string DataUltrasoundnDesc
-        {
-            get { return dataUltrasoundnDesc; }
-            set { dataUltrasoundnDesc = value; }
-        }
-
-        private string dataMammographyDesc;
-        public string DataMammographyDesc
-        {
-            get { return dataMammographyDesc; }
-            set { dataMammographyDesc = value; }
-        }
-
-        private string dataBiopsyOtherDesc;
-        public string DataBiopsyOtherDesc
-        {
-            get { return dataBiopsyOtherDesc; }
-            set { dataBiopsyOtherDesc = value; }
-        }
-
-        private string dataMeikScreenDesc;
-        public string DataMeikScreenDesc
-        {
-            get { return dataMeikScreenDesc; }
-            set { dataMeikScreenDesc = value; }
-        }
+            get { return dataExaminationsOtherDesc; }
+            set { dataExaminationsOtherDesc = value; }
+        }       
 
 
         private string dataLeftFinding;
