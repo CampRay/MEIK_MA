@@ -718,7 +718,7 @@
                         </Grid.RowDefinitions>                                                
                         <WrapPanel Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" Margin="10,0,0,0">
                             <Label Width="Auto" Content="{DynamicResource UserDataMenstrual1}"></Label>                            
-                            <TextBox Name="dateLastMenstruation" Text="{Binding DateLastMenstruation}" Height="20" Width="100"></TextBox>
+                            <TextBox Name="dateLastMenstruation" Text="{Binding DateLastMenstruation}" Width="100"></TextBox>
                         </WrapPanel>
                         <CheckBox Name="checkMenstrualCycleDisorder" Grid.Row="1" Width="Auto" VerticalAlignment="Center" IsChecked="{Binding Path=MenstrualCycleDisorder}" Content="{DynamicResource UserDataAnamnesis2}" Margin="10,0,0,0"></CheckBox>
                         <DockPanel Grid.Row="2" Margin="22,1,10,12">

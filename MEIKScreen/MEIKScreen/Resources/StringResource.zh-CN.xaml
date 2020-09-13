@@ -120,38 +120,38 @@
     <sys:String x:Key="Message_50">您确定要删除选择的文件夹及其下所有内容吗?</sys:String>
     <sys:String x:Key="Message_51">启动升级安装包程序失败，错误原因：</sys:String>
     <sys:String x:Key="Message_52">上传数据文件失败，错误原因：</sys:String>
-    <sys:String x:Key="Message_53">請輸入數字</sys:String>
-    <sys:String x:Key="Message_54">請輸入0到23之間的數字</sys:String>
-    <sys:String x:Key="Message_55">請輸入0到59之間的數字</sys:String>
-    <sys:String x:Key="Message_56">請輸入0到99之間的數字</sys:String>
-    <sys:String x:Key="Message_57">請輸入1到12之間的數字</sys:String>
-    <sys:String x:Key="Message_58">請輸入1到31之間的數字</sys:String>
-    <sys:String x:Key="Message_59">請輸入一個有效的年份數</sys:String>
-    <sys:String x:Key="Message_60">請輸入小於500的數字</sys:String>
-    <sys:String x:Key="Message_61">請輸入一個有效的電話號碼</sys:String>
+    <sys:String x:Key="Message_53">请输入数字</sys:String>
+    <sys:String x:Key="Message_54">请输入0到59之间的数字</sys:String>
+    <sys:String x:Key="Message_55">请输入0到59之间的数字</sys:String>
+    <sys:String x:Key="Message_56">请输入0到99之间的数字</sys:String>
+    <sys:String x:Key="Message_57">请输入1到12之间的数字</sys:String>
+    <sys:String x:Key="Message_58">请输入1到31之间的数字</sys:String>
+    <sys:String x:Key="Message_59">请输入一个有效的年份数</sys:String>
+    <sys:String x:Key="Message_60">请输入小于500的数字</sys:String>
+    <sys:String x:Key="Message_61">请输入入一个有效的电话号码</sys:String>
     <sys:String x:Key="Message_62">您的結論與腫瘤標識特徵狀況不一致，請重新檢查並確認您的報告是否正確！</sys:String>
     <sys:String x:Key="Message_63">BI-RADS分類結果與腫瘤標識特徵狀況不一致，請重新檢查並確認您的報告是否正確！</sys:String>
-    <sys:String x:Key="Message_64">請輸入三位數字的設備編號</sys:String>
-    <sys:String x:Key="Message_65">確定要刪除所有選擇的用戶檔案嗎?</sys:String>
-    <sys:String x:Key="Message_66">請先在配置頁面配置數據傳輸方式.</sys:String>
-    <sys:String x:Key="Message_67">用戶名不能為空.</sys:String>
-    <sys:String x:Key="Message_68">密碼不能為空.</sys:String>
-    <sys:String x:Key="Message_69">登錄失敗，用戶名或密碼錯誤.</sys:String>
-    <sys:String x:Key="Message_70">請先在配置頁面配置設備編號.</sys:String>
-    <sys:String x:Key="Message_71">請輸入授權編號.</sys:String>
-    <sys:String x:Key="Message_72">在線授權激活失敗, 錯誤原因:</sys:String>
-    <sys:String x:Key="Message_73">在線授權激活成功.</sys:String>
-    <sys:String x:Key="Message_74">還沒有生成PDF報告文件，請先點擊"生成報告"按鈕生成PDF報告文件.</sys:String>
-    <sys:String x:Key="Message_75">所有C:\MEIKData目錄下的未歸檔的zip數據文件已經被解包並且歸檔成功.</sys:String>
-    <sys:String x:Key="Message_76">加載报告数据文件{0}失敗，請確定報告數據文件是否正確，錯誤原因:</sys:String>
-    <sys:String x:Key="Message_77">在{0}目錄下沒有需要歸檔的zip文件.</sys:String>
-    <sys:String x:Key="Message_78">請輸入一個電郵地址.</sys:String>
-    <sys:String x:Key="Message_79">請輸入一個有效的電郵地址.</sys:String>
-    <sys:String x:Key="Message_80">此電郵地址已經被添加過.</sys:String>
-    <sys:String x:Key="Message_81">所有C:\MEIKData目錄下的未歸檔的zip報告數據文件已經被解包並且歸檔成功.</sys:String>
-    <sys:String x:Key="Message_82">請選擇數據接收者的電郵, 如果沒有可選擇的電郵，請先進入程式設置功能頁面添加收件人郵箱.</sys:String>
-    <sys:String x:Key="Message_83">請選擇編寫報告的醫生的名稱, 如果沒有可選擇的醫生名稱，請先進入程式設置功能頁面添加醫生名稱.</sys:String>
-    <sys:String x:Key="Message_84">請先輸入一個設備編號.</sys:String>
+    <sys:String x:Key="Message_64">请输入三位数字的设备编号</sys:String>
+    <sys:String x:Key="Message_65">确定要删除所有已选择的用户档案吗？</sys:String>
+    <sys:String x:Key="Message_66">请先在系统设置页面配置数据传输方式</sys:String>
+    <sys:String x:Key="Message_67">用户名不能为空.</sys:String>
+    <sys:String x:Key="Message_68">密码不能为空.</sys:String>
+    <sys:String x:Key="Message_69">登录失败，用户名或密码错误.</sys:String>
+    <sys:String x:Key="Message_70">请先在系统设置页面配置设备编号.</sys:String>
+    <sys:String x:Key="Message_71">请输入授权密钥字符串.</sys:String>
+    <sys:String x:Key="Message_72">在线授权激活失败，错误原因:</sys:String>
+    <sys:String x:Key="Message_73">在线授权激活成功.</sys:String>
+    <sys:String x:Key="Message_74">还没有生成PDF报告文件，请先点击"生成报告"按钮生成PDF报告文件.</sys:String>
+    <sys:String x:Key="Message_75">所有C:\MEIKData目录下的未归档的zip格式的数据文件已经被解包并且归档成功.</sys:String>
+    <sys:String x:Key="Message_76">加载报告数据文件{0}失败，请确定报告数据文件是否正确，错误原因:</sys:String>
+    <sys:String x:Key="Message_77">在{0}目录下没有需要归档的zip文件.</sys:String>
+    <sys:String x:Key="Message_78">请输入一个电邮地址.</sys:String>
+    <sys:String x:Key="Message_79">请输入一个有效的电邮地址.</sys:String>
+    <sys:String x:Key="Message_80">此电邮地址已经被添加过.</sys:String>
+    <sys:String x:Key="Message_81">所有C:\MEIKData目录下的未归档的zip格式的报告数据文件已经被解包并且归档成功.</sys:String>
+    <sys:String x:Key="Message_82">请选择数据接收者的电邮，如果没有可选择的电邮，请先进入系统设置页面添加收件人邮箱.</sys:String>
+    <sys:String x:Key="Message_83">请选择编写报告的医生的名称，如果没有可选择的医生名称，请先进入系统设置页面添加有效的医生名称.</sys:String>
+    <sys:String x:Key="Message_84">请先输入一个设备编号.</sys:String>
     <sys:String x:Key="Message_85">請選擇這臺設備的檢測報告所用的logo</sys:String>
     <sys:String x:Key="Message_86">已經添加了此設備的logo記錄.</sys:String>
 
@@ -177,8 +177,8 @@
     <sys:String x:Key="SettingReportNameGroupHeader">程序使用者信息</sys:String>
     <sys:String x:Key="SettingReportDoctorNameLab">医生</sys:String>
     <sys:String x:Key="SettingReportTechNameLab">检测员</sys:String>
-    <sys:String x:Key="SettingReportDoctorRequired">在報告中顯示醫生名稱</sys:String>
-    <sys:String x:Key="SettingReportTechRequired">在報告中顯示檢測員名稱</sys:String>
+    <sys:String x:Key="SettingReportDoctorRequired">报告中显示医生名称</sys:String>
+    <sys:String x:Key="SettingReportTechRequired">报告中显示检测员名称</sys:String>
     <sys:String x:Key="SettingReportPrintGroupHeader">默认的打印纸</sys:String>
     <sys:String x:Key="SettingReportTransferGroupHeader">默认的数据传输模式</sys:String>
     <sys:String x:Key="SettingEmailTitle">默认的电子邮箱设置</sys:String>
@@ -235,7 +235,7 @@
     <sys:String x:Key="UserDataPersona27">报告使用语言:</sys:String>
     <sys:String x:Key="UserDataPersona28">中文</sys:String>
     <sys:String x:Key="UserDataPersona29">英文</sys:String>
-    <sys:String x:Key="UserDataPersona30">客戶號碼:</sys:String>
+    <sys:String x:Key="UserDataPersona30">客戶号码:</sys:String>
     <sys:String x:Key="UserDataPersona31">地址2:</sys:String>
     <sys:String x:Key="UserDataPersona32">城市:</sys:String>
     <sys:String x:Key="UserDataPersona33">州/省:</sys:String>
@@ -244,12 +244,12 @@
     <sys:String x:Key="UserDataPersona36">免費/演示</sys:String>
     <sys:String x:Key="UserDataPersona37">香港身份证:</sys:String>
 
-    <sys:String x:Key="UserDataFamilyTab">家族病歷</sys:String>
+    <sys:String x:Key="UserDataFamilyTab">家族病历</sys:String>
     <sys:String x:Key="UserDataFamily1">乳癌:</sys:String>
-    <sys:String x:Key="UserDataFamily2">子宮癌:</sys:String>
-    <sys:String x:Key="UserDataFamily3">子宮頸癌:</sys:String>
+    <sys:String x:Key="UserDataFamily2">子宫癌:</sys:String>
+    <sys:String x:Key="UserDataFamily3">子宫颈癌:</sys:String>
     <sys:String x:Key="UserDataFamily4">卵巢癌:</sys:String>
-    <sys:String x:Key="UserDataFamily5">母親/姐妹</sys:String>
+    <sys:String x:Key="UserDataFamily5">母亲/姐妹</sys:String>
     <sys:String x:Key="UserDataFamily6">姑姨母/堂表姐妹</sys:String>
     <sys:String x:Key="UserDataFamily7">祖母/姑姨婆</sys:String>
 
@@ -269,17 +269,17 @@
     <sys:String x:Key="UserDataComplaints13">左乳</sys:String>
     <sys:String x:Key="UserDataComplaints14">物料:</sys:String>
     <sys:String x:Key="UserDataComplaints15">矽膠</sys:String>
-    <sys:String x:Key="UserDataComplaints16">自體脂肪移植</sys:String>
+    <sys:String x:Key="UserDataComplaints16">自体脂肪移植</sys:String>
     <sys:String x:Key="UserDataComplaints17">其他</sys:String>
     <sys:String x:Key="UserDataComplaints18">哺乳時間（周）</sys:String>
-    <sys:String x:Key="UserDataComplaints19">明顯腫塊</sys:String>
-    <sys:String x:Key="UserDataComplaints20">如有，在图中點擊相應位置</sys:String>
+    <sys:String x:Key="UserDataComplaints19">明显肿块</sys:String>
+    <sys:String x:Key="UserDataComplaints20">如有，在图中点击相应位置</sys:String>
     <sys:String x:Key="UserDataComplaints21">程度:</sys:String>
     <sys:String x:Key="UserDataComplaints22">[最弱]</sys:String>
     <sys:String x:Key="UserDataComplaints23">[最強]</sys:String>
 
     <sys:String x:Key="UserDataMenstrualTab">月经状况</sys:String>
-    <sys:String x:Key="UserDataMenstrual1">最近一次月經開始日期 (日/月):</sys:String>
+    <sys:String x:Key="UserDataMenstrual1">最近一次月经开始日期 (日/月):</sys:String>
     <sys:String x:Key="UserDataMenstrual2">(月)</sys:String>
 
     <sys:String x:Key="UserDataAnamnesisTab">病史</sys:String>
@@ -377,7 +377,7 @@
     <sys:String x:Key="ReportContext_20">妊娠期</sys:String>
     <sys:String x:Key="ReportContext_21">哺乳期</sys:String>
     <sys:String x:Key="ReportContext_24">绝经期</sys:String>
-    <sys:String x:Key="ReportContext_22" xml:space="preserve">荷尔蒙: </sys:String>
+    <sys:String x:Key="ReportContext_22" xml:space="preserve">激素类药物: </sys:String>
     <sys:String x:Key="ReportContext_23" xml:space="preserve">皮肤情况: </sys:String>
     <!--<sys:String x:Key="ReportContext_24">有</sys:String>-->
     <sys:String x:Key="ReportContext_25">无</sys:String>

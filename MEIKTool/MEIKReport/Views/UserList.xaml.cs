@@ -6243,13 +6243,15 @@ namespace MEIKReport
                 textBlock1 = page.FindName("dataComparativeElectricalConductivity3") as TextBlock;
                 if (textBlock1 != null)
                 {
-                    textBlock1.Text = reportModel.DataComparativeElectricalConductivity3;
+                    //textBlock1.Text = reportModel.DataComparativeElectricalConductivity3;
+                    textBlock1.Text = reportModel.DataMeanElectricalConductivity3;
                 }
                 textBlock1 = page.FindName("dataLeftComparativeElectricalConductivity3") as TextBlock;
                 if (textBlock1 != null)
                 {
-                    textBlock1.Text = reportModel.DataLeftComparativeElectricalConductivity3;
+                    textBlock1.Text = reportModel.DataLeftComparativeElectricalConductivity3;                    
                 }
+
                 textBlock1 = page.FindName("dataLeftDivergenceBetweenHistograms1") as TextBlock;
                 if (textBlock1 != null)
                 {
@@ -6263,7 +6265,8 @@ namespace MEIKReport
                 textBlock1 = page.FindName("dataDivergenceBetweenHistograms3") as TextBlock;
                 if (textBlock1 != null)
                 {
-                    textBlock1.Text = reportModel.DataDivergenceBetweenHistograms3;
+                    //textBlock1.Text = reportModel.DataDivergenceBetweenHistograms3;
+                    textBlock1.Text = reportModel.DataMeanElectricalConductivity3;
                 }
                 textBlock1 = page.FindName("dataLeftDivergenceBetweenHistograms3") as TextBlock;
                 if (textBlock1 != null)
