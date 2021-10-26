@@ -1272,7 +1272,7 @@
                     </ScrollViewer>
                 </TabItem>
             </TabControl>
-            <Grid Name="reportGroup" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Visibility="Visible">
+            <Grid Name="reportGroup" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Visibility="Collapsed">
                 <Grid Background="#FFB8B8B8">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>

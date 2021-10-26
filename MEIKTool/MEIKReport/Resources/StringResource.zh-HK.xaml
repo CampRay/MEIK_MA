@@ -226,12 +226,13 @@
     <sys:String x:Key="SettingVersionCheckInfo2">有最新的程式版本可供更新.</sys:String>
     <sys:String x:Key="SettingVersionUpdate">立即更新</sys:String>
     <sys:String x:Key="SettingDeviceId">設備編號</sys:String>
-    <sys:String x:Key="SettingImageTitle">公司信息</sys:String>
+    <sys:String x:Key="SettingImageTitle">公司Logo</sys:String>
     <sys:String x:Key="SettingUploadLogo">公司Logo</sys:String>
     <sys:String x:Key="SettingSealIcon">公司印章</sys:String>
     <sys:String x:Key="SettingCompanyInfo">公司地址</sys:String>
     <sys:String x:Key="SettingLogoSelect">選擇圖片...</sys:String>
     <sys:String x:Key="SettingLogoDefault">恢復默認</sys:String>
+    <sys:String x:Key="SettingCompanyTitle">公司信息</sys:String>
     <sys:String x:Key="SettingUploadIcon">設備所屬公司信息</sys:String>
 
     <sys:String x:Key="UserDataPersonalTab">個人資料</sys:String>
@@ -300,6 +301,7 @@
     <sys:String x:Key="UserDataMenstrualTab">月經狀況</sys:String>
     <sys:String x:Key="UserDataMenstrual1">最近一次月經開始日期 (日/月):</sys:String>
     <sys:String x:Key="UserDataMenstrual2">(月)</sys:String>
+    <sys:String x:Key="UserDataMenstrual3">(年)</sys:String>
     
     <sys:String x:Key="UserDataAnamnesisTab">病史</sys:String>
     <sys:String x:Key="UserDataAnamnesis1">月經</sys:String>
